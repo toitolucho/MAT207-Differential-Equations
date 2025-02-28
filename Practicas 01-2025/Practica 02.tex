@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 02 - Ecuaciones Diferenciales Separables y Homogéneas}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+% Introducción
+\section*{Introducción}
+\large
+En esta práctica, se determinará si ciertas ecuaciones diferenciales son de variable separable, se resolverán ecuaciones diferenciales dadas y se evaluará la homogeneidad de ciertas ecuaciones.
+
+% Ejercicios
+\section*{Ejercicios}
+\large
+
+\subsection*{A) Determina si las siguientes ecuaciones diferenciales son de Variable Separable}
+\begin{enumerate}
+    \item $\frac{dy}{dx} - \sin(x + y) = 0$
+    \item $\frac{dy}{dx} = 4y^2 - 3y + 1$
+    \item $\frac{ds}{dt} = t \ln(s^2) + 8^2$
+    \item $\frac{dy}{dx} = \frac{e^{x + y}}{x^2 + 2}$
+    \item $(xy^2 + 3y^2) \, dy - 2x \, dx = 0$
+    \item $s^2 + \frac{ds}{dt} = \frac{s + 1}{st}$
+\end{enumerate}
+
+\subsection*{B) Resuelve las siguientes ecuaciones diferenciales}
+\begin{enumerate}
+    \item $\frac{dy}{dx} = \frac{1}{y^3}$
+    \item $\frac{dx}{dt} = 3x^2$
+    \item $\frac{dx}{dt} = \frac{t}{x e^{t + 2x}}$
+    \item $\frac{dy}{dx} = \frac{x}{y^2 \sqrt{1 + x}}$
+    \item $\frac{dv}{dx} = \frac{1 - 4v^2}{3v}$
+    \item $\frac{dy}{dx} = \frac{\sec^2 y}{1 + x^2}$
+    \item $\frac{dy}{dx} = 3x^2(1 + y^2)^{3/2}$
+    \item $\frac{dx}{dt} - x^3 = x$
+\end{enumerate}
+
+\subsection*{C) Determina si las siguientes ecuaciones diferenciales son homogéneas, }
+Considera simplemente corroborar si incoporando el operandor landa, este se puede factorizar y dentro uno de los terminos factorizados, la funcion f(x,y) vuelve a ser la ecuacion original
+\begin{enumerate}
+    \item $f(x,y)=x^{2} y-4y^{3}$
+    \item $f(x,y)=y^{2}\tan\left(\frac{x}{y}\right)$
+    \item $f(x,y)=\sqrt{x^{3} -y^{3}}$
+    \item $f(x,y)=\frac{x^{2} -y^{2}}{xy}$
+    \item $f(x,y)=x^{2} +\sin (x)\cos (y)$
+    \item $f(x,y)=e^{x}$
+    \item $f(x,y)=e^{\frac{x}{y}}$
+    \item $f(x,y)=\left( x^{2} +y^{2}\right)^{3/2}$
+    \item $f(x,y)=x-5y+6$
+    \item $f(x,y)=x\cdot \sin\left(\frac{y}{x}\right) -y\cdot \sin\left(\frac{x}{y}\right)$
+\end{enumerate}
+
+\subsection*{D) Resuelve las siguientes ecuaciones homogéneas}
+\begin{enumerate}
+    \item $(4x^{2} +xy-3y^{2} )\,dx+(-5x^{2} +2xy+y^{2} )\,dy=0$
+    \item $\frac{dy}{dx} =\frac{y}{x} +\left(\frac{\varphi \left(\frac{y}{x}\right)}{\varphi '\left(\frac{y}{x}\right)}\right)$
+    \item $xy'=2(y-\sqrt{xy})$
+    \item $\left( x\cos\left(\frac{y}{x}\right) -y\right) dx+x\ dy=0$
+    \item $xy'=y+2xe^{-y/x}$
+    \item $dy =\left(\frac{y}{x} -\cos^{2}\left(\frac{y}{x}\right)\right) dx$
+\end{enumerate}
+
+\end{document}
