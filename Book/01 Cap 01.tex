@@ -1,0 +1,90 @@
+
+\section{Definición de una Ecuación Diferencial}
+Una ecuación diferencial es una ecuación que involucra una función desconocida y sus derivadas. Su importancia radica en que modelan diversos fenómenos en física, biología, economía e ingeniería.
+
+\subsection*{Ejemplo 1.1: Ecuación Diferencial Básica}
+Considere la ecuación diferencial:
+
+\begin{equation}
+\frac{dy}{dx} = 3x^2
+\end{equation}
+
+Para resolverla, integramos ambos lados:
+
+\begin{equation}
+y = \int 3x^2 dx = x^3 + C
+\end{equation}
+
+donde \( C \) es la constante de integración.
+
+\section{Clasificación de las Ecuaciones Diferenciales}
+Las ecuaciones diferenciales se clasifican según distintos criterios:
+
+\subsection{Ecuaciones Diferenciales Ordinarias (EDO)}
+Cuando una ecuación involucra una función de una sola variable independiente y sus derivadas.
+
+\subsection{Ecuaciones Diferenciales Parciales (EDP)}
+Si la ecuación involucra derivadas parciales de una función con respecto a más de una variable independiente.
+
+\subsection*{Ejemplo 1.2: EDO vs. EDP}
+\begin{itemize}
+    \item EDO: \( \frac{d^2y}{dx^2} + 4\frac{dy}{dx} + y = 0 \)
+    \item EDP: \( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0 \) (Ecuación de Laplace)
+\end{itemize}
+
+\section{Orden y Grado de una Ecuación Diferencial}
+El \textbf{orden} de una ecuación diferencial es el de la derivada más alta presente en la ecuación.  
+El \textbf{grado} es el exponente de la derivada de orden más alto (si está escrita en forma polinómica).
+
+\subsection*{Ejemplo 1.3: Determinación del Orden y Grado}
+Dada la ecuación:
+
+\begin{equation}
+\left( \frac{d^2y}{dx^2} \right)^3 + 4\frac{dy}{dx} + y = 0
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Orden}: 2 (porque la derivada más alta es \( \frac{d^2y}{dx^2} \))
+    \item \textbf{Grado}: 3 (porque la derivada de orden 2 está elevada al cubo)
+\end{itemize}
+
+\section{Soluciones de una Ecuación Diferencial}
+Existen dos tipos principales de soluciones:
+
+\subsection{Solución General}
+Contiene una familia de soluciones dependientes de constantes arbitrarias.
+
+\subsubsection*{Ejemplo 1.4}
+Resolver \( \frac{dy}{dx} = 2x \):
+
+\begin{equation}
+y = \int 2x dx = x^2 + C
+\end{equation}
+
+\subsection{Solución Particular}
+Se obtiene al asignar valores específicos a las constantes.
+
+Si se da la condición inicial \( y(1) = 5 \):
+
+\begin{equation}
+5 = 1^2 + C \Rightarrow C = 4
+\end{equation}
+
+Entonces, la solución particular es \( y = x^2 + 4 \).
+
+\section{Ejercicios}
+Resuelve los siguientes ejercicios determinando el orden y grado de cada ecuación:
+
+\begin{enumerate}
+    \item \( \frac{d^2y}{dx^2} + 5\frac{dy}{dx} + 6y = 0 \)
+    \item \( \left( \frac{dy}{dx} \right)^2 + y = x \)
+    \item \( \frac{d^3y}{dx^3} + 2\frac{d^2y}{dx^2} + y = 0 \)
+    \item \( \left( \frac{d^2y}{dx^2} \right)^{5} + \frac{dy}{dx} = x^3 \)
+    \item \( \frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} = 0 \) (Indica si es EDO o EDP)
+    \item \( \frac{dy}{dx} = e^x \)
+    \item \( \frac{d^2y}{dx^2} + y^2 = 0 \)
+    \item \( x^2\frac{d^3y}{dx^3} + x\frac{d^2y}{dx^2} + y = 0 \)
+    \item \( \left( \frac{d^2y}{dx^2} \right) + 3 \frac{dy}{dx} + y = x^2 + 1 \)
+    \item \( \left( \frac{d^3y}{dx^3} \right)^2 + y = 0 \)
+\end{enumerate}
+

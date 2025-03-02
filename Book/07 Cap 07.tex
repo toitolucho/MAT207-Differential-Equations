@@ -1,0 +1,154 @@
+
+\section{Introducción}
+La transformada de Laplace es una herramienta matemática fundamental en la solución de ecuaciones diferenciales. Permite convertir ecuaciones diferenciales en ecuaciones algebraicas, facilitando su resolución en aplicaciones de ingeniería, física y sistemas de control.
+
+\section{Definición de la Transformada de Laplace}
+La transformada de Laplace de una función \( f(t) \) se define como:
+
+\begin{equation}
+\mathcal{L} \{ f(t) \} = F(s) = \int_0^{\infty} e^{-st} f(t) dt, \quad \text{para } s > 0.
+\end{equation}
+
+\subsection*{Ejemplo 1: Transformada de \( f(t) = e^{at} \)}
+Aplicamos la definición:
+
+\begin{equation}
+\mathcal{L} \{ e^{at} \} = \int_0^{\infty} e^{-st} e^{at} dt = \int_0^{\infty} e^{-(s-a)t} dt.
+\end{equation}
+
+Resolviendo la integral:
+
+\begin{equation}
+\mathcal{L} \{ e^{at} \} = \frac{1}{s-a}, \quad \text{para } s > a.
+\end{equation}
+
+\section{Transformadas Inversas y Transformadas de Derivadas}
+\subsection{Transformadas Inversas}
+La transformada inversa de Laplace se define como:
+
+\begin{equation}
+f(t) = \mathcal{L}^{-1} \{ F(s) \}.
+\end{equation}
+
+Se obtiene mediante descomposición en fracciones parciales o utilizando tablas de transformadas.
+
+\subsection*{Ejemplo 2: Transformada inversa de \( F(s) = \frac{1}{s+3} \)}
+De la tabla de transformadas sabemos que:
+
+\begin{equation}
+\mathcal{L}^{-1} \left\{ \frac{1}{s+a} \right\} = e^{-at}.
+\end{equation}
+
+Por lo tanto,
+
+\begin{equation}
+\mathcal{L}^{-1} \left\{ \frac{1}{s+3} \right\} = e^{-3t}.
+\end{equation}
+
+\subsection{Transformadas de Derivadas}
+Para una función \( f(t) \):
+
+\begin{equation}
+\mathcal{L} \{ f'(t) \} = s F(s) - f(0).
+\end{equation}
+
+\begin{equation}
+\mathcal{L} \{ f''(t) \} = s^2 F(s) - s f(0) - f'(0).
+\end{equation}
+
+\subsection*{Ejemplo 3: Transformada de \( y'' + 3y' + 2y = 0 \) con \( y(0) = 1 \), \( y'(0) = 0 \)}
+Aplicamos la transformada de Laplace:
+
+\begin{equation}
+s^2 Y(s) - sy(0) - y'(0) + 3(sY(s) - y(0)) + 2Y(s) = 0.
+\end{equation}
+
+Sustituyendo valores iniciales:
+
+\begin{equation}
+s^2 Y(s) - s + 3s Y(s) - 3 + 2Y(s) = 0.
+\end{equation}
+
+Resolviendo para \( Y(s) \):
+
+\begin{equation}
+Y(s) = \frac{s+3}{s^2 + 3s + 2}.
+\end{equation}
+
+\section{Propiedades Operacionales I}
+\subsection{Traslación en el Eje s}
+Si \( \mathcal{L} \{ f(t) \} = F(s) \), entonces:
+
+\begin{equation}
+\mathcal{L} \{ e^{at} f(t) \} = F(s-a).
+\end{equation}
+
+\subsection{Traslación en el Eje t}
+Si \( \mathcal{L} \{ f(t) \} = F(s) \), entonces:
+
+\begin{equation}
+\mathcal{L} \{ f(t-a) u(t-a) \} = e^{-as} F(s).
+\end{equation}
+
+\section{Propiedades Operacionales II}
+\subsection{Derivadas de una Transformada}
+Si \( F(s) \) es la transformada de \( f(t) \):
+
+\begin{equation}
+\mathcal{L} \{ t^n f(t) \} = (-1)^n \frac{d^n}{ds^n} F(s).
+\end{equation}
+
+\subsection{Transformadas de Integrales}
+Si \( F(s) \) es la transformada de \( f(t) \):
+
+\begin{equation}
+\mathcal{L} \left\{ \int_0^t f(\tau) d\tau \right\} = \frac{1}{s} F(s).
+\end{equation}
+
+\subsection{Transformada de una Función Periódica}
+Si \( f(t) \) es periódica con período \( T \), su transformada es:
+
+\begin{equation}
+\mathcal{L} \{ f(t) \} = \frac{1}{1 - e^{-sT}} \int_0^T e^{-st} f(t) dt.
+\end{equation}
+
+\section{La Función Delta de Dirac}
+La función delta de Dirac \( \delta(t) \) satisface:
+
+\begin{equation}
+\int_{-\infty}^{\infty} \delta(t) f(t) dt = f(0).
+\end{equation}
+
+Su transformada de Laplace es:
+
+\begin{equation}
+\mathcal{L} \{ \delta(t - a) \} = e^{-as}.
+\end{equation}
+
+\section{Sistemas de Ecuaciones Diferenciales Lineales}
+Se pueden resolver aplicando la transformada de Laplace a cada ecuación y usando álgebra matricial.
+
+\subsection*{Ejemplo 4: Resolver \( x' = 3x + 4y \), \( y' = -x + y \) con \( x(0) = 1, y(0) = 0 \)}
+Aplicamos la transformada de Laplace:
+
+\begin{equation}
+sX(s) - 1 = 3X(s) + 4Y(s),
+\end{equation}
+
+\begin{equation}
+sY(s) = -X(s) + Y(s).
+\end{equation}
+
+Resolviendo el sistema en el dominio de Laplace y aplicando la transformada inversa, obtenemos:
+
+\begin{equation}
+x(t) = e^{2t} ( \cos 3t + \sin 3t), \quad y(t) = e^{2t} \sin 3t.
+\end{equation}
+
+\section{Ejercicios}
+\begin{enumerate}
+    \item Calcular la transformada de Laplace de \( f(t) = \cosh t \).
+    \item Determinar la transformada inversa de \( F(s) = \frac{s+2}{s^2 + 4s + 5} \).
+    \item Resolver \( y'' + 4y = 0 \) con \( y(0) = 0, y'(0) = 1 \) usando transformadas de Laplace.
+    \item Resolver el sistema \( x' = 2x + 3y \), \( y' = -x + y \) usando Laplace.
+\end{enumerate}

@@ -1,0 +1,178 @@
+\section{Introducción}
+Las ecuaciones diferenciales de orden superior son fundamentales en el estudio de la dinámica de sistemas físicos, eléctricos y mecánicos. En este capítulo exploraremos métodos analíticos para resolverlas, así como sus aplicaciones.
+
+\section{Definiciones y Propiedades Fundamentales}
+Una ecuación diferencial de orden \( n \) se expresa como:
+
+\begin{equation}
+y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = g(x)
+\end{equation}
+
+Si \( g(x) = 0 \), la ecuación es homogénea; si \( g(x) \neq 0 \), es no homogénea.
+
+\section{Solución de la Ecuación Homogénea}
+Para resolver:
+
+\begin{equation}
+y'' + ay' + by = 0
+\end{equation}
+
+asumimos \( y = e^{rx} \), lo que nos lleva a la ecuación característica:
+
+\begin{equation}
+r^2 + ar + b = 0
+\end{equation}
+
+Los valores de \( r \) determinan la solución.
+
+\subsection*{Caso 1: Raíces Reales y Distintas}
+Si \( r_1 \) y \( r_2 \) son distintas, la solución general es:
+
+\begin{equation}
+y_h = C_1 e^{r_1 x} + C_2 e^{r_2 x}
+\end{equation}
+
+\subsection*{Caso 2: Raíces Reales e Iguales}
+Si \( r_1 = r_2 = r \), la solución es:
+
+\begin{equation}
+y_h = C_1 e^{rx} + C_2 x e^{rx}
+\end{equation}
+
+\subsection*{Caso 3: Raíces Complejas}
+Si \( r = \alpha \pm i\beta \), la solución es:
+
+\begin{equation}
+y_h = e^{\alpha x} \left( C_1 \cos \beta x + C_2 \sin \beta x \right)
+\end{equation}
+
+\section{El Método de Coeficientes Indeterminados}
+Se usa cuando \( g(x) \) es una combinación de polinomios, exponenciales y senoidales. La solución particular \( y_p \) se asume con una forma similar a \( g(x) \), con coeficientes por determinar.
+
+\subsection*{Ejemplo 1: Solución para \( g(x) = e^{2x} \)}
+Resolver:
+
+\begin{equation}
+y'' - 3y' + 2y = e^{2x}
+\end{equation}
+
+\textbf{Paso 1: Resolver la homogénea}
+La ecuación característica es:
+
+\begin{equation}
+r^2 - 3r + 2 = 0
+\end{equation}
+
+Factorizando:
+
+\begin{equation}
+(r - 1)(r - 2) = 0 \Rightarrow r = 1, 2
+\end{equation}
+
+Solución homogénea:
+
+\begin{equation}
+y_h = C_1 e^x + C_2 e^{2x}
+\end{equation}
+
+\textbf{Paso 2: Proponer una solución particular}
+Como \( g(x) = e^{2x} \), proponemos:
+
+\begin{equation}
+y_p = A x e^{2x}
+\end{equation}
+
+Derivando:
+
+\begin{equation}
+y_p' = A e^{2x} + 2Ax e^{2x}
+\end{equation}
+
+\begin{equation}
+y_p'' = 2A e^{2x} + 2A e^{2x} + 4Ax e^{2x}
+\end{equation}
+
+Sustituyendo en la ecuación:
+
+\begin{equation}
+(2A e^{2x} + 2A e^{2x} + 4Ax e^{2x}) - 3(A e^{2x} + 2Ax e^{2x}) + 2Ax e^{2x} = e^{2x}
+\end{equation}
+
+Resolviendo para \( A \), obtenemos \( A = \frac{1}{4} \). Por lo tanto:
+
+\begin{equation}
+y_p = \frac{1}{4} x e^{2x}
+\end{equation}
+
+\textbf{Solución general:}
+
+\begin{equation}
+y = C_1 e^x + C_2 e^{2x} + \frac{1}{4} x e^{2x}
+\end{equation}
+
+\section{Método de Variación de Parámetros}
+Se usa cuando \( g(x) \) no permite usar coeficientes indeterminados. Se asume:
+
+\begin{equation}
+y_p = u_1 y_1 + u_2 y_2
+\end{equation}
+
+donde \( y_1 \) y \( y_2 \) son soluciones de la homogénea.
+
+\subsection*{Ejemplo 2: Resolver \( y'' + y = \tan x \)}
+\textbf{Paso 1: Resolver la homogénea}
+
+\begin{equation}
+y'' + y = 0
+\end{equation}
+
+Raíces características: \( r = \pm i \), por lo que:
+
+\begin{equation}
+y_h = C_1 \cos x + C_2 \sin x
+\end{equation}
+
+\textbf{Paso 2: Aplicar variación de parámetros}
+Buscamos:
+
+\begin{equation}
+y_p = u_1 \cos x + u_2 \sin x
+\end{equation}
+
+Derivadas:
+
+\begin{equation}
+y_p' = u_1' \cos x + u_2' \sin x + u_1 (-\sin x) + u_2 \cos x
+\end{equation}
+
+\begin{equation}
+y_p'' = u_1' (-\sin x) + u_2' \cos x + u_1' (-\cos x) + u_2' (-\sin x) + u_1 (-\cos x) + u_2 (-\sin x)
+\end{equation}
+
+Imponiendo \( u_1' \cos x + u_2' \sin x = 0 \) y resolviendo:
+
+\begin{equation}
+u_1 = \int -\tan x \sin x dx, \quad u_2 = \int \tan x \cos x dx
+\end{equation}
+
+Tras integración, encontramos:
+
+\begin{equation}
+y_p = -\ln |\cos x| \cos x + \ln |\cos x| \sin x
+\end{equation}
+
+\textbf{Solución general:}
+
+\begin{equation}
+y = C_1 \cos x + C_2 \sin x - \ln |\cos x| \cos x + \ln |\cos x| \sin x
+\end{equation}
+
+\section{Ejercicios}
+Resuelva las siguientes ecuaciones:
+
+\begin{enumerate}
+    \item \( y'' + 4y = e^x \)
+    \item \( y'' - 2y' + y = x^2 \)
+    \item \( y'' + y = \cos 2x \)
+\end{enumerate}
+

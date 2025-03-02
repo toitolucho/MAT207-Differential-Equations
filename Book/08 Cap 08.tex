@@ -1,0 +1,143 @@
+
+\section{Introducción}
+Los sistemas de ecuaciones diferenciales aparecen en numerosos problemas físicos, biológicos y de ingeniería. En este capítulo se estudian los métodos analíticos para resolver sistemas de ecuaciones diferenciales lineales homogéneos y no homogéneos.
+
+\section{Teoría Preliminar: Sistemas Lineales}
+Un sistema de ecuaciones diferenciales ordinarias de primer orden se expresa como:
+
+\begin{equation}
+\mathbf{x'} = A\mathbf{x} + \mathbf{g}(t),
+\end{equation}
+
+donde \( \mathbf{x} \) es un vector columna de funciones desconocidas, \( A \) es una matriz de coeficientes y \( \mathbf{g}(t) \) representa términos no homogéneos.
+
+\section{Sistemas Lineales Homogéneos}
+Si \( \mathbf{g}(t) = 0 \), el sistema es homogéneo:
+
+\begin{equation}
+\mathbf{x'} = A\mathbf{x}.
+\end{equation}
+
+La solución se basa en los valores propios (\textit{eigenvalores}) de \( A \).
+
+\subsection{Eigenvalores Reales Distintos}
+Si \( A \) tiene \( n \) valores propios distintos \( \lambda_1, \lambda_2, \dots, \lambda_n \) con vectores propios \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \), la solución general es:
+
+\begin{equation}
+\mathbf{x}(t) = C_1 e^{\lambda_1 t} \mathbf{v}_1 + C_2 e^{\lambda_2 t} \mathbf{v}_2 + \dots + C_n e^{\lambda_n t} \mathbf{v}_n.
+\end{equation}
+
+\subsection*{Ejemplo 1: Sistema con eigenvalores distintos}
+Resolver:
+
+\begin{equation}
+\begin{bmatrix} x' \\ y' \end{bmatrix} =
+\begin{bmatrix} 4 & -2 \\ 1 & 1 \end{bmatrix}
+\begin{bmatrix} x \\ y \end{bmatrix}.
+\end{equation}
+
+Calculamos los valores propios de \( A \):
+
+\begin{equation}
+\det(A - \lambda I) = 
+\begin{vmatrix} 4 - \lambda & -2 \\ 1 & 1 - \lambda \end{vmatrix} = 0.
+\end{equation}
+
+Resolviendo:
+
+\begin{equation}
+(4 - \lambda)(1 - \lambda) + 2 = \lambda^2 - 5\lambda + 6 = 0.
+\end{equation}
+
+Raíces: \( \lambda_1 = 3, \lambda_2 = 2 \). Hallamos los vectores propios y construimos la solución general.
+
+\subsection{Eigenvalores Repetidos}
+Si \( A \) tiene valores propios repetidos, se buscan soluciones adicionales del tipo:
+
+\begin{equation}
+\mathbf{x}(t) = e^{\lambda t} (C_1 \mathbf{v} + C_2 (t \mathbf{v} + \mathbf{w})).
+\end{equation}
+
+\subsection*{Ejemplo 2: Sistema con eigenvalores repetidos}
+Resolver:
+
+\begin{equation}
+\begin{bmatrix} x' \\ y' \end{bmatrix} =
+\begin{bmatrix} 2 & 1 \\ 0 & 2 \end{bmatrix}
+\begin{bmatrix} x \\ y \end{bmatrix}.
+\end{equation}
+
+\subsection{Eigenvalores Complejos}
+Si \( A \) tiene valores propios complejos \( \lambda = \alpha \pm i\beta \), la solución es:
+
+\begin{equation}
+\mathbf{x}(t) = e^{\alpha t} (C_1 \cos \beta t + C_2 \sin \beta t).
+\end{equation}
+
+\section{Sistemas Lineales No Homogéneos}
+Si \( \mathbf{g}(t) \neq 0 \), la solución se encuentra como:
+
+\begin{equation}
+\mathbf{x}(t) = \mathbf{x}_h(t) + \mathbf{x}_p(t),
+\end{equation}
+
+donde \( \mathbf{x}_h(t) \) es la solución homogénea y \( \mathbf{x}_p(t) \) es una solución particular.
+
+\subsection{Coeficientes Indeterminados}
+Si \( \mathbf{g}(t) \) es un polinomio, exponencial o seno/coseno, se asume una solución de la misma forma con coeficientes a determinar.
+
+\subsection*{Ejemplo 3: Método de coeficientes indeterminados}
+Resolver:
+
+\begin{equation}
+\begin{bmatrix} x' \\ y' \end{bmatrix} =
+\begin{bmatrix} 1 & 2 \\ -1 & 0 \end{bmatrix}
+\begin{bmatrix} x \\ y \end{bmatrix} +
+\begin{bmatrix} e^t \\ 0 \end{bmatrix}.
+\end{equation}
+
+\subsection{Variación de Parámetros}
+Si \( \mathbf{g}(t) \) es más compleja, se usa:
+
+\begin{equation}
+\mathbf{x}_p(t) = X(t) \int X^{-1}(t) \mathbf{g}(t) dt.
+\end{equation}
+
+\subsection*{Ejemplo 4: Método de variación de parámetros}
+Resolver:
+
+\begin{equation}
+\begin{bmatrix} x' \\ y' \end{bmatrix} =
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} x \\ y \end{bmatrix} +
+\begin{bmatrix} t \\ 1 \end{bmatrix}.
+\end{equation}
+
+\section{Matriz Exponencial}
+Para cualquier matriz \( A \), la solución general del sistema \( \mathbf{x'} = A\mathbf{x} \) se puede escribir en términos de la matriz exponencial:
+
+\begin{equation}
+\mathbf{x}(t) = e^{At} \mathbf{x}(0),
+\end{equation}
+
+donde:
+
+\begin{equation}
+e^{At} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \dots.
+\end{equation}
+
+\subsection*{Ejemplo 5: Cálculo de \( e^{At} \)}
+Para \( A = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \), se obtiene:
+
+\begin{equation}
+e^{At} =
+\begin{bmatrix} \cos t & \sin t \\ -\sin t & \cos t \end{bmatrix}.
+\end{equation}
+
+\section{Ejercicios}
+\begin{enumerate}
+    \item Resolver el sistema \( x' = 3x + 4y \), \( y' = -x + y \).
+    \item Resolver \( x' = 2x + y + e^t \), \( y' = -x + 3y \) usando coeficientes indeterminados.
+    \item Determinar \( e^{At} \) para \( A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \).
+\end{enumerate}
+

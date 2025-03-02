@@ -1,0 +1,124 @@
+\section{Introducción}
+Las ecuaciones diferenciales de primer orden aparecen en una gran variedad de problemas del mundo real. 
+Se utilizan para modelar fenómenos en la física, biología, economía, ingeniería y otras disciplinas.
+En este capítulo, se explorarán diversas aplicaciones del modelado con ecuaciones diferenciales de primer orden.
+
+\section{Crecimiento Poblacional: Modelo Logístico}
+El crecimiento poblacional puede modelarse mediante la ecuación diferencial:
+
+\begin{equation}
+\frac{dP}{dt} = r P \left( 1 - \frac{P}{K} \right)
+\end{equation}
+
+donde \( P(t) \) es la población en el tiempo \( t \), \( r \) es la tasa de crecimiento y \( K \) es la capacidad de carga del entorno.
+
+\subsection*{Ejemplo 3.1: Modelado del Crecimiento Poblacional}
+Supongamos que una población de conejos sigue el modelo logístico con \( r = 0.1 \) y \( K = 500 \). Si inicialmente hay 50 conejos, determinar la ecuación de crecimiento.
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Resolver el modelo logístico para \( r = 0.2 \), \( K = 1000 \) con una población inicial de 100.
+\end{enumerate}
+
+\section{Caída Libre con Resistencia del Aire}
+La ecuación de movimiento de un objeto en caída libre con resistencia del aire es:
+
+\begin{equation}
+m \frac{dv}{dt} = mg - kv
+\end{equation}
+
+donde \( v \) es la velocidad, \( m \) la masa, \( g \) la gravedad y \( k \) el coeficiente de resistencia.
+
+\subsection*{Ejemplo 3.2: Cálculo de Velocidad con Resistencia del Aire}
+Determinar la velocidad terminal de un paracaidista de 80 kg con un coeficiente de resistencia \( k = 10 \).
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Resolver la ecuación de caída libre para \( k = 5 \) y \( m = 60 \).
+\end{enumerate}
+
+\section{Enfriamiento de Newton}
+El modelo de enfriamiento de Newton se expresa como:
+
+\begin{equation}
+\frac{dT}{dt} = -k (T - T_a)
+\end{equation}
+
+donde \( T \) es la temperatura del objeto, \( T_a \) la temperatura ambiente y \( k \) la constante de enfriamiento.
+
+\subsection*{Ejemplo 3.3: Enfriamiento de un Café}
+Un café a 90°C se enfría en una habitación a 20°C. Si \( k = 0.02 \), encontrar la temperatura en 10 minutos.
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Resolver para un objeto que comienza a 100°C en un ambiente de 30°C con \( k = 0.015 \).
+\end{enumerate}
+
+\section{Crecimiento y Desintegración Radiactiva}
+La desintegración radiactiva se modela como:
+
+\begin{equation}
+\frac{dN}{dt} = -\lambda N
+\end{equation}
+
+donde \( N \) es la cantidad de sustancia y \( \lambda \) la constante de desintegración.
+
+\subsection*{Ejemplo 3.4: Desintegración del Carbono-14}
+El carbono-14 tiene una vida media de 5730 años. Encontrar la ecuación de desintegración.
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Determinar la cantidad restante de una muestra de 100 mg de uranio-238 después de 1000 años.
+\end{enumerate}
+
+\section{Dinámica de Enfermedades Infecciosas}
+El modelo SIR para la propagación de enfermedades es:
+
+\begin{equation}
+\frac{dS}{dt} = -\beta SI, \quad \frac{dI}{dt} = \beta SI - \gamma I
+\end{equation}
+
+donde \( S \) es la población susceptible, \( I \) la infectada, \( \beta \) la tasa de transmisión y \( \gamma \) la tasa de recuperación.
+
+\subsection*{Ejemplo 3.5: Propagación de un Virus}
+Simular una epidemia con \( \beta = 0.3 \) y \( \gamma = 0.1 \) en una población de 1000 personas.
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Resolver el modelo SIR con \( \beta = 0.2 \) y \( \gamma = 0.05 \).
+\end{enumerate}
+
+\section{Modelos de Interés Compuesto}
+El modelo de interés compuesto se describe como:
+
+\begin{equation}
+\frac{dA}{dt} = r A
+\end{equation}
+
+donde \( A \) es la cantidad de dinero e \( r \) la tasa de interés.
+
+\subsection*{Ejemplo 3.6: Crecimiento de una Inversión}
+Calcular el crecimiento de una inversión inicial de \$1000 con \( r = 5\% \) anual.
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Resolver para \( r = 3\% \) con una inversión de \$5000.
+\end{enumerate}
+
+\section{Regulación de la Glucosa en la Sangre}
+El modelo de control de insulina se expresa como:
+
+\begin{equation}
+\frac{dG}{dt} = -k G + I
+\end{equation}
+
+donde \( G \) es el nivel de glucosa y \( I \) la insulina inyectada.
+
+\subsection*{Ejemplo 3.7: Control de Glucosa}
+Modelar la respuesta del cuerpo a una inyección de insulina con \( k = 0.1 \).
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+    \item Resolver para \( k = 0.05 \) con una dosis de insulina de 10 unidades.
+\end{enumerate}
+

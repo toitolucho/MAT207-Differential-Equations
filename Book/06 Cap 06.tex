@@ -1,0 +1,160 @@
+\section{Introducción}
+Las series de potencia son herramientas fundamentales en el análisis matemático y la resolución de ecuaciones diferenciales. Permiten representar funciones como sumas infinitas y son especialmente útiles cuando la solución en términos elementales no es posible.
+
+En este capítulo se explorarán las propiedades básicas de las series de potencia, su radio de convergencia, el desarrollo de funciones y su aplicación en la solución de ecuaciones diferenciales.
+
+\section{Definición y Propiedades de una Serie de Potencia}
+Una serie de potencia es una serie infinita de la forma:
+
+\begin{equation}
+\sum_{n=0}^{\infty} c_n (x - x_0)^n
+\end{equation}
+
+donde \( c_n \) son coeficientes constantes y \( x_0 \) es el centro de la expansión.
+
+\subsection{Radio de Convergencia}
+El radio de convergencia \( R \) de una serie de potencia se determina mediante:
+
+\begin{equation}
+R = \frac{1}{\limsup\limits_{n \to \infty} |c_n|^{1/n}}
+\end{equation}
+
+\subsection*{Ejemplo 1: Determinar el radio de convergencia}
+Dada la serie:
+
+\begin{equation}
+\sum_{n=1}^{\infty} \frac{x^n}{n^2}
+\end{equation}
+
+Aplicamos la fórmula:
+
+\begin{equation}
+R = \lim_{n \to \infty} \frac{1}{(1/n^2)^{1/n}} = 1
+\end{equation}
+
+lo que indica convergencia para \( |x| < 1 \).
+
+\section{Desarrollo de Funciones en Series de Potencia}
+Se puede expresar funciones comunes en términos de series de potencia mediante sus desarrollos de Taylor y Maclaurin.
+
+\subsection*{Ejemplo 2: Expansión de \( e^x \)}
+La función exponencial puede representarse como:
+
+\begin{equation}
+e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}
+\end{equation}
+
+Expandiendo los primeros términos:
+
+\begin{equation}
+e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots
+\end{equation}
+
+\subsection*{Ejemplo 3: Serie de Potencia igualada a \( x \)}
+Supongamos la serie:
+
+\begin{equation}
+\sum_{n=1}^{\infty} \frac{x^n}{n} = x
+\end{equation}
+
+Para encontrar su radio de convergencia aplicamos:
+
+\begin{equation}
+R = \lim_{n \to \infty} \frac{1}{(1/n)^{1/n}} = 1
+\end{equation}
+
+lo que indica convergencia para \( |x| < 1 \).
+
+\section{Solución de Ecuaciones Diferenciales mediante Series de Potencia}
+Para resolver ecuaciones diferenciales en series de potencia, asumimos soluciones de la forma:
+
+\begin{equation}
+y = \sum_{n=0}^{\infty} c_n x^n
+\end{equation}
+
+Derivamos término a término y sustituimos en la ecuación dada.
+
+\subsection*{Ejemplo 4: Resolver \( y'' - y = 0 \) usando series de potencia}
+Suponemos:
+
+\begin{equation}
+y = \sum_{n=0}^{\infty} c_n x^n
+\end{equation}
+
+Derivamos dos veces:
+
+\begin{equation}
+y' = \sum_{n=1}^{\infty} n c_n x^{n-1}, \quad y'' = \sum_{n=2}^{\infty} n(n-1) c_n x^{n-2}
+\end{equation}
+
+Sustituyendo en la ecuación:
+
+\begin{equation}
+\sum_{n=2}^{\infty} n(n-1) c_n x^{n-2} - \sum_{n=0}^{\infty} c_n x^n = 0
+\end{equation}
+
+Reescribimos los índices para hacerlos coincidir:
+
+\begin{equation}
+\sum_{n=0}^{\infty} \left[ (n+2)(n+1) c_{n+2} - c_n \right] x^n = 0
+\end{equation}
+
+Para que esta ecuación sea válida para todos los valores de \( x \), los coeficientes deben cumplir:
+
+\begin{equation}
+(n+2)(n+1) c_{n+2} - c_n = 0
+\end{equation}
+
+\textbf{Paso 1: Encontrar la relación de recurrencia}
+
+\begin{equation}
+c_{n+2} = \frac{c_n}{(n+2)(n+1)}
+\end{equation}
+
+\textbf{Paso 2: Determinar los coeficientes}
+
+Tomamos valores iniciales \( c_0 = A \) y \( c_1 = B \):
+
+\begin{align*}
+c_2 &= \frac{c_0}{2(1)} = \frac{A}{2} \\
+c_3 &= \frac{c_1}{3(2)} = \frac{B}{6} \\
+c_4 &= \frac{c_2}{4(3)} = \frac{A}{24} \\
+c_5 &= \frac{c_3}{5(4)} = \frac{B}{120}
+\end{align*}
+
+Reconocemos la serie de Maclaurin para \( e^x \) y \( e^{-x} \), por lo que la solución es:
+
+\begin{equation}
+y = A \cosh x + B \sinh x
+\end{equation}
+
+\section{Ejercicios Resueltos}
+\subsection*{Ejercicio 1: Determinar el radio de convergencia de \( \sum_{n=1}^{\infty} \frac{x^n}{n^2} \)}
+\textbf{Paso 1: Aplicar la fórmula del radio de convergencia}
+
+\begin{equation}
+R = \lim_{n \to \infty} \frac{1}{(1/n^2)^{1/n}}
+\end{equation}
+
+Tomando el límite:
+
+\begin{equation}
+R = 1
+\end{equation}
+
+\subsection*{Ejercicio 2: Expandir \( \sin x \) en una serie de Taylor centrada en \( x = 0 \)}
+\textbf{Paso 1: Aplicar la expansión de Taylor}
+
+\begin{equation}
+\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}
+\end{equation}
+
+Expandiendo los primeros términos:
+
+\begin{equation}
+\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots
+\end{equation}
+
+\section{Conclusión}
+Las series de potencia permiten representar funciones y resolver ecuaciones diferenciales de forma analítica. Son herramientas esenciales en el análisis matemático y la física.
+
