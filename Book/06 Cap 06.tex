@@ -65,16 +65,265 @@ R = \lim_{n \to \infty} \frac{1}{(1/n)^{1/n}} = 1
 
 lo que indica convergencia para \( |x| < 1 \).
 
-\section{Solución de Ecuaciones Diferenciales mediante Series de Potencia}
-Para resolver ecuaciones diferenciales en series de potencia, asumimos soluciones de la forma:
+\section{Ejercicios de convergencia}
+\subsection*{Ejercicio 1: Determinar el radio de convergencia de \( \sum_{n=1}^{\infty} \frac{x^n}{n^2} \)}
+\textbf{Paso 1: Aplicar la fórmula del radio de convergencia}
 
 \begin{equation}
-y = \sum_{n=0}^{\infty} c_n x^n
+R = \lim_{n \to \infty} \frac{1}{(1/n^2)^{1/n}}
 \end{equation}
 
-Derivamos término a término y sustituimos en la ecuación dada.
+Tomando el límite:
 
-\subsection*{Ejemplo 4: Resolver \( y'' - y = 0 \) usando series de potencia}
+\begin{equation}
+R = 1
+\end{equation}
+
+\subsection*{Ejercicio 2: Expandir \( \sin x \) en una serie de Taylor centrada en \( x = 0 \)}
+\textbf{Paso 1: Aplicar la expansión de Taylor}
+
+\begin{equation}
+\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}
+\end{equation}
+
+Expandiendo los primeros términos:
+
+\begin{equation}
+\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots
+\end{equation}
+
+
+\section{Concepcion de uso en las E.D.}
+
+Dada una función cualquiera, en muchas oportunidades es posible representarla a través de una suma sucesiva de términos, conocidos como series. Esta representación muchas veces puede alcanzar con precisión la función original. Mientras más elementos tenga la serie, mayor será la precisión de la misma.
+
+Las series de potencia se utilizan como alternativa de solución a problemas matemáticos cuya representación general no es posible directamente. Se aplicarán series para resolver ecuaciones diferenciales (E.D.), que muchas veces no encajan en los métodos ya estudiados.
+
+\subsection{Ejemplos de series}
+
+\subsubsection{Serie de Fibonacci}
+
+La serie de Fibonacci se define como:
+\[
+f_n = f_{n-1} + f_{n-2}, \quad f_2 = f_1 + f_0, \quad f_0 = 0, \quad f_1 = 1
+\]
+\[
+0, \ 1, \ 1, \ 2, \ 3, \ 5, \ 8, \ 13, \dots
+\]
+
+\subsubsection{Series Generales con Sumatoria}
+
+Existen otras series más generalizadas, representadas con el operador de sumatoria:
+
+\begin{gather*}
+\sum _{n=0}^{\infty } 2^{n} x^{n} = 2^{0} x^{0} + 2^{1} x^{1} + 2^{2} x^{2} + 2^{3} x^{3} + \dots \\
+\sum _{n=0}^{\infty } 2^{n} x^{n} = 1 + 2x + 4x^{2} + 8x^{3} + \dots
+\end{gather*}
+
+Con la función dada, se obtiene un polinomio en \(x\), de donde es posible generar la cantidad de términos que se deseen, e inclusive poder calcular un valor para la serie real considerando un valor de \(x\).
+
+Por ejemplo, si consideramos solo dos términos:
+\[
+\sum _{n=0}^{\infty } 2^{n} x^{n} = 1 + 2x
+\]
+Si \( x = 1 \), entonces:
+\[
+\sum _{n=0}^{\infty } 2^{n} x^{n} = 1 + 2(1) = 3
+\]
+
+Si tomamos cuatro términos:
+\[
+\sum _{n=0}^{\infty } 2^{n} x^{n} = 1 + 2x + 4x^{2} + 8x^{3}
+\]
+Y si \( x = 1 \), obtenemos:
+\[
+\sum _{n=0}^{\infty } 2^{n} x^{n} = 1 + 2(1) + 4(1)^{2} + 8(1)^{3} = 15
+\]
+
+\subsubsection{Serie de Maclaurin y el Número \( e \)}
+
+El factorial de \( n! \) se define como:
+\[
+n! = 1 \cdot 2 \cdot 3 \dots (n-1) \cdot n
+\]
+Ejemplo:
+\[
+4! = 1 \cdot 2 \cdot 3 \cdot 4 = 24, \quad 0! = 1, \quad 1! = 1
+\]
+
+La serie de Maclaurin para \( e^x \) es:
+\begin{gather*}
+e^{x} = \sum _{n=0}^{\infty } \frac{1}{n!} x^{n} = \frac{1}{0!} x^{0} + \frac{1}{1!} x^{1} + \frac{1}{2!} x^{2} + \frac{1}{3!} x^{3} + \dots
+\end{gather*}
+
+Si consideramos \( x = 0.5 \), sabemos que:
+\[
+e^{0.5} = 1.648
+\]
+
+Tomando un solo término:
+\[
+e^x \approx 1
+\]
+Si \( x = 0.5 \), entonces:
+\[
+e^{0.5} \approx 1
+\]
+
+Tomando dos términos:
+\[
+e^x \approx 1 + x
+\]
+Si \( x = 0.5 \), entonces:
+\[
+e^{0.5} \approx 1 + 0.5 = 1.5
+\]
+
+Tomando tres términos:
+\[
+e^x \approx 1 + x + \frac{1}{2}x^2
+\]
+Si \( x = 0.5 \), entonces:
+\[
+e^{0.5} \approx 1 + 0.5 + \frac{1}{2} (0.5)^2 = 1.625
+\]
+
+Mientras más términos generemos de la serie, más preciso será nuestro cálculo.
+
+\subsection{Ecuaciones Diferenciales y Series de Potencia}
+
+En ecuaciones diferenciales es posible representar la solución en términos de una serie de potencia:
+\[
+y = \sum _{n=0}^{\infty } c_{n} (x - x_0)^n
+\]
+Si \( x_0 = 0 \), entonces:
+\[
+y = \sum _{n=0}^{\infty } c_{n} x^n
+\]
+
+Supongamos que nos piden resolver la ecuación diferencial:
+\[
+y''' - 5y = 0
+\]
+La solución homogénea es:
+\[
+y_h = c_1 e^{5x}
+\]
+También podemos expresar la solución como:
+\[
+y = c_0 + c_1 x + c_2 x^2 + c_3 x^3 + \dots
+\]
+
+Para la serie de Taylor de \( e^x \):
+\[
+e^{x} = \sum _{n=0}^{\infty } \frac{1}{n!} x^{n} = 1 + 5x + \frac{1}{2} 5x^2 + \frac{1}{6} 5x^3 + \dots
+\]
+
+
+
+\section{Suma de Series}
+
+Considera la siguiente expresión:
+
+\begin{gather*}
+\sum _{n=2}^{\infty } n( n-1) c_{n} x^{n-2} -\sum _{n=0}^{\infty } c_{n} x^{n+1} = 0
+\end{gather*}
+
+Inicialmente, partamos de encontrar un par de términos de ambas series:
+
+\begin{gather*}
+\left( 2c_{2} + 6c_{3} x + 12c_{4} x^{2} + 20c_{5} x^{3} +...\right) - \left( c_{0} x + c_{1} x^{2} + c_{2} x^{3} + c_{3} x^{4} +...\right) = 0
+\end{gather*}
+
+\begin{gather*}
+2c_{2} + (6c_{3} - c_{0}) x + (12c_{4} - c_{1}) x^{2} + (20c_{5} - c_{2}) x^{3} + (30c_{6} - c_{3}) x^{4} +...
+\end{gather*}
+
+\begin{gather*}
+\sum _{n=2}^{\infty }(( A) c_{n+3} - c_{n}) x^{n+1} \quad \rightarrow \quad \text{donde } A \text{ está en función de } n
+\end{gather*}
+
+\begin{gather*}
+\sum _{n=2}^{\infty } n( n-1) c_{n} x^{n-2} -\sum _{n=0}^{\infty } c_{n} x^{n+1} = 0
+\end{gather*}
+
+La idea del método es poner en fase ambas series,  
+esto quiere decir, que ambas empiecen en un mismo índice  
+y adicionalmente, con dicho índice, la potencia de \( x \)  
+sea igual en todas las sumatorias.
+
+\begin{gather*}
+\sum _{n=2}^{\infty } n( n-1) c_{n} x^{n-2} -\sum _{n=0}^{\infty } c_{n} x^{n+1} = 0
+\end{gather*}
+
+Lo primero que vamos a hacer es igualar las potencias de \( x \).
+
+\begin{gather*}
+\text{Para } \sum _{n=2}^{\infty } n( n-1) c_{n} x^{n-2} \quad \Longrightarrow \quad x^{0}
+\end{gather*}
+
+\begin{gather*}
+\text{Para } \sum _{n=0}^{\infty } c_{n} x^{n+1} \quad \Longrightarrow \quad x^{1}
+\end{gather*}
+
+La idea es nivelar los exponentes. Para ello, tomamos los términos con menor potencia y los extraemos, de tal manera que se nivelen al que tiene el mayor exponente.
+
+\begin{gather*}
+2c_{2} +\sum _{n=3}^{\infty } n( n-1) c_{n} x^{n-2} -\sum _{n=0}^{\infty } c_{n} x^{n+1} = 0
+\end{gather*}
+
+Una vez garantizado que las potencias están igualadas,  
+hacemos un cambio de variable para igualar los índices  
+de las sumatorias.
+
+\begin{gather*}
+\sum _{n=3}^{\infty } n( n-1) c_{n} x^{n-2} \quad \rightarrow \quad x^{k} \quad \rightarrow \quad k = n-2
+\end{gather*}
+
+\begin{gather*}
+\sum _{n=0}^{\infty } c_{n} x^{n+1} = x^{k} \quad \rightarrow \quad k = n+1
+\end{gather*}
+
+Donde se vea la variable \( n \), la cambiaremos por \( k \):
+
+\begin{gather*}
+2c_{2} +\sum _{n=3}^{\infty } n( n-1) c_{n} x^{n-2} -\sum _{n=0}^{\infty } c_{n} x^{n+1} = 0
+\end{gather*}
+
+\begin{gather*}
+k = n-2 \quad \quad \quad k = n+1
+\end{gather*}
+
+\begin{gather*}
+n = k+2 \quad \quad \quad n = k-1
+\end{gather*}
+
+Posteriormente, realizamos las operaciones algebraicas respectivas:
+
+\begin{gather*}
+2c_{2} +\sum _{k+2=3}^{\infty }( k+2)( k+1) c_{k+2} x^{k} -\sum _{k-1=0}^{\infty } c_{k-1} x^{k} = 0
+\end{gather*}
+
+\begin{gather*}
+2c_{2} +\sum _{k=1}^{\infty }( k+2)( k+1) c_{k+2} x^{k} -\sum _{k=1}^{\infty } c_{k-1} x^{k} = 0
+\end{gather*}
+
+Ahora, la expresión queda en términos de \( k \), y al tener el mismo índice de inicio,  
+se pueden unir las sumatorias y factorizar \( x^{k} \).
+
+\begin{gather*}
+2c_{2} +\sum _{k=1}^{\infty }(( k+2)( k+1) c_{k+2} - c_{k-1}) x^{k} = 0
+\end{gather*}
+
+Para corroborar, podemos ahora encontrar los dos primeros términos de esta serie simplificada:
+
+\begin{gather*}
+2c_{2} +( 6c_{3} -c_{0}) x + ( 12c_{4} -c_{1}) x^{2} +...
+\end{gather*}
+
+\section{Ejercicios Resueltos}
+
+\subsection*{Ejemplo 01: Resolver \( y'' - y = 0 \) usando series de potencia}
 Suponemos:
 
 \begin{equation}
@@ -128,33 +377,68 @@ Reconocemos la serie de Maclaurin para \( e^x \) y \( e^{-x} \), por lo que la s
 y = A \cosh x + B \sinh x
 \end{equation}
 
-\section{Ejercicios Resueltos}
-\subsection*{Ejercicio 1: Determinar el radio de convergencia de \( \sum_{n=1}^{\infty} \frac{x^n}{n^2} \)}
-\textbf{Paso 1: Aplicar la fórmula del radio de convergencia}
 
-\begin{equation}
-R = \lim_{n \to \infty} \frac{1}{(1/n^2)^{1/n}}
-\end{equation}
+\subsection{Ejemplo 02}
 
-Tomando el límite:
+\textcolor[rgb]{0.82,0.01,0.11}{\( y'' - xy = 0 \)}
 
-\begin{equation}
-R = 1
-\end{equation}
+\begin{gather*}
+\quad \quad \quad \quad \quad \quad ( k = n-2) \quad \quad \quad \quad \quad ( k = n+1) \\
+\end{gather*}
 
-\subsection*{Ejercicio 2: Expandir \( \sin x \) en una serie de Taylor centrada en \( x = 0 \)}
-\textbf{Paso 1: Aplicar la expansión de Taylor}
+Expresamos la ecuación en términos de series:
 
-\begin{equation}
-\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}
-\end{equation}
+\begin{gather*}
+y'' - xy = \sum _{n=2}^{\infty } n( n-1) c_{n} x^{n-2} -\sum _{n=0}^{\infty } c_{n} x^{n+1} \\
+= \sum _{k=0}^{\infty }( k+2)( k+1) c_{k+2} x^{k} -\sum _{k=1}^{\infty } c_{k-1} x^{k}
+\end{gather*}
 
-Expandiendo los primeros términos:
+Reescribimos la expresión:
 
-\begin{equation}
-\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots
-\end{equation}
+\begin{gather*}
+= 2c_{2} + \sum _{k=1}^{\infty }[( k+2)( k+1) c_{k+2} - c_{k-1}] x^{k} = 0
+\end{gather*}
 
-\section{Conclusión}
-Las series de potencia permiten representar funciones y resolver ecuaciones diferenciales de forma analítica. Son herramientas esenciales en el análisis matemático y la física.
+De aquí, deducimos que:
+
+\begin{gather*}
+c_{2} = 0
+\end{gather*}
+
+Y la relación de recurrencia:
+
+\begin{gather*}
+( k+2)( k+1) c_{k+2} - c_{k-1} = 0
+\end{gather*}
+
+Despejando \( c_{k+2} \):
+
+\begin{gather*}
+c_{k+2} = \frac{1}{( k+2)( k+1)} c_{k-1}, \quad k=1,2,3,...
+\end{gather*}
+
+Ahora, eligiendo valores iniciales:
+
+Si \( c_0 = 1 \) y \( c_1 = 0 \), encontramos:
+
+\begin{gather*}
+c_{3} = \frac{1}{6}, \quad c_{4} = c_{5} = 0, \quad c_{6} = \frac{1}{180}
+\end{gather*}
+
+Si \( c_0 = 0 \) y \( c_1 = 1 \), obtenemos:
+
+\begin{gather*}
+c_{3} = 0, \quad c_{4} = \frac{1}{12}, \quad c_{5} = c_{6} = 0, \quad c_{7} = \frac{1}{504}
+\end{gather*}
+
+Por lo tanto, las soluciones son:
+
+\begin{gather*}
+y_{1} = 1 + \frac{1}{6} x^{3} + \frac{1}{180} x^{6} + \dots
+\end{gather*}
+
+\begin{gather*}
+y_{2} = x + \frac{1}{12} x^{4} + \frac{1}{504} x^{7} + \dots
+\end{gather*}
+
 
