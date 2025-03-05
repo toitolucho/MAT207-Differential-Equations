@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Ecuaciones Diferenciales de Euler - Ejercicios Resueltos}
+\author{}
+\date{}
+\maketitle
+
+\section*{Ejercicio 1}
+
+Resolver la ecuación diferencial:
+
+\[
+    (x+2)^2 y'' + 3(x+2)y' - 3y = 0
+\]
+
+\subsection*{Solución}
+
+Sea $x + 2 = e^t$, entonces $t = \ln (x+2)$, además:
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}, \quad \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Reemplazando en la ecuación diferencial:
+
+\[
+    e^{2t} e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + 3e^t e^{-t} \frac{dy}{dt} - 3y = 0.
+\]
+
+Simplificando:
+
+\[
+    \frac{d^2 y}{dt^2} + 2 \frac{dy}{dt} - 3y = 0,
+\]
+
+que es una ecuación diferencial homogénea de coeficientes constantes.
+
+El polinomio característico es:
+
+\[
+    P(r) = r^2 + 2r - 3 = 0.
+\]
+
+Resolviendo:
+
+\[
+    r_1 = -3, \quad r_2 = 1.
+\]
+
+Por lo tanto, la solución general es:
+
+\[
+    y(t) = c_1 e^{-3t} + c_2 e^t.
+\]
+
+Regresando a $x$:
+
+\[
+    y = \frac{c_1}{(x+2)^3} + c_2 (x+2).
+\]
+
+\section*{Ejercicio 2}
+
+Resolver la ecuación diferencial:
+
+\[
+    x^2 y'' + xy' + y = x(6 - \ln x)
+\]
+
+\subsection*{Solución}
+
+Sea $x = e^t$, entonces $t = \ln x$, además:
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}, \quad \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Reemplazando en la ecuación diferencial:
+
+\[
+    e^{2t} e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + e^t e^{-t} \frac{dy}{dt} + y = e^t (6 - t).
+\]
+
+Simplificando:
+
+\[
+    \frac{d^2 y}{dt^2} + y = (6 - t)e^t.
+\]
+
+Esta es una ecuación diferencial no homogénea de coeficientes constantes.
+
+El polinomio característico es:
+
+\[
+    P(r) = r^2 + 1 = 0.
+\]
+
+Resolviendo:
+
+\[
+    r_1 = i, \quad r_2 = -i.
+\]
+
+La solución complementaria es:
+
+\[
+    y_g = c_1 \cos t + c_2 \sen t.
+\]
+
+Para la solución particular, proponemos:
+
+\[
+    y_p = (At + B)e^t.
+\]
+
+Calculamos derivadas:
+
+\[
+    y_p' = Ae^t + (At + B)e^t,
+\]
+\[
+    y_p'' = 2Ae^t + (At + B)e^t.
+\]
+
+Sustituyendo en la ecuación:
+
+\[
+    2Ae^t + 2(At + B)e^t + (At + B)e^t = (6 - t)e^t.
+\]
+
+Comparando coeficientes:
+
+\[
+    2A + 2A = -1 \Rightarrow A = -\frac{1}{2},
+\]
+\[
+    2B = 7 \Rightarrow B = \frac{7}{2}.
+\]
+
+Por lo tanto:
+
+\[
+    y_p = \left(-\frac{t}{2} + \frac{7}{2}\right)e^t.
+\]
+
+La solución general es:
+
+\[
+    y(t) = c_1 \cos t + c_2 \sin t - \frac{t}{2} + \frac{7}{2}.
+\]
+
+Regresando a $x$:
+
+\[
+    y = c_1 \cos (\ln x) + c_2 \sin (\ln x) - \frac{1}{2} (\ln x - 7).
+\]
+
+\end{document}

@@ -323,7 +323,7 @@ Para corroborar, podemos ahora encontrar los dos primeros términos de esta seri
 
 \section{Ejercicios Resueltos}
 
-\subsection*{Ejemplo 01: Resolver \( y'' - y = 0 \) usando series de potencia}
+\subsection*{Ejemplo 01: E.D. Lineal Homogenea}
 Suponemos:
 
 \begin{equation}
@@ -378,10 +378,8 @@ y = A \cosh x + B \sinh x
 \end{equation}
 
 
-\subsection{Ejemplo 02}
-
-\textcolor[rgb]{0.82,0.01,0.11}{\( y'' - xy = 0 \)}
-
+\subsection{Ejemplo 02 E.D. Sin CC. Homogenea}
+\( y'' - xy = 0 \)
 \begin{gather*}
 \quad \quad \quad \quad \quad \quad ( k = n-2) \quad \quad \quad \quad \quad ( k = n+1) \\
 \end{gather*}
@@ -440,5 +438,110 @@ y_{1} = 1 + \frac{1}{6} x^{3} + \frac{1}{180} x^{6} + \dots
 \begin{gather*}
 y_{2} = x + \frac{1}{12} x^{4} + \frac{1}{504} x^{7} + \dots
 \end{gather*}
+
+
+
+\subsection{Ejemplo 03 E.D. No Homogenea}
+
+
+Resolvamos la siguiente ecuación diferencial por series de potencia:
+
+\[
+(x^2 -1) \frac{d^2 y}{dx^2} + 6x \frac{d y}{dx} + 4y = -4
+\]
+
+Consideramos la función $y$ y sus derivadas como series de potencia:
+
+\[
+    y = \sum_{n=0}^{\infty} a_n x^n,
+\]
+\[
+    y' = \sum_{n=1}^{\infty} a_n n x^{n-1},
+\]
+\[
+    y'' = \sum_{n=2}^{\infty} a_n n (n-1) x^{n-2}.
+\]
+
+Sustituyendo en la ecuación diferencial:
+
+\[
+    (x^2 -1) \sum_{n=2}^{\infty} a_n n (n-1) x^{n-2} + 6x \sum_{n=1}^{\infty} a_n n x^{n-1} + 4\sum_{n=0}^{\infty} a_n x^n = -4.
+\]
+
+Distribuimos los términos dentro de las sumas:
+
+\[
+    \sum_{n=2}^{\infty} a_n n (n-1) x^n - \sum_{n=2}^{\infty} a_n n (n-1) x^{n-2} + 6\sum_{n=1}^{\infty} a_n n x^n + 4\sum_{n=0}^{\infty} a_n x^n = -4.
+\]
+
+Separamos términos sueltos:
+
+\[
+    -2a_2 -6a_3 x + 6a_1 x + 4a_0 + 4a_1 x + \sum_{n=2}^{\infty} (a_n n (n-1) - (n+2)(n+1) a_{n+2} + 6n a_n + 4a_n)x^n = 0.
+\]
+
+De los términos constantes y lineales:
+
+\[
+    -2a_2 + 4a_0 = -4,
+\]
+\[
+    -6a_3 x + 6a_1 x + 4a_1 x = 0.
+\]
+
+Despejamos los coeficientes:
+
+\[
+    a_2 = 2a_0 + 2,
+\]
+\[
+    a_3 = \frac{5a_1}{3}.
+\]
+
+Para la recurrencia:
+
+\[
+    (k^2 + 5k + 4) a_k = (k+2)(k+1) a_{k+2},
+\]
+\[
+    a_{k+2} = \frac{(k+4) a_k}{(k+2)} \quad \text{para } k = 2,3,4,\dots.
+\]
+
+Calculamos algunos términos:
+
+\[
+    a_4 = \frac{6a_2}{4} = 3a_0 + 3,
+\]
+\[
+    a_5 = \frac{7a_3}{5} = \frac{7a_1}{3},
+\]
+\[
+    a_6 = \frac{8a_4}{6} = 4a_0 + 4,
+\]
+\[
+    a_7 = \frac{9a_5}{7} = 3a_1.
+\]
+
+La solución general es:
+
+\[
+    y = a_0 + a_1 x + (2a_0 + 2)x^2 + \frac{5a_1}{3}x^3 + (3a_0 + 3)x^4 + \frac{7a_1}{3}x^5 + (4a_0 + 4)x^6 + 3a_1 x^7 + \dots.
+\]
+
+Agrupamos términos:
+
+\[
+    y_1 = a_0 + (2a_0 + 2)x^2 + (3a_0 + 3)x^4 + (4a_0 + 4)x^6 + \dots,
+\]
+\[
+    y_2 = a_1 x + \frac{5a_1}{3}x^3 + \frac{7a_1}{3}x^5 + \frac{9a_1}{3}x^7 + \dots.
+\]
+
+Por lo tanto:
+
+\[
+    y = y_1 + y_2.
+\]
+
 
 

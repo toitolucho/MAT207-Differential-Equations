@@ -1609,3 +1609,268 @@ y''' + y' = \sec(x)
     \item \( y'' + 4y' + 4y = x^{-2} e^{-2x} \)  
     \textbf{Respuesta:} \( y = e^{-2x} (c_1 -1 + c_2 x - \ln x) \)
 \end{enumerate}
+
+
+\section{Ecuaciones Diferenciales de Cauchy Euler}
+
+Las ecuaciones diferenciales de Euler son de la forma:
+
+\[
+    a_n x^n \frac{d^n y}{dx^n} + a_{n-1} x^{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1 x \frac{dy}{dx} + a_0 y = 0
+\]
+
+donde $a_0, a_1, a_2, \dots, a_n$ son constantes.
+
+Para resolver la ecuación diferencial, se transforma en una ecuación diferencial homogénea de coeficientes constantes mediante la sustitución:
+
+\[
+    x = e^t \quad \Rightarrow \quad t = \ln x, \quad \text{además} \quad \frac{dx}{dt} = e^t \quad \text{y} \quad \frac{dt}{dx} = e^{-t}. 
+\]
+
+aplicando la regla de la cadena
+
+\[
+    \frac{dt}{dx} = e^{-t} \frac{dy}{dy},
+\]
+
+de donde se puede hacer un cruze de variables para obtener :
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}.
+\]
+
+Para la segunda derivada:
+
+\[
+    \frac{d^2 y}{dx^2} = e^{-t} \frac{d}{dt} \left( e^{-t} \frac{dy}{dt} \right).
+\]
+
+Desarrollando:
+
+\[
+    \frac{d^2 y}{dx^2} = e^{-t} \left( -e^{-t} \frac{dy}{dt} + e^{-t} \frac{d^2 y}{dt^2} \right).
+\]
+
+Por lo tanto:
+
+\[
+    \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Este mismo procedimiento se aplica para ecuaciones de orden superior.
+
+Las ecuaciones diferenciales de Euler también pueden presentarse en la forma:
+
+\[
+    a_n (ax + b)^n \frac{d^n y}{dx^n} + a_{n-1} (ax + b)^{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1 (ax + b) \frac{dy}{dx} + a_0 y = 0.
+\]
+
+Para resolver esta ecuación, se usa la transformación:
+
+\[
+    ax + b = e^t \quad \Rightarrow \quad t = \ln (ax + b), \quad \text{además} \quad \frac{dx}{dt} = \frac{e^t}{a}.
+\]
+
+También,
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt},
+\]
+
+de donde se tiene:
+
+\[
+    \frac{d^2 y}{dx^2} = a^2 e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Las ecuaciones diferenciales no homogéneas de Euler tienen la forma:
+
+\[
+    a_n x^n \frac{d^n y}{dx^n} + a_{n-1} x^{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1 x \frac{dy}{dx} + a_0 y = x^m P_m (\ln x),
+\]
+
+donde $m$ es el grado del polinomio $P_m (\ln x)$. Para resolver estas ecuaciones, se sigue el mismo procedimiento de transformación que en los casos anteriores.
+
+
+
+\subsection{Ejercicio  01}
+
+Resolver la ecuación diferencial:
+
+\[
+    (x+2)^2 y'' + 3(x+2)y' - 3y = 0
+\]
+
+Sea $x + 2 = e^t$, entonces $t = \ln (x+2)$, además:
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}, \quad \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Reemplazando en la ecuación diferencial:
+
+\[
+    e^{2t} e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + 3e^t e^{-t} \frac{dy}{dt} - 3y = 0.
+\]
+
+Simplificando:
+
+\[
+    \frac{d^2 y}{dt^2} + 2 \frac{dy}{dt} - 3y = 0,
+\]
+
+que es una ecuación diferencial homogénea de coeficientes constantes.
+
+El polinomio característico es:
+
+\[
+    P(r) = r^2 + 2r - 3 = 0.
+\]
+
+Resolviendo:
+
+\[
+    r_1 = -3, \quad r_2 = 1.
+\]
+
+Por lo tanto, la solución general es:
+
+\[
+    y(t) = c_1 e^{-3t} + c_2 e^t.
+\]
+
+Regresando a $x$:
+
+\[
+    y = \frac{c_1}{(x+2)^3} + c_2 (x+2).
+\]
+
+\subsection{Ejercicio 02}
+
+Resolver la ecuación diferencial:
+
+\[
+    x^2 y'' + xy' + y = x(6 - \ln x)
+\]
+
+Sea $x = e^t$, entonces $t = \ln x$, además:
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}, \quad \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Reemplazando en la ecuación diferencial:
+
+\[
+    e^{2t} e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + e^t e^{-t} \frac{dy}{dt} + y = e^t (6 - t).
+\]
+
+Simplificando:
+
+\[
+    \frac{d^2 y}{dt^2} + y = (6 - t)e^t.
+\]
+
+Esta es una ecuación diferencial no homogénea de coeficientes constantes.
+
+El polinomio característico es:
+
+\[
+    P(r) = r^2 + 1 = 0.
+\]
+
+Resolviendo:
+
+\[
+    r_1 = i, \quad r_2 = -i.
+\]
+
+La solución complementaria es:
+
+\[
+    y_g = c_1 \cos t + c_2 \sen t.
+\]
+
+Para la solución particular, proponemos:
+
+\[
+    y_p = (At + B)e^t.
+\]
+
+Calculamos derivadas:
+
+\[
+    y_p' = Ae^t + (At + B)e^t,
+\]
+\[
+    y_p'' = 2Ae^t + (At + B)e^t.
+\]
+
+Sustituyendo en la ecuación:
+
+\[
+    2Ae^t + 2(At + B)e^t + (At + B)e^t = (6 - t)e^t.
+\]
+
+Comparando coeficientes:
+
+\[
+    2A + 2A = -1 \Rightarrow A = -\frac{1}{2},
+\]
+\[
+    2B = 7 \Rightarrow B = \frac{7}{2}.
+\]
+
+Por lo tanto:
+
+\[
+    y_p = \left(-\frac{t}{2} + \frac{7}{2}\right)e^t.
+\]
+
+La solución general es:
+
+\[
+    y(t) = c_1 \cos t + c_2 \sin t - \frac{t}{2} + \frac{7}{2}.
+\]
+
+Regresando a $x$:
+
+\[
+    y = c_1 \cos (\ln x) + c_2 \sin (\ln x) - \frac{1}{2} (\ln x - 7).
+\]
+
+\subsection{Ejercicios Propuestos}
+
+Resolver los siguientes ejercicios:
+
+\begin{enumerate}
+    \item $x^2 y'' + 2xy' - 2y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 |x| + c_2 |x|^{-2}$
+    
+    \item $x^2 y'' + xy' + 9y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 \sen(3 \ln |x|) + c_2 \cos(3 \ln |x|)$
+    
+    \item $4x^2 y'' - 8xy' + 9y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x^{\frac{3}{2}} + c_2 x^{\frac{3}{2}} \ln x$
+    
+    \item $x^2 y'' - 3xy' + 7y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x^2 \cos \sqrt{3} \ln x + c_2 x^2 \sen \sqrt{3} \ln x$
+    
+    \item $x^2 y'' + xy' - p^2 y = 0$, donde $p$ es una constante.  \\
+    \textbf{Respuesta:} $y = c_1 |x|^p + c_2 |x|^{-p}, \quad p \neq 0$
+    
+    \item $x^3 y''' - 2x^2 y'' - 17xy' - 7y = 0$  \\
+    \textbf{Respuesta:} $y = |x|^{-1} (c_1 + c_2 \ln |x|) + c_3 |x|^7$
+    
+    \item $x^3 y''' + 4x^2 y'' - 2y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 |x|^{-1} + c_2 |x|^{\sqrt{2}} + c_3 |x|^{-\sqrt{2}}$
+    
+    \item $2x^2 y'' + xy' - y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x + \frac{c_2}{\sqrt{x}}$
+    
+    \item $x^3 y''' - 3x^2 y'' + 6xy' - 6y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x + c_2 x^2 + c_3 x^3$
+    
+    \item $x^2 y'' + 3xy' + y = 0$  \\
+    \textbf{Respuesta:} $y = \frac{1}{x} (c_1 + c_2 \ln |x|)$
+\end{enumerate}
