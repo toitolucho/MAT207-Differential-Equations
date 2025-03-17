@@ -1,0 +1,34 @@
+\usepackage[utf8]{inputenc}  % Asegura codificación UTF-8
+\usepackage{geometry}        % Paquete para configurar márgenes
+\geometry{top=0.75in, bottom=0.75in, left=0.75in, right=0.75in}  % Márgenes personalizados
+\usepackage{titlesec}        % Personalización de títulos
+\usepackage{enumitem}        % Personalización de listas
+\usepackage{amsmath}         % Paquete para matemáticas
+\usepackage{amsfonts}        % Paquete para fuentes matemáticas
+\usepackage{graphicx, float} % Paquete para incluir gráficos
+\usepackage{hyperref}        % Enlaces y referencias
+\usepackage{listings}        % Mostrar código
+\usepackage{xcolor}          % Colores para personalizar el código y otros elementos
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{lmodern}
+\usepackage{multicol}
+\usepackage[spanish]{babel}
+
+% Configuración del formato de los títulos
+\titleformat{\section}[block]{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[runin]{\normalfont\itshape}{\thesubsubsection}{1em}{}
+
+% Espaciado para los títulos
+\titlespacing{\section}{0pt}{12pt}{12pt}
+\titlespacing{\subsection}{0pt}{6pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{6pt}
+
+% Espacio entre párrafos y sin sangría
+\setlength{\parskip}{0.5em}  % Espacio entre párrafos
+\setlength{\parindent}{0pt}  % Sin sangría en los párrafos
+
+% Cambiar "Chapter" a "Capítulo"
+\renewcommand{\chaptername}{Capítulo}
+

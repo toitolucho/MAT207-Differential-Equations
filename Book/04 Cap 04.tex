@@ -1,0 +1,1876 @@
+\section{Introducción}
+Las ecuaciones diferenciales de orden superior son fundamentales en el estudio de la dinámica de sistemas físicos, eléctricos y mecánicos. En este capítulo exploraremos métodos analíticos para resolverlas, así como sus aplicaciones.
+
+\section{Nomenclatura}
+\vspace{-20pt} % Adjust as needed
+\begin{align*}
+ & \textit{}{Primera Derivada:} \quad y'=\frac{dy}{dx}\\
+ & \textit{Segunda Derivada:} \quad y''=\frac{d^{2} y}{dx^{2}}\\
+ & \textit{Tercera Derivada:} \quad y'''=\frac{d^{3} y}{dx^{3}}\\
+ & \textit{Cuarta Derivada:} \quad y^{(4)} =\frac{d^{4} y}{dx^{4}} \quad (\text{diferente de } y^4 \text{ (potencia)})\\
+ & \textbf{Derivada de orden superior:} \quad y^{(n)} =\frac{d^{n} y}{dx^{n}}
+\end{align*}
+
+
+\section{Ecuaciones Diferenciales de Orden Superior Lineales}
+
+\subsection{Clasificación}
+
+Según los coeficientes (funciones de \( x \)) que multiplican a las diferenciales y la variable dependiente:
+
+\subsubsection{E.D. con coeficientes constantes}  
+\[
+a( x) y''+ b( x) y'+ c( x) y=\ g( x)
+\]
+Ejemplo:
+\[
+y''+5y'+3y\ =\ 0
+\]
+\subsubsection{E.D. sin coeficientes constantes}
+
+\[
+x^{2} y''+ 5x y'+ 3 y\ =\ 0 \quad \text{(No tiene coeficientes constantes)}
+\]
+
+Según el valor de \( g(x) \) (miembro derecho):
+
+\subsubsection{E.D. Homogéneas} (\( g(x) = 0 \))
+\[
+y''+5y'+3y\ = \ 0
+\]
+
+\subsubsection{E.D. No Homogéneas}  
+\[
+x^{2} y''+ 5x y'+ 3 y\ = x^{3}
+\]
+
+- \textbf{Ejemplos}  
+\[
+\begin{array}{l}
+\textit{E.D. con Coeficientes Constantes Homogénea:} \quad y^{(4)} + 64y = 0\\
+\textit{E.D. con Coeficientes Constantes No Homogénea:} \quad y^{(4)} + 64y = 5x\\
+\textit{E.D. sin Coeficientes Constantes Homogénea:} \quad y^{(4)} + x y = 0\\
+\textit{E.D. sin Coeficientes Constantes No Homogénea:} \quad y^{(4)} + x y = \sin(x)
+\end{array}
+\]
+
+
+\subsubsection{E.D. con Coeficientes Constantes Homogéneas}
+\textbf{Consideraciones:}
+1. Factorización de polinomios.
+2. Uso de \textbf{Ruffini}.
+3. Manejo de \textbf{números complejos} (\( i, -i \)).
+4. Conocimiento de \textbf{funciones trigonométricas}.
+
+La ecuación diferencial general de orden \( n \):
+
+\[
+a_{n}( x)\frac{d^{n} y}{dx^{n}} \ +\ a_{n-1}( x)\frac{d^{n-1} y}{dx^{n-1}} \ +\ a_{n-2}( x)\frac{d^{n-2} y}{dx^{n-2}} +.....\ a_{0} y\ =\ g( x)
+\]
+
+
+\section{Existencia de Soluciones para una E.D. de Orden \( n \)}
+
+Toda ecuación diferencial de orden \( n \) tiene asociadas \( n \) soluciones \textbf{linealmente independientes} a la misma. Por ejemplo:
+
+\begin{gather*}
+y'' -5y' +6y=0\\
+y_{1} = e^{3x}\\
+y_{2} = e^{2x} \quad \rightarrow \quad y_{3} = 0.5e^{3x}
+\end{gather*}
+
+Probamos si son soluciones:
+
+\[
+y_{1} ' = 3e^{3x}, \quad y_{1} '' = 9e^{3x}
+\]
+
+Si reemplazamos en la ecuación diferencial dada:
+
+\[
+9e^{3x} -5(3e^{3x}) +6(e^{3x}) =0
+\]
+
+\textbf{Satisface la ecuación diferencial.}
+
+Si se tiene \( n \) soluciones linealmente independientes, también se asume que la suma de las mismas es una solución de la ecuación diferencial, conocida como \textbf{solución general}:
+
+\[
+y_{g} = y_{1} + y_{2} \quad \Longrightarrow \quad y_{g} = c_{1} e^{3x} + c_{2} e^{2x}
+\]
+
+---
+
+\section{El Wronskiano ¿Cómo se garantiza la independencia lineal?}
+
+\textbf{Wronskiano} Determinante de una matriz
+
+Para garantizar la independencia lineal de un grupo de funciones \( y_{1}, y_{2}, ..., y_{n} \), se construye una matriz considerando las derivadas de las mismas hasta \( n-1 \), donde \( n \) es la cantidad de funciones dadas en el conjunto.
+
+Supongamos que tenemos dos funciones \( y_{1}, y_{2} \):
+
+\[
+W(y_{1}, y_{2}) =
+\begin{vmatrix}
+y_{1} & y_{2}\\
+y_{1} ' & y_{2} '
+\end{vmatrix}
+\]
+
+Si la determinante es distinto de cero, las funciones son \textbf{linealmente independientes}.
+
+
+\subsection{Ejemplo 01: Verificar si \( y_{1} = 3x, y_{2} = 5x \) son L.I.}
+
+\[
+W(y_{1}, y_{2}) =
+\begin{vmatrix}
+3x & 5x\\
+3 & 5
+\end{vmatrix}
+\]
+
+\[
+= (3x \cdot 5) - (5x \cdot 3) = 0
+\]
+
+\textbf{Conclusión:} No son linealmente independientes.
+
+\subsection{Ejemplo 02: Verificar si \( y_{1} = e^{3x}, y_{2} = e^{2x} \) son L.I.}
+
+\[
+W(y_{1}, y_{2}) =
+\begin{vmatrix}
+e^{3x} & e^{2x}\\
+3e^{3x} & 2e^{2x}
+\end{vmatrix}
+\]
+
+\[
+= 2e^{3x} e^{2x} - 3e^{2x} e^{3x}
+\]
+
+\[
+= -e^{5x}
+\]
+
+\textbf{Conclusión:} Son \textbf{linealmente independientes}.
+
+
+\subsection{Ejercicios Propuestos}
+
+\textbf{I.} Obténgase el Wronskiano de las siguientes funciones indicadas:
+
+\begin{enumerate}
+    \item \(1, x, x^2, \dots, x^{n-1} \quad \text{para } n > 1\)  
+    \textbf{Respuesta:} \( W = 0! \cdot 1! \cdots (n - 1)! \)
+
+    \item \( e^{mx}, e^{nx} \), donde \( m \) y \( n \) son enteros y \( m \neq n \)  
+    \textbf{Respuesta:} \( W = (n - m)e^{(m+n)x} \)
+
+    \item \( \sinh x, \cosh x \)  
+    \textbf{Respuesta:} \( W = -1 \)
+
+    \item \( x, xe^x \)  
+    \textbf{Respuesta:} \( W = x^2 e^x \)
+
+    \item \( e^x \sin x, e^x \cos x \)  
+    \textbf{Respuesta:} \( W = -e^{2x} \)
+
+    \item \( \cos^2 x, 1 + \cos 2x \)  
+    \textbf{Respuesta:} \( W = 0 \)
+
+    \item \( e^{-x}, xe^{-x} \)  
+    \textbf{Respuesta:} \( W = e^{-2x} \)
+
+    \item \( e^x, 2e^x, e^{-x} \)  
+    \textbf{Respuesta:} \( W = 0 \)
+
+    \item \( 2, \cos x, \cos 2x \)  
+    \textbf{Respuesta:} \( W = -8 \sin^3 x \)
+
+    \item \( e^{-3x} \sin 2x, e^{-3x} \cos 2x \)  
+    \textbf{Respuesta:} \( W = -2 e^{-6x} \)
+\end{enumerate}
+
+
+\section{E.D. de Segundo Orden}
+
+\textbf{Contexto:} Es similar a resolver polinomios en álgebra, donde el objetivo es encontrar el valor real de \( x \) que satisface la ecuación:
+
+\[
+Ax^{2} +Bx\ +C\ =\ 0
+\]
+
+Considerando una E.D. de segundo orden, buscamos las funciones \( y_{1}(x) \) y \( y_{2}(x) \) que satisfacen:
+
+\[
+a_{2}( x) y''+a_{1}( x) y'+a_{0}( x) y=0
+\]
+
+Si asumimos que es una E.D. con coeficientes constantes:
+
+\[
+Ay''+By'+Cy=0
+\]
+
+\[
+y\ =\ e^{r x}
+\]
+
+\[
+y'\ =\ re^{r x}, \quad y''\ =r^{2} e^{r x}
+\]
+
+Reemplazando:
+
+\[
+Ae^{r x} +Be^{r x} +Ce^{r x} =0
+\]
+
+Factorizando:
+
+\[
+e^{r x}( Ar^{2} +Br+C) =0
+\]
+
+Resolviendo la ecuación característica:
+
+\[
+r_{1,2} = \frac{-b\pm \ \sqrt{b^{2} -4ac}}{2a}
+\]
+
+Dependiendo de los valores de \( r \), se pueden presentar tres casos:
+- Raíces \textbf{diferentes}.
+- Raíces \textbf{iguales}.
+- Raíces \textbf{complejas}.
+
+
+
+\section{Solución de la Ecuación Homogénea}
+Partimos inicialmente de una Ecuacion de 2do orden para iniciar el planteamiento, ya que mas adelante se utilizara la misma logica para ecuaciones de orden superior:
+
+\begin{equation}
+y'' + ay' + by = 0
+\end{equation}
+
+asumimos \( y = e^{rx} \), lo que nos lleva a la ecuación característica:
+
+\begin{equation}
+r^2 + ar + b = 0
+\end{equation}
+
+Los valores de \( r \) determinan la solución.
+
+\subsection*{Caso 1: Raíces Reales y Distintas}
+Si \( r_1 \) y \( r_2 \) son distintas, la solución general es:
+
+\begin{equation}
+y_h = C_1 e^{r_1 x} + C_2 e^{r_2 x}
+\end{equation}
+
+\subsection*{Caso 2: Raíces Reales e Iguales}
+Si \( r_1 = r_2 = r \), la solución es:
+
+\begin{equation}
+y_h = C_1 e^{rx} + C_2 x e^{rx}
+\end{equation}
+
+\subsection*{Caso 3: Raíces Complejas}
+Si \( r = \alpha \pm i\beta \), la solución es:
+
+\begin{equation}
+y_h = e^{\alpha x} \left( C_1 \cos \beta x + C_2 \sin \beta x \right)
+\end{equation}
+
+
+\subsection{Ejemplo 01: Raices Reales Diferentesl}
+
+Resolver la ecuación diferencial:
+
+\[
+2y''-5y'-3y\ =\ 0
+\]
+
+Supongamos que \( y = e^{r x} \), de modo que:
+
+\[
+y' = r e^{r x}, \quad y'' = r^2 e^{r x}
+\]
+
+Sustituyendo en la ecuación:
+
+\[
+2r^{2} e^{r x} -5r e^{r x} -3 e^{r x} = 0
+\]
+
+Factorizando:
+
+\[
+e^{r x}( 2r^{2} -5r-3) = 0
+\]
+
+Resolviendo la ecuación cuadrática:
+
+\[
+r_{1,2} = \frac{5\pm \sqrt{25+4(2)(3)}}{4}
+\]
+
+\[
+r_{1,2} = \frac{5\pm 7}{4}
+\]
+
+\[
+r_{1} =3, \quad r_{2} = -\frac{1}{2}
+\]
+
+Soluciones individuales:
+
+\[
+y_{1} = e^{3x}, \quad y_{2} = e^{- \frac{1}{2} x}
+\]
+
+Solución general:
+
+\[
+y_{h} = c_{1} e^{3x} + c_{2} e^{- \frac{1}{2} x}
+\]
+
+---
+
+\subsection{Ejemplo 02: Raíces Duplicadas}
+
+Resolver la ecuación:
+
+\[
+y''-10y'+25y\ =\ 0
+\]
+
+Ecuación característica:
+
+\[
+e^{rx}( Ar^{2} -10r+25) =0
+\]
+
+Factorizando:
+
+\[
+( r-5)( r-5) = 0
+\]
+
+\[
+r = 5, 5
+\]
+
+Soluciones:
+
+\[
+y_{1} = c_{1} e^{5x}, \quad y_{2} = c_{2} e^{5x}
+\]
+
+\[
+y_{h} = c_{1} e^{5x} + c_{2} e^{5x}
+\]
+
+\[
+y_{h} = e^{5x}( c_{1} + c_{2})
+\]
+
+Para evitar soluciones repetidas, multiplicamos por \( x \):
+
+\[
+y_{2} = c_{2} x e^{5x}
+\]
+
+\[
+y_{h} = c_{1} e^{5x} + c_{2} x e^{5x}
+\]
+\subsection{Ejemplo 03 - Raices Imaginarias}
+
+Resolver la ecuación diferencial:
+
+\[
+2y''+2y'+y=0
+\]
+
+Planteamos la ecuación característica:
+
+\[
+2r^{2} +2r+1=0
+\]
+
+Aplicamos la fórmula general para resolver la ecuación cuadrática:
+
+\[
+r_{1,2} =\frac{-b\ \pm \ \sqrt{b^{2} -4ac}}{2a}
+\]
+
+Sustituyendo los valores \( a = 2 \), \( b = 2 \), \( c = 1 \):
+
+\[
+r_{1,2} =\ \frac{-2\ \pm \ \sqrt{2^{2} -4(2)(1)}}{2(2)}
+\]
+
+\[
+r_{1,2} =\ \frac{-2\pm \sqrt{4-8}}{4}
+\]
+
+\[
+r_{1,2} =\ \frac{-2\pm \sqrt{-4}}{4}
+\]
+
+\[
+r_{1,2} =\ \frac{-1}{2} \pm \frac{i}{2}
+\]
+
+Raíces complejas:
+
+\[
+r_{1} = -\frac{1}{2} + \frac{i}{2}, \quad r_{2} = -\frac{1}{2} - \frac{i}{2}
+\]
+
+Como las raíces son complejas \( r = a \pm bi \), usamos la identidad:
+
+\[
+y_1 = e^{(a+bi)x} = e^{ax} \sin(bx)
+\]
+
+\[
+y_2 = e^{(a-bi)x} = e^{ax} \cos(bx)
+\]
+
+Sustituyendo \( a = -\frac{1}{2} \) y \( b = \frac{1}{2} \):
+
+\[
+y_{g} = c_{1} e^{-\frac{1}{2} x} \sin\left(\frac{1}{2} x\right) + c_{2} e^{-\frac{1}{2} x} \cos\left(\frac{1}{2} x\right)
+\]
+
+\textbf{Solución final:}
+
+\[
+y(x) = c_{1} e^{-\frac{1}{2} x} \sin\left(\frac{1}{2} x\right) + c_{2} e^{-\frac{1}{2} x} \cos\left(\frac{1}{2} x\right)
+\]
+
+\subsection*{EJERCICIOS PROPUESTOS}
+
+\begin{enumerate}
+    \item \( \frac{d^2 y}{dx^2} - 3 \frac{dy}{dx} + 2y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{2x} \)
+
+    \item \( \frac{d^2 y}{dx^2} - 4 \frac{dy}{dx} + 4y = 0 \)  
+    \textbf{Respuesta:} \( y = e^{2x} (c_1 x + c_2) \)
+
+    \item \( \frac{d^2 y}{dx^2} + y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 \cos x + c_2 \sin x \)
+
+    \item \( \frac{d^2 y}{dx^2} + \frac{dy}{dx} + y = 0 \)  
+    \textbf{Respuesta:} \( y = e^{-x/2} \left[ c_1 \cos \frac{\sqrt{3}}{2} x + c_2 \sin \frac{\sqrt{3}}{2} x \right] \)
+
+    \item \( \frac{d^2 y}{dx^2} + 2 \frac{dy}{dx} + 2y = 0 \)  
+    \textbf{Respuesta:} \( y = e^{-x} (c_1 \cos x + c_2 \sin x) \)
+\end{enumerate}
+
+\section{Ejercicios de Ecuaciones de Orden Superior}
+
+\subsection{Ejemplo 01}
+Resolver la ecuación diferencial:
+
+\[
+y'''+5y''-22y'+56y=0
+\]
+
+\textbf{Paso 1:} Plantear la Ecuación Característica\\
+
+Asumimos que la solución es de la forma \( y = e^{r x} \), lo que nos lleva a la ecuación característica:
+
+\[
+r^{3}+9r^{2} +6r-56 = 0
+\]
+
+\textbf{Paso 2:}  Encontrar las Raíces de la Ecuación Característica \\
+
+Buscamos factores probables usando \textbf{Ruffini}:
+
+\[
+\begin{array}{rrrr| r}
+  1 & 9 & 6 & -56 & r \\
+    & -7 & -14 & 56 & -7\\
+  \hline
+  1 & 2 & -8 & 0 &  \\
+\end{array}
+\]
+
+Esto nos da \( (r -7) \) como factor. Factorizando:
+
+\[
+(r-7)(r^2 + 2r - 8) = 0
+\]
+
+Resolviendo la ecuación cuadrática:
+
+\[
+r^2 + 2r - 8 = 0
+\]
+
+Aplicamos la fórmula general:
+
+\[
+r = \frac{-(2) \pm \sqrt{(2)^2 - 4(1)(-8)}}{2(1)}
+\]
+
+\[
+r = \frac{-2 \pm \sqrt{4+32}}{2}
+\]
+
+\[
+r = \frac{-2 \pm 6}{2}
+\]
+
+\[
+r_1 = -4, \quad r_2 = 2
+\]
+
+\textbf{Paso 3}: Construir la Solución General
+
+Dado que tenemos \textbf{raíces reales y distintas}, la solución general es:
+
+\[
+y_h = c_1 e^{-7x} + c_2 e^{-4x} + c_3 e^{2x}
+\]
+
+\textbf{Solución final:}
+
+\[
+y(x) = c_1 e^{-7x} + c_2 e^{-4x} + c_3 e^{2x}
+\]
+
+
+\subsection{Ejemplo 02}
+
+Resolver la ecuación diferencial:
+
+\[
+y'''-6y''+11y'-6y=0
+\]
+
+Planteamos la ecuación característica:
+
+\[
+(D-1)(D-3)(D-2) = 0
+\]
+
+Calculamos las raíces usando Ruffini:
+
+\[
+\begin{array}{ r r r r|r }
+1 & -6 & 11 & -6 & r\\
+ & 1 & -4 & 6 & 1\\
+\hline
+1 & -5 & 6 & 0 & 
+\end{array}
+\]
+
+Las raíces son:
+
+\[
+r_1 = 1, \quad r_2 = 2, \quad r_3 = 3
+\]
+
+Solución general:
+
+\[
+y_{g} = c_{1} e^{x} +c_{2} e^{2x} +c_{3} e^{3x}
+\]
+
+\subsection{Ejemplo 03}
+
+Resolver:
+
+\[
+y^{(4)} -9y''+20y=0
+\]
+
+Planteamos la ecuación característica:
+
+\[
+e^{rx} (r^4 - 9r^2 + 20) = 0
+\]
+
+Calculamos raíces por Ruffini:
+
+\[
+\begin{array}{ r r r r r|r }
+1 & 0 & -9 & 0 & 20 & r\\
+ & 2 & 4 & -10 & -20 & 2\\
+\hline
+1 & 2 & -5 & -10 &  
+\end{array}
+\]
+
+Continuamos con el polinomio restante:
+
+\[
+\begin{array}{ r r r r|r }
+1 & 2 & -5 & -10 & r\\
+ & -2 & 0 & 10 & -2\\
+\hline
+1 & 0 & -5 & 0 &  
+\end{array}
+\]
+
+Raíces:
+
+\[
+r_1 = \sqrt{5}, \quad r_2 = -\sqrt{5}, \quad r_3 = -2, \quad r_4 = 2
+\]
+
+Solución general:
+
+\[
+y_{g} = c_{1} e^{\sqrt{5} x} +c_{2} e^{-\sqrt{5} x} +c_{3} e^{-2x} +c_{4} e^{2x}
+\]
+
+\subsection{Ejemplo 04}
+
+Resolver:
+
+\[
+y'''-6y''+2y'+36y=0
+\]
+
+Calculamos raíces por Ruffini:
+
+\[
+\begin{array}{ r r r r|r }
+1 & -6 & 2 & 36 & r\\
+ & -2 & 16 & -36 & -2\\
+\hline
+1 & -8 & 18 & 0 &  
+\end{array}
+\]
+
+Para el polinomio restante, aplicamos la fórmula cuadrática:
+
+\[
+r_{1,2} =\frac{8\pm \sqrt{64-72}}{2} = 4\pm \sqrt{2} i
+\]
+
+Raíces:
+
+\[
+r_1 = -2, \quad r_2 = 4 + \sqrt{2} i, \quad r_3 = 4 - \sqrt{2} i
+\]
+
+Solución general:
+
+\[
+y_{g} = c_{1} e^{-2x} +e^{4x} \left( c_{2} \cos(\sqrt{2} x) + c_{3} \sin(\sqrt{2} x) \right)
+\]
+
+\subsection{Ejemplo 05}
+
+Resolver:
+
+\[
+y^{(4)} +8y''' + 24y'' + 32y' + 16y = 0
+\]
+
+Calculamos raíces por Ruffini:
+
+\[
+\begin{array}{ r r r r r|r }
+1 & 8 & 24 & 32 & 16 & r\\
+ & -2 & -12 & -24 & -16 & -2\\
+\hline
+1 & 6 & 12 & 8 & 0 &  
+\end{array}
+\]
+
+Continuamos con el polinomio restante:
+
+\[
+\begin{array}{ r r r r|r }
+1 & 6 & 12 & 8 & r\\
+ & -2 & -8 & -8 & -2\\
+\hline
+1 & 4 & 4 & 0 &  
+\end{array}
+\]
+
+Raíces:
+
+\[
+r_1 = -2, \quad r_2 = -2, \quad r_3 = -2, \quad r_4 = -2
+\]
+
+Solución general:
+
+\[
+y_{g} = c_{1} e^{-2x} + c_{2} x e^{-2x} + c_{3} x^2 e^{-2x} + c_{4} x^3 e^{-2x}
+\]
+
+\subsection{Ejemplo 06}
+
+Dada una solución \( y_1 = x\cos(2x) \), reconstruir la ecuación diferencial de cuarto orden.
+
+Sabemos que, al haber una función trigonométrica, su complemento también debe estar presente. Además, si está multiplicada por \( x \), eso implica que había duplicidad de raíces. Deducimos:
+
+\[
+y_1 = x\cos(2x), \quad y_2 = x\sin(2x), \quad y_3 = \cos(2x), \quad y_4 = \sin(2x)
+\]
+
+Las raíces deben ser imaginarias repetidas:
+
+\[
+r_{1,2} = 0 \pm 2i, \quad r_{3,4} = 0 \pm 2i
+\]
+
+Multiplicamos los factores:
+
+\[
+(r - 2i)(r + 2i)(r - 2i)(r + 2i) = 0
+\]
+
+Desarrollamos:
+
+\[
+(r^2 + 4)(r^2 + 4) = 0
+\]
+
+\[
+r^4 + 8r^2 + 16 = 0
+\]
+
+Por lo tanto, la ecuación diferencial es:
+
+\[
+y^{(4)} + 8y'' + 16y = 0
+\]
+
+\textbf{Consejo sobre el Uso de Ruffini para Raíces Imaginarias}
+
+Podemos aprovechar el polinomio para determinar las raíces de forma manual utilizando también Ruffini.  
+Si en un caso extremo se dificulta encontrar las raíces reales, lo más probable es que estemos lidiando con un polinomio que tiene raíces imaginarias.  
+En ese caso, podemos considerar raíces imaginarias en el método.
+
+Aplicamos Ruffini:
+
+\[
+\begin{array}{ r r r r r|r }
+1 & 0 & 8 & 0 & 16 & r\\
+ & 2i & -4 & 8i & -16 & 2i\\
+\hline
+1 & 2i & 4 & 8i & 0 &  
+\end{array}
+\]
+
+Continuamos con el polinomio restante:
+
+\[
+\begin{array}{ r r r r|r }
+1 & 2i & 4 & 8i & r\\
+ & -2i & 0 & -8i & -2i\\
+\hline
+1 & 0 & 4 & 0 &  
+\end{array}
+\]
+
+Para el último factor, deducimos fácilmente que el polinomio es:
+
+\[
+r^2 + 4 = 0
+\]
+
+Por lo tanto, el resto de raíces también son imaginarias:
+
+\[
+r^2 = \sqrt{-4} = \pm 2i
+\]
+
+\subsection*{EJERCICIOS PROPUESTOS}
+
+\begin{enumerate}
+    \item \( y''' - 2y'' - y' + 2y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + c_3 e^{2x} \)
+
+    \item \( y''' + 3y'' - 3y' + y = 0 \)  
+    \textbf{Respuesta:} \( e^{-x} (c_1 + c_2 x + c_3 x^2) = y \)
+
+    \item \( y''' - y'' + y' - y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 \cos x + c_3 \sin x \)
+
+    \item \( y''' - y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + e^{-x/2} \left[ c_2 \cos \frac{\sqrt{3}}{2} x + c_3 \sin \frac{\sqrt{3}}{2} x \right] \)
+
+    \item \( y^{(4)} - y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + c_3 \cos x + c_4 \sin x \)
+
+    \item \( y^{(4)} - 4y''' + 6y'' - 4y' + y = 0 \)  
+    \textbf{Respuesta:} \( y = e^x (c_1 + c_2 x + c_3 x^2 + c_4 x^3) \)
+
+    \item \( 6y''' - y'' - 6y' + y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + c_3 e^{x/6} \)
+
+    \item \( y''' - y'' - 3y' - y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^{-x} + c_2 e^{(1+\sqrt{2})x} + c_3 e^{(1-\sqrt{2})x} \)
+
+    \item \( y^{(6)} - y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + e^{x/2} \left[ c_3 \cos \frac{\sqrt{3}}{2} x + c_4 \sin \frac{\sqrt{3}}{2} x \right] + e^{-x/2} \left[ c_5 \cos \frac{\sqrt{3}}{2} x + c_6 \sin \frac{\sqrt{3}}{2} x \right] \)
+
+    \item \( \frac{d^3 y}{dx^3} - 2 \frac{d^2 y}{dx^2} - 3 \frac{dy}{dx} = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 + c_2 e^{-x} + c_3 e^{3x} \)
+
+    \item \( \frac{d^3 y}{dx^3} + 4 \frac{d^2 y}{dx^2} + 4 \frac{dy}{dx} = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 + (c_2 + c_3 x)e^{-2x} \)
+
+    \item \( \frac{d^4 y}{dx^4} = y \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + c_3 \cos x + c_4 \sin x \)
+
+    \item \( \frac{d^4 y}{dx^4} + 2 \frac{d^2 y}{dx^2} + y = 0 \)  
+    \textbf{Respuesta:} \( y = (c_1 + c_2 x) \cos x + (c_3 + c_4 x) \sin x \)
+
+    \item \( \frac{d^4 y}{dx^4} + 3 \frac{d^2 y}{dx^2} - 4y = 0 \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + c_3 \cos 2x + c_4 \sin 2x \)
+
+\end{enumerate}
+
+\section{El Método de Coeficientes Indeterminados}
+Se usa cuando \( g(x) \) es una combinación de polinomios, exponenciales y senoidales. La solución particular \( y_p \) se asume con una forma similar a \( g(x) \), con coeficientes por determinar.\\
+Consideramos una ecuación diferencial con coeficientes constantes:\[
+ay''+by'+cy\ =\ g( x) \quad \text{(No es cero)}
+\]
+
+1. Se asume que existe una solución para \( g(x) \) en función de la forma de \( g(x) \).
+
+2. \( g(x) \) puede ser una combinación de sumas (+), restas (-) o multiplicaciones (*) de ciertas funciones comunes:
+
+   - \textbf{Polinomios}  
+     Si \( g(x) = x^{3} \), la solución particular se asume como:
+     \[
+     y_{p} = Ax^{3} + Bx^{2} + Cx + D
+     \]
+
+   - \textbf{Funciones Trigonométricas}
+     Si \( g(x) = 3\cos 2x \), la solución particular se asume como:
+     \[
+     y_{p} = A\sin(2x) + B\cos(2x)
+     \]
+
+   - \textbf{Funciones Exponenciales}  
+     Si \( g(x) = 3e^{5x} \), la solución particular se asume como:
+     \[
+     y_{p} = Ae^{5x}
+     \]
+
+3. En función de la solución supuesta, se representa con coeficientes indeterminados y el objetivo es determinar sus valores.
+
+4. Para encontrar estos coeficientes, se debe aplicar la derivación respectiva y asumir la igualdad en la ecuación diferencial.
+
+
+
+\subsection*{Ejemplo 01: Solución para \( g(x) = e^{2x} \)}
+Resolver:
+
+\begin{equation}
+y'' - 3y' + 2y = e^{2x}
+\end{equation}
+
+\textbf{Paso 1: Resolver la homogénea}
+La ecuación característica es:
+
+\begin{equation}
+r^2 - 3r + 2 = 0
+\end{equation}
+
+Factorizando:
+
+\begin{equation}
+(r - 1)(r - 2) = 0 \Rightarrow r = 1, 2
+\end{equation}
+
+Solución homogénea:
+
+\begin{equation}
+y_h = C_1 e^x + C_2 e^{2x}
+\end{equation}
+
+\textbf{Paso 2: Proponer una solución particular}
+Como \( g(x) = e^{2x} \), proponemos:
+
+\begin{equation}
+y_p = A x e^{2x}
+\end{equation}
+
+Derivando:
+
+\begin{equation}
+y_p' = A e^{2x} + 2Ax e^{2x}
+\end{equation}
+
+\begin{equation}
+y_p'' = 2A e^{2x} + 2A e^{2x} + 4Ax e^{2x}
+\end{equation}
+
+Sustituyendo en la ecuación:
+
+\begin{equation}
+(2A e^{2x} + 2A e^{2x} + 4Ax e^{2x}) - 3(A e^{2x} + 2Ax e^{2x}) + 2Ax e^{2x} = e^{2x}
+\end{equation}
+
+Resolviendo para \( A \), obtenemos \( A = \frac{1}{4} \). Por lo tanto:
+
+\begin{equation}
+y_p = \frac{1}{4} x e^{2x}
+\end{equation}
+
+\textbf{Solución general:}
+
+\begin{equation}
+y = C_1 e^x + C_2 e^{2x} + \frac{1}{4} x e^{2x}
+\end{equation}
+
+
+
+\subsection{Ejercicio 02}
+
+\[
+y'' - y' - 2y = e^{3x}
+\]
+
+Primeramente encontramos la solución homogénea \( y_h \)
+
+\[
+y'' - y' - 2y = 0
+\]
+
+\[
+( r - 2)( r + 1) \Rightarrow r_{1} = 2, \quad r_{2} = -1
+\]
+
+\[
+y_h = c_{1} e^{2x} + c_{2} e^{-x}
+\]
+
+Procedemos a derivar la solución supuesta planteada por el método
+
+\[
+y_p = A e^{3x}
+\]
+
+\[
+y_p' = 3A e^{3x}
+\]
+
+\[
+y_p'' = 9A e^{3x}
+\]
+
+Reemplazando las funciones derivadas en la E.D.
+
+\[
+9A e^{3x} - 3A e^{3x} - 2A e^{3x} = e^{3x}
+\]
+
+\[
+e^{3x} (9A - 3A - 2A) = e^{3x}
+\]
+
+\[
+9A - 3A - 2A = 1
+\]
+
+\[
+4A = 1 \Rightarrow A = \frac{1}{4}
+\]
+
+\[
+y_p = \frac{1}{4} e^{3x}
+\]
+
+La solución general es
+
+\[
+y_g = y_h + y_p
+\]
+
+\[
+y_g = c_{1} e^{2x} + c_{2} e^{-x} + \frac{1}{4} e^{3x}
+\]
+
+
+\subsection*{Ejercicio 03}
+
+\[
+y'' = 9x^{2} + 2x - 1
+\]
+
+Encontramos la solución homogénea:
+
+\[
+y'' = 0
+\]
+
+\[
+r = 0
+\]
+
+\[
+y_h = c_1 e^{0x} + c_2 e^{0x}
+\]
+
+\[
+y_1 = 1, \quad y_2 = x
+\]
+
+\[
+y_h = c_1 + c_2 x
+\]
+
+En teoría se tendría la siguiente solución:
+
+\[
+y_g = c_1 + c_2 x + \left(Ax^2 + Bx + C\right)
+\]
+
+Sin embargo, hay un detalle con este planteamiento:
+
+\[
+y_p = Ax^2 + Bx + C \quad \Rightarrow \quad \text{causa resonancia}
+\]
+
+Por ende, debemos solucionarlo y plantear una solución que evite dicha dificultad:
+
+\[
+y_g = c_1 + c_2 x + \left(Ax^4 + Bx^3 + Cx^2\right)
+\]
+
+Multiplicamos por \( x^2 \) para garantizar la independencia lineal:
+
+\[
+y_p = Ax^4 + Bx^3 + Cx^2
+\]
+
+Derivamos \( y_p \):
+
+\[
+y_p' = 4A x^3 + 3B x^2 + 2C x
+\]
+
+\[
+y_p'' = 12A x^2 + 6B x + 2C
+\]
+
+Reemplazamos en la ecuación diferencial:
+
+\[
+y'' = 9x^2 + 2x -1
+\]
+
+\[
+12A x^2 + 6B x + 2C = 9x^2 + 2x - 1
+\]
+
+\[
+12A x^2 = 9x^2
+\]
+
+\[
+A = \frac{9}{12} = \frac{3}{4}
+\]
+
+\[
+B = \frac{1}{3}, \quad C = \frac{-1}{2}
+\]
+
+\[
+y_p = \frac{3}{4} x^4 + \frac{1}{3} x^3 - \frac{1}{2} x^2
+\]
+
+Ejercicios para completar:
+
+\[
+y'' - y' - 2y = 4x^2
+\]
+
+\[
+y'' - 6y' + 25y = 50x^3 - 36x^2 - 63x + 18
+\]
+
+\subsection*{Ejercicio 04}
+
+
+\[
+y'' - y' - 2y = \sin(2x)
+\]
+
+\[
+y_p = A\sin(2x) + B\cos(2x)
+\]
+
+\[
+y_p' = 2A\cos(2x) - 2B\sin(2x)
+\]
+
+\[
+y_p'' = -4A\sin(2x) - 4B\cos(2x)
+\]
+
+\[
+-4A\sin(2x) - 4B\cos(2x) - 2A\cos(2x) + 2B\sin(2x) - 2A\sin(2x) -2B\cos(2x) = \sin(2x) + 0\cos(2x)
+\]
+
+\[
+(-4A + 2B - 2A) \sin(2x) = \sin(2x)
+\]
+
+\[
+-6A + 2B = 1
+\]
+
+\[
+(-4B - 2A - 2B) \cos(2x) = 0\cos(2x)
+\]
+
+\[
+-6B - 2A = 0
+\]
+
+\[
+-6B = 2A
+\]
+
+\[
+A = -3B
+\]
+
+Reemplazando en la ecuación anterior:
+
+\[
+-6(-3B) + 2B = 1
+\]
+
+\[
+20B = 1
+\]
+
+\[
+B = \frac{1}{20}
+\]
+
+Reemplazando en la ecuación de \( A \):
+
+\[
+A = -\frac{3}{20}
+\]
+
+Reemplazando en la ecuación de \( y_p \):
+
+\[
+y_p = A\sin(2x) + B\cos(2x)
+\]
+
+\[
+y_p = -\frac{3}{20} \sin(2x) + \frac{1}{20} \cos(2x)
+\]
+
+\subsection*{Ejercicio 05}
+\[
+y''' - 6y'' + 11y' - 6y = 2x e^{-x} + x^2 \cos(2x)
+\]
+
+Encontramos primeramente la solución \( y_h \), para ello nos apoyamos con Ruffini:
+
+\[
+\begin{array}{r r r r|r}
+1 & -6 & 11 & -6 & r\\
+ & 1 & -5 & 6 & 1\\
+\hline
+1 & -5 & 6 & 0 & 
+\end{array}
+\]
+
+Por ende, los factores formados serían:
+
+\[
+( r - 3)( r - 2)( r - 1)
+\]
+
+Encontramos la solución homogénea:
+
+\[
+y_h = c_1 e^{3x} + c_2 e^{2x} + c_3 e^{x}
+\]
+
+Ahora debemos plantear una solución particular siguiendo el método:
+
+\[
+y_p = ( Ax + B) e^{-x} + ( Cx^2 + Dx + E) \cos(2x) + ( Fx^2 + Gx + H) \sin(2x)
+\]
+
+Podemos tratar individualmente cada término de la ecuación para hacer más sencillo el planteamiento:
+
+\[
+y_{p1} = ( Ax + B) e^{-x}
+\]
+
+\[
+y_{p2} = ( Cx^2 + Dx + E) \cos(2x) + ( Fx^2 + Gx + H) \sin(2x)
+\]
+
+La suma de ambos formaría la solución particular:
+
+\[
+y_p = y_{p1} + y_{p2}
+\]
+
+\[
+y''' - 6y'' + 11y' - 6y = 2x e^{-x}
+\]
+
+\[
+y_h = c_1 e^{3x} + c_2 e^{2x} + c_3 e^{x}
+\]
+
+\[
+y_p = ( Ax + B) e^{-x} = Ax e^{-x} + B e^{-x}
+\]
+
+Procedemos a determinar las derivadas necesarias:
+
+\[
+y_p' = A e^{-x} - A x e^{-x} - B e^{-x}
+\]
+
+\[
+y_p'' = -A e^{-x} - ( A e^{-x} - A x e^{-x}) + B e^{-x}
+\]
+
+\[
+y_p'' = -2A e^{-x} + A x e^{-x} + B e^{-x}
+\]
+
+\[
+y_p''' = 3A e^{-x} - A x e^{-x} - B e^{-x}
+\]
+
+Reemplazamos en la ecuación diferencial original:
+
+\[
+3A e^{-x} - A x e^{-x} - B e^{-x} -6(-2A e^{-x} + A x e^{-x} + B e^{-x})
+\]
+
+\[
++11( A e^{-x} - A x e^{-x} - B e^{-x}) -6( A x e^{-x} + B e^{-x}) = 2x e^{-x}
+\]
+
+Realizamos las operaciones respectivas:
+
+\[
+3A e^{-x} - A x e^{-x} - B e^{-x} + 12A e^{-x} -6A x e^{-x} -6B e^{-x}
+\]
+
+\[
++11A e^{-x} -11A x e^{-x} -11B e^{-x} -6A x e^{-x} -6B e^{-x} = 2x e^{-x}
+\]
+
+Armamos el sistema para determinar los coeficientes:
+
+\[
+26A e^{-x} - 24B e^{-x} = 0
+\]
+
+\[
+-24A x e^{-x} = 2x e^{-x}
+\]
+
+Obtenemos los coeficientes requeridos:
+
+\[
+A = -\frac{1}{12}
+\]
+
+\[
+B = -\frac{13}{144}
+\]
+
+Es posible calcular la otra función solución \( y_{p2} \) siguiendo los criterios anteriores y de esa manera se obtendrá la solución particular completa.
+
+\subsection*{b) EJERCICIOS PROPUESTOS.-}
+
+\textit{Resolver las ecuaciones diferenciales siguientes:}
+
+\begin{enumerate}
+    \item \( \frac{d^2 y}{dx^2} - \frac{dy}{dx} = x^2 \)  
+    \textbf{Respuesta:} \( y = c_1 + c_2 e^x - \frac{x^3}{3} - x^2 - 2x \)
+
+    \item \( \frac{d^2 y}{dx^2} - 4 \frac{dy}{dx} - 5y = 5x \)  
+    \textbf{Respuesta:} \( y = c_1 e^{-x} + c_2 e^{5x} + x + \frac{4}{5} \)
+
+    \item \( \frac{d^3 y}{dx^3} - \frac{dy}{dx} = x+1 \)  
+    \textbf{Respuesta:} \( y = c_1 + c_2 e^x - c_3 e^{-x} - \frac{x^2}{2} - x \)
+
+    \item \( \frac{d^2 y}{dx^2} - 4 \frac{dy}{dx} + 4y = 4(x-1) \)  
+    \textbf{Respuesta:} \( y = e^{2x} (c_1 x + c_2) + x \)
+
+    \item \( y'' - 7y' + 12y = -e^{4x} \)  
+    \textbf{Respuesta:} \( y = c_1 e^{3x} + c_2 e^{4x} - x e^{4x} \)
+
+    \item \( y'' - 2y' + y = 2e^x \)  
+    \textbf{Respuesta:} \( y = e^x (c_1 + c_2 x + x^2) \)
+
+    \item \( y'' = x e^x + y \)  
+    \textbf{Respuesta:} \( y = c_1 e^x + c_2 e^{-x} + \frac{(x^2 - x) e^x}{4} \)
+
+    \item \( y'' - 4y' + 4y = x e^{2x} \)  
+    \textbf{Respuesta:} \( y = (c_1 + c_2 x + \frac{x^3}{6}) e^{2x} \)
+
+    \item \( \frac{d^2 y}{dx^2} + y = \sin x \)  
+    \textbf{Respuesta:} \( y = c_1 \cos x + c_2 \sin x - \frac{x}{2} \cos x \)
+
+    \item \( \frac{d^2 y}{dx^2} + 4y = \cos x \)  
+    \textbf{Respuesta:} \( y = c_1 \cos 2x + c_2 \sin 2x + \frac{\cos x}{3} \)
+
+    \item \( \frac{d^4 y}{dx^4} - 2 \frac{d^2 y}{dx^2} + y = 5 \sin 2x \)  
+    \textbf{Respuesta:} \( y = (c_1 + c_2 x)e^x + (c_3 + c_4 x)e^{-x} + \frac{\sin 2x}{5} \)
+\end{enumerate}
+
+\section{Método de Variación de Parámetros}
+Se usa cuando \( g(x) \) no permite usar coeficientes indeterminados. Se asume:
+
+\begin{equation}
+y_p = v_1 y_1 + v_2 y_2
+\end{equation}
+
+donde \( y_1 \) y \( y_2 \) son soluciones de la homogénea.
+
+
+Este método es genérico y permite resolver la mayor parte de ecuaciones diferenciales de orden \( n \) con coeficientes constantes no homogéneas. Se debe considerar que el mismo utiliza muchas veces el Wronskiano para determinar las soluciones y se apoya en derivadas e integrales.
+
+Dada una E.D. de orden \( n \), por decir una de segundo orden de la forma:
+
+\[
+ay'' + by' + cy = g(x)
+\]
+
+se sabe que esta tiene una solución homogénea:
+
+\[
+y_h = c_1 y_1 + c_2 y_2
+\]
+
+donde \( y_1 \) y \( y_2 \) son soluciones linealmente independientes.
+
+El método parte de un supuesto, se debe encontrar una solución que permita obtener \( g(x) \), sin importar qué tipo de expresión sea esta. Para ello, se asume que las soluciones homogéneas multiplicadas por alguna función deberían permitirnos encontrar \( g(x) \). Por ende, se puede asumir lo siguiente:
+
+\[
+y_p = v_1 y_1 + v_2 y_2
+\]
+
+donde \( v_1 \) y \( v_2 \) ahora serán funciones desconocidas que el método debería permitirnos encontrar.
+
+Para hallar las mismas se parte del armado de un sistema de ecuaciones algebraicas considerando las funciones a encontrar presentes en sus derivadas:
+
+\[
+v_1' y_1 + v_2' y_2 = 0
+\]
+
+\[
+v_1' y_1' + v_2' y_2' = g(x)
+\]
+
+Resolver el sistema para \( v_1' \) y \( v_2' \) nos permitirá encontrar la solución a la E.D. Para ello, uno puede aplicar cualquier método (matricial, algebraico) para encontrar las funciones incógnitas. En nuestro caso, podemos utilizar un método por matrices y la determinante (Wronskiano).
+
+Por ejemplo, para armar el sistema de ecuaciones para una ecuación de orden 3, tendríamos:
+
+\[
+ay''' + by'' + cy' + dy = g(x)
+\]
+
+Dadas \( y_1, y_2, y_3 \), se arma el Wronskiano:
+
+\[
+W =
+\begin{vmatrix}
+y_1 & y_2 & y_3 \\
+y_1' & y_2' & y_3' \\
+y_1'' & y_2'' & y_3''
+\end{vmatrix}
+\]
+
+\[
+v_1' y_1 + v_2' y_2 + v_3' y_3 = 0
+\]
+
+\[
+v_1' y_1' + v_2' y_2' + v_3' y_3' = 0
+\]
+
+\[
+v_1' y_1'' + v_2' y_2'' + v_3' y_3'' = g(x)
+\]
+
+Del sistema armado, se van a encontrar \( v_1', v_2', v_3' \) en su forma derivada. Para encontrar los valores de las funciones deseadas, se debe integrar:
+
+\[
+v_1 = \int \dots
+\]
+
+
+\subsection{Ejemplo 1:} Resolver \( y'' + y = \tan x \)
+\textbf{Paso 1: Resolver la homogénea}
+
+\begin{equation}
+y'' + y = 0
+\end{equation}
+
+Raíces características: \( r = \pm i \), por lo que:
+
+\begin{equation}
+y_h = C_1 \cos x + C_2 \sin x
+\end{equation}
+
+\textbf{Paso 2: Aplicar variación de parámetros}
+Buscamos:
+
+\begin{equation}
+y_p = u_1 \cos x + u_2 \sin x
+\end{equation}
+
+Derivadas:
+
+\begin{equation}
+y_p' = u_1' \cos x + u_2' \sin x + u_1 (-\sin x) + u_2 \cos x
+\end{equation}
+
+\begin{equation}
+y_p'' = u_1' (-\sin x) + u_2' \cos x + u_1' (-\cos x) + u_2' (-\sin x) + u_1 (-\cos x) + u_2 (-\sin x)
+\end{equation}
+
+Imponiendo \( u_1' \cos x + u_2' \sin x = 0 \) y resolviendo:
+
+\begin{equation}
+u_1 = \int -\tan x \sin x dx, \quad u_2 = \int \tan x \cos x dx
+\end{equation}
+
+Tras integración, encontramos:
+
+\begin{equation}
+y_p = -\ln |\cos x| \cos x + \ln |\cos x| \sin x
+\end{equation}
+
+\textbf{Solución general:}
+
+\begin{equation}
+y = C_1 \cos x + C_2 \sin x - \ln |\cos x| \cos x + \ln |\cos x| \sin x
+\end{equation}
+
+
+\subsection*{Ejemplo 02}
+
+\[
+2y'' + 18y = 6\tan(3t)
+\]
+
+Para aplicar variación de parámetros, la E.D. debe estar en su forma estándar:
+
+\[
+y'' + 9y = 3\tan(3t)
+\]
+
+Encontramos la solución homogénea:
+
+\[
+r^2 + 9 = 0 \Rightarrow r = \pm 3i
+\]
+
+\[
+y_1 = \sin(3t), \quad y_2 = \cos(3t)
+\]
+
+\[
+y_h = c_1 \sin(3t) + c_2 \cos(3t)
+\]
+
+Para aplicar el método, partimos de las soluciones homogéneas considerando que se multiplican por supuestas funciones \( v_i \):
+
+\[
+y_p = v_1 \sin(3t) + v_2 \cos(3t)
+\]
+
+Armamos el sistema de ecuaciones:
+
+\[
+v_1' \sin(3t) + v_2' \cos(3t) = 0
+\]
+
+\[
+v_1' (3\cos(3t)) - v_2' (3\sin(3t)) = 3\tan(3t)
+\]
+
+Calculamos el Wronskiano:
+
+\[
+W =
+\begin{vmatrix}
+\sin(3t) & \cos(3t) \\
+3\cos(3t) & -3\sin(3t)
+\end{vmatrix}
+= -3 (\sin^2(3t) + \cos^2(3t)) = -3
+\]
+
+Calculamos los \( W_i \):
+
+\[
+W_1 =
+\begin{vmatrix}
+0 & \cos(3t) \\
+3\tan(3t) & -3\sin(3t)
+\end{vmatrix}
+= -3\cos(3t) \frac{\sin(3t)}{\cos(3t)} = -3\sin(3t)
+\]
+
+\[
+W_2 =
+\begin{vmatrix}
+\sin(3t) & 0 \\
+3\cos(3t) & 3\tan(3t)
+\end{vmatrix}
+= 3\sin(3t) \tan(3t) = \frac{3\sin^2(3t)}{\cos(3t)}
+\]
+
+Encontramos los valores de \( v_i' \):
+
+\[
+v_1' = \frac{W_1}{W} = \frac{-3\sin(3t)}{-3} = \sin(3t)
+\]
+
+\[
+v_2' = \frac{W_2}{W} = \frac{3\sin^2(3t)}{\cos(3t)} \frac{1}{-3} = -\frac{\sin^2(3t)}{\cos(3t)}
+\]
+
+Procedemos a integrar:
+
+\[
+v_1 = \int \sin(3t) dt = -\frac{1}{3} \cos(3t)
+\]
+
+\[
+v_2 = -\int \frac{\sin^2(3t)}{\cos(3t)} dt = -\int ( \sec(3t) - \cos(3t)) dt
+\]
+
+\[
+v_2 = -\left( \frac{1}{3} \ln( \tan(3t) + \sec(3t)) - \frac{1}{3} \sin(3t) \right)
+\]
+
+\[
+y_p = v_1 \sin(3t) + v_2 \cos(3t)
+\]
+
+\[
+y = c_1 \sin(3t) + c_2 \cos(3t) -\frac{1}{3} \cos(3t) \sin(3t) + \left( -\frac{1}{3} \ln( \tan(3t) + \sec(3t)) + \frac{1}{3} \sin(3t) \right) \cos(3t)
+\]
+
+Evaluando con los valores de frontera \( y(0) = 1 \), \( y'(0) = 1 \):
+
+\[
+1 = c_2 \Rightarrow c_2 = 1
+\]
+
+\[
+1 = 3c_1 \Rightarrow c_1 = \frac{1}{3}
+\]
+
+\[
+y_h = \frac{1}{3} \sin(3t) + \cos(3t)
+\]
+
+\subsection*{Ejemplo 03}
+
+\[
+y''' + y' = \sec(x)
+\]
+
+
+\subsection*{EJERCICIOS PROPUESTOS}
+
+\begin{enumerate}
+    \item \( \frac{d^2 y}{dx^2} + y = c \tan x \)  
+    \textbf{Respuesta:} \( y = c_1 \cos x + c_2 \sin x - \sin x \ln |\cos x| - c \tan x \)
+
+    \item \( \frac{d^2 y}{dx^2} + y = \sec x \)  
+    \textbf{Respuesta:} \( y = c_1 \cos x + c_2 \sin x + x \sin x + \cos x \ln |\cos x| \)
+
+    \item \( \frac{d^2 y}{dx^2} + 4y = 4c \tan 2x \)  
+    \textbf{Respuesta:} \( y = c_1 \sin 2x + c_2 \cos 2x + \sin 2x \ln |\cos 2x - c \tan 2x| \)
+
+    \item \( y'' + 2y' + 2y = e^{-x} \sec x \)  
+    \textbf{Respuesta:} \( y = e^{-x} (c_1 + x) \sin x + e^{-x} [c_2 + \ln (\cos x)] \cos x \)
+
+    \item \( y'' + 4y' + 4y = x^{-2} e^{-2x} \)  
+    \textbf{Respuesta:} \( y = e^{-2x} (c_1 -1 + c_2 x - \ln x) \)
+\end{enumerate}
+
+
+\section{Ecuaciones Diferenciales de Cauchy Euler}
+
+Las ecuaciones diferenciales de Euler son de la forma:
+
+\[
+    a_n x^n \frac{d^n y}{dx^n} + a_{n-1} x^{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1 x \frac{dy}{dx} + a_0 y = 0
+\]
+
+donde $a_0, a_1, a_2, \dots, a_n$ son constantes.
+
+Para resolver la ecuación diferencial, se transforma en una ecuación diferencial homogénea de coeficientes constantes mediante la sustitución:
+
+\[
+    x = e^t \quad \Rightarrow \quad t = \ln x, \quad \text{además} \quad \frac{dx}{dt} = e^t \quad \text{y} \quad \frac{dt}{dx} = e^{-t}. 
+\]
+
+aplicando la regla de la cadena
+
+\[
+    \frac{dt}{dx} = e^{-t} \frac{dy}{dy},
+\]
+
+de donde se puede hacer un cruze de variables para obtener :
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}.
+\]
+
+Para la segunda derivada:
+
+\[
+    \frac{d^2 y}{dx^2} = e^{-t} \frac{d}{dt} \left( e^{-t} \frac{dy}{dt} \right).
+\]
+
+Desarrollando:
+
+\[
+    \frac{d^2 y}{dx^2} = e^{-t} \left( -e^{-t} \frac{dy}{dt} + e^{-t} \frac{d^2 y}{dt^2} \right).
+\]
+
+Por lo tanto:
+
+\[
+    \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Este mismo procedimiento se aplica para ecuaciones de orden superior.
+
+Las ecuaciones diferenciales de Euler también pueden presentarse en la forma:
+
+\[
+    a_n (ax + b)^n \frac{d^n y}{dx^n} + a_{n-1} (ax + b)^{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1 (ax + b) \frac{dy}{dx} + a_0 y = 0.
+\]
+
+Para resolver esta ecuación, se usa la transformación:
+
+\[
+    ax + b = e^t \quad \Rightarrow \quad t = \ln (ax + b), \quad \text{además} \quad \frac{dx}{dt} = \frac{e^t}{a}.
+\]
+
+También,
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt},
+\]
+
+de donde se tiene:
+
+\[
+    \frac{d^2 y}{dx^2} = a^2 e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Las ecuaciones diferenciales no homogéneas de Euler tienen la forma:
+
+\[
+    a_n x^n \frac{d^n y}{dx^n} + a_{n-1} x^{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1 x \frac{dy}{dx} + a_0 y = x^m P_m (\ln x),
+\]
+
+donde $m$ es el grado del polinomio $P_m (\ln x)$. Para resolver estas ecuaciones, se sigue el mismo procedimiento de transformación que en los casos anteriores.
+
+
+
+\subsection{Ejercicio  01}
+
+Resolver la ecuación diferencial:
+
+\[
+    (x+2)^2 y'' + 3(x+2)y' - 3y = 0
+\]
+
+Sea $x + 2 = e^t$, entonces $t = \ln (x+2)$, además:
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}, \quad \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Reemplazando en la ecuación diferencial:
+
+\[
+    e^{2t} e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + 3e^t e^{-t} \frac{dy}{dt} - 3y = 0.
+\]
+
+Simplificando:
+
+\[
+    \frac{d^2 y}{dt^2} + 2 \frac{dy}{dt} - 3y = 0,
+\]
+
+que es una ecuación diferencial homogénea de coeficientes constantes.
+
+El polinomio característico es:
+
+\[
+    P(r) = r^2 + 2r - 3 = 0.
+\]
+
+Resolviendo:
+
+\[
+    r_1 = -3, \quad r_2 = 1.
+\]
+
+Por lo tanto, la solución general es:
+
+\[
+    y(t) = c_1 e^{-3t} + c_2 e^t.
+\]
+
+Regresando a $x$:
+
+\[
+    y = \frac{c_1}{(x+2)^3} + c_2 (x+2).
+\]
+
+\subsection{Ejercicio 02}
+
+Resolver la ecuación diferencial:
+
+\[
+    x^2 y'' + xy' + y = x(6 - \ln x)
+\]
+
+Sea $x = e^t$, entonces $t = \ln x$, además:
+
+\[
+    \frac{dy}{dx} = e^{-t} \frac{dy}{dt}, \quad \frac{d^2 y}{dx^2} = e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right).
+\]
+
+Reemplazando en la ecuación diferencial:
+
+\[
+    e^{2t} e^{-2t} \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + e^t e^{-t} \frac{dy}{dt} + y = e^t (6 - t).
+\]
+
+Simplificando:
+
+\[
+    \frac{d^2 y}{dt^2} + y = (6 - t)e^t.
+\]
+
+Esta es una ecuación diferencial no homogénea de coeficientes constantes.
+
+El polinomio característico es:
+
+\[
+    P(r) = r^2 + 1 = 0.
+\]
+
+Resolviendo:
+
+\[
+    r_1 = i, \quad r_2 = -i.
+\]
+
+La solución complementaria es:
+
+\[
+    y_g = c_1 \cos t + c_2 \sen t.
+\]
+
+Para la solución particular, proponemos:
+
+\[
+    y_p = (At + B)e^t.
+\]
+
+Calculamos derivadas:
+
+\[
+    y_p' = Ae^t + (At + B)e^t,
+\]
+\[
+    y_p'' = 2Ae^t + (At + B)e^t.
+\]
+
+Sustituyendo en la ecuación:
+
+\[
+    2Ae^t + 2(At + B)e^t + (At + B)e^t = (6 - t)e^t.
+\]
+
+Comparando coeficientes:
+
+\[
+    2A + 2A = -1 \Rightarrow A = -\frac{1}{2},
+\]
+\[
+    2B = 7 \Rightarrow B = \frac{7}{2}.
+\]
+
+Por lo tanto:
+
+\[
+    y_p = \left(-\frac{t}{2} + \frac{7}{2}\right)e^t.
+\]
+
+La solución general es:
+
+\[
+    y(t) = c_1 \cos t + c_2 \sin t - \frac{t}{2} + \frac{7}{2}.
+\]
+
+Regresando a $x$:
+
+\[
+    y = c_1 \cos (\ln x) + c_2 \sin (\ln x) - \frac{1}{2} (\ln x - 7).
+\]
+
+\subsection{Ejercicios Propuestos}
+
+Resolver los siguientes ejercicios:
+
+\begin{enumerate}
+    \item $x^2 y'' + 2xy' - 2y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 |x| + c_2 |x|^{-2}$
+    
+    \item $x^2 y'' + xy' + 9y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 \sen(3 \ln |x|) + c_2 \cos(3 \ln |x|)$
+    
+    \item $4x^2 y'' - 8xy' + 9y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x^{\frac{3}{2}} + c_2 x^{\frac{3}{2}} \ln x$
+    
+    \item $x^2 y'' - 3xy' + 7y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x^2 \cos \sqrt{3} \ln x + c_2 x^2 \sen \sqrt{3} \ln x$
+    
+    \item $x^2 y'' + xy' - p^2 y = 0$, donde $p$ es una constante.  \\
+    \textbf{Respuesta:} $y = c_1 |x|^p + c_2 |x|^{-p}, \quad p \neq 0$
+    
+    \item $x^3 y''' - 2x^2 y'' - 17xy' - 7y = 0$  \\
+    \textbf{Respuesta:} $y = |x|^{-1} (c_1 + c_2 \ln |x|) + c_3 |x|^7$
+    
+    \item $x^3 y''' + 4x^2 y'' - 2y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 |x|^{-1} + c_2 |x|^{\sqrt{2}} + c_3 |x|^{-\sqrt{2}}$
+    
+    \item $2x^2 y'' + xy' - y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x + \frac{c_2}{\sqrt{x}}$
+    
+    \item $x^3 y''' - 3x^2 y'' + 6xy' - 6y = 0$  \\
+    \textbf{Respuesta:} $y = c_1 x + c_2 x^2 + c_3 x^3$
+    
+    \item $x^2 y'' + 3xy' + y = 0$  \\
+    \textbf{Respuesta:} $y = \frac{1}{x} (c_1 + c_2 \ln |x|)$
+\end{enumerate}
