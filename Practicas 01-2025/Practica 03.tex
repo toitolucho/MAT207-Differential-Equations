@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 03 - Ecuaciones Diferenciales de 1er Orden Lineales y Bernoulli}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+\subsubsection*{A. Determine si las siguientes ecuaciones diferenciales son de variable separable, lineales, ambas o ninguna de ellas}
+
+\begin{enumerate}
+    \item \(x^2 \frac{dy}{dx} + \sin x - y = 0\)
+    \item \(\frac{dx}{dt} + xt = e^x\)
+    \item \((t^2 + 1) \frac{dy}{dt} = yt - y\)
+    \item \(3t = e^t \frac{dy}{dt} + y \ln t\)
+    \item \(3r = \frac{dr}{d\theta} - \theta^3\)
+\end{enumerate}
+
+\subsubsection*{B. Resuelva las siguientes ecuaciones diferenciales}
+
+\begin{enumerate}
+    \item \(\frac{dy}{dx} - y - e^{3x} = 0\)
+    \item \(\frac{dr}{d\theta} + r \tan \theta = \sec \theta\)
+    \item \(\frac{dx}{dt} + t^3 + x = 0\)
+    \item \((t + y + 1) \, dt - dy = 0\)
+    \item \(y \frac{dx}{dy} + 2x = 5y^3\)
+    \item \(\frac{dy}{dx} + 3(y + x^2) = \frac{\sin x}{x}\)
+    \item \((x^2 + 1) \frac{dy}{dx} + xy - x = 0\)
+    \item \(\frac{dy}{dx} = \left(1 - x^2 \right) \sqrt{1 - x^2}\)
+\end{enumerate}
+
+\subsection*{Ecuaciones Diferenciales de Bernoulli}
+
+\subsubsection*{C. Resuelva las siguientes ecuaciones diferenciales por el método de Bernoulli}
+
+\begin{enumerate}
+    \item \(\frac{dy}{dx} + \frac{y}{x} = x^2 y^2\)
+    \item \(\frac{dy}{dx} - y = e^{2x y^3}\)
+    \item \(\frac{dy}{dx} = \frac{2y}{x} - x^2 y^2\)
+    \item \(\frac{dy}{dx} + \frac{y}{x - 2} = 5(x - 2)^{1/2} y\)
+    \item \(\frac{dx}{dt} + t^3 + \frac{x}{t} = 0\)
+    \item \(\frac{dy}{dx} + y = e^{x y^{-2}}\)
+\end{enumerate}
+
+\end{document}

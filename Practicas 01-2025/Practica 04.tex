@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 04 - Ecuaciones Diferenciales de 1er Exactas y Factores de Integración}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+
+\subsubsection*{A. Determine si las siguientes ecuaciones diferenciales son de variable separable, lineales, exactas o ninguna de ellas}
+
+\begin{enumerate}
+    \item \((x^2 y + x^4 \cos x) \, dx - x^3 \, dy = 0\)
+    \item \((x^{10/3} - 2y) \, dx + x \, dy = 0\)
+    \item \(\sqrt{-2y - y^2} \, dx + (3 + 2x - x^2) \, dy = 0\)
+    \item \((y e^{xy} + 2x) \, dx + (x e^{xy} - 2y) \, dy = 0\)
+    \item \(x y \, dx + dy = 0\)
+    \item \(y^2 \, dx + (2xy + \cos y) \, dy = 0\)
+    \item \([2x + y \cos(xy)] \, dx + [x \cos(xy) - 2y] \, dy = 0\)
+    \item \(\theta \, dr + (3r - \theta - 1) \, d\theta = 0\)
+\end{enumerate}
+
+\subsubsection*{B. Resuelva las siguientes ecuaciones diferenciales}
+
+\begin{enumerate}
+    \item \((2xy + 3) \, dx + (x^2 - 1) \, dy = 0\)
+    \item \((2x + y) \, dx + (x - 2y) \, dy = 0\)
+    \item \((e^x \sin y - 3x^2) \, dx + (e^x \cos y + {y^{-2/3}/3}) \, dy = 0\)
+    \item \((\cos x \cos y + 2x) \, dx - (\sin x \sin y + 2y) \, dy = 0\)
+    \item \(e^t (y - t) \, dt + (1 + e^t) \, dy = 0\)
+    \item \((t/y) \, dy + (1 + \ln y) \, dt = 0\)
+    \item \(\cos \theta \, dr - (r \sin \theta - e^{\theta}) \, d\theta = 0\)
+    \item \((y e^{xy} - 1/y) \, dx + (x e^{xy} + x/y^2) \, dy = 0\)
+    \item \((1/y) \, dx - (3y - x/y^2) \, dy = 0\)
+    \item \([2x + y^2 - \cos(x + y)] \, dx + [2xy - \cos(x + y) - e^y] \, dy = 0\)
+\end{enumerate}
+
+\subsubsection*{C. Determine si las siguientes ecuaciones diferenciales son de variable separable, lineales, exactas o tienen un factor de integración que solo depende de \(x\) o de \(y\)}
+
+\begin{enumerate}
+    \item \((2x + yx^{-1}) \, dx + (xy - 1) \, dy = 0\)
+    \item \((2y^3 + 2y^2) \, dx + (3y^2x + 2xy) \, dy = 0\)
+    \item \((2x + y) \, dx + (x - 2y) \, dy = 0\)
+    \item \((y^2 + 2xy) \, dx - x^2 \, dy = 0\)
+    \item \((x^2 \sin x + 4y) \, dx + x \, dy = 0\)
+    \item \((2y^2x - y) \, dx + x \, dy = 0\)
+\end{enumerate}
+
+\subsubsection*{D. Determine el factor de integración más adecuado para resolver las ecuaciones diferenciales listadas y resuélvalas}
+
+\begin{enumerate}
+    \item \((2xy) \, dx + (y^2 - 3x^2) \, dy = 0\)
+    \item \((3x^2 + y) \, dx + (x^2y - x) \, dy = 0\)
+    \item \((x^4 - x + y) \, dx - x \, dy = 0\)
+    \item \((2y^2 + 2y + 4x^2) \, dx + (2xy + x) \, dy = 0\)
+    \item \((y^2 + 2xy) \, dx - x^2 \, dy = 0\)
+    \item \((2xy^3 + 1) \, dx + (3x^2y^2 - y^{-1}) \, dy = 0\)
+\end{enumerate}
+
+\end{document}
