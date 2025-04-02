@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage[spanish]{babel} 
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{titlesec}
+\usepackage{geometry}
+
+% Ajuste de márgenes para evitar que sean muy grandes
+\geometry{top=1in, bottom=1in, left=1in, right=1in}
+
+
+\title{Ecuaciones Diferenciales}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% Índice de contenido
+\tableofcontents
+\newpage
+
+\section{Introducción a las Ecuaciones Diferenciales}
+
+Las ecuaciones diferenciales son fundamentales para modelar fenómenos naturales y procesos en ciencias físicas, biológicas, e ingeniería. En general, las ecuaciones diferenciales se dividen en dos categorías principales: ecuaciones diferenciales ordinarias (EDO) y ecuaciones en derivadas parciales (EDP). 
+
+Las ecuaciones diferenciales ordinarias involucran una o más funciones de una sola variable independiente y sus derivadas. Estas ecuaciones tienen aplicaciones en muchos campos, como el estudio de circuitos eléctricos, el crecimiento poblacional y el movimiento de cuerpos.
+
+
+\section{Ecuaciones Diferenciales de Primer Orden}
+
+\subsection{Ecuaciones de Primer Orden}
+Una ecuación diferencial de primer orden tiene la forma general:
+\[
+F(x, y, y') = 0
+\]
+donde \( y' = \frac{dy}{dx} \). Estas ecuaciones pueden clasificarse según su forma y los métodos para resolverlas.
+
+\subsection{Métodos para Resolver Ecuaciones de Primer Orden}
+
+\subsubsection{Ecuaciones de Variable Separables}
+Una ecuación de primer orden es separable si puede escribirse como:
+\[
+\frac{dy}{dx} = g(x)h(y)
+\]
+El método consiste en separar las variables y luego integrar ambos lados.
+
+\subsubsection{Ecuaciones Homogéneas}
+Una ecuación homogénea de primer orden tiene la forma:
+\[
+\frac{dy}{dx} = \frac{f(x, y)}{g(x, y)}
+\]
+Estas ecuaciones pueden resolverse mediante una sustitución adecuada, como \( v = \frac{y}{x} \).
+
+\subsubsection{Ecuaciones Exactas}
+Una ecuación exacta de primer orden es aquella que puede escribirse como:
+\[
+M(x, y)dx + N(x, y)dy = 0
+\]
+donde se cumple que:
+\[
+\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}
+\]
+La solución se obtiene integrando \( M(x, y) \) con respecto a \( x \) o \( N(x, y) \) con respecto a \( y \).
+
+\subsubsection{Factor de Integración (No Homogéneas)}
+En ecuaciones no homogéneas, el uso de un factor de integración adecuado puede convertir una ecuación no exacta en una exacta.
+
+\subsubsection{Ecuaciones Lineales de Primer Orden}
+Una ecuación lineal de primer orden tiene la forma:
+\[
+\frac{dy}{dx} + P(x)y = Q(x)
+\]
+El método de resolución implica el uso de un factor de integración \( \mu(x) = e^{\int P(x)dx} \).
+
+\subsubsection{Ecuaciones de Bernoulli}
+Las ecuaciones de Bernoulli tienen la forma:
+\[
+\frac{dy}{dx} + P(x)y = Q(x)y^n
+\]
+Este tipo de ecuación se puede transformar en una ecuación lineal mediante la sustitución \( v = y^{1-n} \).
+
+\subsection{Aplicaciones de Modelado en Ecuaciones de Primer Orden}
+
+\subsubsection{Crecimiento y Decrecimiento Poblacional}
+Las ecuaciones de crecimiento poblacional se modelan comúnmente mediante ecuaciones diferenciales del tipo:
+\[
+\frac{dP}{dt} = kP
+\]
+donde \( P \) es la población y \( k \) es la tasa de crecimiento. Este modelo se puede modificar para representar crecimiento logístico.
+
+\subsubsection{Circuitos Eléctricos}
+En circuitos RLC, la ecuación diferencial que describe la carga de un condensador es de primer orden y se expresa como:
+\[
+\frac{dQ}{dt} + \frac{1}{RC}Q = V
+\]
+donde \( Q \) es la carga, \( R \) es la resistencia, \( C \) es la capacitancia y \( V \) es la fuente de voltaje.
+
+\subsubsection{Caída Libre y Movimiento de Cuerpos}
+En el caso de la caída libre de un objeto sin resistencia del aire, la ecuación es:
+\[
+\frac{dv}{dt} = g
+\]
+donde \( v \) es la velocidad y \( g \) es la aceleración debida a la gravedad.
+
+\section{Ecuaciones Diferenciales de Orden Superior}
+
+\subsection{Ecuaciones de Segundo Orden}
+Las ecuaciones diferenciales de segundo orden tienen la forma:
+\[
+F(x, y, y', y'') = 0
+\]
+Estas ecuaciones pueden ser clasificadas en homogéneas y no homogéneas, dependiendo de la presencia de términos independientes.
+
+\subsection{Métodos de Solución}
+
+\subsubsection{Ecuaciones Homogéneas con Coeficientes Constantes}
+Una ecuación de segundo orden homogénea con coeficientes constantes tiene la forma:
+\[
+ay'' + by' + cy = 0
+\]
+La solución se obtiene mediante el análisis de las raíces del polinomio característico \( ar^2 + br + c = 0 \).
+
+\subsubsection{Ecuaciones No Homogéneas con Coeficientes Constantes}
+La solución general de una ecuación no homogénea de segundo orden con coeficientes constantes es la suma de la solución homogénea y una solución particular, que se puede encontrar utilizando el método de coeficientes indeterminados.
+
+\subsubsection{Ecuaciones de Cauchy-Euler}
+Las ecuaciones de Cauchy-Euler son de la forma:
+\[
+x^2 y'' + axy' + by = 0
+\]
+Estas ecuaciones se resuelven mediante la sustitución \( y = x^r \), lo que convierte la ecuación en una ecuación algebraica.
+
+\section{Aplicaciones de Modelado en E.D. de Segundo Orden}
+
+\subsubsection{Circuitos Eléctricos de Segundo Orden}
+Los circuitos RLC de segundo orden tienen una ecuación diferencial que describe la relación entre la corriente y el voltaje. La forma general de la ecuación es:
+\[
+L \frac{d^2q}{dt^2} + R \frac{dq}{dt} + \frac{1}{C} q = V(t)
+\]
+donde \( q \) es la carga, \( L \) es la inductancia, \( R \) es la resistencia y \( C \) es la capacitancia.
+
+\subsubsection{Sistema Masa-Resorte}
+La ecuación diferencial que describe el movimiento de un sistema masa-resorte es:
+\[
+m \frac{d^2x}{dt^2} + kx = 0
+\]
+donde \( m \) es la masa, \( k \) es la constante del resorte y \( x \) es la posición.
+
+\section{Series de Potencia}
+
+Las series de potencia se utilizan para resolver ecuaciones diferenciales cerca de puntos singulares. Una solución de la forma de serie de potencias tiene la forma:
+\[
+y(x) = \sum_{n=0}^{\infty} a_n x^n
+\]
+Este tipo de solución es útil cuando no se puede encontrar una solución cerrada.
+
+\subsection{Puntos Ordinarios y Singulares}
+Los puntos donde la ecuación diferencial no es analítica se denominan puntos singulares. Los puntos donde la ecuación es analítica se llaman puntos ordinarios.
+
+\section{Transformada de Laplace}
+
+\subsection{Propiedades de la Transformada de Laplace}
+La transformada de Laplace de una función \( f(t) \) se define como:
+\[
+\mathcal{L}\{f(t)\} = \int_0^{\infty} e^{-st} f(t) dt
+\]
+Algunas propiedades incluyen linealidad, la transformada de la derivada, y la transformada de la integral.
+
+\subsection{Solución de E.D. mediante la Transformada de Laplace}
+La transformada de Laplace se puede utilizar para resolver ecuaciones diferenciales lineales al transformar la ecuación en un polinomio algebraico, lo cual es más fácil de resolver.
+
+\section{Sistemas de Ecuaciones Diferenciales Ordinarias}
+
+\subsection{Formulación de Sistemas}
+Un sistema de ecuaciones diferenciales es un conjunto de ecuaciones en las que las incógnitas son funciones de la misma variable independiente.
+
+\subsection{Métodos de Resolución}
+Los sistemas pueden resolverse utilizando métodos como la eliminación, la diagonalización de matrices o el método de autovalores y autovectores.
+
+\bibliographystyle{plain}
+\bibliography{referencias}
+
+\end{document}
