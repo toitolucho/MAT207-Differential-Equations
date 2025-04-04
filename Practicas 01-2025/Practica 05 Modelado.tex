@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 05 - Aplicaciones de Modelado para E.D. de Primer Orden}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+
+\subsubsection*{A. Analize y resuelve los siguientes problemas}
+
+\begin{enumerate}
+    \item \textbf Las bacterias crecen en una solución nutritiva a una tasa proporcional a la cantidad presente. Inicialmente, hay 250 hebras de bacterias en la solución que crecen a 800 hebras después de siete horas. Encuentra (a) una expresión para el número aproximado de hebras en la cultura en cualquier momento \(t\) y (b) el tiempo necesario para que las bacterias crezcan a 1600 hebras.
+
+\textit{Respuestas:}  
+(a) \(N = 250e^{0.1667t}\)  
+(b) 11.2 hr
+    \item \textbf La población de un cierto país ha crecido a una tasa proporcional al número de personas en el país. Actualmente, el país tiene 80 millones de habitantes. Hace diez años tenía 70 millones. Suponiendo que esta tendencia continúe, encuentra (a) una expresión para el número aproximado de personas que habitarán el país en cualquier momento \(t\) (tomando \(t = 0\) para el presente) y (b) el número aproximado de personas que habitarán el país al final del siguiente periodo de diez años.
+
+\textit{Respuestas:}  
+(a) \(N = 80e^{0.0134t}\) (en millones)  
+(b) 91.5 millones
+    \item \textbf Un material radiactivo es conocido por decaer a una tasa proporcional a la cantidad presente. Si después de una hora se observa que el 10 por ciento del material se ha desintegrado, encuentra el período de semivida del material.
+
+\textit{Respuesta:}  
+\(N = \frac{500}{1 + 99e^{-500t}}\)
+    \item \textbf Un cuerpo a una temperatura de 0°F se coloca en una habitación cuya temperatura se mantiene a 100°F. Si después de 10 minutos la temperatura del cuerpo es de 25°F, encuentra (a) el tiempo requerido para que el cuerpo alcance una temperatura de 50°F, y (b) la temperatura del cuerpo después de 20 minutos.
+
+\textit{Respuestas:}  
+\(T = -100e^{-0.029t} + 100\)  
+(a) 23.9 minutos
+(b) 44ºF
+    \item \textbf Una tarta caliente que se cocinó a una temperatura constante de 325°F se saca directamente de un horno y se coloca al aire libre a la sombra en un día en el que la temperatura del aire en la sombra es de 85°F. Después de 5 minutos a la sombra, la temperatura de la tarta se había reducido a 250°F. Determina (a) la temperatura de la tarta después de 20 minutos y (b) el tiempo requerido para que alcance los 275°F.
+
+\textit{Respuestas:}  
+(a) 138.6°F  
+(b) 3.12 min
+    \item \textbf Una pelota es propulsada hacia arriba con una velocidad inicial de 250 ft/seg en un vacío sin resistencia al aire. ¿Qué tan alto llegará?
+
+\textit{Respuesta:}  
+976.6 ft
+    \item \textbf  Un cuerpo de masa 10 slugs se deja caer desde una altura de 1000 ft sin velocidad inicial. El cuerpo encuentra una resistencia al aire proporcional a su velocidad. Si la velocidad límite es conocida como 320 ft/seg, encuentra (a) una expresión para la velocidad del cuerpo en cualquier momento \(t\), (b) una expresión para la posición del cuerpo en cualquier momento \(t\), y (c) el tiempo requerido para que el cuerpo alcance los 160 ft/seg.
+
+\textit{Respuestas:}  
+(a) \(v = -320e^{-0.1t} + 320\)  
+    \item \textbf Un cuerpo de masa 1 slug se deja caer con una velocidad inicial de 1 ft/sec y encuentra una fuerza debido a la resistencia al aire proporcional a su velocidad, de modo que la aceleración del cuerpo es exactamente \( -8v^2 \). Encuentra la velocidad en cualquier momento \(t\).
+
+\textit{Respuesta:}  
+\( \frac{2 + v}{2 - v} = 3e^{32t} \quad \text{or} \quad v = \frac{2(3e^{32t} - 1)}{(3e^{32t} + 1)} \)
+
+\end{enumerate}
+
+
+\end{document}
