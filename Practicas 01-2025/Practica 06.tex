@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{array}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Columna izquierda, alineada a la izquierda
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}  % Columna derecha, alineada a la derecha
+
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 06 - Ecuaciones Diferenciales de Orden Superior Con CC. Homogeneas / No Homogeneas}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{7.5cm}{0.4pt}  \textbf{Fecha de Present.:}28/05/25  \rule{0.5cm}{0.4pt} 
+
+
+
+\subsubsection*{A.Resuelva las siguientes ecuaciones diferenciales con coeficientes constantes}
+\begin{enumerate}
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - 2y'' - y' + 2y = 0 \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} + c_3 e^{2x} \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' + 3y'' - 3y' + y = 0 \) & \(\displaystyle y = e^{-x} (c_1 + c_2 x + c_3 x^2) \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - y'' + y' - y = 0 \) & \(\displaystyle y = c_1 e^x + c_2 \cos x + c_3 \sin x \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - y = 0 \) & \(\displaystyle y = c_1 e^x + e^{-\frac{x}{2}} \left( c_2 \cos\left(\frac{\sqrt{3}}{2} x\right) + c_3 \sin\left(\frac{\sqrt{3}}{2} x\right) \right) \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y^{(4)} - y = 0 \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} + c_3 \cos x + c_4 \sin x \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y^{(4)} - 4 y''' + 6 y'' - 4 y' + y = 0 \) & \(\displaystyle y = e^x (c_1 + c_2 x + c_3 x^2 + c_4 x^3) \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( 6 y''' - y'' - 6 y' + y = 0 \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} + c_3 e^{\frac{x}{6}} \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - y'' - 3 y' - y = 0 \) & \(\displaystyle y = c_1 e^{-x} + c_2 e^{\frac{(1+\sqrt{2})x}{2}} + c_3 e^{\frac{(1-\sqrt{2})x}{2}} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( 9y'' - 30y' + 25y = 0 \) & \(\displaystyle y = (c_1 + c_2 x) e^{\frac{5x}{3}} \)
+    \end{tabularx}
+    
+\end{enumerate}
+
+\subsubsection*{B. Resuelva las siguientes ecuaciones No homogeneas por Coeficientes Indeterminados}
+
+\begin{enumerate}
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( \frac{d^2 y}{dx^2} - 2 \frac{dy}{dx} + 5 y = 25 x^2 + 12 \) & \(\displaystyle y = e^x \left(c_1 \cos 2x + c_2 \sin 2x \right) + 2 + 4x + 5x^2 \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( \frac{d^2 y}{dx^2} - 2 \frac{dy}{dx} = 12 x - 10 \) & \(\displaystyle y = c_1 + c_2 e^{2x} + 2x - x^2 \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' = x e^x + y \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} + \frac{(x^2 - x) e^x}{4} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 4 y' + 4 y = x e^{2x} \) & \(\displaystyle y = (c_1 + c_2 x + \frac{x^3}{6}) e^{2x} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 6 y' + 9 y = e^x \) & \(\displaystyle y = (c_1 + c_2 x) e^{3x} + \frac{e^x}{4} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 3 y' - 4 y = 30 e^x \) & \(\displaystyle y = c_1 e^{4x} + c_2 e^{-x} - 5 e^x \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 3 y' - 4 y = 30 e^{4x} \) & \(\displaystyle y = (c_1 + 6 x) e^{4x} + c_2 e^{-x} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - y = 8 x e^x \) & \(\displaystyle y = c_1 e^{-x} + e^x (c_2 - 2x + 2x^2) \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y^{(4)} - y = e^{-x} \) & \(\displaystyle y = c_1 e^x + \left(c_2 - \frac{x}{4}\right) e^{-x} - c_3 \cos x + c_4 \sin x \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + 4y = 4(\sin 2x + \cos 2x), \quad y(\pi) = y'(\pi) = 2 \) & \(\displaystyle y = 3 \pi \cos 2x + \frac{1}{2} \sin 2x + x(\sin 2x - \cos 2x) \)
+    \end{tabularx}
+    
+  \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + 4y = -12 \sin 2x \) & \(\displaystyle y = A \cos 2x + B \sin 2x + 3x \cos 2x \)
+    \end{tabularx}
+    
+  \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + 4y = x^2 + 3e^x, \quad y(0) = 0, \quad y'(0) = 2 \) & \(\displaystyle y = \frac{7}{10} \sin 2x - \frac{19}{40} \cos 2x + \frac{x^2}{4} - \frac{1}{8} + \frac{3}{5} e^x \)
+    \end{tabularx}
+    
+  \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 2 y' + y = x e^x + 4, \quad y(0) = y'(0) = 1 \) & \(\displaystyle y = 4 x e^x - 3 e^x + \frac{x^3}{6} e^x + 4 \)
+    \end{tabularx}
+    
+  \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( 2 y'' + 3 y' + y = x^2 + 3 \sin x \) & \(\displaystyle y = c_1 e^{-x} + c_2 e^{-\frac{x}{2}} + (x^2 - 6x + 14) - \frac{3}{10} \sin x - \frac{9}{10} \cos x \)
+    \end{tabularx}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta ParteA01</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA01&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = 3x^2(1 + y^2)^{3/2} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;a) Llevar la ecuación diferencial a su forma estándar.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \frac{1}{(1 + y^2)^{3/2}} \ dy = 3x^2 \ dx \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{dy}{(1 + y^2)^{2/3}} = 3x^2 \ dx \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( 3x^2 \ dx = \frac{1}{(1 + z^2)^{3/2}} \ dy \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( 3x^2 \ dx - (1 + y^2)^{3/2} \ dy = 0 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta ParteA02</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA02&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = 3x^2(1 + y^2)^{3/2} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;b) Determina la integral de la variable \(y\).&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \ln(y + \sqrt{1 + y^2}) \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \sinh^{-1}(y) \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \arctan(y) \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{2} \ln(1 + y^2) \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta ParteA03</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA03&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = 3x^2(1 + y^2)^{3/2} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;c) Determina la integral de la variable \(x\).&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( x^3 \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( x^2 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( 3x^3 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( x^4 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta ParteA04</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA04&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = 3x^2(1 + y^2)^{3/2} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;d) Determina la solución intermedia antes de aplicar operaciones algebraicas para reducir la expresión.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \ln(y + \sqrt{1 + y^2}) = x^3 + C \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y + \sqrt{1 + y^2} = e^{x^3 + C} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = e^{x^3 + C} - \sqrt{1 + y^2} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y + \sqrt{1 + y^2} = x^3 + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta ParteA05</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA05&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = 3x^2(1 + y^2)^{3/2} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;e) Determina la solución general.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( y + \sqrt{1 + y^2} = e^{x^3 + C} \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = e^{x^3} - \sqrt{1 + y^2} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y + \sqrt{1 + y^2} = x^3 + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = x^3 + C - \sqrt{1 + y^2} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Pregunta ParteA06</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA06&lt;/span&gt;&lt;/p&gt;
+                            &lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( y + \sqrt{1 + y^2} = e^{x^3 + C} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;f) Encuentra el valor de la constante \( C \) usando el punto de evaluación \( y(0) = 0 \):&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;C = 0&lt;/p&gt;</text>
+    </answer>
+  </question>
+</quiz>

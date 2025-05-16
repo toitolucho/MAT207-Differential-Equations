@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(255, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA01&lt;/span&gt; E.D.01VS01</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA01&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = \frac{x}{y^2 \sqrt{1 + x}} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;a) Llevar la ecuación diferencial a su forma estándar.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \frac{1}{y^2 \sqrt{1 + x}} \ dy = x \ dx \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{dy}{y^2 \sqrt{1 + x}} = x \ dx \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( 3x^2 \ dx = \frac{1}{(1 + z^2)^{3/2}} \ dy \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( 3x^2 \ dx - (1 + y^2)^{3/2} \ dy = 0 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(255, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA02&lt;/span&gt; E.D.01VS01</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA02&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = \frac{x}{y^2 \sqrt{1 + x}} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;b) Determina la integral de la variable \(y\).&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( - \frac{1}{y} \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{y} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{x}{y} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( -y \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(255, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA03&lt;/span&gt; E.D.01VS01</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA03&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = \frac{x}{y^2 \sqrt{1 + x}} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;c) Determina la integral de la variable \(x\).&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \int x \ dx \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{x^2}{2} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( x^3 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( 2x \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(255, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA04&lt;/span&gt; E.D.01VS01</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA04&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = \frac{x}{y^2 \sqrt{1 + x}} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;d) Determina la solución intermedia antes de aplicar operaciones algebraicas para reducir la expresión.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( - \frac{1}{y} = x + C \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( - \frac{1}{y} = x^2 + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = x^2 + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( - \frac{1}{y} = x + 2C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(255, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA05&lt;/span&gt; E.D.01VS01</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA05&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dy}{dx} = \frac{x}{y^2 \sqrt{1 + x}} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;e) Determina la solución general.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( y = -\frac{1}{x + C} \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = \frac{1}{x + C} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = x + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( y = - \frac{1}{x^2 + C} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Pregunta ParteA06</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA06&lt;/span&gt;&lt;/p&gt;
+                            &lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( y = -\frac{1}{x + C} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;f) Encuentra el valor de la constante \( C \) usando el punto de evaluación \( y(1) = -1 \):&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;C = -2&lt;/p&gt;</text>
+    </answer>
+  </question>
+</quiz>

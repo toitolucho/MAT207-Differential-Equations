@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(080, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA01&lt;/span&gt; - E.D.01VS02</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA01&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dv}{dx} = \frac{1 - 4v^2}{3v} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;a) Llevar la ecuación diferencial a su forma estándar.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \frac{3v}{1 - 4v^2} \ dv = dx \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{3v}{1 - 4v^2} \ dv = dx \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1 - 4v^2}{v} \ dv = 3dx \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1 - 4v^2}{v} \ dx = 3dv \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(080, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA02&lt;/span&gt; - E.D.01VS02</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA02&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dv}{dx} = \frac{1 - 4v^2}{3v} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;b) Determina la integral de la variable \(v\).&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( -\frac{1}{2} \ln(1 - 4v^2) \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( -\frac{1}{2} \ln(1 - 4v^2) \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( v^2 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{4} \ln(v) \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(080, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA03&lt;/span&gt; - E.D.01VS02</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA03&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dv}{dx} = \frac{1 - 4v^2}{3v} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;c) Determina la integral de la variable \(x\).&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \frac{x}{3} \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{x}{3} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( x^3 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{3} x^2 \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(080, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA04&lt;/span&gt; - E.D.01VS02</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA04&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dv}{dx} = \frac{1 - 4v^2}{3v} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;d) Determina la solución intermedia antes de aplicar operaciones algebraicas para reducir la expresión.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( \frac{1}{2} \ln(1 - 4v^2) = x + C \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{2} \ln(1 - 4v^2) = x + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{v^2} = x + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( \frac{1}{4} \ln(v) = x + C \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>&lt;span style=&quot;color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(080, 102, 51);&quot; class=&quot;&quot;&gt;Pregunta ParteA05&lt;/span&gt; - E.D.01VS02</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA05&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( \frac{dv}{dx} = \frac{1 - 4v^2}{3v} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;e) Determina la solución general.&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;\( v = \pm \frac{1}{2} \sqrt{C - x} \)&lt;/p&gt;</text>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( v = \pm \frac{1}{2} \sqrt{C - x} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( v = \pm \sqrt{C - x} \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\( v = \pm \frac{1}{2} (C - x) \)</text>
+      <feedback format="html">
+        <text>Penalización: 50%</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Pregunta ParteA06</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;Pregunta ParteA06&lt;/span&gt;&lt;/p&gt;
+                            &lt;p&gt;Resuelve la sig. E.D.:&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;\( v = \pm \frac{1}{2} \sqrt{C - x} \)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;f) Encuentra el valor de la constante \( C \) usando el punto de evaluación \( v(0) = 1 \):&lt;/strong&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;C = 1&lt;/p&gt;</text>
+    </answer>
+  </question>
+</quiz>
