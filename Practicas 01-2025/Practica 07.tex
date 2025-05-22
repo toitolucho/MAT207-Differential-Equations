@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{array}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Columna izquierda, alineada a la izquierda
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}  % Columna derecha, alineada a la derecha
+
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 07 - Ecuaciones Diferenciales de Orden Superior Con CC. - VARIACION DE PARAMETROS - CAUCHY EULER}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{7.5cm}{0.4pt}  \textbf{Fecha de Present.:}28/05/25  \rule{0.5cm}{0.4pt} 
+
+
+
+\subsubsection*{A.Resuelva las siguientes ecuaciones diferenciales por el metodo de Variacion de Prametros}
+\begin{enumerate}
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + y = \sec^3 x \) & \(\displaystyle y = y_h + \frac{\sec x}{2} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + y = \tan x \) & \(\displaystyle y = y_h - \cos x \cdot \ln(\sec x + \tan x) \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - y = e^{-2x} \sin(e^{-x}) \) & \(\displaystyle y = y_h - \sin e^{-x} - e^{x} \cos e^{-x} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.35\linewidth} R{0.65\linewidth}}
+    \( 9 y'' + y = \sec \left( \frac{x}{3} \right) \) & \(\displaystyle y = \left[c_1 + \frac{x}{3}\right] \sin \frac{x}{3} + \left[c_2 + \ln \left(\cos \frac{x}{3}\right)\right] \cos \frac{x}{3} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - y = \sin^2 x \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} - \frac{2}{5} - \frac{\sin^2 x}{5} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - y = x^2 e^{\frac{x^2}{2}} \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} + e^{\frac{x^2}{2}} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - y' = \sin x \) & \(\displaystyle y = c_1 + c_2 e^{-x} + c_3 e^{x} + \frac{\cos x}{2} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - 3 y'' - y' + 3 y = 1 + e^x \) & \(\displaystyle y = c_1 e^x + c_2 e^{-x} + c_3 e^{3x} - \frac{2}{3} e^{-3x} - e^{-2x} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' - 2 y'' = 4 (x + 1) \) & \(\displaystyle y = c_1 + c_2 x + c_3 e^{2x} - \left( \frac{x^3}{3} - \frac{3}{2} x^2 + \frac{3}{2} x + \frac{3}{4} \right) \)
+    \end{tabularx}
+\end{enumerate}
+
+
+\subsubsection*{B. Resuelva las siguientes ecuaciones No homogeneas por el metodo de Cauchy Euler}
+
+\begin{enumerate}
+    \item
+    \begin{tabularx}{\linewidth}{L{0.60\linewidth} R{0.35\linewidth}}
+    \( x^2 y'' + x y' - p^2 y = 0, \quad p \text{ es una constante} \) & \(\displaystyle y = c_1 |x|^p + c_2 |x|^{-p}, \quad p \neq 0 \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( x^3 y''' - 2 x^2 y'' - 17 x y' - 7 y = 0 \) & \(\displaystyle y = |x|^{-1} \left( c_1 + c_2 \ln |x| \right) + c_3 |x|^{7} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( x^3 y''' + 4 x^2 y'' - 2 y = 0 \) & \(\displaystyle y = c_1 |x|^{-1} + c_2 |x|^{\sqrt{2}} + c_3 |x|^{-\sqrt{2}} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( 2 x^2 y'' + x y' - y = 0 \) & \(\displaystyle y = c_1 x + \frac{c_2}{\sqrt{x}} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' + \frac{4}{x} y'' + \frac{8}{x^2} y' + \frac{y}{x^3} = 0 \) & \(\displaystyle y = c_1 x^{-1} + c_2 \cos(\ln x) + c_3 \sin(\ln x) \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y''' + \frac{4 y''}{x} + \frac{y'}{x^2} + \frac{y}{x^3} = 0 \) & \(\displaystyle y = c_1 x + x^{-1} \left( c_2 \ln x + c_3 \right) \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + \frac{y'}{x^2} - \frac{y}{x^3} = 0 \) & \(\displaystyle y = x \left[ c_1 (\ln x)^2 + c_2 \ln x + c_3 \right] \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + 4 y = 2 x \ln x, \quad x > 0 \) & \(\displaystyle y = c_1 \sin(\ln x^2) + c_2 \cos(\ln x^2) + \frac{x \ln x^2}{5} - \frac{4 x}{25} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( x^3 \frac{d^3 y}{dx^3} - x^2 \frac{d^2 y}{dx^2} - 2 x \frac{dy}{dx} - 2 y = x^3 \) & \(\displaystyle y = (c_1 + c_2 \ln x) x + c_3 x^2 + \frac{x^3}{3} \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( (2 x - 3)^2 \frac{d^2 y}{dx^2} - 6 (2 x - 3) \frac{dy}{dx} + 12 y = 0 \) & \(\displaystyle y = c_1 (2 x - 3) + c_2 (2 x - 3) \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.55\linewidth} R{0.45\linewidth}}
+    \( (3 + x)^3 \frac{d^3 y}{dx^3} + 3 (3 + x)^2 \frac{d^2 y}{dx^2} + (6 + 2 x) \frac{dy}{dx} = 0 \) 
+    \end{tabularx}
+\end{enumerate}
+
+\end{document}
