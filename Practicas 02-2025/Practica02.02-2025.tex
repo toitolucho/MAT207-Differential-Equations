@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol}
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 02 - Ecuaciones Diferenciales Separables y Homogéneas}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+% Introducción
+\section*{Introducción}
+\large
+En esta práctica, se determinará si ciertas ecuaciones diferenciales son de variable separable, se resolverán ecuaciones diferenciales dadas y se evaluará la homogeneidad de ciertas ecuaciones.
+
+% Ejercicios
+\section*{Ejercicios}
+\large
+
+\subsection*{A) Determina si las siguientes ecuaciones diferenciales son de Variable Separable}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\dfrac{dy}{dx} - \sin(x + y) = 0$
+    \item $\dfrac{dy}{dx} = 4y^2 - 3y + 1$
+    \item $\dfrac{ds}{dt} = t \ln(s^2) + 8^2$
+    \item $\dfrac{dy}{dx} = \dfrac{e^{x + y}}{x^2 + 2}$
+    \item $(xy^2 + 3y^2) \, dy - 2x \, dx = 0$
+    \item $s^2 + \dfrac{ds}{dt} = \dfrac{s + 1}{st}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Resuelve las siguientes ecuaciones diferenciales}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $y' = \dfrac{x e^x}{2y}$
+  \item $\dfrac{dy}{dx} = \dfrac{x+1}{y}$
+  \item $\dfrac{dy}{dx} = y^2$
+  \item $\dfrac{dx}{dt} = x^2 t^2$
+  \item $\dfrac{dx}{dt} = \dfrac{x}{t}$
+  \item $\dfrac{dy}{dt} = 3 + 5y$
+  \item $\sin x \, dx + y \, dy = 0; \quad y(0)=-2$
+  \item $(x^2+1)dx + \dfrac{1}{y}dy=0; \quad y(-1)=1$
+  \item $x e^{x^2} dx + (y^5-1)dy=0; \quad y(0)=0$
+  \item $y' = \dfrac{x^2 y - y}{y+1}; \quad y(3)=-1$
+  \item $\dfrac{dx}{dt} = 8-3x; \quad x(0)=4$
+\end{enumerate}
+\end{multicols}
+\subsection*{C) Determina si las siguientes ecuaciones diferenciales son homogéneas, }
+Considera simplemente corroborar si incoporando el operandor landa, este se puede factorizar y dentro uno de los terminos factorizados, la funcion f(x,y) vuelve a ser la ecuacion original
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x,y)=x^{2} y-4y^{3}$
+    \item $f(x,y)=y^{2}\tan\left(\frac{x}{y}\right)$
+    \item $f(x,y)=\sqrt{x^{3} -y^{3}}$
+    \item $f(x,y)=\frac{x^{2} -y^{2}}{xy}$
+    \item $f(x,y)=x^{2} +\sin (x)\cos (y)$
+    \item $f(x,y)=e^{x}$
+    \item $f(x,y)=e^{\frac{x}{y}}$
+    \item $f(x,y)=\left( x^{2} +y^{2}\right)^{3/2}$
+    \item $f(x,y)=x-5y+6$
+    \item $f(x,y)=x\cdot \sin\left(\frac{y}{x}\right) -y\cdot \sin\left(\frac{x}{y}\right)$
+\end{enumerate}
+\end{multicols}
+\subsection*{D) Resuelve las siguientes ecuaciones homogéneas siempre y cuando lo sean}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $y' = \dfrac{y-x}{x}$
+  \item $y' = \dfrac{2y+x}{x}$
+  \item $y' = \dfrac{x^2+2y^2}{xy}$
+  \item $y' = \dfrac{2x+y^2}{xy}$
+  \item $y' = \dfrac{x^2+y^2}{2xy}$
+  \item $y' = \dfrac{2xy}{y^2-x^2}$
+  \item $y' = \dfrac{y}{x+\sqrt{xy}}$
+  \item $y' = \dfrac{y^2}{xy+(xy^2)^{1/3}}$
+  \item $y' = \dfrac{x^4+3x^2y^2+y^4}{x^3y}$
+\end{enumerate}
+\end{multicols}
+\end{document}

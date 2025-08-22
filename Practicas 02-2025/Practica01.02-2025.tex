@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{extsizes} % Para cambiar tamaños de fuente
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Huge\textbf{Práctica 01 - Introducción a las Ecuaciones Diferenciales}\\[1cm]
+    \Large \textbf{Nombre:} \rule{10cm}{0.4pt} \\
+    \Large \textbf{Fecha:} \rule{5cm}{0.4pt}
+\end{center}
+
+% Ejercicios
+\section*{Ejercicios}
+A) Determina el orden y grado de las siguientes E.D.
+\large
+
+\begin{enumerate}[label=\Large\arabic*.]
+    \item $\displaystyle \cos x \cdot \left( y'' \right)^2 + \sin x \cdot \left( y' \right)^4 = 1$
+    \item $\displaystyle \sqrt{y} + y = \cos x$
+    \item $\displaystyle \left(\frac{d^2 y}{dx^2}\right)^3 + \frac{d^2 y}{dx^2} \cdot \left(\frac{dy}{dx}\right)^4 - x^7 y = \cos x$
+    \item $\displaystyle \frac{d^2 y}{dx^2} \cdot \frac{dy}{dx} + \left(\frac{dy}{dx}\right)^2 + y = 0$
+    \item $\displaystyle x^4 \frac{dy}{dx} - x^2 \frac{d^2 y}{dx^2} = y^4 \frac{d^3 y}{dx^3}$
+    \item $\displaystyle (D_x y)^3 = 3x^2 - 1$
+    \item $\displaystyle x \left( y'' \right)^3 + \left( y' \right)^4 - y = 0$
+    \item $\displaystyle \frac{d^3}{dx^3} y - \left(\frac{d^2}{dx^2} \right)^s + y = 0$
+    \item $\displaystyle \frac{d^2Q}{dt^2} + R \frac{dQ}{dt} + \frac{Q}{C} = 0$
+    \item $\displaystyle \frac{d^2 y}{dx^2} = \sqrt{y + \left(\frac{dy}{dx}\right)^2}$
+\end{enumerate}
+
+B) Determine si las siguientes ecuaciones diferenciales son lineales o no:
+\large
+\begin{enumerate}[label=\Large\arabic*.]
+    \item $\displaystyle y' + y^2 = x$
+    \item $\displaystyle y'' + x y' + \ln(y) = 0$
+    \item $\displaystyle x^2 y'' + 4xy' + 2y = 0$
+    \item $\displaystyle y' + \cos(y) = e^x$
+    \item $\displaystyle y'' + 3xy' - 2y = \sin x$
+\end{enumerate}
+\end{document}
