@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{lmodern}
+
+\title{Resolución de Ecuación Diferencial Homogénea - Ejercicio 1}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Problema}
+Resolver la ecuación diferencial:
+\[
+y' = \frac{y-x}{x}, \qquad y(1) = 2
+\]
+
+\section*{1. Verificación de homogeneidad}
+La ecuación se puede escribir como:
+\[
+\frac{dy}{dx} = \frac{y-x}{x} = \frac{y}{x} - 1
+\]
+
+Sustituyendo \(x \to \lambda x\), \(y \to \lambda y\):
+\[
+\frac{dy}{dx} = \frac{\lambda y}{\lambda x} - 1 = \frac{y}{x} - 1
+\]
+La ecuación es homogénea (grado 0).
+
+\section*{2. Cambio de variable}
+Sea 
+\[
+y = x\mu, \qquad \mu = \frac{y}{x}, \qquad \frac{dy}{dx} = \mu + x\frac{d\mu}{dx}
+\]
+
+Sustituyendo en la E.D.:
+\[
+\mu + x\frac{d\mu}{dx} = \mu - 1
+\]
+
+Simplificamos:
+\[
+x\frac{d\mu}{dx} = -1
+\]
+
+\section*{3. Separación de variables}
+\[
+\frac{d\mu}{dx} = -\frac{1}{x}
+\]
+
+Integrando ambos lados:
+\[
+\int d\mu = -\int \frac{dx}{x}
+\]
+
+\[
+\mu = -\ln|x| + C
+\]
+
+\section*{4. Sustitución inversa}
+Recordando que \(\mu = \frac{y}{x}\):
+\[
+\frac{y}{x} = -\ln|x| + C
+\]
+
+Por tanto:
+\[
+y = x(-\ln|x| + C) = -x\ln|x| + Cx
+\]
+
+\section*{5. Condición inicial}
+Con \(y(1) = 2\):
+\[
+2 = -1 \cdot \ln|1| + C \cdot 1
+\]
+
+Dado que \(\ln(1) = 0\):
+\[
+2 = 0 + C, \qquad C = 2
+\]
+
+\section*{6. Solución particular}
+\[
+y = -x\ln|x| + 2x
+\]
+
+\section*{7. Solución final}
+Solución general:
+\[
+\boxed{\, y = -x\ln|x| + Cx \,}
+\]
+
+Solución particular con \(y(1) = 2\):
+\[
+\boxed{\, y = -x\ln|x| + 2x \,}
+\]
+
+\end{document}
