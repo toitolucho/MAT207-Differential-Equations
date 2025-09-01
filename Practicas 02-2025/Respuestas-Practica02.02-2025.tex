@@ -1,0 +1,140 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Respuestas - Práctica 02: Ecuaciones Diferenciales Homogéneas}\\[1cm]  
+\end{center}
+
+\section*{C) Determinación de Homogeneidad}
+
+\textbf{Criterio:} Una función $f(x,y)$ es homogénea de grado $n$ si $f(\lambda x, \lambda y) = \lambda^n f(x,y)$
+
+\begin{enumerate}
+    \item $f(x,y) = x^2y - 4y^3$
+    
+    $f(\lambda x, \lambda y) = \lambda^3 x^2y - 4\lambda^3 y^3$
+    
+    $= \lambda^3(x^2y - 4y^3)$
+    
+    $= \lambda^3 f(x,y)$
+    
+    \textbf{Homogénea de grado 3}
+
+    \item $f(x,y) = y^2\tan\left(\frac{x}{y}\right)$
+    
+    $f(\lambda x, \lambda y) = \lambda^2 y^2\tan\left(\frac{x}{y}\right)$
+    
+    $= \lambda^2 f(x,y)$
+    
+    \textbf{Homogénea de grado 2}
+
+    \item $f(x,y) = \sqrt{x^3 - y^3}$
+    
+    $f(\lambda x, \lambda y) = \sqrt{\lambda^3(x^3 - y^3)}$
+    
+    $= \lambda^{3/2}\sqrt{x^3 - y^3}$
+    
+    $= \lambda^{3/2} f(x,y)$
+    
+    \textbf{Homogénea de grado 3/2}
+
+    \item $f(x,y) = \frac{x^2 - y^2}{xy}$
+    
+    $f(\lambda x, \lambda y) = \frac{\lambda^2(x^2 - y^2)}{\lambda^2 xy}$
+    
+    $= \frac{x^2 - y^2}{xy}$
+    
+    $= \lambda^0 f(x,y)$
+    
+    \textbf{Homogénea de grado 0}
+
+    \item $f(x,y) = x^2 + \sin(x)\cos(y)$
+    
+    $f(\lambda x, \lambda y) = \lambda^2 x^2 + \sin(\lambda x)\cos(\lambda y)$
+    
+    $\neq \lambda^n f(x,y)$ para cualquier $n$
+    
+    \textbf{NO es homogénea}
+
+    \item $f(x,y) = e^x$
+    
+    $f(\lambda x, \lambda y) = e^{\lambda x}$
+    
+    $\neq \lambda^n e^x$ para cualquier $n$
+    
+    \textbf{NO es homogénea}
+
+    \item $f(x,y) = e^{\frac{x}{y}}$
+    
+    $f(\lambda x, \lambda y) = e^{\frac{\lambda x}{\lambda y}}$
+    
+    $= e^{\frac{x}{y}}$
+    
+    $= \lambda^0 f(x,y)$
+    
+    \textbf{Homogénea de grado 0}
+
+    \item $f(x,y) = (x^2 + y^2)^{3/2}$
+    
+    $f(\lambda x, \lambda y) = (\lambda^2(x^2 + y^2))^{3/2}$
+    
+    $= \lambda^3(x^2 + y^2)^{3/2}$
+    
+    $= \lambda^3 f(x,y)$
+    
+    \textbf{Homogénea de grado 3}
+
+    \item $f(x,y) = x - 5y + 6$
+    
+    $f(\lambda x, \lambda y) = \lambda(x - 5y) + 6$
+    
+    $\neq \lambda^n(x - 5y + 6)$ para cualquier $n$
+    
+    \textbf{NO es homogénea}
+
+    \item $f(x,y) = x\sin\left(\frac{y}{x}\right) - y\sin\left(\frac{x}{y}\right)$
+    
+    $f(\lambda x, \lambda y) = \lambda x\sin\left(\frac{y}{x}\right) - \lambda y\sin\left(\frac{x}{y}\right)$
+    
+    $= \lambda f(x,y)$
+    
+    \textbf{Homogénea de grado 1}
+\end{enumerate}
+
+\section*{Resumen de Resultados}
+
+\textbf{Funciones Homogéneas (7 de 10):}
+\begin{itemize}
+    \item Grado 0: $f_4(x,y) = \frac{x^2-y^2}{xy}$ y $f_7(x,y) = e^{\frac{x}{y}}$
+    \item Grado 1: $f_{10}(x,y) = x\sin\left(\frac{y}{x}\right) - y\sin\left(\frac{x}{y}\right)$
+    \item Grado 3/2: $f_3(x,y) = \sqrt{x^3-y^3}$
+    \item Grado 2: $f_2(x,y) = y^2\tan\left(\frac{x}{y}\right)$
+    \item Grado 3: $f_1(x,y) = x^2y-4y^3$ y $f_8(x,y) = (x^2+y^2)^{3/2}$
+\end{itemize}
+
+\textbf{Funciones NO Homogéneas (3 de 10):}
+\begin{itemize}
+    \item $f_5(x,y) = x^2 + \sin(x)\cos(y)$
+    \item $f_6(x,y) = e^x$
+    \item $f_9(x,y) = x - 5y + 6$
+\end{itemize}
+
+\end{document}

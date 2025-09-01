@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- Category: Exercise A -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio A</text>
+    </category>
+</question>
+
+<!-- EXERCISE A: f(x,y) = x²y - 4y³ (Homogeneous degree 3) -->
+<question type="multichoice">
+    <name><text>Pregunta 01A</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 01A</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = x²y - 4y³, obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[(λx)²(λy) - 4(λy)³]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²x²λy - 4λ³y³]]></text><feedback format="html"><text>Incorrecto. Mantén la forma sin simplificar</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ³x²y - 4λ³y³]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02A</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 02A</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ³(x²y - 4y³)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²(x²y - 4y³)]]></text><feedback format="html"><text>Incorrecto. Factor común es λ³</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(x²y - 4y³)]]></text><feedback format="html"><text>Incorrecto. Factor común es λ³</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03A</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 03A</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = x²y - 4y³, ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 3.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>3</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise B -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio B</text>
+    </category>
+</question>
+
+<!-- EXERCISE B: f(x,y) = y²tan(x/y) (Homogeneous degree 2) -->
+<question type="multichoice">
+    <name><text>Pregunta 01B</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 01B</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = y²tan(x/y), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[(λy)²tan(λx/λy)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²y²tan(x/y)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λy²tan(λx/λy)]]></text><feedback format="html"><text>Incorrecto. Aplica λ a todos los términos</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02B</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 02B</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ²(y²tan(x/y))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ³(y²tan(x/y))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ²</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(y²tan(x/y))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ²</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03B</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 03B</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = y²tan(x/y), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 2.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>2</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise C -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio C</text>
+    </category>
+</question>
+
+<!-- EXERCISE C: f(x,y) = √(x³-y³) (Homogeneous degree 3/2) -->
+<question type="multichoice">
+    <name><text>Pregunta 01C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(50, 205, 50);">Pregunta 01C</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = √(x³-y³), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[√((λx)³-(λy)³)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ^(3/2)√(x³-y³)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[√(λx³-λy³)]]></text><feedback format="html"><text>Incorrecto. Aplica λ correctamente</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(50, 205, 50);">Pregunta 02C</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ^(3/2)(√(x³-y³))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ³(√(x³-y³))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ^(3/2)</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(√(x³-y³))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ^(3/2)</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(50, 205, 50);">Pregunta 03C</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = √(x³-y³), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p><p>Para fracciones use decimales (ej: 1.5 para 3/2)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 3/2 = 1.5.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>1.5</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise D -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio D</text>
+    </category>
+</question>
+
+<!-- EXERCISE D: f(x,y) = (x²-y²)/(xy) (Homogeneous degree 0) -->
+<question type="multichoice">
+    <name><text>Pregunta 01D</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(128, 0, 128);">Pregunta 01D</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = (x²-y²)/(xy), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[((λx)²-(λy)²)/((λx)(λy))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[(x²-y²)/(xy)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²(x²-y²)/(λxy)]]></text><feedback format="html"><text>Incorrecto. Aplica λ a todos los términos</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02D</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(128, 0, 128);">Pregunta 02D</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ⁰((x²-y²)/(xy))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ¹((x²-y²)/(xy))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ⁰</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²((x²-y²)/(xy))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ⁰</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03D</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(128, 0, 128);">Pregunta 03D</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = (x²-y²)/(xy), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 0.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>0</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise E -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio E</text>
+    </category>
+</question>
+
+<!-- EXERCISE E: f(x,y) = x²+sin(x)cos(y) (Not homogeneous) -->
+<question type="multichoice">
+    <name><text>Pregunta 01E</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 165, 0);">Pregunta 01E</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = x²+sin(x)cos(y), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[(λx)²+sin(λx)cos(λy)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²x²+sin(λx)cos(λy)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²(x²+sin(x)cos(y))]]></text><feedback format="html"><text>Incorrecto. No se puede factorizar</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02E</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 165, 0);">Pregunta 02E</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[No se puede factorizar λ]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²(x²+sin(x)cos(y))]]></text><feedback format="html"><text>Incorrecto. No es posible factorizar</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(x²+sin(x)cos(y))]]></text><feedback format="html"><text>Incorrecto. No es posible factorizar</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03E</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 165, 0);">Pregunta 03E</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = x²+sin(x)cos(y), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función NO es homogénea.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>-1</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise F -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio F</text>
+    </category>
+</question>
+
+<!-- EXERCISE F: f(x,y) = e^x (Not homogeneous) -->
+<question type="multichoice">
+    <name><text>Pregunta 01F</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(0, 128, 128);">Pregunta 01F</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = e^x, obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[e^(λx)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λe^x]]></text><feedback format="html"><text>Incorrecto. Aplica λ al argumento</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[e^x]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02F</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(0, 128, 128);">Pregunta 02F</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[No se puede factorizar λ]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(e^x)]]></text><feedback format="html"><text>Incorrecto. No es posible factorizar</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ⁰(e^x)]]></text><feedback format="html"><text>Incorrecto. No es posible factorizar</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03F</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(0, 128, 128);">Pregunta 03F</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = e^x, ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función NO es homogénea.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>-1</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise G -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio G</text>
+    </category>
+</question>
+
+<!-- EXERCISE G: f(x,y) = e^(x/y) (Homogeneous degree 0) -->
+<question type="multichoice">
+    <name><text>Pregunta 01G</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);">Pregunta 01G</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = e^(x/y), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[e^(λx/λy)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[e^(x/y)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λe^(x/y)]]></text><feedback format="html"><text>Incorrecto. Aplica λ al argumento</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02G</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);">Pregunta 02G</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ⁰(e^(x/y))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ¹(e^(x/y))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ⁰</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²(e^(x/y))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ⁰</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03G</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);">Pregunta 03G</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = e^(x/y), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 0.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>0</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise H -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio H</text>
+    </category>
+</question>
+
+<!-- EXERCISE H: f(x,y) = (x²+y²)^(3/2) (Homogeneous degree 3) -->
+<question type="multichoice">
+    <name><text>Pregunta 01H</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(128, 0, 0);">Pregunta 01H</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = (x²+y²)^(3/2), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[((λx)²+(λy)²)^(3/2)]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ³(x²+y²)^(3/2)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[(λ²x²+λ²y²)^(3/2)]]></text><feedback format="html"><text>Incorrecto. Mantén la forma sin simplificar</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02H</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(128, 0, 0);">Pregunta 02H</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ³((x²+y²)^(3/2))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²((x²+y²)^(3/2))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ³</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ^(3/2)((x²+y²)^(3/2))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ³</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03H</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(128, 0, 0);">Pregunta 03H</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = (x²+y²)^(3/2), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 3.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>3</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise I -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio I</text>
+    </category>
+</question>
+
+<!-- EXERCISE I: f(x,y) = x-5y+6 (Not homogeneous) -->
+<question type="multichoice">
+    <name><text>Pregunta 01I</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(0, 255, 255);">Pregunta 01I</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = x-5y+6, obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[(λx)-5(λy)+6]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λx-5λy+6]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(x-5y+6)]]></text><feedback format="html"><text>Incorrecto. El término constante no cambia</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02I</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(0, 255, 255);">Pregunta 02I</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[No se puede factorizar λ]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ(x-5y+6)]]></text><feedback format="html"><text>Incorrecto. No es posible factorizar</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ⁰(x-5y+6)]]></text><feedback format="html"><text>Incorrecto. No es posible factorizar</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03I</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(0, 255, 255);">Pregunta 03I</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = x-5y+6, ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función NO es homogénea.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>-1</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+<!-- Category: Exercise J -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/Ejercicio J</text>
+    </category>
+</question>
+
+<!-- EXERCISE J: f(x,y) = x·sin(y/x)-y·sin(x/y) (Homogeneous degree 1) -->
+<question type="multichoice">
+    <name><text>Pregunta 01J</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(0, 100, 0);">Pregunta 01J</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = x·sin(y/x)-y·sin(x/y), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[(λx)·sin((λy)/(λx))-(λy)·sin((λx)/(λy))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λx·sin(y/x)-λy·sin(x/y)]]></text><feedback format="html"><text>Incorrecto. Muestra la sustitución directa</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[x·sin(λy/λx)-y·sin(λx/λy)]]></text><feedback format="html"><text>Incorrecto. Aplica λ a todos los términos</text></feedback></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>Pregunta 02J</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(0, 100, 0);">Pregunta 02J</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>En el proceso de factorización de λ, ¿cuál es el resultado más simple que se puede obtener?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>Al factorizar el término común λ, obtenemos la función original multiplicada por una potencia de λ.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>Respuesta correcta</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[λ(x·sin(y/x)-y·sin(x/y))]]></text><feedback format="html"><text>¡Correcto!</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ²(x·sin(y/x)-y·sin(x/y))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ</text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[λ⁰(x·sin(y/x)-y·sin(x/y))]]></text><feedback format="html"><text>Incorrecto. Factor común es λ</text></feedback></answer>
+</question>
+
+<question type="numerical">
+    <name><text>Pregunta 03J</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span style="color: rgb(255, 255, 255); background-color: rgb(0, 100, 0);">Pregunta 03J</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Considerando la función f(x,y) = x·sin(y/x)-y·sin(x/y), ¿cuál es el grado de homogeneidad?</p><p>Si la función NO es homogénea, ingrese -1</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text>La función es homogénea de grado 1.</text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber>
+    <answer fraction="100"><text>1</text><feedback format="html"><text>¡Correcto!</text></feedback><tolerance>0</tolerance></answer>
+</question>
+
+</quiz>
