@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- Question 1: Homogeneity Verification -->
+<question type="multichoice">
+    <name>
+        <text>Pregunta 01A - Paso 1</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 01A - Paso 1</span></p><p>Al sustituir x → λx, y → λy en dy/dx = y/x - 1, ¿cuál es el resultado?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>La ecuación es homogénea si no cambia bajo la transformación λ.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[y/x - 1]]></text>
+        <feedback><text>¡Correcto! La ecuación es homogénea de grado 0</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[λy/λx - λ]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El término -1 no se multiplica por λ</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[λ(y/x - 1)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se factoriza λ de toda la expresión</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[λy/x - 1]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Ambos x e y deben ser sustituidos</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 2: Variable Substitution -->
+<question type="multichoice">
+    <name>
+        <text>Pregunta 02A - Paso 2</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 02A - Paso 2</span></p><p>Usando la sustitución y = xμ donde dy/dx = μ + x(dμ/dx), ¿cuál es la ecuación resultante?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye la derivada y se simplifica la ecuación homogénea.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[x(dμ/dx) = -1]]></text>
+        <feedback><text>¡Correcto! Después de sustituir y simplificar</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[μ + x(dμ/dx) = μ/x - 1]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha simplificado correctamente</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[x(dμ/dx) = μ - 1]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta cancelar el término μ</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[dμ/dx = -1/x]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Este es el paso siguiente</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 3: Variable Separation -->
+<question type="multichoice">
+    <name>
+        <text>Pregunta 03A - Paso 3</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 03A - Paso 3</span></p><p>De la ecuación x(dμ/dx) = -1, ¿cuál es la forma separada correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se separan las variables μ y x en lados opuestos de la ecuación.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[dμ = -dx/x]]></text>
+        <feedback><text>¡Correcto! Variables separadas correctamente</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[x dμ = -dx]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha dividido por x</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[dμ = -x dx]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo y la separación son incorrectos</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[μ dx = -x dμ]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Esta no es la forma separada</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 4: Integration -->
+<question type="multichoice">
+    <name>
+        <text>Pregunta 04A - Paso 4</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 04A - Paso 4</span></p><p>¿Cuál es el resultado de ∫dμ = -∫(dx/x)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se integran ambos lados de la ecuación separada.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[μ = -ln|x| + C]]></text>
+        <feedback><text>¡Correcto! La integral de 1/x es ln|x|</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[μ = -x²/2 + C]]></text>
+        <feedback format="html">
+            <text>Incorrecto. La integral de 1/x no es x²/2</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[μ = -x + C]]></text>
+        <feedback format="html">
+            <text>Incorrecto. La integral de 1/x no es x</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[μ = -1/x + C]]></text>
+        <feedback format="html">
+            <text>Incorrecto. La integral de 1/x no es 1/x</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 5: Back Substitution -->
+<question type="multichoice">
+    <name>
+        <text>Pregunta 05A - Paso 5</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 05A - Paso 5</span></p><p>Si μ = -ln|x| + C y μ = y/x, ¿cuál es la solución general?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye μ = y/x y se despeja y.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[y = -x ln|x| + Cx]]></text>
+        <feedback><text>¡Correcto! Se multiplica por x ambos lados</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[y = -ln|x| + Cx]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta multiplicar ln|x| por x</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[y = -x ln|x| + C]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta multiplicar C por x</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[y = x(-ln|x| + C)x]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Hay una x extra</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 6: Initial Condition (Numerical) -->
+<question type="numerical">
+    <name>
+        <text>Pregunta 06A - Paso 6</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 06A - Paso 6</span></p><p>Con y(1) = 2 y sabiendo que ln(1) = 0, ¿cuál es el valor de C?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye la condición inicial en la solución general.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    
+    <answer fraction="100">
+        <text>2</text>
+        <feedback format="html">
+            <text>¡Correcto! 2 = -1·0 + C·1, por tanto C = 2</text>
+        </feedback>
+        <tolerance>0</tolerance>
+    </answer>
+</question>
+
+<!-- Question 7: Final Solution -->
+<question type="multichoice">
+    <name>
+        <text>Pregunta 07A - Paso 7</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 07A - Paso 7</span></p><p>¿Cuál es la solución particular con y(1) = 2?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye el valor de C en la solución general.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[y = -x ln|x| + 2x]]></text>
+        <feedback><text>¡Correcto! Sustituyendo C = 2</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[y = -x ln|x| + x]]></text>
+        <feedback format="html">
+            <text>Incorrecto. C = 2, no C = 1</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[y = -2x ln|x| + x]]></text>
+        <feedback format="html">
+            <text>Incorrecto. C multiplica a x, no al logaritmo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[y = x ln|x| + 2x]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del logaritmo debe ser negativo</text>
+        </feedback>
+    </answer>
+</question>
+
+</quiz>

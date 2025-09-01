@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{lmodern}
+
+\title{Resolución de Ecuación Diferencial Homogénea}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Problema}
+Resolver la ecuación diferencial:
+\[
+xy\frac{dy}{dx} + 4x^{2} + y^{2} = 0, 
+\qquad y(2) = -7
+\]
+
+\section*{1. Verificación de homogeneidad}
+\[
+\frac{dy}{dx} = \frac{-4x^{2} - y^{2}}{xy}
+\]
+
+Sustituyendo \(x \to \lambda x\), \(y \to \lambda y\):
+\[
+\frac{dy}{dx} = \frac{-4(\lambda x)^{2} - (\lambda y)^{2}}{(\lambda x)(\lambda y)}
+= \frac{\lambda^{2}(-4x^{2} - y^{2})}{\lambda^{2} xy}
+= \frac{-4x^{2} - y^{2}}{xy}.
+\]
+La ecuación es homogénea.
+
+\section*{2. Cambio de variable}
+Sea 
+\[
+y = x\mu, \qquad \mu = \frac{y}{x}, \qquad \frac{dy}{dx} = \mu + x\frac{d\mu}{dx}.
+\]
+
+Sustituyendo en la E.D.:
+\[
+\mu + x\frac{d\mu}{dx} = \frac{-4x^{2} - x^{2}\mu^{2}}{x^{2}\mu}.
+\]
+
+Simplificamos:
+\[
+\mu + x\frac{d\mu}{dx} = \frac{-4 - \mu^{2}}{\mu},
+\]
+\[
+x\frac{d\mu}{dx} = \frac{-4 - \mu^{2}}{\mu} - \mu 
+= \frac{-4 - 2\mu^{2}}{\mu}.
+\]
+
+\section*{3. Separación de variables}
+\[
+x\frac{d\mu}{dx} = -\frac{4 + 2\mu^{2}}{\mu}.
+\]
+
+\[
+\int \frac{\mu \, d\mu}{4 + 2\mu^{2}} = -\int \frac{dx}{x}.
+\]
+
+La integral del lado izquierdo es:
+\[
+\int \frac{\mu}{4 + 2\mu^{2}}\, d\mu 
+= \frac{1}{4} \ln(4 + 2\mu^{2}).
+\]
+
+Por tanto:
+\[
+\frac{1}{4}\ln(4 + 2\mu^{2}) = -\ln(x) + \ln(C).
+\]
+
+\section*{4. Solución implícita}
+\[
+\ln\!\left((4+2\mu^{2})^{1/4}\right) = \ln\!\left(\frac{C}{x}\right).
+\]
+
+\[
+(4 + 2\mu^{2})^{1/4} = \frac{C}{x}.
+\]
+
+Elevando a la cuarta:
+\[
+4 + 2\mu^{2} = \frac{C^{4}}{x^{4}}.
+\]
+
+Sea \(A = C^{4}\):
+\[
+4 + 2\mu^{2} = A x^{-4}.
+\]
+
+\section*{5. Sustitución inversa}
+Recordando que \(\mu = \tfrac{y}{x}\):
+\[
+2\left(\frac{y}{x}\right)^{2} = A x^{-4} - 4,
+\]
+
+\[
+y^{2} = \frac{A}{2x^{2}} - 2x^{2}.
+\]
+
+\section*{6. Condición inicial}
+Con \(y(2) = -7\):
+\[
+(-7)^{2} = \frac{A}{2(2)^{2}} - 2(2)^{2},
+\]
+
+\[
+49 = \frac{A}{8} - 8,
+\]
+
+\[
+57 = \frac{A}{8}, \qquad A = 456.
+\]
+
+\section*{7. Solución final}
+\[
+y^{2} = \frac{456}{2x^{2}} - 2x^{2},
+\]
+
+\[
+y(x) = \pm \sqrt{\frac{228}{x^{2}} - 2x^{2}}.
+\]
+
+Dado que \(y(2) = -7 < 0\), se toma la rama negativa:
+\[
+\boxed{\, y(x) = -\sqrt{\frac{228}{x^{2}} - 2x^{2}} \,}
+\]
+
+\end{document}
