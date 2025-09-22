@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 05 - Aplicaciones de Modelado para E.D. de Primer Orden}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+
+\subsubsection*{A. Analize y resuelve los siguientes problemas}
+
+\begin{enumerate}
+
+    \item \textbf Una tarta caliente que se cocinó a una temperatura constante de 325°F se saca directamente de un horno y se coloca al aire libre a la sombra en un día en el que la temperatura del aire en la sombra es de 85°F. Después de 5 minutos a la sombra, la temperatura de la tarta se había reducido a 250°F. Determina (a) la temperatura de la tarta después de 20 minutos y (b) el tiempo requerido para que alcance los 275°F.
+
+\textit{Respuestas:}  
+(a) 138.6°F  
+(b) 3.12 min
+    \item \textbf Una pelota es propulsada hacia arriba con una velocidad inicial de 250 ft/seg en un vacío sin resistencia al aire. ¿Qué tan alto llegará?
+
+\textit{Respuesta:}  
+976.6 ft
+    \item \textbf  Un cuerpo de masa 10 slugs se deja caer desde una altura de 1000 ft sin velocidad inicial. El cuerpo encuentra una resistencia al aire proporcional a su velocidad. Si la velocidad límite es conocida como 320 ft/seg, encuentra (a) una expresión para la velocidad del cuerpo en cualquier momento \(t\), (b) una expresión para la posición del cuerpo en cualquier momento \(t\), y (c) el tiempo requerido para que el cuerpo alcance los 160 ft/seg.
+
+\textit{Respuestas:}  
+(a) \(v = -320e^{-0.1t} + 320\)  
+    \item \textbf Un cuerpo de masa 1 slug se deja caer con una velocidad inicial de 1 ft/sec y encuentra una fuerza debido a la resistencia al aire proporcional a su velocidad, de modo que la aceleración del cuerpo es exactamente \( -8v^2 \). Encuentra la velocidad en cualquier momento \(t\).
+
+\textit{Respuesta:}  
+\( \frac{2 + v}{2 - v} = 3e^{32t} \quad \text{or} \quad v = \frac{2(3e^{32t} - 1)}{(3e^{32t} + 1)} \)
+
+\item \textbf{(Contaminación de un lago — modelo proporcional a lo no contaminado)}\\
+En un lago, la fracción de agua contaminada \(P(t)\) aumenta de manera directamente proporcional a la fracción de agua aún limpia \((1-P)\). Inicialmente el \(2\%\) del agua está contaminada. Después de 4 días, el \(8\%\) del agua ya se encuentra contaminada. 
+
+\begin{itemize}
+  \item Plantea la ecuación diferencial que describe el proceso.
+  \item Determina la fórmula que da \(P(t)\) para cualquier tiempo \(t\).
+\end{itemize}
+
+\bigskip
+
+\item \textbf{(Campaña de inmunización — modelo proporcional a los no inmunizados)}\\
+En una población, se inicia una campaña de inmunización cuya eficacia hace que la fracción inmunizada crezca proporcionalmente al número de personas aún no inmunizadas. Sea \(P(t)\) la fracción inmunizada al tiempo \(t\) (en días). Inicialmente el \(10\%\) de la población está inmunizada; tras 7 días el \(30\%\) lo está. 
+
+\begin{itemize}
+  \item Plantea la ecuación diferencial.
+  \item Encuentra la fórmula explícita de \(P(t)\).
+\end{itemize}
+
+\bigskip
+
+\item \textbf{(Crecimiento logístico — población con capacidad de carga)}\\
+Una población de conejos en una reserva comienza con \(P(0)=500\). El crecimiento sigue el modelo logístico con capacidad de carga \(K=5000\) y tasa intrínseca \(r=0.2\) (por mes). 
+
+\begin{enumerate}
+  \item Escribe la ecuación diferencial y su solución general.
+  \item Determina la fórmula para \(P(t)\).
+  \item Calcula la población después de 12 meses.
+\end{enumerate}
+
+
+    \item \textbf Un material radiactivo es conocido por decaer a una tasa proporcional a la cantidad presente. Si después de una hora se observa que el 10 por ciento del material se ha desintegrado, encuentra el período de semivida del material.
+
+\textit{Respuesta:}  
+\(N = \frac{500}{1 + 99e^{-500t}}\)
+    \item \textbf Un cuerpo a una temperatura de 0°F se coloca en una habitación cuya temperatura se mantiene a 100°F. Si después de 10 minutos la temperatura del cuerpo es de 25°F, encuentra (a) el tiempo requerido para que el cuerpo alcance una temperatura de 50°F, y (b) la temperatura del cuerpo después de 20 minutos.
+
+\textit{Respuestas:}  
+\(T = -100e^{-0.029t} + 100\)  
+(a) 23.9 minutos
+(b) 44ºF
+
+
+\end{enumerate}
+
+
+\end{document}
