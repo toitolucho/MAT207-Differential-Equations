@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Anuncios y Puntos de Resolución de Ejercicios}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% --- Ejercicios Homogéneos (Solutions-4.52-4.54.tex) ---
+
+\section*{Ejercicios de Ecuaciones Diferenciales Homogéneas}
+
+\subsection*{Ejercicio 4.52}
+\textbf{Enunciado:}
+\\
+Resuelve la ecuación diferencial:
+\[
+y' = \frac{y}{x + \sqrt{xy}}
+\]
+\begin{itemize}[leftmargin=2em]
+    \item Verifica si la ecuación es homogénea.
+    \item Realiza el cambio de variable adecuado.
+    \item Separa las variables y resuelve la integral.
+    \item Expresa la solución general de la ecuación.
+\end{itemize}
+
+\subsection*{Ejercicio 4.54}
+\textbf{Enunciado:}
+\\
+Resuelve la ecuación diferencial:
+\[
+y' = \frac{x^4 + 3x^2y^2 + y^4}{xy}
+\]
+\begin{itemize}[leftmargin=2em]
+    \item Verifica si la ecuación es homogénea y justifica el método.
+    \item Realiza el cambio de variable correspondiente.
+    \item Separa las variables y resuelve la integral.
+    \item Expresa la solución general de la ecuación.
+\end{itemize}
+
+% --- Ejercicios de Modelado (Modeling-Solutions.tex) ---
+
+\section*{Problemas de Modelado con Ecuaciones Diferenciales}
+
+\subsection*{Problema 1: Contaminación de un Lago}
+\textbf{Contexto:}
+\\
+En un lago, la fracción de agua contaminada $P(t)$ aumenta de manera directamente proporcional a la fracción de agua aún limpia $(1-P)$. Inicialmente el $2\%$ del agua está contaminada ($P(0) = 0.02$). Después de 4 días, el $8\%$ del agua ya se encuentra contaminada ($P(4) = 0.08$).
+
+\textbf{Puntos a resolver:}
+\begin{enumerate}[label=\textbf{\Alph*.},leftmargin=2em]
+    \item Plantea la ecuación diferencial que describe el proceso.
+    \item Determina la fórmula explícita que da $P(t)$ para cualquier tiempo $t$.
+    \item ¿Cuál será el porcentaje de contaminación del lago después de un mes (30 días)?
+    \item ¿Cuántos días deben pasar para que el lago alcance un 50\% de contaminación?
+\end{enumerate}
+
+\textbf{Análisis Crítico del Modelo:}
+\begin{enumerate}[label=\textbf{E\arabic*.},leftmargin=2em]
+    \item ¿En cuánto tiempo estará el lago 100\% contaminado? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.
+    \item Un nuevo informe afirma que, después de solo 5 días, la contaminación ya era del 10\%. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.
+\end{enumerate}
+
+\subsection*{Problema 2: Campaña de Inmunización}
+\textbf{Contexto:}
+\\
+En una población, se inicia una campaña de inmunización cuya eficacia hace que la fracción inmunizada crezca proporcionalmente al número de personas aún no inmunizadas. Sea $P(t)$ la fracción inmunizada al tiempo $t$ (en días). Inicialmente el $10\%$ de la población está inmunizada ($P(0) = 0.10$); tras 7 días el $30\%$ lo está ($P(7) = 0.30$).
+
+\textbf{Puntos a resolver:}
+\begin{enumerate}[label=\textbf{\Alph*.},leftmargin=2em]
+    \item Plantea la ecuación diferencial.
+    \item Encuentra la fórmula explícita de $P(t)$.
+    \item ¿Cuál será el porcentaje de la población inmunizada después de un mes (30 días)?
+    \item ¿Cuántos días deben pasar para que el 80\% de la población esté inmunizada?
+\end{enumerate}
+
+\textbf{Análisis Crítico del Modelo:}
+\begin{enumerate}[label=\textbf{E\arabic*.},leftmargin=2em]
+    \item Según este modelo, ¿en cuánto tiempo estará el 100\% de la población inmunizada? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.
+    \item Un funcionario de salud anuncia que, después de 10 días, el 45\% de la población ya está inmunizada. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.
+\end{enumerate}
+
+\end{document}
