@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- Category: Modelado/ContaminacionLago -->
+<question type="category">
+    <category>
+        <text>$course$/Modelado/ContaminacionLago</text>
+    </category>
+</question>
+
+<!-- Paso 1: Planteamiento de la ecuación diferencial -->
+<question type="multichoice">
+    <name>
+        <text>Contaminación Lago - Paso 1 - Planteamiento Ecuación</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+<p><span style="color: rgb(0,100,0); background-color: rgb(255,255,153);">Pregunta 01A - Modelado</span></p>
+<p>En un lago, la fracción de agua contaminada \( P(t) \) aumenta de manera directamente proporcional a la fracción de agua aún limpia \((1-P)\). Sea \( P(t) \) la fracción contaminada al tiempo \( t \) (en días). Inicialmente el 2\% del agua está contaminada (\(P(0) = 0.02\)). Después de 4 días, el 8\% del agua ya se encuentra contaminada (\(P(4) = 0.08\)).</p>
+<p><b>Paso 1:</b> ¿Cuál es la ecuación diferencial que modela este proceso?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>La ecuación diferencial debe relacionar la tasa de cambio de la fracción contaminada con la fracción limpia.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>¡Correcto!</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(\frac{dP}{dt} = k(1-P)\)]]></text>
+        <feedback><text>¡Correcto! Esta es la ecuación diferencial adecuada.</text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{dP}{dt} = kP\)]]></text>
+        <feedback><text>Incorrecto. La tasa es proporcional a la fracción limpia, no a la contaminada.</text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{dP}{dt} = k(1+P)\)]]></text>
+        <feedback><text>Incorrecto. Revisa el signo en la expresión.</text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{dP}{dt} = k\)]]></text>
+        <feedback><text>Incorrecto. Falta la dependencia de P.</text></feedback>
+    </answer>
+</question>
+
+<!-- Paso 2: Solución general de la ecuación diferencial -->
+<question type="multichoice">
+    <name>
+        <text>Contaminación Lago - Paso 2 - Solución General</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+<p><span style="color: rgb(0,100,0); background-color: rgb(255,255,153);">Pregunta 02A - Modelado</span></p>
+<p>A partir de la ecuación diferencial planteada, ¿cuál es la forma general de la solución para \(P(t)\)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>La solución general se obtiene separando variables e integrando, usando constantes de integración.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text>¡Correcto!</text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text>Respuesta parcialmente correcta.</text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text>Respuesta incorrecta.</text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(P(t) = 1 - Ae^{-kt}\)]]></text>
+        <feedback><text>¡Correcto! Esta es la solución general de la ecuación diferencial dada.</text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(P(t) = Ae^{kt}\)]]></text>
+        <feedback><text>Incorrecto. Revisa el signo y la constante.</text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(P(t) = 1 + Ae^{-kt}\)]]></text>
+        <feedback><text>Incorrecto. El signo delante de la constante es incorrecto.</text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(P(t) = Ae^{-kt}\)]]></text>
+        <feedback><text>Incorrecto. Falta el término constante 1.</text></feedback>
+    </answer>
+</question>
+
+<!-- Paso 3: Predicción de contaminación a 30 días -->
+<question type="numerical">
+    <name>
+        <text>Contaminación Lago - Paso 3 - Predicción 30 días</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+<p><span style="color: rgb(0,100,0); background-color: rgb(255,255,153);">Pregunta 03A - Modelado</span></p>
+<p>Utiliza la fórmula explícita obtenida para calcular el valor de \( P(30) \), es decir, la fracción contaminada después de 30 días.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se evalúa la solución general en t = 30.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <answer fraction="100" tolerance="0.01">
+        <text>0.39</text>
+        <feedback><text>¡Correcto! El valor calculado es aproximadamente 0.39 o 39%.</text></feedback>
+    </answer>
+</question>
+
+<!-- Paso 4: Tiempo para alcanzar un umbral de contaminación -->
+<question type="numerical">
+    <name>
+        <text>Contaminación Lago - Paso 4 - Tiempo para 50%</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+<p><span style="color: rgb(0,100,0); background-color: rgb(255,255,153);">Pregunta 04A - Modelado</span></p>
+<p>¿Cuántos días deben pasar para que la fracción contaminada alcance el 50%? Escribe la ecuación que debe resolverse y el valor de \( t \) correspondiente.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se resuelve la ecuación \( P(t) = 0.5 \) para t.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <answer fraction="100" tolerance="0.1">
+        <text>42.6</text>
+        <feedback><text>¡Correcto! Aproximadamente 42.6 días.</text></feedback>
+    </answer>
+</question>
+
+<!-- Paso 5: Análisis del límite teórico -->
+<question type="essay">
+    <name>
+        <text>Contaminación Lago - Paso 5 - Límite Teórico</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+<p><span style="color: rgb(0,100,0); background-color: rgb(255,255,153);">Pregunta 05A - Modelado</span></p>
+<p>Analiza el comportamiento del modelo cuando \( t \) tiende a infinito. ¿En cuánto tiempo, según el modelo, el lago estaría completamente contaminado? Explica y justifica tu respuesta con la expresión matemática correspondiente.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Explica el límite de \( P(t) \) cuando \( t \to \infty \).</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+</question>
+
+<!-- Paso 6: Contraste de datos con el modelo -->
+<question type="essay">
+    <name>
+        <text>Contaminación Lago - Paso 6 - Contraste de Datos</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+<p><span style="color: rgb(0,100,0); background-color: rgb(255,255,153);">Pregunta 06A - Modelado</span></p>
+<p>Considerando que un nuevo informe indica que después de 5 días la contaminación era del 10%, utiliza el modelo para verificar si este dato es compatible. Escribe el cálculo necesario y concluye si es consistente o no.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Compara el valor calculado de \( P(5) \) con el 10% reportado.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+</question>
+
+</quiz>

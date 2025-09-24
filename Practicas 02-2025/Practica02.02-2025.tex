@@ -61,22 +61,123 @@ En esta práctica, se determinará si ciertas ecuaciones diferenciales son de va
   \item $\dfrac{dx}{dt} = 8-3x; \quad x(0)=4$
 \end{enumerate}
 \end{multicols}
-\subsection*{C) Determina si las siguientes ecuaciones diferenciales son homogéneas, }
-Considera simplemente corroborar si incoporando el operandor landa, este se puede factorizar y dentro uno de los terminos factorizados, la funcion f(x,y) vuelve a ser la ecuacion original
-\begin{multicols}{2}
+\subsection*{C) Determina si las siguientes ecuaciones diferenciales son homogéneas}
+Considera simplemente corroborar si incorporando el operador lambda, este se puede factorizar y dentro uno de los términos factorizados, la función f(x,y) vuelve a ser la ecuación original
+
 \begin{enumerate}
-    \item $f(x,y)=x^{2} y-4y^{3}$
-    \item $f(x,y)=y^{2}\tan\left(\frac{x}{y}\right)$
-    \item $f(x,y)=\sqrt{x^{3} -y^{3}}$
-    \item $f(x,y)=\frac{x^{2} -y^{2}}{xy}$
-    \item $f(x,y)=x^{2} +\sin (x)\cos (y)$
-    \item $f(x,y)=e^{x}$
-    \item $f(x,y)=e^{\frac{x}{y}}$
-    \item $f(x,y)=\left( x^{2} +y^{2}\right)^{3/2}$
-    \item $f(x,y)=x-5y+6$
-    \item $f(x,y)=x\cdot \sin\left(\frac{y}{x}\right) -y\cdot \sin\left(\frac{x}{y}\right)$
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = x^{2} y - 4y^{3} \\[1.2em]
+    f(\lambda x, \lambda y) = (\lambda x)^{2}(\lambda y) - 4(\lambda y)^{3} \\[1.2em]
+    = \lambda^{2} x^{2} \cdot \lambda y - 4\lambda^{3} y^{3} \\[1.2em]
+    = \lambda^{3} x^{2} y - 4\lambda^{3} y^{3} \\[1.2em]
+    = \lambda^{3}(x^{2} y - 4y^{3}) = \lambda^{3} f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 3}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = y^{2}\tan\left(\frac{x}{y}\right) \\[1.2em]
+    f(\lambda x, \lambda y) = (\lambda y)^{2}\tan\left(\frac{\lambda x}{\lambda y}\right) \\[1.2em]
+    = \lambda^{2} y^{2}\tan\left(\frac{x}{y}\right) \\[1.2em]
+    = \lambda^{2} f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 2}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = \sqrt{x^{3} - y^{3}} \\[1.2em]
+    f(\lambda x, \lambda y) = \sqrt{(\lambda x)^{3} - (\lambda y)^{3}} \\[1.2em]
+    = \sqrt{\lambda^{3} x^{3} - \lambda^{3} y^{3}} \\[1.2em]
+    = \sqrt{\lambda^{3}(x^{3} - y^{3})} \\[1.2em]
+    = \lambda^{3/2}\sqrt{x^{3} - y^{3}} = \lambda^{3/2} f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 3/2}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = \frac{x^{2} - y^{2}}{xy} \\[1.2em]
+    f(\lambda x, \lambda y) = \frac{(\lambda x)^{2} - (\lambda y)^{2}}{(\lambda x)(\lambda y)} \\[1.2em]
+    = \frac{\lambda^{2} x^{2} - \lambda^{2} y^{2}}{\lambda^{2} xy} \\[1.2em]
+    = \frac{\lambda^{2}(x^{2} - y^{2})}{\lambda^{2} xy} \\[1.2em]
+    = \frac{x^{2} - y^{2}}{xy} = \lambda^{0} f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 0}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = x^{2} + \sin(x)\cos(y) \\[1.2em]
+    f(\lambda x, \lambda y) = (\lambda x)^{2} + \sin(\lambda x)\cos(\lambda y) \\[1.2em]
+    = \lambda^{2} x^{2} + \sin(\lambda x)\cos(\lambda y) \\[1.2em]
+    \neq \lambda^{n} f(x,y) \text{ para cualquier } n
+    \end{array}
+    \]
+    \textbf{NO es homogénea}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = e^{x} \\[1.2em]
+    f(\lambda x, \lambda y) = e^{\lambda x} \\[1.2em]
+    \neq \lambda^{n} e^{x} \text{ para cualquier } n
+    \end{array}
+    \]
+    \textbf{NO es homogénea}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = e^{\frac{x}{y}} \\[1.2em]
+    f(\lambda x, \lambda y) = e^{\frac{\lambda x}{\lambda y}} \\[1.2em]
+    = e^{\frac{x}{y}} = \lambda^{0} f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 0}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = \left( x^{2} + y^{2}\right)^{3/2} \\[1.2em]
+    f(\lambda x, \lambda y) = \left( (\lambda x)^{2} + (\lambda y)^{2}\right)^{3/2} \\[1.2em]
+    = \left( \lambda^{2} x^{2} + \lambda^{2} y^{2}\right)^{3/2} \\[1.2em]
+    = \left( \lambda^{2}(x^{2} + y^{2})\right)^{3/2} \\[1.2em]
+    = \lambda^{3}\left( x^{2} + y^{2}\right)^{3/2} = \lambda^{3} f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 3}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = x - 5y + 6 \\[1.2em]
+    f(\lambda x, \lambda y) = \lambda x - 5\lambda y + 6 \\[1.2em]
+    = \lambda(x - 5y) + 6 \\[1.2em]
+    \neq \lambda^{n}(x - 5y + 6) \text{ para cualquier } n
+    \end{array}
+    \]
+    \textbf{NO es homogénea}
+
+    \item 
+    \[
+    \begin{array}{l}
+    f(x,y) = x\cdot \sin\left(\frac{y}{x}\right) - y\cdot \sin\left(\frac{x}{y}\right) \\[1.2em]
+    f(\lambda x, \lambda y) = \lambda x\cdot \sin\left(\frac{\lambda y}{\lambda x}\right) - \lambda y\cdot \sin\left(\frac{\lambda x}{\lambda y}\right) \\[1.2em]
+    = \lambda x\cdot \sin\left(\frac{y}{x}\right) - \lambda y\cdot \sin\left(\frac{x}{y}\right) \\[1.2em]
+    = \lambda\left[x\cdot \sin\left(\frac{y}{x}\right) - y\cdot \sin\left(\frac{x}{y}\right)\right] = \lambda f(x,y)
+    \end{array}
+    \]
+    \textbf{Homogénea de grado 1}
+
 \end{enumerate}
-\end{multicols}
 \subsection*{D) Resuelve las siguientes ecuaciones homogéneas siempre y cuando lo sean}
 \begin{multicols}{2}
 \begin{enumerate}

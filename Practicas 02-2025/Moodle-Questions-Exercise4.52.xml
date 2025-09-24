@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- Category: Exercise 4.52 -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/EjercicioA</text>
+    </category>
+</question>
+
+<!-- Question 1: Homogeneity Verification -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 01 - Paso 1</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 01A - Ejercicio 4.52</span></p><p>Al dividir numerador y denominador por \(x^2\) en \(\frac{dy}{dx} = \frac{x^2 + 2xy - y^2}{x^2 - 2xy + y^2}\), ¿cuál es el resultado?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Para verificar homogeneidad, se sustituyen las variables escaladas y se verifica si la ecuación permanece invariante.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(\frac{1 + 2(y/x) - (y/x)^2}{1 - 2(y/x) + (y/x)^2}\)]]></text>
+        <feedback><text>¡Correcto! Resultado después de la sustitución</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1 + 2(y/x) + (y/x)^2}{1 - 2(y/x) + (y/x)^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del numerador es incorrecto</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{(y/x)^2 + 2(y/x) - 1}{(y/x)^2 - 2(y/x) + 1}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha dividido por \(x^2\) correctamente</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1 - 2(y/x) + (y/x)^2}{1 + 2(y/x) - (y/x)^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Los numeradores y denominadores están invertidos</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 2: Variable Substitution -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 02 - Paso 2</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 02A - Ejercicio 4.52</span></p><p>Usando \(v = y/x\) donde \(\frac{dy}{dx} = v + x\frac{dv}{dx}\), ¿cuál es la ecuación después de sustituir y simplificar?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye y = xμ y dy/dx = μ + x(dμ/dx) en la ecuación original.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = \frac{1 + 2v - v^2}{1 - 2v + v^2}\)]]></text>
+        <feedback><text>¡Correcto! Resultado después de la sustitución y simplificación</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = \frac{1 + 2v + v^2}{1 - 2v + v^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del numerador es incorrecto</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = \frac{v^2 + 2v - 1}{v^2 - 2v + 1}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha sustituido correctamente</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = \frac{1 - 2v + v^2}{1 + 2v - v^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Los numeradores y denominadores están invertidos</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 3: Further Simplification -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 03 - Paso 3</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 03A - Ejercicio 4.52</span></p><p>Al simplificar \(v + x\frac{dv}{dx} = \frac{1 + 2v - v^2}{1 - 2v + v^2}\), ¿cuál es el resultado?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se combinan las fracciones del lado derecho usando un denominador común.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{-2v + 2v^2}{1 - 2v + v^2}\)]]></text>
+        <feedback><text>¡Correcto! Resultado después de la simplificación</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{2v - 2v^2}{1 - 2v + v^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del numerador es incorrecto</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{2v + 2v^2}{1 - 2v + v^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El numerador no se ha calculado correctamente</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{-2v + 2v^2}{1 + 2v - v^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Los numeradores y denominadores están invertidos</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 4: Variable Separation -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 04 - Paso 4</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 04A - Ejercicio 4.52</span></p><p>¿Cuál es la forma separada correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se separan las variables v y x, invirtiendo la fracción del lado izquierdo.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(\frac{1 - 2v + v^2}{-2v + 2v^2}dv = \frac{dx}{x}\)]]></text>
+        <feedback><text>¡Correcto! Variables separadas correctamente</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1 + 2v + v^2}{2v - 2v^2}dv = \frac{dx}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha separado correctamente la fracción</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{\sqrt{v}}{v} dv = -\frac{dx}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta un término en la separación</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{v}{1-v^2} dv = \frac{dx}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El exponente de μ en el denominador es incorrecto</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 5: Integration -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 05 - Paso 5</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 05A - Ejercicio 4.52</span></p><p>¿Cuál es el resultado de la integración?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se integran ambos lados usando las reglas de potencias y logaritmos.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(-2\mu^{-1/2} + \ln|\mu| = -\ln|x| + C\)]]></text>
+        <feedback><text>¡Correcto! Resultado de las integrales de potencia y logarítmica</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-\frac{3}{2}\mu^{-1/2} + \ln|\mu| = -\ln|x| + C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El coeficiente de la integral de μ^(-3/2) es -2, no -3/2</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(2\mu^{-1/2} + \ln|\mu| = -\ln|x| + C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-2\mu^{1/2} + \ln|\mu| = -\ln|x| + C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El exponente debe ser -1/2, no 1/2</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 6: Back Substitution -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 06 - Paso 6</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 06A - Ejercicio 4.52</span></p><p>Sustituyendo \(\mu = y/x\), ¿cuál es la solución implícita?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye μ = y/x y se simplifica la expresión resultante.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(-2\sqrt{\frac{x}{y}} + \ln|y| = C\)]]></text>
+        <feedback><text>¡Correcto! Resultado después de la sustitución inversa</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-2\sqrt{\frac{y}{x}} + \ln|x| = C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. La raíz debe ser x/y y el logaritmo de y</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(2\sqrt{\frac{x}{y}} + \ln|y| = C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-2\sqrt{\frac{x}{y}} + \ln|x| = C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El logaritmo debe ser de y, no de x</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 7: Initial Condition (Numerical) -->
+<question type="numerical">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 07 - Paso 7</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 07A - Ejercicio 4.52</span></p><p>Con la condición inicial \(y(1) = 1\), ¿cuál es el valor de \(C\)?</p><p>Nota: \(\ln(1) = 0\)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye x = 1, y = 1 en la solución implícita para encontrar C.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    
+    <answer fraction="100">
+        <text>-2</text>
+        <feedback format="html">
+            <text>¡Correcto! \(-2\sqrt{1/1} + \ln|1| = -2 + 0 = -2\)</text>
+        </feedback>
+        <tolerance>0</tolerance>
+    </answer>
+</question>
+
+<!-- Question 8: Final Solution -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.52 - Pregunta 08 - Paso 8</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 08A - Ejercicio 4.52</span></p><p>¿Cuál es la solución particular con \(y(1) = 1\)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye el valor de C en la solución general.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(-2\sqrt{\frac{x}{y}} + \ln|y| = -2\)]]></text>
+        <feedback><text>¡Correcto! Sustituyendo C = -2</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-2\sqrt{\frac{x}{y}} + \ln|y| = 2\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. \(C = -2\), no \(C = 2\)</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(2\sqrt{\frac{x}{y}} + \ln|y| = -2\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del primer término debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-2\sqrt{\frac{x}{y}} - \ln|y| = -2\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del logaritmo debe ser positivo</text>
+        </feedback>
+    </answer>
+</question>
+
+</quiz>

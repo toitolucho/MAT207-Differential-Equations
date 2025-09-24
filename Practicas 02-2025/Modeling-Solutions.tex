@@ -1,0 +1,287 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath} % For align*, equation*, \text{}, and \allowdisplaybreaks
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\centering}{}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\subsection}[block]{\large\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\allowdisplaybreaks
+
+\begin{document}
+
+\section*{Soluciones Detalladas de Problemas de Modelado con Ecuaciones Diferenciales}
+
+\tableofcontents
+\newpage
+
+% --- PROBLEMA 1: CONTAMINACIÓN DEL LAGO ---
+\subsection*{Problema 1: Contaminación de un Lago}
+
+\noindent \textbf{(Modelo Proporcional a lo No Contaminado)}
+
+En un lago, la fracción de agua contaminada $P(t)$ aumenta de manera directamente proporcional a la fracción de agua aún limpia $(1-P)$. Sea $P(t)$ la fracción contaminada al tiempo $t$ (en días). Inicialmente el $2\%$ del agua está contaminada ($P(0) = 0.02$). Después de 4 días, el $8\%$ del agua ya se encuentra contaminada ($P(4) = 0.08$).
+
+\begin{enumerate}[label=\textbf{A\arabic*.},font=\bfseries]
+    \item \textbf{Plantea la ecuación diferencial} que describe el proceso.
+    \item \textbf{Determina la fórmula explícita} que da $P(t)$ para cualquier tiempo $t$.
+    \item \textbf{Cálculo de Predicción:} ¿Cuál será el porcentaje de contaminación del lago después de un mes (30 días)?
+    \item \textbf{Tiempo para un Umbral:} ¿Cuántos días deben pasar para que el lago alcance un 50\% de contaminación?
+\end{enumerate}
+
+\noindent \textbf{Análisis Crítico del Modelo:}
+\begin{enumerate}[label=\textbf{E\arabic*.},start=1,font=\bfseries]
+    \item \textbf{El Límite Teórico:} ¿En cuánto tiempo estará el lago 100\% contaminado? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.
+    \item \textbf{Contradicción de Datos:} Un nuevo informe afirma que, después de solo 5 días, la contaminación ya era del 10\%. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.
+\end{enumerate}
+
+\vspace{1em}
+\hrule % Separator line
+\vspace{1em}
+
+\subsubsection*{Solución Detallada - Problema 1}
+
+\noindent \textbf{1. Plantea la ecuación diferencial que describe el proceso.}
+\begin{align*}
+&\text{Tasa de cambio:} \\
+&\frac{dP}{dt} = k(1-P)
+\end{align*}
+Donde $k$ es la constante de proporcionalidad.
+
+\vspace{0.5em}
+\noindent \textbf{2. Determina la fórmula explícita de $P(t)$ para cualquier tiempo $t$.}
+\begin{align*}
+&\text{Separación de variables:} \\
+&\int \frac{1}{1-P} dP = \int k dt \\
+&- \ln|1-P| = kt + C_1 \\
+&\ln|1-P| = -kt - C_1 \\
+&|1-P| = e^{-kt - C_1} = e^{-C_1}e^{-kt} \\
+&\text{Sea } A = \pm e^{-C_1} \\
+&1-P = Ae^{-kt} \\
+&P(t) = 1 - Ae^{-kt}
+\end{align*}
+\noindent \textbf{Determinación de las Constantes A y k:}
+
+Usando la condición inicial $P(0) = 0.02$:
+\begin{align*}
+0.02 &= 1 - Ae^{-k(0)} \\
+0.02 &= 1 - A \cdot 1 \\
+A &= 1 - 0.02 \\
+\boldsymbol{A} &= \boldsymbol{0.98}
+\end{align*}
+Ahora el modelo es $P(t) = 1 - 0.98e^{-kt}$.
+
+Usando la segunda condición $P(4) = 0.08$:
+\begin{align*}
+0.08 &= 1 - 0.98e^{-k(4)} \\
+\text{Restamos 1 de ambos lados:}\\
+-0.92 &= -0.98e^{-4k} \\
+\text{Dividimos por -0.98:}\\
+\frac{-0.92}{-0.98} &= e^{-4k} \\
+\frac{0.92}{0.98} &= e^{-4k} \\
+\text{Tomamos el logaritmo natural en ambos lados para despejar } k\text{:} \\
+\ln\left(\frac{0.92}{0.98}\right) &= -4k \\
+k &= -\frac{1}{4} \ln\left(\frac{0.92}{0.98}\right) \\
+k &\approx -\frac{1}{4} (-0.063152...) \approx 0.015788... \\
+\boldsymbol{k} &\approx \boldsymbol{0.0158}
+\end{align*}
+Por lo tanto, la fórmula explícita de $P(t)$ es:
+\begin{equation*}
+\boxed{P(t) = 1 - 0.98e^{-0.0158t}}
+\end{equation*}
+
+\vspace{0.5em}
+\noindent \textbf{3. Cálculo de Predicción: ¿Cuál será el porcentaje de contaminación del lago después de un mes (30 días)?}
+\begin{align*}
+\text{Para } t = 30 \text{ días, sustituimos en la fórmula de } P(t)\text{:} \\
+P(30) &= 1 - 0.98e^{-0.0158 \times 30} \\
+P(30) &= 1 - 0.98e^{-0.474} \\
+P(30) &\approx 1 - 0.98(0.622509) \\
+P(30) &\approx 1 - 0.610059 \\
+P(30) &\approx 0.389941
+\end{align*}
+Por lo tanto, $P(30) \approx 39\%$.
+\textbf{Respuesta:} Después de un mes (30 días), aproximadamente el \textbf{39\%} del lago estará contaminado.
+
+\vspace{0.5em}
+\noindent \textbf{4. Tiempo para un Umbral: ¿Cuántos días deben pasar para que el lago alcance un 50\% de contaminación?}
+\begin{align*}
+&\text{Buscamos } t \text{ cuando } P(t) = 0.50:\\
+&0.50 = 1 - 0.98e^{-0.0158t} \\
+&-0.50 = -0.98e^{-0.0158t} \\
+&\frac{0.50}{0.98} = e^{-0.0158t} \\
+&\ln\left(\frac{0.50}{0.98}\right) = -0.0158t \\
+&t = \frac{\ln(0.510204...)}{-0.0158} \\
+&t \approx \frac{-0.672986}{-0.0158} \\
+&t \approx 42.594
+\end{align*}
+\textbf{Respuesta:} Aproximadamente \textbf{42.6 días} deben pasar para que el lago alcance un 50\% de contaminación.
+
+\vspace{0.5em}
+\noindent \textbf{Análisis Crítico del Modelo:}
+
+\vspace{0.5em}
+\noindent \textbf{E1. El Límite Teórico: ¿En cuánto tiempo estará el lago 100\% contaminado? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.}
+\begin{align*}
+\text{Para que el lago esté 100\% contaminado, } P(t) = 1\text{:} \\
+1 &= 1 - 0.98e^{-0.0158t} \\
+0 &= -0.98e^{-0.0158t} \\
+0 &= e^{-0.0158t}
+\end{align*}
+\textbf{Justificación Matemática:} La función exponencial $e^x$ nunca es exactamente igual a cero para ningún valor finito de $x$. Para que $e^{-0.0158t}$ se acerque a cero, el exponente $-0.0158t$ debe tender a $-\infty$. Esto solo ocurre si $t$ tiende a $+\infty$.
+\textbf{Realismo en Contexto Práctico:} En la práctica, el lago nunca alcanzará el 100\% de contaminación según este modelo. Se acercará asintóticamente a ese valor a medida que el tiempo transcurre indefinidamente. Esto es razonable, ya que siempre podría haber una pequeña fracción teórica de agua "no contaminada" que el modelo predice, o el proceso se ralentiza tanto que el cambio es imperceptible. El modelo describe una saturación gradual.
+
+\vspace{0.5em}
+\noindent \textbf{E2. Contradicción de Datos: Un nuevo informe afirma que, después de solo 5 días, la contaminación ya era del 10\%. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.}
+\begin{align*}
+&\text{Para } t=5:\\
+P(5) &= 1 - 0.98e^{-0.0158 \times 5} \\
+&= 1 - 0.98e^{-0.079} \\
+&\approx 1 - 0.98(0.92404) \\
+&\approx 1 - 0.905559 \\
+&\approx 0.094441
+\end{align*}
+Por lo tanto, $P(5) \approx 9.44\%$.
+\textbf{Razonamiento y Conclusión:} Nuestro modelo predice que después de 5 días, la contaminación sería de aproximadamente 9.44\%. La afirmación del informe es que fue del 10\%. Esta afirmación es **consistente y plausible** con nuestro modelo. La pequeña diferencia (aproximadamente 0.56\%) puede atribuirse a redondeos en las constantes calculadas o a que las condiciones reales pueden variar ligeramente del modelo ideal. No hay una contradicción significativa.
+
+\newpage
+
+% --- PROBLEMA 2: CAMPAÑA DE INMUNIZACIÓN ---
+\subsection*{Problema 2: Campaña de Inmunización}
+
+\noindent \textbf{(Modelo Proporcional a los No Inmunizados)}
+
+En una población, se inicia una campaña de inmunización cuya eficacia hace que la fracción inmunizada crezca proporcionalmente al número de personas aún no inmunizadas. Sea $P(t)$ la fracción inmunizada al tiempo $t$ (en días). Inicialmente el $10\%$ de la población está inmunizada ($P(0) = 0.10$); tras 7 días el $30\%$ lo está ($P(7) = 0.30$).
+
+\begin{enumerate}[label=\textbf{A\arabic*.},font=\bfseries]
+    \item \textbf{Plantea la ecuación diferencial.}
+    \item \textbf{Encuentra la fórmula explícita} de $P(t)$.
+    \item \textbf{Cálculo de Predicción:} ¿Cuál será el porcentaje de la población inmunizada después de un mes (30 días)?
+    \item \textbf{Tiempo para un Umbral:} ¿Cuántos días deben pasar para que el 80\% de la población esté inmunizada?
+\end{enumerate}
+
+\noindent \textbf{Análisis Crítico del Modelo:}
+\begin{enumerate}[label=\textbf{E\arabic*.},start=1,font=\bfseries]
+    \item \textbf{El Límite Teórico:} Según este modelo, ¿en cuánto tiempo estará el 100\% de la población inmunizada? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.
+    \item \textbf{Contradicción de Datos:} Un funcionario de salud anuncia que, después de 10 días, el 45\% de la población ya está inmunizada. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.
+\end{enumerate}
+
+\vspace{1em}
+\hrule % Separator line
+\vspace{1em}
+
+\subsubsection*{Solución Detallada - Problema 2}
+
+\noindent \textbf{1. Plantea la ecuación diferencial.}
+\begin{align*}
+&\text{Tasa de cambio de la fracción inmunizada:} \\
+&\frac{dP}{dt} = k(1-P)
+\end{align*}
+Donde $k$ es la constante de proporcionalidad.
+
+\vspace{0.5em}
+\noindent \textbf{2. Encuentra la fórmula explícita de $P(t)$.}
+\begin{align*}
+&\text{Separación de variables:} \\
+&\int \frac{1}{1-P} dP = \int k dt \\
+&- \ln|1-P| = kt + C_1 \\
+&\ln|1-P| = -kt - C_1 \\
+&1-P = Ae^{-kt} \\
+&P(t) = 1 - Ae^{-kt}
+\end{align*}
+\noindent \textbf{Determinación de las Constantes A y k:}
+
+Usando la condición inicial $P(0) = 0.10$:
+\begin{align*}
+0.10 &= 1 - Ae^{-k(0)} \\
+0.10 &= 1 - A \\
+A &= 1 - 0.10 \\
+\boldsymbol{A} &= \boldsymbol{0.90}
+\end{align*}
+Ahora el modelo es $P(t) = 1 - 0.90e^{-kt}$.
+
+Usando la segunda condición $P(7) = 0.30$:
+\begin{align*}
+0.30 &= 1 - 0.90e^{-k(7)} \\
+-0.70 &= -0.90e^{-7k} \\
+\frac{-0.70}{-0.90} &= e^{-7k} \\
+\frac{7}{9} &= e^{-7k} \\
+\text{Tomamos el logaritmo natural en ambos lados:}\\
+\ln\left(\frac{7}{9}\right) &= -7k \\
+k &= -\frac{1}{7} \ln\left(\frac{7}{9}\right) \\
+k &\approx -\frac{1}{7} (-0.251314...) \approx 0.035902... \\
+\boldsymbol{k} &\approx \boldsymbol{0.0359}
+\end{align*}
+Por lo tanto, la fórmula explícita de $P(t)$ es:
+\begin{equation*}
+\boxed{P(t) = 1 - 0.90e^{-0.0359t}}
+\end{equation*}
+
+\vspace{0.5em}
+\noindent \textbf{3. Cálculo de Predicción: ¿Cuál será el porcentaje de la población inmunizada después de un mes (30 días)?}
+\begin{align*}
+\text{Para } t = 30 \text{ días, sustituimos en la fórmula de } P(t)\text{:} \\
+P(30) &= 1 - 0.90e^{-0.0359 \times 30} \\
+P(30) &= 1 - 0.90e^{-1.077} \\
+P(30) &\approx 1 - 0.90(0.34061) \\
+P(30) &\approx 1 - 0.306549 \\
+P(30) &\approx 0.693451
+\end{align*}
+Por lo tanto, $P(30) \approx 69.3\%$.
+\textbf{Respuesta:} Después de un mes (30 días), aproximadamente el \textbf{69.3\%} de la población estará inmunizada.
+
+\vspace{0.5em}
+\noindent \textbf{4. Tiempo para un Umbral: ¿Cuántos días deben pasar para que el 80\% de la población esté inmunizada?}
+\begin{align*}
+\text{Queremos encontrar } t \text{ cuando } P(t) = 0.80\text{:} \\
+0.80 &= 1 - 0.90e^{-0.0359t} \\
+-0.20 &= -0.90e^{-0.0359t} \\
+\frac{0.20}{0.90} &= e^{-0.0359t} \\
+\frac{2}{9} &= e^{-0.0359t} \\
+\ln\left(\frac{2}{9}\right) &= -0.0359t \\
+t &= \frac{\ln(2/9)}{-0.0359} \\
+t &\approx \frac{-1.504077}{-0.0359} \\
+t &\approx 41.90
+\end{align*}
+\textbf{Respuesta:} Aproximadamente \textbf{41.9 días} deben pasar para que el 80\% de la población esté inmunizada.
+
+\vspace{0.5em}
+\noindent \textbf{Análisis Crítico del Modelo:}
+
+\vspace{0.5em}
+\noindent \textbf{E1. El Límite Teórico: Según este modelo, ¿en cuánto tiempo estará el 100\% de la población inmunizada? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.}
+\begin{align*}
+\text{Para que la población esté 100\% inmunizada, } P(t) = 1\text{:} \\
+1 &= 1 - 0.90e^{-0.0359t} \\
+0 &= -0.90e^{-0.0359t} \\
+0 &= e^{-0.0359t}
+\end{align*}
+\textbf{Justificación Matemática:} La función exponencial $e^x$ nunca es exactamente cero para un $x$ finito. Para que $e^{-0.0359t}$ tienda a cero, el exponente $-0.0359t$ debe tender a $-\infty$. Esto implica que $t$ debe tender a $+\infty$.
+\textbf{Realismo en Contexto Práctico:} En un contexto práctico, este modelo predice que la población **nunca alcanzará el 100\% de inmunización** en un tiempo finito. El resultado es bastante realista en campañas de inmunización. Factores como la negativa de una parte de la población a ser inmunizada, contraindicaciones médicas, inaccesibilidad, o el tiempo necesario para alcanzar a todos, hacen que el 100\% sea un objetivo asintótico y rara vez alcanzable en la práctica.
+
+\vspace{0.5em}
+\noindent \textbf{E2. Contradicción de Datos: Un funcionario de salud anuncia que, después de 10 días, el 45\% de la población ya está inmunizada. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.}
+\begin{align*}
+&\text{Para } t=10:\\
+P(10) &= 1 - 0.90e^{-0.0359 \times 10} \\
+&= 1 - 0.90e^{-0.359} \\
+&\approx 1 - 0.90(0.69830) \\
+&\approx 1 - 0.62847 \\
+&\approx 0.37153
+\end{align*}
+Por lo tanto, $P(10) \approx 37.15\%$.
+
+\textbf{Razonamiento y Conclusión:} Nuestro modelo predice que después de 10 días, aproximadamente el 37.15\% de la población estaría inmunizada.\\
+La afirmación del funcionario es del 45\%. Esta afirmación \textbf{no es consistente} con las predicciones de nuestro modelo.\\
+El porcentaje reportado (45\%) es significativamente mayor que lo que el modelo predice para ese momento (37.15\%).\\
+Esto podría sugerir que la campaña de inmunización ha sido más efectiva de lo que los datos iniciales (0\% en $t=0$, 30\% en $t=7$) sugerirían para un crecimiento proporcional simple, o que hay otros factores no contemplados en el modelo, o incluso que los datos del funcionario difieren de los usados para calibrar el modelo.
+
+\end{document}

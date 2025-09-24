@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 27945684  -->
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 01A</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span class="" style="color: rgb(245, 184, 0); background-color: rgb(0, 46, 184);">Pregunta 01A</span></p><p>Dada la ED&nbsp;</p><p>\( \left( y^{2} +yx\right) dx+x^{2} dy=0 \)<br></p><p>Determine su representacion en la forma A</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>\( \frac{dy}{dx} =-\frac{\left( y^{2} +yx\right)}{x^{2}} \)<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>\( \frac{dy}{dx} =\frac{\left( y^{2} +yx\right)}{x^{2}} \)<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[\(&nbsp;x^{2} dy=-\left( y^{2} +yx\right) dx \)]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>\(&nbsp;\frac{dy|dx}=-\frac{y\power{2}|x\power{2}}+yx\)&nbsp;<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

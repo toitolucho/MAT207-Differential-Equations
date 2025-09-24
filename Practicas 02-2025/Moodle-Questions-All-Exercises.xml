@@ -204,7 +204,7 @@
 <question type="multichoice">
     <name><text>Pregunta 01E</text></name>
     <questiontext format="html">
-        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(255, 165, 0);">Pregunta 01E</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = x²+sin(x)cos(y), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
+        <text><![CDATA[<p><span style="color: rgb(0, 0, 0); background-color: rgb(209, 139, 8);">Pregunta 01E</span></p><p>Para determinar si una función es homogénea, aplicamos el criterio λ.</p><p><strong>Criterio:</strong> Una función f(x,y) es homogénea de grado n si f(λx, λy) = λⁿf(x,y)</p><p>Al sustituir x por λx y y por λy en f(x,y) = x²+sin(x)cos(y), obtenemos:</p><p>f(λx, λy) = ?</p>]]></text>
     </questiontext>
     <generalfeedback format="html"><text>Al sustituir λx por x y λy por y, cada término se multiplica por las potencias correspondientes de λ.</text></generalfeedback>
     <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><idnumber></idnumber><single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>

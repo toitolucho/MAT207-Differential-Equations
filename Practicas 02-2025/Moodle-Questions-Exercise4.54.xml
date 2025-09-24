@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- Category: Exercise 4.54 -->
+<question type="category">
+    <category>
+        <text>$course$/Homogeneidad/EjercicioB</text>
+    </category>
+</question>
+
+<!-- Question 1: Homogeneity Verification -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 01 - Paso 1</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 01B - Ejercicio 4.54</span></p><p>Al dividir numerador y denominador por \(x^4\) en \(\frac{dy}{dx} = \frac{x^4 + 3x^2y^2 + y^4}{xy}\), ¿cuál es el resultado?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se divide por la mayor potencia de x para verificar homogeneidad.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(\frac{1 + 3(y/x)^2 + (y/x)^4}{y/x}\)]]></text>
+        <feedback><text>¡Correcto! La ecuación depende solo de la razón y/x</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1 + 3(y/x) + (y/x)^2}{y/x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Los exponentes no son correctos</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{x^4 + 3x^2y^2 + y^4}{xy}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha dividido por x⁴</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1 + 3(y/x)^2 + (y/x)^4}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El denominador debe ser y/x</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 2: Variable Substitution -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 02 - Paso 2</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 02B - Ejercicio 4.54</span></p><p>Usando \(v = y/x\) donde \(\frac{dy}{dx} = v + x\frac{dv}{dx}\), ¿cuál es la ecuación después de sustituir?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye v = y/x y dy/dx = v + x(dv/dx) en la ecuación.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = \frac{1 + 3v^2 + v^4}{v}\)]]></text>
+        <feedback><text>¡Correcto! Resultado directo de la sustitución</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{1 + 3v^2 + v^4}{v}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta el término v del lado izquierdo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = 1 + 3v^2 + v^4\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta dividir por v</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v + x\frac{dv}{dx} = \frac{1 + 3v + v^2}{v}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Los exponentes no son correctos</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 3: Simplification -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 03 - Paso 3</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 03B - Ejercicio 4.54</span></p><p>Al despejar \(x\frac{dv}{dx}\), ¿cuál es el resultado simplificado?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se despeja x(dv/dx) y se simplifica el numerador.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{(1 + v^2)^2}{v}\)]]></text>
+        <feedback><text>¡Correcto! 1 + 2v² + v⁴ = (1 + v²)²</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{1 + 2v^2 + v^4}{v}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Se puede factorizar como (1 + v²)²</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{1 + 3v^2 + v^4}{v} - v\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Ya se debe haber restado v</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(x\frac{dv}{dx} = \frac{1 + v^4}{v}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta el término 2v²</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 4: Variable Separation -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 04 - Paso 4</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 04B - Ejercicio 4.54</span></p><p>¿Cuál es la forma separada correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se separan las variables v y x invirtiendo la fracción.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(\frac{v}{(1 + v^2)^2} dv = \frac{dx}{x}\)]]></text>
+        <feedback><text>¡Correcto! Variables separadas correctamente</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{(1 + v^2)^2}{v} dv = \frac{dx}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. La fracción está invertida</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{v}{1 + v^2} dv = \frac{dx}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta el exponente 2 en (1 + v²)</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{v^2}{(1 + v^2)^2} dv = \frac{dx}{x}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El numerador debe ser v, no v²</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 5: Integration Setup -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 05 - Paso 5</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 05B - Ejercicio 4.54</span></p><p>Para integrar \(\int \frac{v}{(1 + v^2)^2} dv\), usando \(u = 1 + v^2\), ¿cuál es la integral transformada?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se usa la sustitución u = 1 + v², du = 2v dv.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(\frac{1}{2}\int \frac{du}{u^2}\)]]></text>
+        <feedback><text>¡Correcto! v dv = (1/2)du y (1 + v²)² = u²</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\int \frac{du}{u^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta el factor 1/2</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(2\int \frac{du}{u^2}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El factor debe ser 1/2, no 2</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1}{2}\int \frac{du}{u}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El denominador debe ser u², no u</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 6: Integration Result -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 06 - Paso 6</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 06B - Ejercicio 4.54</span></p><p>¿Cuál es el resultado de la integración completa?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se integran ambos lados y se sustituye de vuelta u = 1 + v².</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(-\frac{1}{2(1 + v^2)} = \ln|x| + C\)]]></text>
+        <feedback><text>¡Correcto! Resultado de integrar (1/2)∫u⁻² du = -(1/2)u⁻¹</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(\frac{1}{2(1 + v^2)} = \ln|x| + C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-\frac{1}{2(1 + v^2)} + \ln|x| = C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Falta el factor 1/2</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(-\frac{1}{2(1 + v^2)} = x + C\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El lado derecho debe ser ln|x| + C</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 7: Solving for v² -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 07 - Paso 7</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 07B - Ejercicio 4.54</span></p><p>Al despejar \(v^2\) de la ecuación, ¿cuál es el resultado?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se despeja v² manipulando algebraicamente la ecuación.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(v^2 = \frac{-1 - 2\ln|Ax|}{2\ln|Ax|}\)]]></text>
+        <feedback><text>¡Correcto! Resultado del despeje algebraico</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v^2 = \frac{1 + 2\ln|Ax|}{2\ln|Ax|}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo del numerador debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v^2 = \frac{-1 + 2\ln|Ax|}{2\ln|Ax|}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. No se ha combinado en una sola fracción</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(v^2 = \frac{-1 - \ln|Ax|}{\ln|Ax|}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Faltan los factores 2 en numerador y denominador</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 8: Back Substitution -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 08 - Paso 8</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 08B - Ejercicio 4.54</span></p><p>Sustituyendo \(v = y/x\), ¿cuál es la forma de la solución?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye v = y/x y se simplifica la expresión.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(y^2 = -x^2\frac{1 + 2\ln|kx|}{2\ln|kx|}\)]]></text>
+        <feedback><text>¡Correcto! Forma final con constantes c y k</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(y^2 = x^2\frac{1 + 2\ln|kx|}{2\ln|kx|}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(y^2 = -x^2\frac{1 - 2\ln|kx|}{2\ln|kx|}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo dentro del paréntesis debe ser +</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(y = -x\sqrt{1 + \frac{c}{\ln|kx|}}\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Debe ser y², no y</text>
+        </feedback>
+    </answer>
+</question>
+
+<!-- Question 9: Initial Condition (Numerical) -->
+<question type="numerical">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 09 - Paso 9</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 09B - Ejercicio 4.54</span></p><p>Si \(y(1) = 2\) y \(k = e\), ¿cuál es el valor de \(c\)?</p><p>Nota: \(\ln(e) = 1\)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye x = 1, y = 2, k = e en la solución para encontrar c.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    
+    <answer fraction="100">
+        <text>-5</text>
+        <feedback format="html">
+            <text>¡Correcto! 4 = -1(1 + c/1), entonces 4 = -1 - c, por tanto c = -5</text>
+        </feedback>
+        <tolerance>0</tolerance>
+    </answer>
+</question>
+
+<!-- Question 10: Final Solution -->
+<question type="multichoice">
+    <name>
+        <text>Ejercicio 4.54 - Pregunta 10 - Paso 10</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[<p><span class="" style="color: rgb(255, 255, 255); background-color: rgb(220, 20, 60);">Pregunta 10B - Ejercicio 4.54</span></p><p>¿Cuál es la solución particular con \(y(1) = 2\) y \(k = e\)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text>Se sustituye c = -5 y k = e en la solución general.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+        <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+        <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+        <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <answer fraction="100" format="html">
+        <text><![CDATA[\(y^2 = -x^2\left(1 - \frac{5}{\ln|ex|}\right)\)]]></text>
+        <feedback><text>¡Correcto! Sustituyendo c = -5 y k = e</text></feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(y^2 = -x^2\left(1 + \frac{5}{\ln|ex|}\right)\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Con c = -5, debe ser 1 - 5/ln|ex|</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(y^2 = x^2\left(1 - \frac{5}{\ln|ex|}\right)\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. El signo principal debe ser negativo</text>
+        </feedback>
+    </answer>
+    
+    <answer fraction="-50" format="html">
+        <text><![CDATA[\(y^2 = -x^2\left(1 - \frac{5}{\ln|x|}\right)\)]]></text>
+        <feedback format="html">
+            <text>Incorrecto. Debe ser ln|ex|, no ln|x|</text>
+        </feedback>
+    </answer>
+</question>
+
+</quiz>
