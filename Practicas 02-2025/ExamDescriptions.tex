@@ -1,0 +1,104 @@
+% ExamDescriptions.tex
+% Description of two exams with one exercise and one modeling problem each
+
+\documentclass[8pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+% Reduce spacing for lists and headings
+\setlist[itemize]{itemsep=0.2em, topsep=0.2em, leftmargin=2em}
+\setlist[enumerate]{itemsep=0.2em, topsep=0.2em, leftmargin=2em}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{0.4em}{0.4em}
+\titlespacing*{\subsection}{0pt}{0.2em}{0.2em}
+\usepackage{geometry}
+\geometry{legalpaper, top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm}
+\setlength{\parskip}{0.2em}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+\section*{MAT207 G1 - ECUACIONES DIFERENCIALES}
+
+\textbf{Nombre completo del estudiante:} \rule{12cm}{0.4pt}
+
+\subsection*{Ejercicio a Resolver}
+\textbf{Ejercicio 4.52}
+\\
+Resuelve la ecuaci\'on diferencial:
+\[
+y' = \frac{y}{x + \sqrt{xy}}
+\]
+\begin{itemize}[leftmargin=2em]
+    \item Verifica si la ecuaci\'on es homog\'enea.
+    \item Realiza el cambio de variable adecuado.
+    \item Separa las variables y resuelve la integral.
+    \item Expresa la soluci\'on general de la ecuaci\'on.
+    \item Encuentre la soluci\'on particular cuando $y(1) = 1$
+\end{itemize}
+
+
+\textbf{Problema 1: Contaminaci\'on de un Lago}
+\\
+En un lago, la fracci\'on de agua contaminada $P(t)$ aumenta de manera directamente proporcional a la fracci\'on de agua a\'un limpia $(1-P)$. Inicialmente el $2\%$ del agua est\'a contaminada ($P(0) = 0.02$). Despu\'es de 4 d\'ias, el $8\%$ del agua ya se encuentra contaminada ($P(4) = 0.08$).
+
+\textbf{Puntos a resolver:}
+\begin{enumerate}[label=\textbf{\Alph*.},leftmargin=2em]
+    \item Plantea la ecuaci\'on diferencial que describe el proceso.
+    \item Determina la f\'ormula expl\'icita que da $P(t)$ para cualquier tiempo $t$.
+    \item ¿Cuál será el porcentaje de contaminación del lago después de un mes (30 días)?
+    \item ¿Cuántos días deben pasar para que el lago alcance un 50\% de contaminación?
+\end{enumerate}
+
+\textbf{An\'alisis Cr\'itico del Modelo:}
+\begin{enumerate}[label=\textbf{E\arabic*.},leftmargin=2em]
+    \item ¿En cuánto tiempo estará el lago 100\% contaminado? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.
+    \item Un nuevo informe afirma que, después de solo 5 días, la contaminación ya era del 10\%. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.
+\end{enumerate}
+
+
+\vspace{1cm}
+
+\section*{MAT207 G2 - ECUACIONES DIFERENCIALES}
+
+\textbf{Nombre completo del estudiante:} \rule{12cm}{0.4pt}
+
+\subsection*{Ejercicio a Resolver}
+\textbf{Ejercicio 4.54}
+\\
+Resuelve la ecuaci\'on diferencial:
+\[
+y' = \frac{x^4 + 3x^2y^2 + y^4}{xy}
+\]
+\begin{itemize}[leftmargin=2em]
+    \item Verifica si la ecuaci\'on es homog\'enea y justifica el m\'etodo.
+    \item Realiza el cambio de variable correspondiente.
+    \item Separa las variables y resuelve la integral.
+    \item Expresa la soluci\'on general de la ecuaci\'on.
+    \item Encuentre la soluci\'on particular cuando $y(1) = 2$
+\end{itemize}
+
+
+\textbf{Problema 2: Campa\~na de Inmunizaci\'on}
+\\
+En una poblaci\'on, se inicia una campa\~na de inmunizaci\'on cuya eficacia hace que la fracci\'on inmunizada crezca proporcionalmente al n\'umero de personas a\'un no inmunizadas. Sea $P(t)$ la fracci\'on inmunizada al tiempo $t$ (en d\'ias). Inicialmente el $10\%$ de la poblaci\'on est\'a inmunizada ($P(0) = 0.10$); tras 7 d\'ias el $30\%$ lo est\'a ($P(7) = 0.30$).
+
+\textbf{Puntos a resolver:}
+\begin{enumerate}[label=\textbf{\Alph*.},leftmargin=2em]
+    \item Plantea la ecuaci\'on diferencial.
+    \item Encuentra la f\'ormula expl\'icita de $P(t)$.
+    \item ¿Cuál será el porcentaje de la población inmunizada después de un mes (30 días)?
+    \item ¿Cuántos días deben pasar para que el 80\% de la población esté inmunizada?
+\end{enumerate}
+
+\textbf{An\'alisis Cr\'itico del Modelo:}
+\begin{enumerate}[label=\textbf{E\arabic*.},leftmargin=2em]
+    \item Según este modelo, ¿en cuánto tiempo estará el 100\% de la población inmunizada? Justifica tu respuesta matemáticamente y explica si este resultado es completamente realista en un contexto práctico.
+    \item Un funcionario de salud anuncia que, después de 10 días, el 45\% de la población ya está inmunizada. Según el modelo que calculamos, ¿es posible esta afirmación? Explica tu razonamiento.
+\end{enumerate}
+
+
+\end{document}
