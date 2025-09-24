@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 04 - Ecuaciones Diferenciales de 1er Exactas y Factores de Integración}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+
+\subsubsection*{A. Determine si las siguientes ecuaciones diferenciales son de variable separable, lineales, exactas o ninguna de ellas}
+
+\begin{enumerate}
+    \item \((x^2 y + x^4 \cos x) \, dx - x^3 \, dy = 0\)
+    \item \((x^{10/3} - 2y) \, dx + x \, dy = 0\)
+    \item \(\sqrt{-2y - y^2} \, dx + (3 + 2x - x^2) \, dy = 0\)
+    \item \((y e^{xy} + 2x) \, dx + (x e^{xy} - 2y) \, dy = 0\)
+    \item \(x y \, dx + dy = 0\)
+    \item \(y^2 \, dx + (2xy + \cos y) \, dy = 0\)
+    \item \([2x + y \cos(xy)] \, dx + [x \cos(xy) - 2y] \, dy = 0\)
+    \item \(\theta \, dr + (3r - \theta - 1) \, d\theta = 0\)
+\end{enumerate}
+
+\subsubsection*{B. Resuelva las siguientes ecuaciones diferenciales en caso de que las mismas sean exactas}
+
+\begin{enumerate}
+  \item $(x+1)\, dx + (x+y)\, dy = 0$ 
+\item $(y\sin x + y\cos x)\, dx + (x\sin x + 1)\, dy = 0$ 
+\item $-\tfrac{y^2}{t^2}\, dt + \tfrac{2y}{t}\, dy = 0$
+\item $-\tfrac{2y}{t^3}\, dt + \tfrac{1}{t^2}\, dy = 0$ 
+\item $y^2\, dt + t^2\, dy = 0$ 
+\item $(4y^3 - 2ty)\, dt + (3t^2y^2 - t^2)\, dy = 0$
+\item $\tfrac{ty - 1}{t^2y}\, dt - \tfrac{1}{t^2y^2}\, dy = 0$
+\item $(t^2 - 2y)\, dt + t\, dx = 0$
+\item $(t^2 - 2x)\, dy + (2tx - x)\, dx = 0$
+\end{enumerate}
+
+
+
+\subsubsection*{D. Determine el factor de integración más adecuado para resolver las ecuaciones diferenciales listadas y resuélvalas}
+
+\begin{enumerate}
+  \item $(y+1)\, dx - x\, dy = 0$ 
+\item $y\, dx + (1-x)\, dy = 0$ 
+\item $(x^2+y^2)\, dx + x^2y\, dy = 0$ 
+\item $(y+y^2)\, dx + x\, dy = 0$
+\item $(y+x^3y^2)\, dx + x\, dy = 0$ 
+\item $(3x^2y-x)\, dx + dy = 0$
+\item $dx - 2xy\, dy = 0$
+\item $2xy\, dx + y^2\, dy = 0$
+\item $y\, dx + 3x\, dy = 0$
+\item $\Big(2xy^2 + \tfrac{x}{y}\Big)\, dx + 4x^2y\, dy = 0$
+\end{enumerate}
+
+\end{document}

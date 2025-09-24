@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 03 - Ecuaciones Diferenciales de 1er Orden Lineales y Bernoulli}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+\subsubsection*{A. Determine si las siguientes ecuaciones diferenciales son de variable separable, lineales, ambas o ninguna de ellas}
+
+\begin{enumerate}
+    \item \(x^2 \frac{dy}{dx} + \sin x - y = 0\)
+    \item \(\frac{dx}{dt} + xt = e^x\)
+    \item \((t^2 + 1) \frac{dy}{dt} = yt - y\)
+    \item \(3t = e^t \frac{dy}{dt} + y \ln t\)
+    \item \(3r = \frac{dr}{d\theta} - \theta^3\)
+\end{enumerate}
+
+\subsubsection*{B. Resuelva las siguientes ecuaciones diferenciales}
+
+\begin{enumerate}
+    \item $y' - 7y = 14x$
+    \item $y' - 7y = \sin 2x$
+    \item $y' + x^2 y = x^2$
+    \item $y' - \tfrac{3}{x^2}y = \tfrac{1}{x^2}$
+    \item $y' = \cos x$
+    \item $y' + y = y^2$
+    \item $x y' + y = x y^3$
+    \item $y' + x y = 6x\sqrt{y}$
+    \item $y' + y = y^3$
+    \item $y' + y = y^{-2}$
+    \item $y' + y = y^2 e^x$
+    \item $\dfrac{dy}{dt} + 50y = 0$
+\end{enumerate}
+
+
+\subsubsection*{C. Resuelva las siguientes ecuaciones diferenciales con los valores de frontera dados}
+
+\begin{enumerate}
+    \item $y' + \tfrac{2}{x}y = x, \quad y(1) = 0$
+    \item $y' + 6xy = 0, \quad y(\pi) = 5$
+    \item $y' + 2xy = 2x^3, \quad y(0) = 1$
+    \item $y' + \tfrac{2}{x}y = -x^9 y^5, \quad y(-1) = 2$
+    \item $\dfrac{dv}{dt} + 2v = 32, \quad v(0) = 0$
+    \item $\dfrac{dq}{dt} + q = 4\cos 2t, \quad q(0) = 1$
+    \item $\dfrac{dN}{dt} + \tfrac{1}{t}N = t, \quad N(2) = 8$
+    \item $\dfrac{dT}{dt} + 0.069T = 2.07, \quad T(0) = -30$
+\end{enumerate}
+
+\end{document}
