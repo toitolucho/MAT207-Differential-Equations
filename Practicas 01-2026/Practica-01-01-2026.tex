@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 02 - Ecuaciones Diferenciales Separables y Homogéneas}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+% Introducción
+\section*{Introducción}
+\large
+En esta práctica, se determinará si ciertas ecuaciones diferenciales son de variable separable, se resolverán ecuaciones diferenciales dadas y se evaluará la homogeneidad de ciertas ecuaciones.
+
+% Ejercicios
+\section*{Ejercicios}
+\large
+
+\subsection*{A) Determina si las siguientes ecuaciones diferenciales son de Variable Separable}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\dfrac{dy}{dx} - \sin(x + y) = 0$
+    \item $\dfrac{dy}{dx} = 4y^2 - 3y + 1$
+    \item $\dfrac{dy}{dx} = \dfrac{e^{x + y}}{x^2 + 2}$
+    \item $(xy^2 + 3y^2) \, dy - 2x \, dx = 0$
+    \item $s^2 + \dfrac{ds}{dt} = \dfrac{s + 1}{st}$
+    \item $\dfrac{dy}{dx} = y \cos(x) + \cos(x)$
+    \item $x \dfrac{dy}{dx} = e^{-y} \ln(x)$
+    \item $\dfrac{dy}{dx} = x^2 y + x$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Resuelve las siguientes ecuaciones diferenciales}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\dfrac{dx}{dt} = \dfrac{t}{x e^{t + 2x}}$
+    \item $\dfrac{dv}{dx} = \dfrac{1 - 4v^2}{3v}$
+    \item $\dfrac{dy}{dx} = 3x^2(1 + y^2)^{3/2}$
+    \item $\sin x \, dx + y \, dy = 0; \quad y(0)=-2$
+    \item $y' = \dfrac{x^2 y - y}{y+1}; \quad y(3)=-1$
+    \item $\dfrac{dy}{dx} = y^2 \sin(x); \quad y(\pi) = 1$
+    \item $(y+1) \, dx + (x+1) \, dy = 0$
+    \item $\dfrac{dy}{dx} = e^{x-y}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{C) Determina si las siguientes ecuaciones diferenciales son homogéneas}
+Considera simplemente corroborar si incorporando el operador lambda, este se puede factorizar y dentro uno de los términos factorizados, la función f(x,y) vuelve a ser la ecuación original
+
+\begin{enumerate}
+    \item $f(x,y)=x^{2} y-4y^{3}$
+    \item $f(x,y)=y^{2}\tan\left(\dfrac{x}{y}\right)$
+    \item $f(x,y)=\dfrac{x^{2} -y^{2}}{xy}$
+    \item $f(x,y)=e^{\frac{x}{y}}$
+    \item $f(x,y)=x\cdot \sin\left(\dfrac{y}{x}\right) -y\cdot \sin\left(\dfrac{x}{y}\right)$
+    \item $f(x,y) = \dfrac{x^3 + xy^2}{x^2 y}$
+    \item $f(x,y) = x \ln\left(\dfrac{x}{y}\right) + y$
+    \item $f(x,y) = y^3 + x^2$
+\end{enumerate}
+
+\subsection*{D) Resuelve las siguientes ecuaciones homogéneas siempre y cuando lo sean}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $(4x^{2} +xy-3y^{2} )\,dx+(-5x^{2} +2xy+y^{2} )\,dy=0$
+    \item $xy'=2(y-\sqrt{xy})$
+    \item $y' = \dfrac{y-x}{x}$
+    \item $y' = \dfrac{2x+y^2}{xy}$
+    \item $y' = \dfrac{2xy}{y^2-x^2}$
+    \item $x^2 y' = y^2 + xy$
+    \item $\dfrac{dy}{dx} = \dfrac{y}{x} + e^{y/x}$
+    \item $(x-y) \, dx + x \, dy = 0$
+\end{enumerate}
+\end{multicols}
+
+\end{document}
