@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 03 - Ecuaciones Diferenciales Ordinarias Exactas y Factores de Integración}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+\subsubsection*{A. Determine si las siguientes ecuaciones diferenciales son de variable separable, homogénea, lineal, de Bernoulli o exactas}
+
+\begin{enumerate}
+    \item \((x^2 y + x^4 \cos x) \, dx - x^3 \, dy = 0\)
+    \item \(\theta \, dr + (3r - \theta - 1) \, d\theta = 0\)
+    \item \(x y \, dx + dy = 0\)
+    \item \((2xy + y^2)\, dx - 2x^2\, dy = 0\)
+    \item \(y^2 \, dx + (2xy + \cos y) \, dy = 0\)
+    \item \([2x + y \cos(xy)] \, dx + [x \cos(xy) - 2y] \, dy = 0\)
+    \item \(x y' + y = y^2 \ln x\)
+    \item \((t^2 - 2y)\, dt + t\, dy = 0\)
+\end{enumerate}
+
+\subsubsection*{B. Resuelva las siguientes Ecuaciones Diferenciales Exactas con los valores iniciales dados}
+
+\begin{enumerate}
+    \item \((2xy - \tan y)\,dx + (x^2 - x\sec^2 y)\,dy = 0, \quad y(1)=\frac{\pi}{4}\) \hfill \textbf{Rpta:} \(x^2 y - x\tan y = \frac{\pi}{4} - 1\)
+    \item \((y - x^3)\,dx + (x + y^3)\,dy = 0, \quad y(0)=1\) \hfill \textbf{Rpta:} \(4xy - x^4 + y^4 = 1\)
+    \item \((3x^2 + 6xy^2)\,dx + (6x^2 y + 4y^3)\,dy = 0, \quad y(1)=0\) \hfill \textbf{Rpta:} \(x^3 + 3x^2y^2 + y^4 = 1\)
+    \item \((e^y + \cos x \cos y)\,dx + (x e^y - \sin x \sin y)\,dy = 0, \quad y(0)=0\) \hfill \textbf{Rpta:} \(x e^y + \cos y \sin x = 0\)
+    \item \((3x^2 + 3xy^2)\,dx + (3x^2y - 3y^2 + 2y)\,dy = 0, \quad y(0)=1\) \hfill \textbf{Rpta:} \(x^3 + \frac{3}{2}x^2y^2 - y^3 + y^2 = 0\)
+    \item \(e^{x^2}(dy + 2xydx) = 3x^2\,dx, \quad y(0)=2\) \hfill \textbf{Rpta:} \(y e^{x^2} = x^3 + 2\)
+    \item \(\left(\frac{xy}{\sqrt{1+x^2}} + 2xy - \frac{y}{x}\right)dx + (\sqrt{1+x^2} + x^2 - \ln x)\,dy = 0, \quad y(1)=0\) \hfill \textbf{Rpta:} \(\sqrt{1+x^2} + x^2 y - y\ln x = \sqrt{2}\)
+    \item \((e^x \sin y - 2y \sin x)\,dx + (e^x \cos y + 2\cos x)\,dy = 0, \quad y\left(\frac{\pi}{2}\right)=0\) \hfill \textbf{Rpta:} \(e^x \sin y + 2y \cos x = 0\)
+\end{enumerate}
+
+\subsubsection*{C. Determine el factor de integración adecuado y resuelva las siguientes ecuaciones diferenciales con sus valores iniciales}
+
+\begin{enumerate}
+    \item \((x^2+y)\,dx - x\,dy = 0, \quad y(1)=0\) \hfill \textbf{Rpta:} \(x^2 - y = x\)
+    \item \(y^2\,dx + (x^2 - 2xy)\,dy = 0, \quad y(1)=2\) \hfill \textbf{Rpta:} \(xy - y^2 = -2x\)
+    \item \((y^4+x^3)\,dx + 8xy^3\,dy = 0, \quad y(1)=1\) \hfill \textbf{Rpta:} \(x(7y^4 + x^3) = 8\)
+    \item \((x^2+y^2+2x)\,dx + 2y\,dy = 0, \quad y(0)=1\) \hfill \textbf{Rpta:} \(x^2 + y^2 = e^{-x}\)
+    \item \(y\,dx + (2x - y e^y)\,dy = 0, \quad y(0)=2\) \hfill \textbf{Rpta:} \(xy^2 - y^2 e^y + 2y e^y - 2e^y = -2e^2\)
+    \item \((3x^2y + 2xy + y^3)\,dx + (x^2 + y^2)\,dy = 0, \quad y(0)=1\) \hfill \textbf{Rpta:} \((3x^2y + y^3)e^{3x} = 1\)
+    \item \((x^4 \ln x - 2x y^3)\,dx + 3x^2 y^2\,dy = 0, \quad y(1)=1\) \hfill \textbf{Rpta:} \(y^3 + x^3(\ln x - 1) = 0\)
+    \item \((\cos x - \sin x + \sin y)\,dx + (\cos x + \sin y + \cos y)\,dy = 0, \quad y(0)=0\) \hfill \textbf{Rpta:} \(e^{x+y}(\cos x + \sin y) = 1\)
+\end{enumerate}
+
+\end{document}
