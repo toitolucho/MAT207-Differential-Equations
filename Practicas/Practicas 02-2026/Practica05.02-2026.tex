@@ -1,0 +1,114 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 05 - Modelado con Ecuaciones Diferenciales de Primer Orden}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+
+\begin{enumerate}[itemsep=0.4cm, label=\textbf{\arabic*.}]
+    \item \textbf{Crecimiento de Población Bacteriana} \\
+    Una población de bacterias crece a una tasa proporcional a la población actual $P(t)$ en cualquier tiempo $t$ (medido en horas). Inicialmente, hay $500$ bacterias en el cultivo. Después de $3$ horas, la población ha crecido a $1500$ bacterias.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Formula el problema de valor inicial (PVI) que modela la población.
+        \item Encuentra la función explícita $P(t)$ que representa la población en cualquier tiempo $t$.
+        \item ¿Cuántas bacterias habrá después de $10$ horas?
+    \end{enumerate}
+
+    \item \textbf{Decaimiento Radiactivo de Plutonio} \\
+    Un reactor regenerador convierte el uranio-238 estable en el isótopo radiactivo plutonio-239, el cual decae a una tasa proporcional a la cantidad $A(t)$ presente en cualquier tiempo $t$ (medido en años). Si la vida media del plutonio-239 es de $24,100$ años:
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Plantea la ecuación diferencial y resuelve para la expresión general $A(t)$, si $A_0$ es la masa inicial de la muestra.
+        \item Si una muestra contiene inicialmente $100$ gramos de plutonio-239, ¿cuánto tiempo tomará para que la muestra decaiga a $20$ gramos?
+    \end{enumerate}
+
+    \item \textbf{Enfriamiento de una Taza de Café} \\
+    Se sirve una taza de café recién preparado a una temperatura de $190^\circ\text{F}$. Se coloca en una habitación mantenida a una temperatura constante de $70^\circ\text{F}$. Después de $10$ minutos, el café se ha enfriado a $150^\circ\text{F}$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Plantea el problema de valor inicial que representa la temperatura del café, $T(t)$.
+        \item Resuelve la ecuación diferencial para encontrar $T(t)$.
+        \item ¿Cuál será la temperatura del café después de $25$ minutos?
+    \end{enumerate}
+
+    \item \textbf{Calentamiento de un Termómetro} \\
+    Un termómetro se saca de un ambiente exterior donde la temperatura es de $15^\circ\text{C}$ y se lleva dentro de un invernadero mantenido a una temperatura constante de $30^\circ\text{C}$. Después de $2$ minutos dentro del invernadero, el termómetro marca $21^\circ\text{C}$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Plantea la ecuación diferencial y encuentra la ecuación de temperatura $T(t)$ mostrada por el termómetro.
+        \item ¿Qué marca el termómetro después de $5$ minutos dentro del invernadero?
+        \item ¿Cuánto tiempo tomará para que el termómetro alcance $29.5^\circ\text{C}$?
+    \end{enumerate}
+
+    \item \textbf{Caída Libre sin Resistencia del Aire} \\
+    Se deja caer una piedra pesada desde lo alto de una torre alta con una velocidad inicial de $0\text{ m/s}$. La torre tiene $180\text{ metros}$ de altura. Desprecia la resistencia del aire y asume que la aceleración debida a la gravedad es $g = 9.8\text{ m/s}^2$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Escribe el problema de valor inicial para la velocidad $v(t)$ y encuentra $v(t)$.
+        \item Determina la ecuación de posición $s(t)$ de la piedra que cae, asumiendo que $s(0) = 0$ es la cima de la torre.
+        \item ¿Cuánto tiempo tarda la piedra en golpear el suelo y cuál es su velocidad al impactar?
+    \end{enumerate}
+
+    \item \textbf{Caída Libre con Resistencia Lineal} \\
+    Un objeto de masa $m = 10\text{ kg}$ se deja caer desde un helicóptero estacionario. La fuerza de resistencia del aire que actúa sobre el objeto que cae es proporcional a su velocidad instantánea $v(t)$, con un coeficiente de arrastre $\beta = 2\text{ N}\cdot\text{s/m}$. Sea la aceleración de la gravedad $g = 9.8\text{ m/s}^2$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Formula el problema de valor inicial para la velocidad de caída $v(t)$, asumiendo $v(0) = 0$.
+        \item Resuelve la ecuación diferencial para encontrar la velocidad $v(t)$ como una función explícita del tiempo.
+        \item Encuentra la velocidad terminal $v_{\text{term}} = \lim_{t \to \infty} v(t)$ del objeto.
+    \end{enumerate}
+
+    \item \textbf{Mezcla de Salmuera en Tanque Único} \\
+    Un tanque grande contiene inicialmente $300\text{ litros}$ de agua pura. Se bombea al tanque una solución de salmuera que contiene $2\text{ gramos}$ de sal por litro a una tasa de $4\text{ litros/minuto}$. La mezcla bien agitada se bombea fuera del tanque a la misma tasa de $4\text{ litros/minuto}$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Formula el problema de valor inicial para la cantidad de sal $A(t)$ en el tanque en cualquier tiempo $t$.
+        \item Encuentra la cantidad de sal $A(t)$ en el tanque como una función del tiempo.
+        \item ¿Cuál es la concentración de sal en el tanque después de $1$ hora?
+    \end{enumerate}
+
+    \item \textbf{Crecimiento Poblacional Logístico} \\
+    Una reserva natural puede soportar un máximo de $10,000$ ciervos. La población de ciervos crece de acuerdo a la ecuación logística:
+    \[ \frac{dP}{dt} = r P \left(1 - \frac{P}{K}\right) \]
+    donde $K = 10,000$ es la capacidad de carga, y $r = 0.05$ año$^{-1}$ es la tasa de crecimiento intrínseca. La población inicial de ciervos es de $2,000$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Encuentra la solución explícita $P(t)$ para la población de ciervos.
+        \item ¿Cuál será la población de ciervos después de $15$ años?
+        \item ¿Cuánto tiempo tomará para que la población de ciervos alcance $8,000$?
+    \end{enumerate}
+
+    \item \textbf{Propagación de una Gripe} \\
+    En un dormitorio estudiantil aislado de $1000$ estudiantes, un solo estudiante regresa de las vacaciones de invierno infectado con una gripe altamente contagiosa. La tasa a la que se propaga el virus es proporcional al producto del número de estudiantes infectados $x(t)$ y el número de estudiantes que aún no están infectados.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Plantea la ecuación diferencial y la condición inicial que modela la propagación del virus.
+        \item Si después de $4$ días, $50$ estudiantes están infectados, encuentra la solución explícita $x(t)$.
+        \item ¿Cuántos estudiantes estarán infectados después de $10$ días?
+    \end{enumerate}
+
+    \item \textbf{La Gota de Lluvia Evaporable} \\
+    Una gota de lluvia esférica cae de una nube. Mientras cae, se evapora a una tasa proporcional a su área superficial $S(t) = 4\pi r(t)^2$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
+        \item Muestra que la tasa de cambio del radio $r(t)$ de la gota de lluvia es una constante. (Pista: Recuerda que el volumen de una esfera es $V(t) = \frac{4}{3}\pi r(t)^3$).
+        \item Si el radio inicial de la gota de lluvia es $3\text{ mm}$, y después de $10$ segundos el radio es $2.5\text{ mm}$, escribe la ecuación explícita para el radio $r(t)$ como función del tiempo.
+        \item ¿Después de cuántos segundos se evaporará completamente la gota de lluvia?
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,372 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\title{\textbf{Chapter 3: Modeling with First-Order Differential Equations}\\
+\large 10 Practical Applications in Cooling, Gravity, Population, Mixing, and Disease\\
+\normalsize Modelado con Ecuaciones Diferenciales de Primer Orden}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Overview of Modeling / Principios Básicos de Modelado}
+
+Mathematical modeling is the process of translating physical laws, biological systems, or chemical behaviors into mathematical equations. Under Dennis Zill's framework, first-order differential equations are used when a quantity's \textbf{rate of change} is directly related to its current state or its environment.
+
+\subsection{Key Classic Models / Modelos Clásicos Fundamentales}
+
+\begin{enumerate}
+    \item \textbf{Growth and Decay (Crecimiento y Decaimiento):}
+    The rate of growth or decay of a population, substance, or radioactive material is proportional to the amount $A(t)$ present at time $t$:
+    \begin{equation}
+        \frac{dA}{dt} = kA
+    \end{equation}
+    where $k > 0$ for growth, and $k < 0$ for decay.
+
+    \item \textbf{Newton's Law of Cooling / Warming (Ley de Enfriamiento de Newton):}
+    The rate at which the temperature $T(t)$ of a body changes is proportional to the difference between $T(t)$ and the constant temperature $T_m$ of the surrounding medium (the ambient temperature):
+    \begin{equation}
+        \frac{dT}{dt} = k(T - T_m)
+    \end{equation}
+    where $k$ is a constant of proportionality.
+
+    \item \textbf{Falling Bodies (Cuerpos en Caída Libre):}
+    Based on Newton's second law ($F = ma = m \frac{dv}{dt}$), the motion of a falling body of mass $m$ experiencing acceleration due to gravity $g$ and air resistance (drag) can be modeled as:
+    \begin{itemize}
+        \item \textbf{No air resistance:} $\frac{dv}{dt} = g$
+        \item \textbf{Linear air resistance:} $m \frac{dv}{dt} = mg - \beta v \implies \frac{dv}{dt} = g - \frac{\beta}{m} v$
+    \end{itemize}
+    where $v(t)$ is the velocity of the body at time $t$, and $\beta > 0$ is the drag coefficient.
+
+    \item \textbf{Mixture Problems (Mezclas):}
+    The rate of change of the amount of substance (e.g., salt) $A(t)$ in a tank is the difference between the input rate and the output rate:
+    \begin{equation}
+        \frac{dA}{dt} = R_{\text{in}} - R_{\text{out}} = (C_{\text{in}} \cdot F_{\text{in}}) - \left(\frac{A(t)}{V(t)} \cdot F_{\text{out}}\right)
+    \end{equation}
+    where $C$ denotes concentration, $F$ represents fluid flow rates, and $V(t)$ is the volume of fluid in the tank at time $t$.
+\end{enumerate}
+
+\newpage
+\section{Problem Set: 10 Modeling Problems / 10 Problemas de Modelado}
+
+\begin{enumerate}[label=\textbf{Problem \arabic*:}, leftmargin=*]
+
+    \item \textbf{Bacterial Population Growth (Crecimiento de Población Bacteriana)} \\
+    A population of bacteria grows at a rate proportional to the current population $P(t)$ at any time $t$ (measured in hours). Initially, there are $500$ bacteria in the culture. After $3$ hours, the population has grown to $1500$ bacteria.
+    \begin{enumerate}[label=(\alph*)]
+        \item Formulate the initial value problem (IVP) modeling the population.
+        \item Find the explicit function $P(t)$ representing the population at any time $t$.
+        \item How many bacteria will be present after $10$ hours?
+    \end{enumerate}
+
+    \item \textbf{Radioactive Decay of Plutonium (Decaimiento Radiactivo de Plutonio)} \\
+    A breeder reactor converts stable uranium-238 into the radioactive isotope plutonium-239, which decays at a rate proportional to the amount $A(t)$ present at any time $t$ (measured in years). If the half-life of plutonium-239 is $24,100$ years:
+    \begin{enumerate}[label=(\alph*)]
+        \item Set up the differential equation and solve for the general expression $A(t)$, if $A_0$ is the initial mass of the sample.
+        \item If a sample initially contains $100$ grams of plutonium-239, how long will it take for the sample to decay to $20$ grams?
+    \end{enumerate}
+
+    \item \textbf{Cooling Coffee (Enfriamiento de una Taza de Café)} \\
+    A freshly brewed cup of coffee is poured at a temperature of $190^\circ\text{F}$. It is placed in a room kept at a constant temperature of $70^\circ\text{F}$. After $10$ minutes, the coffee has cooled to $150^\circ\text{F}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Set up the initial value problem representing the temperature of the coffee, $T(t)$.
+        \item Solve the differential equation to find $T(t)$.
+        \item What will the temperature of the coffee be after $25$ minutes?
+    \end{enumerate}
+
+    \item \textbf{Thermometer Warming (Calentamiento de un Termómetro)} \\
+    A thermometer is taken from an outdoor environment where the temperature is $15^\circ\text{C}$ and brought inside a greenhouse maintained at a steady temperature of $30^\circ\text{C}$. After $2$ minutes inside the greenhouse, the thermometer reads $21^\circ\text{C}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Set up the differential equation and find the temperature equation $T(t)$ shown by the thermometer.
+        \item What does the thermometer read after $5$ minutes inside the greenhouse?
+        \item How long will it take for the thermometer to reach $29.5^\circ\text{C}$?
+    \end{enumerate}
+
+    \item \textbf{Free Fall without Air Resistance (Caída Libre sin Resistencia del Aire)} \\
+    A heavy stone is dropped from the top of a tall tower with an initial velocity of $0\text{ m/s}$. The tower is $180\text{ meters}$ high. Neglect air resistance and assume the acceleration due to gravity is $g = 9.8\text{ m/s}^2$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Write down the initial value problem for the velocity $v(t)$ and find $v(t)$.
+        \item Determine the position equation $s(t)$ of the falling stone, letting $s(0) = 0$ be the top of the tower.
+        \item How long does it take for the stone to hit the ground, and what is its velocity upon impact?
+    \end{enumerate}
+
+    \item \textbf{Free Fall with Linear Air Resistance (Caída Libre con Resistencia Lineal)} \\
+    An object of mass $m = 10\text{ kg}$ is dropped from a stationary helicopter. The force of air resistance acting on the falling object is proportional to its instantaneous velocity $v(t)$, with a drag coefficient $\beta = 2\text{ N}\cdot\text{s/m}$. Let the acceleration of gravity $g = 9.8\text{ m/s}^2$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Formulate the initial value problem for the falling velocity $v(t)$, assuming $v(0) = 0$.
+        \item Solve the differential equation to find the velocity $v(t)$ as an explicit function of time.
+        \item Find the terminal velocity $v_{\text{term}} = \lim_{t \to \infty} v(t)$ of the object.
+    \end{enumerate}
+
+    \item \textbf{Brine Mixing in a Single Tank (Mezcla de Salmuera en Tanque Único)} \\
+    A large tank initially contains $300\text{ liters}$ of pure water. A brine solution containing $2\text{ grams}$ of salt per liter is pumped into the tank at a rate of $4\text{ liters/minute}$. The well-stirred mixture is pumped out of the tank at the same rate of $4\text{ liters/minute}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Formulate the initial value problem for the amount of salt $A(t)$ in the tank at any time $t$.
+        \item Find the amount of salt $A(t)$ in the tank as a function of time.
+        \item What is the concentration of salt in the tank after $1$ hour?
+    \end{enumerate}
+
+    \item \textbf{Logistic Population Growth (Crecimiento Poblacional Logístico)} \\
+    A nature reserve can support a maximum of $10,000$ deer. The deer population grows according to the logistic equation:
+    \[ \frac{dP}{dt} = r P \left(1 - \frac{P}{K}\right) \]
+    where $K = 10,000$ is the carrying capacity, and $r = 0.05$ year$^{-1}$ is the intrinsic growth rate. The initial deer population is $2,000$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Find the explicit solution $P(t)$ for the deer population.
+        \item What will the deer population be after $15$ years?
+        \item How long will it take for the deer population to reach $8,000$?
+    \end{enumerate}
+
+    \item \textbf{Spread of a Flu in a Community (Propagación de una Gripe)} \\
+    In a isolated student dormitory of $1000$ students, a single student returns from winter break infected with a highly contagious flu. The rate at which the virus spreads is proportional to the product of the number of infected students $x(t)$ and the number of students who are not yet infected.
+    \begin{enumerate}[label=(\alph*)]
+        \item Set up the differential equation and initial condition modeling the spread of the virus.
+        \item If after $4$ days, $50$ students are infected, find the explicit solution $x(t)$.
+        \item How many students will be infected after $10$ days?
+    \end{enumerate}
+
+    \item \textbf{The Evaporating Raindrop (La Gota de Lluvia Evaporable - Zill Classic)} \\
+    An interesting conceptual modeling problem from Dennis Zill's text: A spherical raindrop falls from a cloud. As it falls, it evaporates at a rate proportional to its surface area $S(t) = 4\pi r(t)^2$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Show that the rate of change of the radius $r(t)$ of the raindrop is a constant. (Hint: Recall that the volume of a sphere is $V(t) = \frac{4}{3}\pi r(t)^3$).
+        \item If the initial radius of the raindrop is $3\text{ mm}$, and after $10$ seconds the radius is $2.5\text{ mm}$, write the explicit equation for the radius $r(t)$ as a function of time.
+        \item After how many seconds will the raindrop evaporate completely?
+    \end{enumerate}
+
+\end{enumerate}
+
+\newpage
+\section{Solutions and Step-by-Step Derivations / Solucionario}
+
+\subsection*{Solution 1: Bacterial Population Growth}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Formulation of the IVP:}
+    Let $P(t)$ be the population at time $t$. The rate of growth is proportional to $P(t)$:
+    \[ \frac{dP}{dt} = kP, \quad P(0) = 500 \]
+    
+    \item \textbf{Solving the DE:}
+    This is a separable equation. Integrating yields:
+    \[ \frac{dP}{P} = k\,dt \implies \ln(P) = kt + C_1 \implies P(t) = C e^{kt} \]
+    Using $P(0) = 500$:
+    \[ 500 = C e^0 \implies C = 500 \implies P(t) = 500 e^{kt} \]
+    Using the condition after $3$ hours, $P(3) = 1500$:
+    \[ 1500 = 500 e^{3k} \implies 3 = e^{3k} \implies 3k = \ln(3) \implies k = \frac{\ln(3)}{3} \approx 0.3662 \]
+    So, the explicit solution is:
+    \[ P(t) = 500 e^{\frac{\ln(3)}{3}t} = 500 (3)^{t/3} \]
+
+    \item \textbf{Population after 10 hours:}
+    \[ P(10) = 500 (3)^{10/3} \approx 500 (38.94) \approx 19,470 \text{ bacteria} \]
+\end{enumerate}
+
+\subsection*{Solution 2: Radioactive Decay of Plutonium}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Set up and general solution:}
+    Let $A(t)$ be the amount of plutonium-239 at time $t$.
+    \[ \frac{dA}{dt} = kA \quad (k < 0), \quad A(0) = A_0 \]
+    The general solution is $A(t) = A_0 e^{kt}$. 
+    The half-life is $24,100$ years, which means $A(24,100) = \frac{1}{2}A_0$:
+    \[ \frac{1}{2}A_0 = A_0 e^{24100 k} \implies e^{24100 k} = \frac{1}{2} \implies 24100 k = \ln(1/2) = -\ln(2) \]
+    \[ k = \frac{-\ln(2)}{24100} \approx -2.876 \times 10^{-5} \]
+    The explicit model is:
+    \[ A(t) = A_0 e^{-\frac{\ln(2)}{24100}t} = A_0 \left(\frac{1}{2}\right)^{t/24100} \]
+
+    \item \textbf{Decay from 100g to 20g:}
+    Using $A_0 = 100$ and $A(t) = 20$:
+    \[ 20 = 100 \left(\frac{1}{2}\right)^{t/24100} \implies 0.2 = (0.5)^{t/24100} \]
+    Taking the natural logarithm on both sides:
+    \[ \ln(0.2) = \frac{t}{24100} \ln(0.5) \implies t = 24100 \frac{\ln(0.2)}{\ln(0.5)} \]
+    \[ t = 24100 \frac{-1.6094}{-0.6931} \approx 24100 \times 2.3219 \approx 55,958 \text{ years} \]
+\end{enumerate}
+
+\subsection*{Solution 3: Cooling Coffee}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Formulation of the IVP:}
+    Let $T(t)$ be the temperature of the coffee. The surrounding temperature is $T_m = 70^\circ\text{F}$.
+    \[ \frac{dT}{dt} = k(T - 70), \quad T(0) = 190 \]
+
+    \item \textbf{Solving the DE:}
+    This is a separable equation:
+    \[ \frac{dT}{T-70} = k \, dt \implies \ln|T-70| = kt + C_1 \implies T(t) - 70 = C e^{kt} \implies T(t) = 70 + C e^{kt} \]
+    Using $T(0) = 190$:
+    \[ 190 = 70 + C e^0 \implies C = 120 \implies T(t) = 70 + 120 e^{kt} \]
+    Using $T(10) = 150$:
+    \[ 150 = 70 + 120 e^{10k} \implies 80 = 120 e^{10k} \implies e^{10k} = \frac{80}{120} = \frac{2}{3} \]
+    \[ 10k = \ln(2/3) \implies k = \frac{1}{10}\ln(2/3) \approx -0.0405 \]
+    The temperature model is:
+    \[ T(t) = 70 + 120 e^{\frac{1}{10}\ln(2/3)t} = 70 + 120 \left(\frac{2}{3}\right)^{t/10} \]
+
+    \item \textbf{Temperature after 25 minutes:}
+    \[ T(25) = 70 + 120 \left(\frac{2}{3}\right)^{2.5} \approx 70 + 120 (0.3629) \approx 70 + 43.55 = 113.55^\circ\text{F} \]
+\end{enumerate}
+
+\subsection*{Solution 4: Thermometer Warming}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Warming Model:}
+    Here $T_m = 30^\circ\text{C}$ and $T(0) = 15^\circ\text{C}$.
+    \[ \frac{dT}{dt} = k(T-30) \implies T(t) = 30 + C e^{kt} \]
+    Using $T(0) = 15$:
+    \[ 15 = 30 + C \implies C = -15 \implies T(t) = 30 - 15 e^{kt} \]
+    Using $T(2) = 21$:
+    \[ 21 = 30 - 15 e^{2k} \implies 15 e^{2k} = 9 \implies e^{2k} = 0.6 \implies 2k = \ln(0.6) \implies k = \frac{\ln(0.6)}{2} \approx -0.2554 \]
+    The explicit equation is:
+    \[ T(t) = 30 - 15 (0.6)^{t/2} \]
+
+    \item \textbf{Reading after 5 minutes:}
+    \[ T(5) = 30 - 15 (0.6)^{2.5} \approx 30 - 15 (0.2789) \approx 30 - 4.18 = 25.82^\circ\text{C} \]
+
+    \item \textbf{Time to reach $29.5^\circ\text{C}$:}
+    \[ 29.5 = 30 - 15 e^{kt} \implies 15 e^{kt} = 0.5 \implies e^{kt} = \frac{0.5}{15} = \frac{1}{30} \]
+    \[ kt = \ln(1/30) = -\ln(30) \implies t = \frac{-\ln(30)}{k} \]
+    Using $k = -0.2554$:
+    \[ t = \frac{-3.4012}{-0.2554} \approx 13.32 \text{ minutes} \]
+\end{enumerate}
+
+\subsection*{Solution 5: Free Fall without Air Resistance}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Velocity function:}
+    Using Newton's Second Law with $F = mg$ (taking downward as positive direction):
+    \[ m \frac{dv}{dt} = mg \implies \frac{dv}{dt} = g = 9.8, \quad v(0) = 0 \]
+    Integrating:
+    \[ v(t) = 9.8t + C \implies v(t) = 9.8t \text{ m/s} \]
+
+    \item \textbf{Position function:}
+    Let $s(t)$ be the distance from the top of the tower.
+    \[ \frac{ds}{dt} = v(t) = 9.8t, \quad s(0) = 0 \]
+    Integrating:
+    \[ s(t) = 4.9t^2 + C \implies s(t) = 4.9t^2 \text{ meters} \]
+
+    \item \textbf{Time to hit ground and impact velocity:}
+    The ground is reached when $s(t) = 180\text{ meters}$:
+    \[ 4.9t^2 = 180 \implies t^2 = \frac{180}{4.9} \approx 36.73 \implies t \approx \sqrt{36.73} \approx 6.06 \text{ seconds} \]
+    The velocity at impact is:
+    \[ v(6.06) = 9.8 \times 6.06 \approx 59.39 \text{ m/s} \]
+\end{enumerate}
+
+\subsection*{Solution 6: Free Fall with Linear Air Resistance}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Formulation of the IVP:}
+    Taking the downward direction as positive, gravity pulls downward ($mg$) and air drag acts upward ($-\beta v$):
+    \[ m \frac{dv}{dt} = mg - \beta v \implies 10 \frac{dv}{dt} = 10(9.8) - 2v \implies \frac{dv}{dt} = 9.8 - 0.2 v \]
+    Subject to the initial condition:
+    \[ \frac{dv}{dt} + 0.2 v = 9.8, \quad v(0) = 0 \]
+
+    \item \textbf{Solving the DE:}
+    This is a linear first-order equation with $P(t) = 0.2$ and $Q(t) = 9.8$:
+    \[ \mu(t) = e^{\int 0.2 \, dt} = e^{0.2t} \]
+    Multiplying by $e^{0.2t}$:
+    \[ \frac{d}{dt}\left[ e^{0.2t} v \right] = 9.8 e^{0.2t} \implies e^{0.2t} v = \int 9.8 e^{0.2t} \, dt = 49 e^{0.2t} + C \]
+    Solving for $v(t)$:
+    \[ v(t) = 49 + C e^{-0.2t} \]
+    Using $v(0) = 0$:
+    \[ 0 = 49 + C \implies C = -49 \implies v(t) = 49(1 - e^{-0.2t}) \text{ m/s} \]
+
+    \item \textbf{Terminal velocity:}
+    \[ v_{\text{term}} = \lim_{t \to \infty} 49(1 - e^{-0.2t}) = 49 \text{ m/s} \]
+    (Note: This occurs when acceleration is zero: $mg - \beta v_{\text{term}} = 0 \implies v_{\text{term}} = mg/\beta = 98/2 = 49\text{ m/s}$).
+\end{enumerate}
+
+\subsection*{Solution 7: Brine Mixing in a Single Tank}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Formulation of the IVP:}
+    Let $A(t)$ be the grams of salt in the tank at time $t$. Since inflow rate equals outflow rate ($4\text{ L/min}$), the volume remains constant at $V(t) = 300\text{ liters}$.
+    \[ R_{\text{in}} = 2\text{ g/L} \times 4\text{ L/min} = 8\text{ g/min} \]
+    \[ R_{\text{out}} = \frac{A(t)}{300}\text{ g/L} \times 4\text{ L/min} = \frac{4}{300} A(t) = \frac{1}{75} A(t)\text{ g/min} \]
+    The differential equation is:
+    \[ \frac{dA}{dt} = R_{\text{in}} - R_{\text{out}} = 8 - \frac{1}{75}A \implies \frac{dA}{dt} + \frac{1}{75}A = 8, \quad A(0) = 0 \]
+
+    \item \textbf{Solving the DE:}
+    Integrating factor: $\mu(t) = e^{t/75}$.
+    \[ \frac{d}{dt}\left[ e^{t/75} A \right] = 8 e^{t/75} \implies e^{t/75} A = \int 8 e^{t/75} \, dt = 600 e^{t/75} + C \]
+    \[ A(t) = 600 + C e^{-t/75} \]
+    Using $A(0) = 0$:
+    \[ 0 = 600 + C \implies C = -600 \implies A(t) = 600(1 - e^{-t/75}) \text{ grams} \]
+
+    \item \textbf{Concentration after 1 hour (60 minutes):}
+    First, calculate the total salt in the tank:
+    \[ A(60) = 600(1 - e^{-60/75}) = 600(1 - e^{-0.8}) \approx 600(1 - 0.4493) \approx 600(0.5507) \approx 330.4\text{ grams} \]
+    The concentration is:
+    \[ C(60) = \frac{A(60)}{300} = \frac{330.4}{300} \approx 1.101 \text{ g/L} \]
+\end{enumerate}
+
+\subsection*{Solution 8: Logistic Population Growth}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Explicit Solution for the Logistic DE:}
+    The general solution for the logistic model $\frac{dP}{dt} = r P(1 - P/K)$ with $P(0) = P_0$ is:
+    \[ P(t) = \frac{K}{1 + \left( \frac{K - P_0}{P_0} \right) e^{-rt}} \]
+    Substituting $K = 10000$, $P_0 = 2000$, and $r = 0.05$:
+    \[ \frac{K - P_0}{P_0} = \frac{10000 - 2000}{2000} = 4 \]
+    \[ P(t) = \frac{10000}{1 + 4 e^{-0.05t}} \]
+
+    \item \textbf{Deer population after 15 years:}
+    \[ P(15) = \frac{10000}{1 + 4 e^{-0.05 \times 15}} = \frac{10000}{1 + 4 e^{-0.75}} \]
+    Since $e^{-0.75} \approx 0.4724$:
+    \[ P(15) = \frac{10000}{1 + 4(0.4724)} = \frac{10000}{1 + 1.8896} = \frac{10000}{2.8896} \approx 3,460 \text{ deer} \]
+
+    \item \textbf{Time to reach 8,000 deer:}
+    \[ 8000 = \frac{10000}{1 + 4 e^{-0.05t}} \implies 1 + 4 e^{-0.05t} = \frac{10000}{8000} = 1.25 \]
+    \[ 4 e^{-0.05t} = 0.25 \implies e^{-0.05t} = 0.0625 \]
+    Taking natural logs:
+    \[ -0.05t = \ln(0.0625) \approx -2.7726 \implies t = \frac{-2.7726}{-0.05} = 55.45 \text{ years} \]
+\end{enumerate}
+
+\subsection*{Solution 9: Spread of a Flu in a Community}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Set up of the DE and IVP:}
+    Let $x(t)$ be the number of infected students at time $t$. The uninfected students are $1000 - x(t)$.
+    The rate of spread is proportional to their product:
+    \[ \frac{dx}{dt} = k x(1000 - x), \quad x(0) = 1 \]
+
+    \item \textbf{Solving the DE:}
+    This is also a logistic model with carrying capacity $K = 1000$ and initial population $x_0 = 1$.
+    \[ x(t) = \frac{1000}{1 + \left(\frac{1000 - 1}{1}\right) e^{-1000kt}} = \frac{1000}{1 + 999 e^{-rt}} \quad (\text{letting } r = 1000k) \]
+    Using $x(4) = 50$:
+    \[ 50 = \frac{1000}{1 + 999 e^{-4r}} \implies 1 + 999 e^{-4r} = 20 \implies 999 e^{-4r} = 19 \]
+    \[ e^{-4r} = \frac{19}{999} \approx 0.01902 \implies -4r = \ln(0.01902) \approx -3.9624 \implies r \approx 0.9906 \]
+    The explicit solution is:
+    \[ x(t) = \frac{1000}{1 + 999 e^{-0.9906t}} \]
+
+    \item \textbf{Infected students after 10 days:}
+    \[ x(10) = \frac{1000}{1 + 999 e^{-0.9906 \times 10}} = \frac{1000}{1 + 999 e^{-9.906}} \]
+    Since $e^{-9.906} \approx 0.000050$:
+    \[ x(10) \approx \frac{1000}{1 + 999(0.000050)} = \frac{1000}{1 + 0.0499} = \frac{1000}{1.0499} \approx 952.4 \implies 952 \text{ students} \]
+\end{enumerate}
+
+\subsection*{Solution 10: The Evaporating Raindrop}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Show radius rate of change is a constant:}
+    The volume is $V = \frac{4}{3}\pi r^3$ and surface area is $S = 4\pi r^2$.
+    The rate of evaporation of volume is proportional to the surface area:
+    \[ \frac{dV}{dt} = k S \quad (k < 0 \text{ since it is evaporating}) \]
+    Differentiating $V$ with respect to time using the chain rule:
+    \[ \frac{dV}{dt} = \frac{dV}{dr} \frac{dr}{dt} = \left(\frac{4}{3}\pi \cdot 3r^2\right) \frac{dr}{dt} = 4\pi r^2 \frac{dr}{dt} \]
+    Substitute this into the evaporation equation:
+    \[ 4\pi r^2 \frac{dr}{dt} = k \left(4\pi r^2\right) \]
+    Dividing both sides by $4\pi r^2$ (assuming $r(t) > 0$):
+    \[ \frac{dr}{dt} = k \quad (\text{a constant!}) \]
+    This proves that the radius of the raindrop shrinks at a constant linear rate.
+
+    \item \textbf{Determine $r(t)$:}
+    Integrating $r' = k$ yields:
+    \[ r(t) = kt + C \]
+    Given $r(0) = 3$:
+    \[ 3 = k(0) + C \implies C = 3 \implies r(t) = kt + 3 \]
+    Given $r(10) = 2.5$:
+    \[ 2.5 = k(10) + 3 \implies 10k = -0.5 \implies k = -0.05 \text{ mm/s} \]
+    So, the explicit equation is:
+    \[ r(t) = -0.05t + 3 \]
+
+    \item \textbf{Time for complete evaporation:}
+    The raindrop is completely evaporated when the radius $r(t) = 0$:
+    \[ 0 = -0.05t + 3 \implies 0.05t = 3 \implies t = \frac{3}{0.05} = 60 \text{ seconds} \]
+    Thus, the raindrop evaporates completely in exactly $1$ minute.
+\end{enumerate}
+
+\end{document}
