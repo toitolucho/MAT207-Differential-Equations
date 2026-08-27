@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category><text>$course$/MAT207/Exactas_PVI_Trascendente</text></category>
+</question>
+
+<question type="multichoice">
+    <name><text>P01. Identificación de M(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Para la ecuación diferencial dada, ¿cuál es la expresión de \( M(x,y) \) que acompaña al diferencial \( dx \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^y + \cos x \cos y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x e^y - \sin x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y - \sin x \sin y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P02. Identificación de N(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la expresión de \( N(x,y) \) identificada en su Paso 2?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x e^y - \sin x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x e^y + \sin x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y + \cos x \cos y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P03. Derivada parcial común</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al realizar la prueba de exactitud (Paso 3), ¿cuál es el resultado de las derivadas parciales \( M_y \) y \( N_x \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^y - \cos x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y + \sin x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y - \sin x \cos y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P04. Integración de M respecto a x</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras integrar \( M(x,y) \) respecto a \( x \), ¿qué expresión obtuvo para \( g(x,y) \) sin incluir la función \( h(y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x e^y + \sin x \cos y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x e^y - \sin x \cos y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y + \sin x \cos y \)]]></text></answer>
+</question>
+
+<question type="truefalse">
+    <name><text>P05. Función h(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿En su desarrollo incluyó una función \( h(y) \) como constante de integración parcial?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>true</text></answer>
+    <answer fraction="0"><text>false</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P06. Derivada de g respecto a y</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al derivar su expresión \( g(x,y) \) respecto a \( y \), ¿qué términos obtuvo antes de sumar \( h'(y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x e^y - \sin x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x e^y + \sin x \sin y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y - \sin x \cos y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P07. Simplificación algebraica</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al igualar su derivada con \( N(x,y) \), ¿qué ocurrió con los términos en su hoja?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[Se simplificaron todos los términos de x y y.]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Solo se simplificó el término exponencial.]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[No hubo simplificación posible.]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P08. Valor numérico de h'(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras la simplificación del Paso 6, ¿cuál es el valor de la derivada \( h'(y) \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P09. Cálculo de la constante C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al evaluar la condición inicial \( y(0) = 0 \), ¿cuál es el valor numérico exacto de la constante \( C \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P10. Solución Final del PVI</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la solución final implícita del PVI?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x e^y + \sin x \cos y = 0 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x e^y - \sin x \cos y = 0 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x e^y + \sin x \cos y = 1 \)]]></text></answer>
+</question>
+
+</quiz>

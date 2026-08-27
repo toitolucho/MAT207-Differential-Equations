@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category><text>$course$/MAT207/Exactas_PVI_Corregido</text></category>
+</question>
+
+<question type="multichoice">
+    <name><text>P01. Identificación de M(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Basándose en su hoja de trabajo, ¿cuál es la expresión correspondiente a \( M(x,y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 2xy - \tan y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^2 - x \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xy + \tan y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P02. Identificación de N(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la expresión de \( N(x,y) \) identificada en su desarrollo?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x^2 - x \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^2 + x \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xy - \tan y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P03. Prueba de Exactitud</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al realizar el Paso 3 (derivadas parciales cruzadas), ¿qué resultado común obtuvo para \( \frac{\partial M}{\partial y} \) y \( \frac{\partial N}{\partial x} \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 2x - \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2x - \tan y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2 - \sec^2 y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P04. Integración parcial de M</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>En el Paso 4, al calcular \( \int M(x,y) dx \), ¿cuál es la expresión obtenida (sin considerar aún la función \( h(y) \))?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x^2 y - x \tan y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^2 y + x \tan y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( xy^2 - x \tan y \)]]></text></answer>
+</question>
+
+<question type="truefalse">
+    <name><text>P05. Incorporación de h(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Es correcto afirmar que en el Paso 4 se debe sumar una función desconocida \( h(y) \) porque la variable \( y \) se considera constante durante la integración parcial respecto a \( x \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>true</text></answer>
+    <answer fraction="0"><text>false</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P06. Derivada de g respecto a y</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al derivar su expresión \( g(x,y) \) respecto a \( y \) (Paso 5), ¿cuáles son los términos que resultan antes de sumar \( h'(y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x^2 - x \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2x - \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^2 - \sec^2 y \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P07. Simplificación de términos</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al igualar \( \frac{\partial g}{\partial y} = N(x,y) \) (Paso 6), ¿qué términos de su hoja se simplificaron por completo?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x^2 \) y \( x \sec^2 y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Solo \( x^2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Solo \( x \sec^2 y \)]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P08. Valor de h'(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras la simplificación total en el paso anterior, ¿cuál es el valor numérico de la derivada \( h'(y) \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P09. Cálculo de la constante C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Utilizando la condición inicial \( y(1) = \pi/4 \), ¿cuál es el valor exacto de la constante \( C \) en su solución implícita?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( \frac{\pi}{4} - 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \frac{\pi}{4} + 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 1 - \frac{\pi}{4} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P10. Solución Final del PVI</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la solución final que obtuvo para este Problema de Valor Inicial?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x^2 y - x \tan y = \frac{\pi}{4} - 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^2 y + x \tan y = \frac{\pi}{4} - 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^2 y - x \tan y = \frac{\pi}{4} + 1 \)]]></text></answer>
+</question>
+
+</quiz>

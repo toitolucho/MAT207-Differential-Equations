@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category>
+        <text>$course$/EDO Series/Ej 04 - Final</text>
+    </category>
+    <info format="html">
+        <text><![CDATA[<p>Cuestionario secuencial para EDO No Homogénea. Revisión v3 (LaTeX Inline).</p>]]></text>
+    </info>
+    <idnumber>EDO-04-FINAL</idnumber>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q01. Ajuste de Potencias</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 1: Planteamiento Algebraico</strong></p>
+            <p>Al iniciar la solución de \( y'' + xy' + 2y = x \), usted debe sustituir las series de potencias.</p>
+            <p>Concéntrese en el término \( xy' \). Al operar algebraicamente el factor \( x \) externo con la sumatoria de la derivada, ¿cuál es la expresión correcta del término general resultante dentro de la sigma?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Al multiplicar bases iguales (\( x \cdot x^{n-1} \)), se suman los exponentes, resultando en \( x^n \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( n a_n x^{n} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[ \( n a_n x^{n-1} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. No operó la x externa.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[ \( n a_n x^{n+1} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q02. Estrategia de Unificación</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 2: Alineación de Índices</strong></p>
+            <p>Tras realizar el cambio de variable a \( k \), notará que las series no comienzan en el mismo índice (unas inician en \( k=0 \) y otras en \( k=1 \)).</p>
+            <p>Para poder sumarlas en una sola recurrencia general, ¿qué procedimiento debe realizar en su hoja de trabajo?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Se deben extraer los términos iniciales (\( k=0 \)) de las series correspondientes para igualar el punto de partida al índice mayor (\( k=1 \)).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[Extraer los términos \( k=0 \) de las series pertinentes para iniciar la recurrencia en \( k=1 \).]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[Modificar los índices de la serie que empieza en 1 para forzarla a empezar en 0.]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. No se pueden inventar términos anteriores.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[Ignorar los términos iniciales y comenzar la sumatoria desde \( k=2 \).]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Perdería información vital de las condiciones iniciales.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q03. Cálculo de a2</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 3: Términos Constantes (\( x^0 \))</strong></p>
+            <p>En su desarrollo, identifique los coeficientes que acompañan a la potencia \( x^0 \) (términos sueltos) e iguálelos al término constante del lado derecho de la ecuación diferencial.</p>
+            <p>¿Qué relación obtiene para el coeficiente \( a_2 \)?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>La ecuación resultante es \( 2a_2 + 2a_0 = 0 \), por lo que \( a_2 = -a_0 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( a_2 = -a_0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_2 = -2a_0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Revise el coeficiente que multiplica a \( a_2 \).]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_2 = a_0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de signo al despejar.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_2 = 0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Olvidó incluir el término proveniente de \( 2y \).]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q04. Cálculo de a3</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 4: Términos Lineales (\( x^1 \))</strong></p>
+            <p>Ahora analice los coeficientes para \( k=1 \). Tenga en cuenta que la ecuación es <strong>no homogénea</strong> y el lado derecho es \( x \).</p>
+            <p>Plantee la ecuación correspondiente y despeje \( a_3 \). ¿Cuál es el resultado correcto?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Coeficientes: \( 6a_3 + 3a_1 = 1 \) (coeficiente de x). Despejando: \( a_3 = 1/6 - a_1/2 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( a_3 = \frac{1}{6} - \frac{1}{2}a_1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_3 = -\frac{1}{2}a_1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Trató la ecuación como homogénea (=0) ignorando la \( x \) del lado derecho.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_3 = \frac{1}{6} + \frac{1}{2}a_1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de signo al despejar.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_3 = \frac{1}{6}a_1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de planteamiento.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q05. Relación de Recurrencia</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 5: Fórmula General (\( k \ge 2 \))</strong></p>
+            <p>Iguale la expresión general de la sumatoria a cero (ya que no hay más términos en el lado derecho para \( k \ge 2 \)).</p>
+            <p>Simplifique algebraicamente la expresión resultante y seleccione la <strong>fórmula de recurrencia</strong> correcta para \( a_{k+2} \).</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Se obtiene \( (k+2)(k+1)a_{k+2} + (k+2)a_k = 0 \). Simplificando \( (k+2) \), obtenemos \( a_{k+2} = -a_k / (k+1) \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( a_{k+2} = -\frac{a_k}{k+1} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_{k+2} = \frac{a_k}{k+1} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de signo.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_{k+2} = -\frac{a_k}{(k+2)(k+1)} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. No simplificó el término común \( (k+2) \).]]></text></feedback>
+    </answer>
+</question>
+
+<question type="shortanswer">
+    <name>
+        <text>Q06. Calculo de a5</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 6: Cálculo de Coeficientes Superiores</strong></p>
+            <p>Utilizando la relación de recurrencia que acaba de encontrar y el valor de \( a_3 \) obtenido en el Paso 4, calcule el coeficiente \( a_5 \).</p>
+            <p>Escriba únicamente la <strong>parte numérica constante</strong> (fracción) de este coeficiente (la parte que no depende de \( a_1 \)).</p>
+            <p><em>(Ejemplo de formato: 1/2, -3/5)</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( a_5 = -a_3/4 = -1/4(1/6 - a_1/2) = -1/24 + a_1/8 \). La constante es -1/24.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>-1/24</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>-1 / 24</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q07. Identificación de Soluciones</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 7: Solución General</strong></p>
+            <p>Basándose en los resultados obtenidos en su hoja de papel, identifique cuál de las siguientes opciones clasifica correctamente las tres partes de la solución general.</p>
+            <p>Recuerde:</p>
+            <ul>
+                <li><strong>Homogénea 1 (\( y_1 \)):</strong> Asociada a \( a_0 \)</li>
+                <li><strong>Homogénea 2 (\( y_2 \)):</strong> Asociada a \( a_1 \)</li>
+                <li><strong>Particular (\( y_p \)):</strong> Términos libres</li>
+            </ul>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Revise los cálculos de \( a_2 \) (par) y \( a_3 \) (impar/particular).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="100" format="html">
+        <text><![CDATA[
+            <p><b>y1:</b> \( 1 - x^2 + \frac{1}{3}x^4 \dots \)</p>
+            <p><b>y2:</b> \( x - \frac{1}{2}x^3 + \frac{1}{8}x^5 \dots \)</p>
+            <p><b>yp:</b> \( \frac{1}{6}x^3 - \frac{1}{24}x^5 \dots \)</p>
+        ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+
+    <answer fraction="-50" format="html">
+        <text><![CDATA[
+            <p><b>y1:</b> \( x - \frac{1}{2}x^3 + \frac{1}{8}x^5 \dots \)</p>
+            <p><b>y2:</b> \( 1 - x^2 + \frac{1}{3}x^4 \dots \)</p>
+            <p><b>yp:</b> \( \frac{1}{6}x^3 - \frac{1}{24}x^5 \dots \)</p>
+        ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Ha invertido las soluciones homogéneas.]]></text></feedback>
+    </answer>
+
+    <answer fraction="-50" format="html">
+        <text><![CDATA[
+            <p><b>y1:</b> \( 1 - x^2 + \frac{1}{3}x^4 \dots \)</p>
+            <p><b>y2:</b> \( x - \frac{1}{2}x^3 + \frac{1}{8}x^5 \dots \)</p>
+            <p><b>yp:</b> \( x + \frac{1}{6}x^3 + \frac{1}{24}x^5 \dots \)</p>
+        ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. La solución particular es errónea.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q08. Verificación de Solución</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Verificación</strong></p>
+            <p>Si usted toma la <strong>Solución Particular \( y_p \)</strong> (los términos libres hallados) y la sustituye en el lado izquierdo de la ecuación original (\( y'' + xy' + 2y \)), ¿a qué valor debe ser igual el resultado matemático?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Al ser solución de la No Homogénea, debe satisfacer \( L(y) = g(x) \), donde \( g(x) = x \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[A la variable \( x \).]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[A cero (\( 0 \)).]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Eso solo aplica para las soluciones homogéneas.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[A una constante arbitraria.]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="truefalse">
+    <name>
+        <text>Q09. Lógica - Superposición</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Razonamiento Conceptual</strong></p>
+            <p>Dado que \( y_p(x) \) es una solución válida de la ecuación no homogénea, ¿es correcto afirmar que \( 5 \cdot y_p(x) \) también es una solución válida de la misma ecuación?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Falso. En ecuaciones no homogéneas, multiplicar la solución particular por una constante rompe la igualdad con el término independiente (obtendríamos \( 5x \) en lugar de \( x \)).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <answer fraction="0">
+        <text>true</text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="100">
+        <text>false</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q10. Lógica - Paridad</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Razonamiento Conceptual</strong></p>
+            <p>Observe su fórmula de recurrencia: relaciona \( a_{k+2} \) con \( a_k \). Esto implica saltos de 2 en 2 en los índices.</p>
+            <p>¿Qué consecuencia lógica tiene esto en la estructura de las soluciones base \( y_1 \) y \( y_2 \)?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>El salto de 2 separa los términos pares de los impares, generando dos series independientes de paridad definida (una función par y una función impar).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[Que una solución tendrá solo potencias PARES y la otra solo potencias IMPARES.]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[Que las soluciones se cortan y se convierten en polinomios finitos.]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. La paridad no implica que la serie termine.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[Que no es posible separar las soluciones en dos series independientes.]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+</quiz>

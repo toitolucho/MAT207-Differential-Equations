@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category><text>$course$/MAT207/Exactas_PVI_Irracional_Log</text></category>
+</question>
+
+<question type="multichoice">
+    <name><text>P01. Identificación de M(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>De acuerdo a su hoja de trabajo, ¿cuál es la expresión completa de \( M(x,y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( \frac{xy}{\sqrt{1+x^2}} + 2xy - \frac{y}{x} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \sqrt{1+x^2} + x^2 - \ln x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \frac{x}{\sqrt{1+x^2}} + 2x - \frac{1}{x} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P02. Derivada parcial común</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al realizar la prueba de exactitud (Paso 3), ¿qué expresión obtuvo para \( \frac{\partial M}{\partial y} \) y \( \frac{\partial N}{\partial x} \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( \frac{x}{\sqrt{1+x^2}} + 2x - \frac{1}{x} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \frac{1}{\sqrt{1+x^2}} + 2x - \ln x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \frac{xy}{\sqrt{1+x^2}} + 2xy - \frac{1}{x} \)]]></text></answer>
+</question>
+
+<question type="truefalse">
+    <name><text>P03. Estrategia de Integración</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Es cierto que integrar \( N(x,y) \) respecto a \( y \) resulta algebraicamente más directo que integrar \( M(x,y) \) respecto a \( x \) en este ejercicio?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>true</text></answer>
+    <answer fraction="0"><text>false</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P04. Resultado de la integración parcial</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras integrar \( N(x,y) \) respecto a \( y \), ¿cuál es la expresión de \( g(x,y) \) sin incluir la función de ajuste \( f(x) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( y\sqrt{1+x^2} + x^2y - y\ln x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \sqrt{1+x^2} + x^2 - y\ln x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y\frac{x}{\sqrt{1+x^2}} + x^2y - \ln x \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P05. Función desconocida</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Dado que se integró respecto a \( y \), ¿qué función se debe añadir para completar la solución general?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( f(x) \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( h(y) \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( g(x,y) \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P06. Derivada parcial de g respecto a x</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al derivar su expresión de \( g(x,y) \) respecto a \( x \) (Paso 5), ¿qué términos obtuvo antes de sumar \( f'(x) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( \frac{xy}{\sqrt{1+x^2}} + 2xy - \frac{y}{x} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \frac{x}{\sqrt{1+x^2}} + 2x - \frac{1}{x} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y\sqrt{1+x^2} + 2xy - \frac{1}{x} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P07. Proceso de simplificación</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al igualar la derivada anterior con \( M(x,y) \), ¿qué sucedió en su desarrollo manuscrito?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[Todos los términos con variables se cancelaron.]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Solo se canceló el término logarítmico.]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Permaneció el término \( 2xy \).]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P08. Valor de f'(x)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras la simplificación del Paso 6, ¿cuál es el valor resultante para \( f'(x) \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P09. Cálculo de la constante C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Evaluando la condición inicial \( y(1) = 0 \), ¿cuál es el valor numérico de la constante \( C \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P10. Solución Final del PVI</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la solución final implícita que determinó para este PVI?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( y\sqrt{1+x^2} + x^2y - y\ln x = 0 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y\sqrt{1+x^2} + x^2y - y\ln x = 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( \sqrt{1+x^2} + x^2 - \ln x = 0 \)]]></text></answer>
+</question>
+
+</quiz>

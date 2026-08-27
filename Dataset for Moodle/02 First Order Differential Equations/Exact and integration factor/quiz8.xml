@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category><text>$course$/MAT207/Exactas_PVI_Trig_Exp</text></category>
+</question>
+
+<question type="multichoice">
+    <name><text>P01. Identificación de M(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>De acuerdo a la forma estándar \( M(x,y)dx + N(x,y)dy = 0 \), ¿cuál es la expresión de \( M(x,y) \) en su hoja?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^x \sin y - 2y \sin x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \cos y + 2\cos x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \sin y + 2y \cos x \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P02. Derivada parcial común</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al realizar la prueba de exactitud (Paso 3), ¿cuál es el resultado de las derivadas parciales cruzadas \( M_y \) y \( N_x \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^x \cos y - 2\sin x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \cos y + 2\sin x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \sin y - 2\cos x \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P03. Integración de M respecto a x</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>En el Paso 4, al calcular \( \int M(x,y) dx \), ¿cuál es la expresión obtenida para \( g(x,y) \) sin considerar la función \( h(y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^x \sin y + 2y \cos x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \sin y - 2y \cos x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \cos y + 2y \sin x \)]]></text></answer>
+</question>
+
+<question type="truefalse">
+    <name><text>P04. Inclusión de h(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Es correcto afirmar que se añade \( h(y) \) porque cualquier función que dependa solo de \( y \) actúa como una constante durante la integración respecto a \( x \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>true</text></answer>
+    <answer fraction="0"><text>false</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P05. Derivada parcial de g respecto a y</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al derivar su expresión \( g(x,y) \) respecto a \( y \) (Paso 5), ¿qué términos obtuvo antes de sumar \( h'(y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^x \cos y + 2\cos x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \cos y - 2\sin x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \sin y + 2\cos x \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P06. Términos simplificados</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al igualar su derivada parcial con \( N(x,y) \) (Paso 6), ¿qué sucedió en su desarrollo?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[Todos los términos de la derivada coincidieron con N y se cancelaron.]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Solo se canceló el término con el exponencial.]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[No hubo términos comunes para simplificar.]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P07. Valor de h'(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras la simplificación total, ¿cuál es el valor resultante para la derivada \( h'(y) \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P08. Función h(y) resultante</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es el valor de la función \( h(y) \) tras integrar el resultado anterior?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[Una constante C (que puede asumirse como 0 en g).]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^y \)]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P09. Cálculo de la constante C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Evaluando la condición inicial \( y(\pi/2) = 0 \), ¿cuál es el valor numérico final de la constante \( C \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>0</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P10. Solución Final del PVI</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la solución final implícita del problema?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^x \sin y + 2y \cos x = 0 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \sin y - 2y \cos x = 0 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^x \cos y + 2y \cos x = 0 \)]]></text></answer>
+</question>
+
+</quiz>

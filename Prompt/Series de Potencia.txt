@@ -1,0 +1,16 @@
+Formula tras hacer el reemplazo por series de potencia
+resultado de la incluision de cualquier polinomio que multiplica a la serie de potencia
+exponente de una de las sumatorias tras haber incluido el polinomio que lo multiplica
+Identificacion de la serie con mayor exponente al cual se debe nivelar el resto de las series
+Series que deben nivelarse o se deben excluir terminos para nivelarlos
+Agrupacion de los coeficientes segun el valor de x y su exponente
+Terminos excluidos de alguna de las series (Aca se puede pedir algun coeficiente que multiplica a x)
+Valor al que se debe igualar los terminos asociados a x a la potencia de cero
+Valor al que se debe igualar los terminos asociados a x a la potencia de uno y asi sucecivamente.
+Expresion resultante al agrupar x a la potencia de n sin despejar ningun coeficiente
+Indice en el que empieza la serie de forma general para determinar cualquier coeficiente sabiendo que siempre estara igualada a cero.
+Expresion o formula de la relacion de recurrencia.
+Identificacion de la dependencia para a0, a1 etc en funcion al orden de la ecuacion diferencial, es decir la equivalencia de los coeficientes que representan la constante de la famila de la solucion como tal.
+Identificacion del coeficiente n de acuerdo a la regla de recurrencia, al menos se puede identificar 3 a 4 elementos de cada solucion, por ende se puede preguntar algunos de esos coeficientes en el indice i
+
+

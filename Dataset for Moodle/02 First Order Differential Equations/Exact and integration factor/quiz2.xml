@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category><text>$course$/MAT207/Exactas_PVI_Ejercicio2</text></category>
+</question>
+
+<question type="multichoice">
+    <name><text>P01. Identificación de M(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>De acuerdo a su desarrollo en papel para la ecuación \((y - x^3)dx + (x + y^3)dy = 0\), ¿cuál es la expresión de \( M(x,y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( y - x^3 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x + y^3 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y + x^3 \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P02. Identificación de N(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la expresión de \( N(x,y) \) que identificó en el Paso 2 del algoritmo?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x + y^3 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y - x^3 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x - y^3 \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P03. Prueba de Exactitud</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al realizar la prueba de exactitud (Paso 3), ¿cuál es el valor numérico constante obtenido para las derivadas parciales cruzadas?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[1]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[0]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[-1]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P04. Integración de M respecto a x</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras integrar \( M(x,y) \) respecto a \( x \), ¿qué términos obtuvo antes de añadir la función desconocida \( h(y) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( xy - \frac{x^4}{4} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( xy - x^4 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( yx - \frac{x^3}{3} \)]]></text></answer>
+</question>
+
+<question type="truefalse">
+    <name><text>P05. Uso de h(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿En su desarrollo incluyó la función \( h(y) \) como constante de integración debido a que integró parcialmente con respecto a \( x \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>true</text></answer>
+    <answer fraction="0"><text>false</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P06. Derivada parcial de g</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al derivar su función potencial \( g(x,y) \) respecto a \( y \) (Paso 5), ¿qué término obtuvo (sin incluir a \( h'(y) \))?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x - x^3 \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P07. Término simplificado</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al igualar la derivada anterior con \( N(x,y) \), ¿qué término se simplifica en ambos lados de la ecuación?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( x \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( y^3 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[Ninguno, son términos diferentes.]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P08. Expresión de h'(y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la expresión resultante para \( h'(y) \) tras el proceso de simplificación?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( y^3 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[0]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( x^3 \)]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P09. Valor de la constante C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Utilizando la condición \( y(0) = 1 \) en la expresión \( xy - \frac{x^4}{4} + \frac{y^4}{4} = C \), ¿cuál es el valor numérico de \( C \) en forma de fracción simple?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>1/4</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P10. Solución Final</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras multiplicar por 4 para eliminar denominadores, ¿cuál es la solución final del PVI?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 4xy - x^4 + y^4 = 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 4xy + x^4 + y^4 = 1 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 4xy - x^4 + y^4 = 0 \)]]></text></answer>
+</question>
+
+</quiz>

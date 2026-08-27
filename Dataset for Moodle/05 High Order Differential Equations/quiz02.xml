@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category>
+        <text>$course$/EDO/Coeficientes Indeterminados - Ejercicio B (Amortiguado)</text>
+    </category>
+    <info format="html">
+        <text><![CDATA[<p>Cuestionario de ingeniería inversa para el caso de raíces 0, -1, -1.</p>]]></text>
+    </info>
+    <idnumber>EDO-REV-02</idnumber>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q01. Identificación de Raíces</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 1: Análisis de la Homogénea</strong></p>
+            <p>Observe la solución homogénea dada en el problema:</p>
+            <p>\[ y_h(t) = c_1 + c_2 e^{-t} + c_3 t e^{-t} \]</p>
+            <p>Analice los exponentes y la estructura. Recuerde que el término \( c_1 \) equivale a \( c_1 e^{0t} \) y que \( t e^{-t} \) implica multiplicidad.</p>
+            <p>¿Cuál es el conjunto de raíces \( m \) asociadas?</p>
+            <p style="color: #b30000; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 5px;"><em>Advertencia: Respuesta incorrecta penaliza.</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>La constante \( c_1 \) implica \( m=0 \). Los términos \( e^{-t} \) y \( t e^{-t} \) indican que la raíz es \( -1 \) y aparece dos veces (multiplicidad 2).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( m = 0 \) (simple), \( m = -1 \) (doble). ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( m = 0 \) (simple), \( m = 1 \) (doble). ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. El exponente es negativo (-t).]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( m = -1 \) (triple). ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Ignoró la raíz asociada a la constante c1.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( m = 0 \) (doble), \( m = -1 \) (simple). ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Multiplicidades invertidas.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="truefalse">
+    <name>
+        <text>Q02. Polinomio Característico</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 2: Construcción del Polinomio</strong></p>
+            <p>Para reconstruir la E.D., debemos formar el polinomio característico multiplicando los factores \( (m - r) \).</p>
+            <p>Considerando las raíces identificadas (\( m=0 \) y \( m=-1 \) doble), ¿es <strong>Verdadero</strong> afirmar que la expresión factorizada correcta es la siguiente?</p>
+            <p>\[ m(m-1)^2 = 0 \]</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Falso. La raíz es -1, por lo que el factor debe ser \( (m - (-1)) = (m+1) \). La expresión correcta es \( m(m+1)^2 = 0 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <answer fraction="0">
+        <text>true</text>
+        <feedback format="html"><text><![CDATA[Incorrecto. El factor (m-1) corresponde a la raíz +1.]]></text></feedback>
+    </answer>
+    <answer fraction="100">
+        <text>false</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q03. La Ecuación Diferencial</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 3: Determinar la E.D. Original</strong></p>
+            <p>Desarrolle algebraicamente el producto correcto \( m(m+1)^2 = 0 \) en su hoja (expanda el binomio y multiplique por m).</p>
+            <p>Al convertir a notación de derivadas, ¿cuál es la EDO resultante?</p>
+            <p style="color: #b30000; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 5px;"><em>Advertencia: Respuesta incorrecta penaliza.</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( m(m^2 + 2m + 1) = m^3 + 2m^2 + m \). Esto corresponde a \( y''' + 2y'' + y' = 0 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( y''' + 2y'' + y' = 0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y''' - 2y'' + y' = 0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de signos (correspondería a raíces positivas).]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y''' + 2y'' + y = 0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. El último término tiene derivada de orden 0, lo cual es incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y'' + 2y' + y = 0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Orden incorrecto (grado 2 en lugar de 3).]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q04. Propuesta Inicial yp</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 4: Solución Particular Base</strong></p>
+            <p>Observe la función de entrada dada por:</p>
+            <p>\[ g(t) = 4t + 6 \]</p>
+            <p>Sin considerar todavía las raíces de la homogénea (propuesta ingenua), ¿cuál es la estructura base para un polinomio de este grado?</p>
+            <p style="color: #b30000; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 5px;"><em>Advertencia: Respuesta incorrecta penaliza.</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Es un polinomio de primer grado (lineal), su forma base es \( At + B \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( y_p = At + B \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y_p = At^2 + Bt + C \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Exceso de grado (cuadrática).]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y_p = A e^{4t} + B \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Confundió el coeficiente 4 con un exponente.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y_p = At \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Falta el término independiente B.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="truefalse">
+    <name>
+        <text>Q05. Resonancia</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 5: Readecuación por Superposición</strong></p>
+            <p>Analice su propuesta base (\( At + B \)). Note que el término constante \( B \) es linealmente dependiente del término \( c_1 \) de la homogénea (raíz \( m=0 \)).</p>
+            <p>¿Es <strong>Verdadero</strong> afirmar que debe multiplicar toda su propuesta \( y_p \) por la variable \( t \) para romper esta dependencia lineal?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Verdadero. Al haber raíz en 0, las constantes son solución homogénea. Se ajusta multiplicando por \( t^1 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <answer fraction="0">
+        <text>false</text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="100">
+        <text>true</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="shortanswer">
+    <name>
+        <text>Q06. Coeficiente Lineal</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 6: Reemplazo y Derivadas</strong></p>
+            <p>En su hoja, defina la \( y_p \) corregida como \( y_p = At^2 + Bt \) y calcule sus derivadas.</p>
+            <p>Sustituya en la EDO \( y''' + 2y'' + y' \). Concéntrese en el término que contiene a la variable \( t \) en el lado izquierdo.</p>
+            <p>Este término proviene únicamente de \( y' \). ¿Cuál es el <strong>coeficiente numérico entero</strong> que multiplica a la constante \( A \) asociada a \( t \)?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( y_p' = 2At + B \). El término con \( t \) es \( 2At \). El coeficiente es 2.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>2</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q07. Sistema de Ecuaciones</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 7: Agrupación del Sistema</strong></p>
+            <p>Agrupe términos semejantes e iguale coeficientes con el lado derecho \( 4t + 6 \).</p>
+            <p>Recuerde que \( y'''=0 \), \( y''=2A \), \( y'=2At + B \).</p>
+            <p>¿Cuál es el sistema de ecuaciones correcto?</p>
+            <p style="color: #b30000; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 5px;"><em>Advertencia: Respuesta incorrecta penaliza.</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Términos en t: \( 2At = 4t \implies 2A = 4 \). Términos constantes: \( 2(2A) + B = 6 \implies 4A + B = 6 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( \begin{cases} 2A = 4 \\ 4A + B = 6 \end{cases} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( \begin{cases} 2A = 4 \\ 2A + B = 6 \end{cases} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Olvidó multiplicar y'' por el coeficiente 2 de la EDO.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( \begin{cases} A = 4 \\ 4A + B = 6 \end{cases} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error en coeficiente de t.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( \begin{cases} 2A = 4 \\ B = 6 \end{cases} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Ignoró la contribución de y'' al término constante.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="shortanswer">
+    <name>
+        <text>Q08. Calculo de A</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 8: Determinación de Constantes</strong></p>
+            <p>Resuelva la primera ecuación del sistema (\( 2A = 4 \)) para hallar \( A \).</p>
+            <p>¿Cuál es el valor numérico entero de <strong>A</strong>?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( A = 4/2 = 2 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>2</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="shortanswer">
+    <name>
+        <text>Q09. Calculo de B</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 9: Solución Particular Final</strong></p>
+            <p>Sustituya el valor de \( A \) en la segunda ecuación (\( 4A + B = 6 \)) para encontrar \( B \).</p>
+            <p>¿Cuál es el valor numérico entero de <strong>B</strong>?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( 4(2) + B = 6 \implies 8 + B = 6 \implies B = -2 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>-2</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q10. Ensamble Final</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 10: Solución General</strong></p>
+            <p>Seleccione la Solución General completa y correcta, recordando la forma de su \( y_p \) ajustada.</p>
+            <p style="color: #b30000; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 5px;"><em>Advertencia: Respuesta incorrecta penaliza.</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Se suma la homogénea original y la particular calculada: \( 2t^2 - 2t \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( y(t) = c_1 + c_2 e^{-t} + c_3 t e^{-t} + 2t^2 - 2t \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y(t) = c_1 + c_2 e^{-t} + c_3 t e^{-t} + 2t - 2 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Usó la forma ingenua sin multiplicar por t.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y(t) = c_1 + c_2 e^{-t} + c_3 t e^{-t} + 2t^2 + 2t \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de signo en el coeficiente B.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( y(t) = c_1 + c_2 e^{t} + c_3 t e^{t} + 2t^2 - 2t \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Alteró los signos de los exponentes en la solución homogénea.]]></text></feedback>
+    </answer>
+</question>
+
+</quiz>

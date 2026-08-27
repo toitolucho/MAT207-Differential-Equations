@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category><text>$course$/MAT207/Exactas_PVI_Exponencial_X2</text></category>
+</question>
+
+<question type="multichoice">
+    <name><text>P01. Reordenamiento de la E.D.</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Para aplicar el método de exactas, primero debe llevar la ecuación a la forma \( Mdx + Ndy = 0 \).</p>
+        <p>¿Cuál es la expresión de \( M(x,y) \) tras realizar este reordenamiento?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 2xye^{x^2} - 3x^2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xye^{x^2} + 3x^2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^{x^2} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P02. Identificación de N(x,y)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la expresión de \( N(x,y) \) que multiplica al diferencial \( dy \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( e^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xye^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^{x} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P03. Derivada parcial cruzada</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>En el Paso 3, ¿qué resultado común obtuvo para las derivadas \( M_y \) y \( N_x \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 2xe^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xye^{x^2} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P04. Integración parcial de N respecto a y</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Si decide integrar \( N(x,y) \) respecto a \( y \), ¿cuál es la expresión parcial de \( g(x,y) \) sin considerar la función de ajuste \( f(x) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( ye^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xye^{x^2} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P05. Función de ajuste f(x)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al integrar respecto a \( y \), se añade una función desconocida. ¿Cómo se denomina correctamente en este caso?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( f(x) \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( h(y) \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( C \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P06. Derivada parcial de g respecto a x</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al derivar su expresión \( g(x,y) = ye^{x^2} + f(x) \) respecto a \( x \), ¿qué término obtiene antes de sumar \( f'(x) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 2xye^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 2xe^{x^2} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P07. Término simplificado</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Al igualar la derivada anterior con \( M(x,y) \), ¿qué término se cancela en ambos lados?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( 2xye^{x^2} \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( -3x^2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( e^{x^2} \)]]></text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P08. Expresión de f'(x)</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Tras la simplificación, ¿cuál es la expresión resultante para \( f'(x) \)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( -3x^2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( 3x^2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[0]]></text></answer>
+</question>
+
+<question type="shortanswer">
+    <name><text>P09. Constante de integración C</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>Evaluando la condición inicial \( y(0) = 2 \) en su solución general \( ye^{x^2} - x^3 = C \), ¿cuál es el valor de \( C \)?</p>]]></text>
+    </questiontext>
+    <answer fraction="100"><text>2</text></answer>
+</question>
+
+<question type="multichoice">
+    <name><text>P10. Solución Final del PVI</text></name>
+    <questiontext format="html">
+        <text><![CDATA[<p>¿Cuál es la solución final que obtuvo en su hoja de trabajo?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100" format="html"><text><![CDATA[\( ye^{x^2} = x^3 + 2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( ye^{x^2} = x^3 - 2 \)]]></text></answer>
+    <answer fraction="-25" format="html"><text><![CDATA[\( ye^{x^2} - x^3 = 0 \)]]></text></answer>
+</question>
+
+</quiz>

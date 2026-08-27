@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="category">
+    <category>
+        <text>$course$/EDO Series/Ej 03 - Final</text>
+    </category>
+    <info format="html">
+        <text><![CDATA[<p>Cuestionario secuencial para EDO \( y'' - xy' = 2x \). Requiere resolución previa en papel.</p>]]></text>
+    </info>
+    <idnumber>EDO-03-FINAL</idnumber>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q01. Ajuste Algebraico</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 1: Planteamiento</strong></p>
+            <p>Al resolver la ecuación \( y'' - xy' = 2x \), sustituimos las series de potencias.</p>
+            <p>Concéntrese en el término \( -xy' \). Al introducir la variable \( x \) (y el signo negativo) dentro de la sumatoria de la primera derivada, ¿cuál es la expresión correcta del término general resultante?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>La \( x \) multiplica a \( x^{n-1} \), resultando en \( x^n \). El signo negativo también se incluye.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( - n a_n x^{n} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[ \( - n a_n x^{n-1} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. No operó la x externa.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[ \( n a_n x^{n+1} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q02. Estrategia de Unificación</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 2: Alineación de Índices</strong></p>
+            <p>Tras el cambio de variable a \( k \), obtenemos:</p>
+            <ul>
+                <li>Serie de \( y'' \): Inicia en \( k=0 \).</li>
+                <li>Serie de \( xy' \): Inicia en \( k=1 \).</li>
+            </ul>
+            <p>Para unificar ambas en una sola sumatoria, ¿qué operación preliminar es necesaria?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Debemos extraer el término \( k=0 \) de la primera serie para que ambas comiencen en \( k=1 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[Extraer el término \( k=0 \) de la primera serie para igualar el inicio a \( k=1 \).]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[Cambiar el índice de la segunda serie para forzarla a iniciar en 0.]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[Ignorar el primer término y empezar ambas desde \( k=2 \).]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q03. Coeficiente a2</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 3: Término Constante (\( x^0 \))</strong></p>
+            <p>Extraiga el coeficiente para \( k=0 \) de la primera serie e iguálelo al término constante del lado derecho de la ecuación diferencial (\( 2x \)).</p>
+            <p>¿Cuál es el valor resultante de \( a_2 \)?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>El término constante de \( 2x \) es 0. La ecuación es \( 2a_2 = 0 \), por tanto \( a_2 = 0 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( a_2 = 0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_2 = 1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_2 = a_0 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q04. Coeficiente a3</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 4: Término Lineal (\( x^1 \))</strong></p>
+            <p>Analice ahora los coeficientes para \( k=1 \). Recuerde que el lado derecho de la ecuación es \( 2x \).</p>
+            <p>Plantee la ecuación de coeficientes y despeje \( a_3 \). ¿Cuál es la expresión correcta?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Ecuación: \( 6a_3 - a_1 = 2 \). Despejando: \( 6a_3 = 2 + a_1 \), entonces \( a_3 = 1/3 + a_1/6 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( a_3 = \frac{1}{3} + \frac{1}{6}a_1 \) ]]></text>
+        [cite_start]<feedback format="html"><text><![CDATA[Correcto[cite: 14].]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_3 = \frac{1}{6}a_1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Ignoró la no homogeneidad (2x).]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_3 = \frac{2}{3} + a_1 \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de despeje.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q05. Relación de Recurrencia</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 5: Fórmula General (\( k \ge 2 \))</strong></p>
+            <p>Para potencias superiores, el lado derecho es 0. La ecuación simplificada es:</p>
+            <p>\[ (k+2)(k+1)a_{k+2} - k a_k = 0 \]</p>
+            <p>Despeje \( a_{k+2} \) para obtener la fórmula de recurrencia.</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Pasando \( -ka_k \) al otro lado positivo y dividiendo: \( a_{k+2} = \frac{k a_k}{(k+2)(k+1)} \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[ \( a_{k+2} = \frac{k a_k}{(k+2)(k+1)} \) ]]></text>
+        [cite_start]<feedback format="html"><text><![CDATA[Correcto[cite: 16].]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_{k+2} = -\frac{k a_k}{(k+2)(k+1)} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Error de signo al despejar.]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+        <text><![CDATA[ \( a_{k+2} = \frac{a_k}{(k+2)(k+1)} \) ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Omitió la variable k del numerador.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="shortanswer">
+    <name>
+        <text>Q06. Calculo de a4</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 6: Coeficientes Pares</strong></p>
+            <p>Observe la fórmula de recurrencia. Dado que calculamos previamente que \( a_2 = 0 \).</p>
+            <p>¿Cuál es el valor numérico de \( a_4 \) (cuando \( k=2 \))?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Como \( a_4 \) depende de \( a_2 \) multiplicativamente, y \( a_2=0 \), entonces \( a_4=0 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>0</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="shortanswer">
+    <name>
+        <text>Q07. Calculo de a5</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 7: Coeficientes Impares</strong></p>
+            <p>Usando la recurrencia y el valor de \( a_3 \) hallado (\( a_3 = 1/3 + a_1/6 \)), calcule el coeficiente \( a_5 \) (cuando \( k=3 \)).</p>
+            <p>Escriba únicamente la <strong>parte numérica constante</strong> de la fracción resultante (la parte que NO multiplica a \( a_1 \)).</p>
+            <p><em>(Ejemplo de formato: 1/10, 3/20)</em></p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( a_5 = \frac{3 a_3}{20} = \frac{3}{20}(1/3 + \dots) = \frac{3}{60} + \dots = 1/20 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>1/20</text>
+        [cite_start]<feedback format="html"><text><![CDATA[Correcto[cite: 20].]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+        <text>1 / 20</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q08. Clasificación de Soluciones</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Paso 8: Solución General</strong></p>
+            <p>En base a sus resultados (donde los términos pares se anulan y los impares generan una serie), identifique cuál de las siguientes opciones describe correctamente la estructura de las soluciones:</p>
+            <ul>
+                <li>\( y_1 \) (asociada a \( a_0 \))</li>
+                <li>\( y_2 \) (asociada a \( a_1 \))</li>
+                <li>\( y_p \) (Particular)</li>
+            </ul>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>\( y_1 \) es constante porque \( a_2, a_4 \dots = 0 \). \( y_p \) surge de los términos libres de los coeficientes impares.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="100" format="html">
+        <text><![CDATA[
+            <p><b>y1:</b> \( a_0 \) (Constante)</p>
+            <p><b>y2:</b> \( x + \frac{1}{6}x^3 + \dots \)</p>
+            <p><b>yp:</b> \( \frac{1}{3}x^3 + \frac{1}{20}x^5 \dots \)</p>
+        ]]></text>
+        [cite_start]<feedback format="html"><text><![CDATA[Correcto[cite: 23, 24].]]></text></feedback>
+    </answer>
+
+    <answer fraction="-50" format="html">
+        <text><![CDATA[
+            <p><b>y1:</b> \( 1 + x^2 + x^4 \dots \)</p>
+            <p><b>y2:</b> \( x + \frac{1}{6}x^3 + \dots \)</p>
+            <p><b>yp:</b> \( \frac{1}{3}x^3 + \frac{1}{20}x^5 \dots \)</p>
+        ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto. Calculamos que los coeficientes pares \( a_2, a_4 \) son cero.]]></text></feedback>
+    </answer>
+
+    <answer fraction="-50" format="html">
+        <text><![CDATA[
+            <p><b>y1:</b> \( a_0 \) (Constante)</p>
+            <p><b>y2:</b> \( 1 + x + x^2 \dots \)</p>
+            <p><b>yp:</b> \( x + x^3 \dots \)</p>
+        ]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="truefalse">
+    <name>
+        <text>Q09. Lógica - Truncamiento</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Razonamiento Conceptual</strong></p>
+            <p>Dado que \( a_2 = 0 \) y la recurrencia es multiplicativa (\( a_{k+2} \) es proporcional a \( a_k \)), esto implica necesariamente que la serie asociada a \( a_0 \) (la solución \( y_1 \)) se trunca y se convierte en un simple polinomio constante (simplemente \( y_1 = 1 \)).</p>
+            <p>¿Es esta afirmación Verdadera o Falsa?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Verdadero. Al ser \( a_2=0 \), entonces \( a_4=0, a_6=0 \), etc. Solo sobrevive el término \( a_0 \).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <answer fraction="0">
+        <text>false</text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="100">
+        <text>true</text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+</question>
+
+<question type="multichoice">
+    <name>
+        <text>Q10. Lógica - Radio Convergencia</text>
+    </name>
+    <questiontext format="html">
+        <text><![CDATA[
+            <p><strong>Razonamiento Conceptual</strong></p>
+            <p>Analizando la ecuación original \( y'' - xy' = 2x \). El coeficiente de la segunda derivada es 1 (constante, nunca es cero).</p>
+            <p>¿Qué podemos afirmar teóricamente sobre el radio de convergencia \( R \) de la solución en series de potencias obtenida?</p>
+        ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+        <text><![CDATA[<p>Al no existir puntos singulares (donde el coeficiente de \( y'' \) se anule) en el plano finito, la solución converge para todo número real.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+        <text><![CDATA[El radio es infinito (\( R = \infty \)), converge para todo \( x \).]]></text>
+        <feedback format="html"><text><![CDATA[Correcto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[El radio es 1 (\( R=1 \)).]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+        <text><![CDATA[El radio es 0 (solo converge en el origen).]]></text>
+        <feedback format="html"><text><![CDATA[Incorrecto.]]></text></feedback>
+    </answer>
+</question>
+
+</quiz>
