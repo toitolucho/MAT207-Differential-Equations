@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{array}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Columna izquierda, alineada a la izquierda
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}  % Columna derecha, alineada a la derecha
+
+% Configuración de márgenes
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 05 - Ecuaciones Diferenciales Ordinarias de Orden Superior: Variación de Parámetros}\\[1cm]  
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+\vspace{0.5cm}
+
+\subsubsection*{A. Resuelva las siguientes ecuaciones diferenciales utilizando el método de variación de parámetros}
+
+\begin{enumerate}
+    % Ejercicios Fáciles
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + y = \sec x \) & \(\displaystyle y = c_1 \cos x + c_2 \sin x + \cos x \ln|\cos x| + x \sin x \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 2y' + y = \dfrac{e^x}{x} \) & \(\displaystyle y = c_1 e^x + c_2 x e^x + x e^x \ln|x| \)
+    \end{tabularx}
+    
+    % Ejercicios Medios
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + y = \tan x \) & \(\displaystyle y = c_1 \cos x + c_2 \sin x - \cos x \ln|\sec x + \tan x| \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + 4y = \csc 2x \) & \(\displaystyle y = c_1 \cos 2x + c_2 \sin 2x - \frac{1}{2} x \cos 2x + \frac{1}{4} \sin 2x \ln|\sin 2x| \)
+    \end{tabularx}
+    
+    % Ejercicios Difíciles
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' + y = \sec^3 x \) & \(\displaystyle y = c_1 \cos x + c_2 \sin x + \frac{1}{2} \sec x \)
+    \end{tabularx}
+    
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( y'' - 2y' + 2y = e^x \sec x \) & \(\displaystyle y = e^x(c_1 \cos x + c_2 \sin x) + e^x \cos x \ln|\cos x| + x e^x \sin x \)
+    \end{tabularx}
+
+    \item
+    \begin{tabularx}{\linewidth}{L{0.45\linewidth} R{0.45\linewidth}}
+    \( x^2 y'' - 2x y' + 2y = x^3 \ln x \) & \(\displaystyle y = c_1 x + c_2 x^2 + \frac{1}{2} x^3 \ln x - \frac{3}{4} x^3 \)
+    \end{tabularx}
+    
+\end{enumerate}
+
+\end{document}
