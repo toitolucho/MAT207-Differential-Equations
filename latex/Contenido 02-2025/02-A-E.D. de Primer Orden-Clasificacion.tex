@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+E.D. DE PRIMER ORDEN 
+
+En este tipo de E.D. solo se cuenta con la primera derivada presente en la E.D.
+
+\textbf{Representacion}
+
+Se puede tener la E.D. en su forma \colorbox[RGB]{248,231,28}{\textbf{Estandar:}}
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y)  \rightarrow  A \\
+\frac{dy}{dx} = xe^{y}
+\end{gather*}
+
+
+Se puede tener asi mismo su representacion de forma \colorbox[RGB]{248,231,28}{\textbf{diferencial}}
+
+
+\begin{gather*}
+M(x,y)dx + N(x,y)dy = 0  \rightarrow  B \\
+(x^{3}+5y)dx+(e^{2x}-ln(y))dy = 0
+\end{gather*}
+
+
+Es posible readecuar la representacion algebraida de una E.D. para converirtirla
+
+a cualquiera de sus formas
+
+Por ejmplo:  
+
+
+\begin{gather*}
+5x+3y-\frac{dy}{dx} = 0 \\
+\text{para llevar a la forma A} \\
+\frac{dy}{dx} = 5x+3y \\
+\text{es posible llevar la E.D. a su forma B} \\
+\text{podriamos multiplicar la expresion por dx} \\
+\frac{dy}{\text{\colorbox[RGB]{248,231,28}{$dx$}}}*\text{\colorbox[RGB]{248,231,28}{$dx$}} = (5x+3y)dx \\
+dy = (5x+3y)dx \\
+M(x,y)dx + N(x,y)dy = 0 \\
+(5x+3y)dx-dy = 0   \rightarrow  \\
+M(x,y) =(5x+3y); N(x,y) = -1
+\end{gather*}
+
+
+
+
+Clasificacion
+
+\textbf{E.D. de Variable Separable}
+
+En este tipo de E.D. es posible aplicar directamente la integracion para resolver la misma, ya que se tiene la certeza de que cada variable esta separada y sujeta a su respectiva diferencial
+
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y)  \rightarrow \text{ donde es posible tener una empresion } \\
+\text{donde se pueda despejar individualmente cada variable} \\
+\frac{dy}{dx} = A(x)*B(y) o A(x)/B(y) o B(x)/A(y)\text{   o las posibles combinaciones de grupos} \\
+\text{* supongramos que tenemos el primer caso} \\
+\frac{dy}{dx} = A(x)*B(y)   \rightarrow dy =\text{\colorbox[RGB]{248,231,28}{$A$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}*B(y)\text{\colorbox[RGB]{248,231,28}{$dx$}}  \rightarrow \frac{1}{B(y)}dy =\text{\colorbox[RGB]{248,231,28}{$A$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$dx$}}  \\
+\int \frac{1}{B(y)}dy =\text{\colorbox[RGB]{248,231,28}{$\int $}}A(x)dx  \\
+o \\
+\text{partiendo de la forma B} \\
+M(x,y)dx + N(x,y)dy = 0   \rightarrow \text{ donde} \\
+M(x,y)  \rightarrow  A(x) \\
+N(x,y) \rightarrow B(y) \\
+A(x)dx + B(y)dy = 0 \\
+\text{se puede aplicar integral directa} \\
+\int A(x)dx + \int B(y)dy =c
+\end{gather*}
+
+
+
+
+\textbf{E.D Homogeneas} $\rightarrow$  no se pueden separar directamente, pero si se puede hacer un cambio de variable para resolver la misma convirtiendola a una E.D. de Variable Separable
+
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y) \\
+\text{Si se incorporar el operador lambda }\text{\colorbox[RGB]{248,231,28}{$𝜆$}}\text{ a cada variable } \\
+\text{y se puede nuevamente reproducir la  expresion original,} \\
+\text{entonces la E.D. es Homogenea} \\
+\vspace{0.5em} \\
+\frac{dy}{dx} = f(x,y) = \frac{dy}{dx} = f(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x,\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y) =f(x,y)   \\
+\text{entonces se hace un cambio de variable} \\
+y = xv    o      x =yu \\
+\frac{dy}{dx} = v+x\frac{dv}{dx}   o    \frac{dx}{dy} = u+y\frac{du}{dy} \\
+\text{una vez acomodada algebraicamente, } \\
+\text{se puede resolver por Variable Separable}
+\end{gather*}
+
+
+Lineales
+
+
+\begin{gather*}
+\frac{dy}{dx}+P(x)y =Q(x)  
+\end{gather*}
+
+
+E.D. de Bernoulli $\rightarrow$  es una variacion a una E.D. Lineal
+
+
+\begin{gather*}
+\frac{dy}{dx}+P(x)y =Q(x)\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{n}$}}
+\end{gather*}
+
+
+
+
+E.D Exactas
+
+
+\begin{gather*}
+M(x,y)dx + N(x,y)dy = 0 \\
+\text{para verificar que una E.D. es exacta,} \\
+\text{se utiliza prueba de exactitud.} \\
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x}
+\end{gather*}
+
+
+
+
+
+
+
+
+
+\end{document}

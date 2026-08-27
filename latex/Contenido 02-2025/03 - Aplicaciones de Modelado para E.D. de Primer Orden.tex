@@ -1,0 +1,221 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{APLICACIONES DE MODELADO PARA E.D. de Primer Orden}
+
+
+
+Aplicaciones de Crecimiento/Decrecimiento(Decaimiento)
+
+Dada una determinado variable, se requiere determinar su comportamiento a lo largo del tiempo
+
+Cuando la cantidad presente de la variable de estudio es directamente proporcional a una ctte,  se
+
+puede representar la misma de la siguiente forma, a traves de una E.D.
+
+
+\begin{gather*}
+\frac{dP}{dt} = kP ;  P(t_{0}) = P_{0}\text{ donde k} \rightarrow \text{ ctte de proporcionalidad}
+\end{gather*}
+
+
+La E.D es de variable separable y posible resolverla
+
+
+\begin{gather*}
+\frac{1}{P}dP = kdt  \rightarrow  \int \frac{1}{P}dP = k\int dt \\
+ln(P) = kt+c \\
+P(t) = e^{kt+c}=Ae^{kt}, donde A=e^{c}
+\end{gather*}
+
+
+\textbf{Ejercicios}
+
+Inicialmente un cultivo tiene un número 
+\begin{gather*}
+P_{0}
+\end{gather*}
+ de bacterias. En t = 1 h se determina que
+
+el número de bacterias es 
+\begin{gather*}
+\frac{3}{2}P_{0}
+\end{gather*}
+. Si la razón de crecimiento es proporcional al número
+
+de bacterias P(t) presentes en el tiempo t, determine el tiempo necesario para que se
+
+triplique el número de bacterias.
+
+\image-container
+
+
+\begin{gather*}
+P(t) =Ae^{kt}
+\end{gather*}
+
+
+Se toma inicialmente un punto de estudio
+
+Tomando como punto de partida el \colorbox[RGB]{248,231,28}{punto A}
+
+
+\begin{gather*}
+P_{0} =Ae^{k(0)} \rightarrow    A=P_{0} \\
+ P(t) =P_{0}e^{kt} 
+\end{gather*}
+
+
+Ahora tomamos el siguiente\colorbox[RGB]{248,231,28}{ punto B}
+
+
+\begin{gather*}
+\frac{3P_{0}}{2} =P_{0}e^{k(1)}  \rightarrow \frac{3\text{\colorbox[RGB]{248,231,28}{$P$}}\text{\colorbox[RGB]{248,231,28}{$_{0}$}}}{2\text{\colorbox[RGB]{248,231,28}{$P$}}\text{\colorbox[RGB]{248,231,28}{$_{0}$}}}=e^{k}  \rightarrow k=ln(3/2) \\
+k=0.41 \\
+P(t) =P_{0}e^{0.41t} 
+\end{gather*}
+
+
+Para el punto C, se nos pide el tiempo
+
+
+\begin{gather*}
+3P_{0} =P_{0}e^{0.41t} \rightarrow  t=\frac{ln(3)}{0.41}  
+\end{gather*}
+t = 2.679
+
+
+
+Si hubiesen pasado 5hrs, cuanto de poblacion habria?
+
+
+\begin{gather*}
+P(_{t=5})= 
+\end{gather*}
+ 
+\begin{gather*}
+P_{0}e^{0.41(5)} =P_{0}(2.71..) 
+\end{gather*}
+
+
+
+
+\textbf{LEY DE NEWTON, enfriamiento y Calentamiento de Cuerpos}
+
+
+\begin{gather*}
+\frac{dT}{dt}= k(T - T_{m})
+\end{gather*}
+
+
+
+\begin{gather*}
+\int \frac{dT}{(T - T_{m})}= k\int dt \\
+ln(T - T_{m}) =kt+c \\
+T-T_{m}=e^{kt+c}=Ae^{kt} \\
+T=Ae^{kt}+T_{m}
+\end{gather*}
+    
+
+
+
+Una taza de cafe fresco se ha preparado en la cafetera y actualmente tiene una Temperatura de 200ºF. Despues de 3 minutos, este se ha enfriado y ha alcanzado una temperatura de 190ºF, pero aun esta un tanto caliente para ser consumido. Si la temperatura del ambiente es de 72ºF y la temperatura del Cafe esta regido a la ley de Enfriamiento de Newton, Que tiempo sera necesario para que se pueda consumir la taza de cafe de tal manera que haya alcanzado una temperatura de 165F?\image-container
+
+
+\begin{gather*}
+\text{Inicialmente aplicamos la ley de Newton:}
+\end{gather*}
+
+
+
+\begin{gather*}
+T=Ae^{kt}+T_{m} \\
+\text{Primeramente arrancamos con }(A) \\
+T(0) =200  \rightarrow \text{ la termperatura del cafe arranca con ese valor} \\
+200 = Ae^{k(0)}+T_{m} \\
+200 = A+72 \\
+A = 200-72 \\
+A=128 \\
+\text{Reemplazamos en la expresion inicial} \\
+T=128e^{kt}+72 \\
+\vspace{0.5em} \\
+\text{Continuamos con el  punto }(B) \\
+T(3) = 190 \\
+T=128e^{kt}+72 \\
+190 = 128e^{k(3)}+72 \\
+\frac{ln(\frac{190-72}{128})}{3}= k  \rightarrow  k =-0.027 \\
+\text{Reemplazamos en la expresion inicial} \\
+T=128e^{-0.027t}+72 \\
+\vspace{0.5em} \\
+\text{Para determinar el valor del tiempo, reemplazamos en la formula anterior} \\
+T(t=?) = 165 \\
+165=128e^{-0.027t}+72 \\
+\frac{165-72}{128} =e^{-0.027t} \\
+t=\frac{ln(\frac{165-72}{128})}{-0.027} =11.83s
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+
+
+Supon que un virus se esta esparciendo por toda la poblacion a un valor directamente proporcional al numero de personas que no estan enfermas. Si el 5% de la poblacion inicialmente se encuentra ya infectada y posterior a una semana se enferma ya el 10% de la poblacion. Encuentra la formula como tal que representa el modelo de la poblacion infectada en cualquier tiempo.
+
+
+\begin{gather*}
+\text{La representacion del modelo estara dado por : Asumimos que el universo de personas } \\
+\text{sanas estara representada por el 100% } \rightarrow  1
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+\frac{dP}{dt} = k(1-P) \\
+\text{Resolvamos la E.D.} \\
+\int \frac{1}{1-P}dp = \int kdt \\
+-ln(1-P) = kt+c \\
+ln(1-P)^{-1} = kt+c \\
+\frac{1}{1-P}=Ae^{kt} \\
+1-P=Ae^{-kt} \\
+P=1-Ae^{-kt}
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+
+\begin{gather*}
+\text{Para ambos Puntos} \\
+ P(0) = 0.05   \rightarrow (A) \\
+P(1) = 0.1  \rightarrow  ( B) \\
+\text{Con los valores de frontera es posible determinar el modelo de la E.D.} \\
+0.05=1-Ae^{-k(0)} \\
+0.05=1-A \\
+A=0.95 \\
+\vspace{0.5em} \\
+\text{Para el siguiente punto Frontera:} \\
+P=1-0.95e^{-kt} \\
+0.1=1-0.95e^{-k(1)} \\
+0.1-1=-0.95e^{-k(1)} \\
+-0.9=-0.95e^{-k(1)} \\
+\frac{0.9}{0.95} =e^{-k}  \rightarrow k=-ln(\frac{0.9}{0.95} )=0.054 \\
+P=1-0.95e^{-0.054t}
+\end{gather*}
+
+
+
+
+
+\end{document}

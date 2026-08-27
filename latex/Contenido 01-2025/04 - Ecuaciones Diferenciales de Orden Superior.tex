@@ -1,0 +1,525 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{CAP 04 - ECUACIONES DIFERENCIALES DE ORDEN SUPERIOR}
+
+
+
+Consideraciones
+
+Se sigue trabajando con E.D lineales.
+
+La funcion g(x) puede ser cero o diferente de cero
+
+Las Funciones que acompañan tanto a las diferenciales, como la variable dependiente conmunmente son constates.
+
+
+
+Forma general:
+
+
+
+
+\begin{gather*}
+a_{n}(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+...a_{1}(x)y'+a_{0}(x)y = g(x) \\
+\vspace{0.5em} \\
+a_{1}(x)\text{\colorbox[RGB]{248,231,28}{$y'$}}+ a_{0}(x)\text{\colorbox[RGB]{248,231,28}{$y$}} = b(x)  \rightarrow \text{E.D. de Primer Orden} \\
+p(x) = \frac{a_{1}(x)}{a_{2}(x)}    q(x) = \frac{b(x)}{a_{2}(x)} \\
+\vspace{0.5em} \\
+y' + p(x)y = q(x) \\
+\vspace{0.5em} \\
+5xy' + 3xy  = e^{3x} \\
+\vspace{0.5em} \\
+a_{2}(x)\text{\colorbox[RGB]{248,231,28}{$y''+$}}a_{1}(x)\text{\colorbox[RGB]{248,231,28}{$y'$}}+ a_{0}(x)\text{\colorbox[RGB]{248,231,28}{$y$}} = b(x) \\
+a_{3}(x)\text{\colorbox[RGB]{248,231,28}{$y'''+$}}a_{2}(x)\text{\colorbox[RGB]{248,231,28}{$y''+$}}a_{1}(x)\text{\colorbox[RGB]{248,231,28}{$y'$}}+ a_{0}(x)\text{\colorbox[RGB]{248,231,28}{$y$}} = b(x) \\
+\vspace{0.5em} \\
+y'''+5y'+e^{3x}y = ln(x)  \rightarrow \text{Lineal de 3er Orden} \\
+y'''+5y'+e^{3x}y^{x} = ln(x)  \rightarrow \text{NO es Lineal} \\
+\vspace{0.5em} \\
+y''+5y'-3y = 0
+\end{gather*}
+
+
+Clasificacion de una E.D. de Orden Superior
+
+E.D. Con o sin Coeficientes Constantes (Izquierda)
+
+E.d. Homogenea o no Homogenea (Derecha)
+
+
+
+E.D. Con Coeficientes Constates:
+
+
+\begin{gather*}
+y''+5y'-3y = 0
+\end{gather*}
+
+
+E.D. Sin Coeficientes Constates:
+
+
+\begin{gather*}
+x^{2}y''+5xy'-3y = 5x
+\end{gather*}
+
+
+E.D. Homogenea
+
+
+\begin{gather*}
+y''+5y'-3y = 0
+\end{gather*}
+
+
+E.D. NO Homogenea
+
+
+\begin{gather*}
+y''+5y'-3y = ln(x)
+\end{gather*}
+
+
+
+
+Soluciones de una E.D. de Orden Superior
+
+Por convension se sabe que una ecuacion diferencial de orden superior n, tiene "n" soluciones \colorbox[RGB]{248,231,28}{linealmente independientes} que satisfacen como tal a la E.D.
+
+(a-3)(a+2)
+
+Por ejemplo
+
+
+\begin{gather*}
+y''-y'-6y = 0 \\
+\text{Al ser una E.D. de 2do orden, esta debe tener 2 soluciones} \\
+y_{1} = e^{3x}   \rightarrow \text{ generaliada } \rightarrow y_{1} = Ae^{3x} \\
+y'_{1} = 3e^{3x} \\
+y''_{1} = 9e^{3x} \\
+9e^{3x}-3e^{3x}-6e^{3x} = 0 \\
+\vspace{0.5em} \\
+\text{Por ende sabemos que e}^{3x}\text{ es una solucion de la E.D.} \\
+\vspace{0.5em} \\
+\text{Probemos con otra funcion} \\
+y_{2} = 100e^{3x} \\
+y_{2}' = 300e^{3x} \\
+y_{2}'' = 900e^{3x} \\
+900e^{3x}-300e^{3x}-600e^{3x} = 0 \\
+\vspace{0.5em} \\
+\text{Probemos con otra funcion} \\
+y_{3} = \frac{1}{2}e^{3x} \\
+y_{3}' = \frac{3}{2}e^{3x} \\
+y_{3}'' = \frac{9}{2}e^{3x} \\
+\frac{9}{2}e^{3x}-\frac{3}{2}e^{3x}-6\frac{1}{2}e^{3x} = 0 \\
+\vspace{0.5em} \\
+y_{4} = 𝜋e^{3x} \\
+\vspace{0.5em} \\
+y''-y'-6y = 0 \\
+y_{2} = e^{-2x}  \rightarrow \text{ Generalizada } \rightarrow  y_{2} = Be^{-2x} \\
+y_{2}' = -2e^{-2x} \\
+y_{2}'' = 4e^{-2x} \\
+4e^{-2x}-(-2e^{-2x})-6e^{-2x} = 0 \\
+y_{2} = -5e^{-2x} \\
+\vspace{0.5em} \\
+y = Ae^{3x}+Be^{-2x} \\
+\vspace{0.5em} \\
+y =  e^{3x}+100e^{3x}+\frac{1}{2}e^{3x}+𝜋e^{3x} \\
+y =e^{3x}(1+100+1/2+𝜋)   \rightarrow 1+100+1/2+𝜋 = A \\
+y = Ae^{3x}
+\end{gather*}
+
+
+
+
+\textbf{Wronskiano}
+
+Dado un conjunto de funciones, el wronskiano, permite determinar si dicho set es linealmente independiente o lo contrario.
+
+Utiliza la forma de una \textbf{determinate} y esta dada por la secuencia de derivadas de las funciones dadas en cada reglon de la determinante
+
+Ejemplo 1:
+
+Dado
+
+
+\begin{gather*}
+{x^{2}, x} \\
+\text{Determine si dicho set de funciones es linealmente independiente} \\
+\matrix{x^{2}}{x}{2x}{1} = x^{2}-2x^{2} = \text{\colorbox[RGB]{248,231,28}{$-x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}} \\
+\text{Si el valor encontrado, es diferente de cero, podemos deducir que:} \\
+\text{las funciones dadas en el set, }\text{SON LINEALMENTE INDEPENDIENTES} 
+\end{gather*}
+
+
+Ejemplo 2:
+
+Dado el sig SET de funciones
+
+
+
+
+\begin{gather*}
+{ \frac{1}{2}e^{3x}, e^{3x}} \\
+\text{Calculamos el wroksiano} \\
+\matrix{\frac{1}{2}e^{3x}}{e^{3x}}{\frac{3}{2}e^{3x}}{3e^{3x}} =(\frac{1}{2}e^{3x}*3e^{3x} - e^{3x}*\frac{3}{2}e^{3x})=0 \\
+\text{Son linealmente dependientes} \\
+A\frac{1}{2}e^{3x} + Be^{3x}=e^{3x}(A\frac{1}{2}+B)  = Ce^{3x} \\
+\text{Supongamos que tuviesemos la sig. E.D.} \\
+Ay''' +By''+Cy'+Dy = 0 \\
+\text{entonces se tuvise 3 soluciones, que forma un set de funciones} \\
+{y_{1},y_{2},y_{3}} \\
+\text{Si el wroksiano no da cero, se tiene la certeza} \\
+\text{que la expresion de abajo, se mantendra, sin absorverse} \\
+y = C_{1}y_{1}+C_{2}y_{2}+C_{3}y_{3} =
+\end{gather*}
+
+
+E.D. de 2do Orden
+
+Dada la E.D. de 2do orden en su forma general
+\begin{gather*}
+a_{2}(x)y''+a_{1}(x)y'+a_{0}(x)y = 0 \\
+\text{Asumimos que la E.D. es de CC Homogenea} \\
+Ay''+By'+Cy=0 \\
+Ax^{2}+Bx+C=0 \\
+x_{1,2} = \frac{-b±\sqrt{b^{2}-4ac}}{2a}  x1= 2, x2=-3 \\
+\text{Se va a suponer que se partira del siguiente plantemiento} \\
+y = e^{rx} \\
+y' = re^{rx} \\
+y'' = r^{2}e^{rx} \\
+\text{Se reemplaza en la E.D. inicial} \\
+A r^{2}e^{rx}+Bre^{rx}+Ce^{rx}=0 \\
+\text{Se se factoriza e}^{rx}: \\
+e^{rx}(A r^{2}+Br+C)=0 \\
+A r^{2}+Br+C = 0 \\
+r_{1,2} = \frac{-b±\sqrt{b^{2}-4ac}}{2a}
+\end{gather*}
+
+
+Ejercicios:
+
+
+\begin{gather*}
+y´´-3y´-4y=0 \\
+y = e^{rx} \\
+y' = re^{rx} \\
+y'' = r^{2}e^{rx} \\
+\text{reemplazando en la E.D.} \\
+r^{2}e^{rx}-3re^{rx}-4e^{rx}=0 \\
+e^{rx}(r^{2}-3r-4)=0 \\
+(r-4)(r+1)=0 \\
+r_{1} = 4 \\
+r_{2} =-1 \\
+y_{1}=e^{4x}  y_{2}=e^{-x}  \\
+{e^{4x},e^{-x}}\text{ se puede corroborar la Ind. Lineal con el Wronskiano} \\
+y_{g} = c_{1}y_{1}+c_{2}y_{2}  \\
+\vspace{0.5em} \\
+\text{Demuestre que la funcion y}_{1}=e^{4x}\text{ es una solucion a la E.D.} \\
+y´´-3y´-4y=0 \\
+y_{1}=e^{4x} \\
+y'_{1}=4e^{4x} \\
+y''_{1}=16e^{4x} \\
+\text{Reemplazando en la E.D. original} \\
+16e^{4x}-3*4e^{4x}-4e^{4x}=0
+\end{gather*}
+
+
+
+
+Resuelva los siguientes ejercicios:
+
+
+\begin{gather*}
+y''+2y'+5y=0 \\
+y = e^{rx} \\
+y' =re^{rx} \\
+y'' =r^{2}e^{rx} \\
+r^{2}e^{rx}+2re^{rx}+5e^{rx}=0 \\
+e^{rx}(r^{2}+2r+5) = 0 \\
+r^{2}+2r+5 = 0 \\
+(r±   )(r±   ) = 0  \rightarrow \text{ factorizacion no sirve} \\
+a = 1, b=2, c=5 \rightarrow \text{aplicamos la formula cuadratica} \\
+r_{1,2} = \frac{-2±\sqrt{4-20}}{2} =\frac{-2±4i}{2}= -1+2i,  -1-2i \\
+r_{1} =-1+2i \\
+r_{2} =-1-2i \\
+y_{1} = e^{r_{1}x} ,  y_{2} = e^{r_{2}x} \\
+y_{1} = e^{(-1+2i)x} ,  y_{2} = e^{(-1-2i)x} \\
+y = e^{-x}(c_{1}cos2x+c_{2}\text{sen2x}) \\
+\text{Cuando hay raices con valores imaginarios, se opta por:} \\
+r_{1} = a+bi  ,  r_{2} = a-bi \\
+y_{1} = c_{1}e^{ax}\text{cosbx} \\
+y_{2}= c_{2}e^{ax}\text{senbx} \\
+y = e^{ax}(c_{1}cosbx+c_{2}\text{senbx}) \\
+\vspace{0.5em} \\
+y''+16y =0 \\
+y = e^{rx} \\
+y' =re^{rx} \\
+y'' =r^{2}e^{rx} \\
+r^{2}e^{rx}+16 e^{rx} = 0 \\
+e^{rx}(r^{2}+16) = 0 \\
+r^{2}+16 = 0 \\
+r^{2} = -16 \\
+r = \sqrt{-16} \\
+r_{1,2} =0 ±4i   \rightarrow      r = a±bi \\
+y = e^{0x}(c_{1}cos4x+c_{2}\text{sen4x}) \\
+y = c_{1}cos4x+c_{2}\text{sen4x} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+y''+6y'+9y=0 \\
+y = e^{rx} \\
+y' =re^{rx} \\
+y'' =r^{2}e^{rx} \\
+r^{2}e^{rx}+6re^{rx}+9e^{rx}=0 \\
+e^{rx}(r^{2}+6r+9) =0 \\
+r^{2}+6r+9= 0 \\
+(r+3)(r+3)(r+3)(r+3) \\
+y_{1} = e^{-3x}   ,   y_{2} = e^{-3x} \\
+\vspace{0.5em} \\
+y = c_{1}y_{1}+c_{2}y_{2} \\
+y =c_{1}e^{-3x}+c_{2}e^{-3x} \\
+\text{verifiquemos que el par de solucion son L.I} \\
+W = \matrix{e^{-3x}}{e^{-3x}}{-3e^{-3x}}{-3e^{-3x}} = 0  \\
+y =c_{1}e^{-3x}+c_{2}e^{-3x} = e^{-3x}(c_{1}+c_{2})  \rightarrow donde A = c_{1}+c_{2} \\
+y= Ae^{-3x} \\
+\text{Para garantizar la I.L, se debe multiplicar por 'x'} \\
+y =c_{1}e^{-3x}+c_{2}xe^{-3x}  \\
+y =(c_{1}+c_{2}x)e^{-3x} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+y^{(v)}- 4y'''  =  0  \\
+e^{rx}(r^{5}-4r^{3})=0 \\
+r^{5}-4r^{3}=0 \\
+r^{3}(r^{2}-4)=0 \\
+r_{1,2,3}=0   \rightarrow   \\
+y_{1} = c_{1}e^{0x}   \\
+y_{2} = c_{2}xe^{0x}  \\
+y_{3} = c_{3}x^{2}e^{0x}    \\
+r^{2} = 4 \\
+r_{4,5} =±2 \\
+y_{4} = c_{4}e^{2x} \\
+y_{5} = c_{5}e^{-2x} \\
+y = c_{1}+c_{2}x+c_{3}x^{2}+c_{4}e^{2x}+c_{5}e^{-2x}
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+
+\begin{gather*}
+y^{.(4)}-16y=0
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y^{.(4)}-16y=0 \\
+(r^{4}-16) = 0 \\
+((r^{2})^{2}-4^{2}) = 0  \rightarrow (a^{2}-b^{2}) =  \\
+(r^{2}+4)(r^{2}-4) = 0 \\
+r^{2}+4=0  \rightarrow r^{2}=-4  \rightarrow ±2i \\
+r^{2}-2^{2} =0  \rightarrow  (r-2)(r+2) \\
+r_{1}=2, r_{2}=-2, r_{3} =2i, r_{4} =-2i \\
+y_{1} = c_{1}e^{2x} , y_{2} = c_{2}e^{-2x}  , y_{3} = c_{3}\text{cos2x, y}_{4}=c_{4}\text{sen2x} \\
+y =c_{1}e^{2x} + c_{2}e^{-2x}  + c_{3}cos2x+c_{4}\text{sen2x }
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y^{(4)}+4y′′′+6y′′+4y′=0
+\end{gather*}
+
+
+
+\begin{gather*}
+y^{(4)}+4y′′′+6y′′+4y′=0 \\
+e^{rx}(r^{4}+4r^{3}+6r^{2}+4r)=0 \\
+r^{4}+4r^{3}+6r^{2}+4r=0 \\
+r(r^{3}+4r^{2}+6r+4)=0 \\
+\matrix{1}{4}{}{-2}{1}{2}{6}{4}{}{-4}{-4}{-2}{2}{0}{} \\
+(r^{2}+2r+2) = 0 \\
+\text{Se puede aplicar la formula cuadratica} \\
+\frac{-2±\sqrt{4-8}}{2}=-1±i \\
+r_{1} = 0, r_{2}=-2, r_{3}=-1+i, r_{4}=-1-i \\
+y_{1} = c_{1}e^{0x}  ,   y_{2} = c_{2}e^{-2x}, y_{3}=c_{3}e^{-x}\text{cosx,  y}_{4}=c_{4}e^{-x}senx \\
+y= c+ c_{2}e^{-2x}+c_{3}e^{-x}cosx+c_{4}e^{-x}senx
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y^{(5)}+12y^{(4)}+104y^{(3)}+408y''+115y'=0
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+r(r^{4}+12r^{3}+104r^{2}+408r+115)=0 \\
+\matrix{1}{12}{104}{408}{115}{}{2i}{}{}{}{1}{}{}{}{}{}{2i}{} \\
+i(i)= \\
+i(-i)=
+\end{gather*}
+
+
+
+
+
+
+
+
+\textbf{ECUACIONES DIFERENCIALES CON COEFICENTES CONSTANTES NO HOMOGENEAS}
+
+
+
+
+\begin{gather*}
+a(x)y'' + b(x)y'+c(x)y = g(x)  \\
+Ay'' + By'+Cy = g(x)   \rightarrow  g(x)<>0 \\
+\vspace{0.5em} \\
+\text{la solucion a este tipo E.D.} \\
+y = y_{h} + y_{p}
+\end{gather*}
+
+
+
+
+\textbf{METODO DE COEFICIENTES INDETERMINADOS}
+
+
+
+
+\begin{gather*}
+g(x)  \rightarrow \text{ Polinomio  } \rightarrow  Ax^{2}+Bx+C   \rightarrow (I) \\
+g(x)  \rightarrow \text{ Funcion Exponencial } \rightarrow Ae^{mx}   \rightarrow \text{ donde A y r son valores reales  }(II) \\
+g(x)  \rightarrow \text{ Juego de Sen y Cos } \rightarrow Asen(x)\text{  Bcos}(x) (III) \\
+\vspace{0.5em} \\
+\text{Adicionalmente se puede tener combinaciones de los casos:} \\
+Ay'' + By'+Cy = (I) + (II)  \rightarrow  x^{3}+5e^{3x} \\
+Ay'' + By'+Cy = (I)* (II)  \rightarrow 5x^{3}e^{3x} \\
+= (x^{5}+1)cos(x) \\
+\vspace{0.5em} \\
+g(x) = x^{2}   \rightarrow   y_{p} = Ax^{2}+Bx+C \\
+g(x) = x^{3}+1   \rightarrow   y_{p} = Ax^{3}+Bx^{2}+Cx+D \\
+g(x) = e^{5x}   \rightarrow  y_{p} = Ae^{5x} \\
+g(x) = cos(x)   \rightarrow y_{p} = Acos(x)+Bsen(x) \\
+g(x) = 5x^{3}e^{3x}  \rightarrow  y_{p}= (Ax^{3}+Bx^{2}+Cx+D)e^{3x}
+\end{gather*}
+
+
+
+
+Ejemplo 1
+
+
+\begin{gather*}
+y''-2y'-15y = -(15x^{2}+4x+13) \\
+\text{Determinamos la solucion y}_{h} \\
+y''-2y'-15y=0 \\
+y_{h} = c_{1}e^{-3x}+c_{2}e^{5x} \\
+\text{Determinamos la solucion particula y}_{p} \\
+\text{Asumimos por supocion} \\
+y_{p} = Ax^{2}+Bx+C \\
+y'_{p} = 2Ax+B \\
+y''_{p}=2A \\
+\vspace{0.5em} \\
+2A-2(2Ax+B)-15(Ax^{2}+Bx+C) = -(15x^{2}+4x+13) \\
+\text{\colorbox[RGB]{248,231,28}{$2A$}}\text{\colorbox[RGB]{126,211,33}{$-4Ax$}}\text{\colorbox[RGB]{248,231,28}{$-2B$}}-15Ax^{2}\text{\colorbox[RGB]{126,211,33}{$-15Bx$}}\text{\colorbox[RGB]{248,231,28}{$-15C$}} = -15x^{2}-4x-13
+\end{gather*}
+
+
+\image-container
+
+
+\begin{gather*}
+(2A-2B-15C) +(-4A-15B)x-15Ax^{2}=-15x^{2}-4x-13 \\
+-15Ax^{2} = -15x^{2} \\
+(-4A-15B)x =-4x \\
+(2A-2B-15C)=-13 \\
+\vspace{0.5em} \\
+-15A = -15 \\
+A =1 \\
+\vspace{0.5em} \\
+-4-15B =-4 \\
+B= 0 \\
+\vspace{0.5em} \\
+2-15C=-13 \\
+C=1 \\
+y_{p} = x^{2}+1 \\
+\vspace{0.5em} \\
+y =c_{1}e^{5x}+c_{2}e^{-3x}+ x^{2}+1
+\end{gather*}
+
+
+Ejemplo 2
+
+
+\begin{gather*}
+y''+3y' = e^{x} \\
+y= c1+c2e^{-3x}+\frac{1}{4}e^{x}
+\end{gather*}
+
+
+Ejemplo3
+
+
+\begin{gather*}
+y'' + y = senx-cosx \\
+y = senx-cosx -\frac{x}{2}sin(x)-\frac{x}{2}cos(x)
+\end{gather*}
+
+
+Ejemplo 4
+
+
+\begin{gather*}
+y′′ − 2y′ − 3y = 28e^{3x} \\
+y_{h} = c_{1}e^{3x} +c_{2}e^{-x} \\
+y = y_{h}+y_{p} =c_{1}e^{3x} +c_{2}e^{-x}+Axe^{3x} \\
+y_{p}= Axe^{3x} \rightarrow  (Ae^{3x})\text{Se multiplica por 'x' porque hay resonancia} \\
+y'_{p} = 3Axe^{3x}+Ae^{3x} \\
+y''_{p} = 9Axe^{3x}+6Ae^{3x} \\
+\vspace{0.5em} \\
+y′′ − 2y′ − 3y = 28e^{3x} \\
+\text{\colorbox[RGB]{248,231,28}{$9Axe$}}\text{\colorbox[RGB]{248,231,28}{$^{3x}$}}+6Ae^{3x}\text{\colorbox[RGB]{248,231,28}{$-6Axe$}}\text{\colorbox[RGB]{248,231,28}{$^{3x}$}}-2Ae^{3x}\text{\colorbox[RGB]{248,231,28}{$-3Axe$}}\text{\colorbox[RGB]{248,231,28}{$^{3x}$}}=28e^{3x} \\
+4Ae^{3x} =28e^{3x} \\
+A = 7 \\
+y_{p}= 7xe^{3x} \\
+y = y_{h}+y_{p} =c_{1}e^{3x} +c_{2}e^{-x}+7xe^{3x}
+\end{gather*}
+
+
+\textbf{VARIACION DE PARAMETROS}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

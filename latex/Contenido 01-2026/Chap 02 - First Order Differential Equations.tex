@@ -1,0 +1,294 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{CAP 02 - ECUACIONES DIFERENCIALES DE ORDEN SUPERIOR}
+
+\textbf{REPRESENTACION DE UN E.D. de Primer Orden}
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y) (A)  \rightarrow \text{ Forma General} \\
+\frac{dy}{dx} = \frac{x^{2}+sen(x)}{e^{x}+y} \rightarrow     \\
+\text{\colorbox[RGB]{248,231,28}{$M$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x,y$}}\text{\colorbox[RGB]{248,231,28}{$)$}}dx + \text{\colorbox[RGB]{126,211,33}{$N$}}\text{\colorbox[RGB]{126,211,33}{$($}}\text{\colorbox[RGB]{126,211,33}{$x,y$}}\text{\colorbox[RGB]{126,211,33}{$)$}}dy = 0 (B)  \rightarrow \text{ Forma Diferencial} \\
+e^{x}dy = (x^{2}+sen(y))dx \\
+(\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$+sen$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$)$}})dx \text{\colorbox[RGB]{126,211,33}{$-e$}}\text{\colorbox[RGB]{126,211,33}{$^{x}$}}dy = 0
+\end{gather*}
+
+
+
+
+\textbf{VARIABLE SEPARABLE.- }Es posible separar las variables en un extremo\textbf{ }
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y)  \rightarrow  f(x,y)\text{ deberias ser una combinancion de factores que } \\
+\text{se puede separar o se deberia poder buscar  alguna forma algebraica de formarlos}
+\end{gather*}
+
+
+
+\begin{gather*}
+\vspace{0.5em} \\
+M(x,y)dx + N(x,y)dy = 0  \rightarrow  A(x)dx + B(y)dy =0
+\end{gather*}
+
+
+
+\begin{gather*}
+\frac{dy}{dx} =e^{-y}(2x-4)         y(5)=0 \\
+\int e^{y} dy=\int (2x-4)dx +C \\
+e^{y}  =x^{2}-4x +C  \\
+y = ln(x^{2}-4x +C) \\
+\text{para determinar la solucion especifica para y}(5)=0  \rightarrow  y(x) =f(...) \\
+0 = ln(5^{2}-4*5 +C) \\
+1  =25-20 +C  \\
+C =-4 \\
+y = ln(x^{2}-4x -4)
+\end{gather*}
+
+
+
+
+
+
+EED
+\begin{gather*}
+\frac{dy}{dx} = \frac{x^{2}+sen(x)}{e^{x}+y} \\
+\vspace{0.5em} \\
+y\frac{dy}{dx} =\frac{x^{2}+sen(x)}{e^{x}} \\
+ydy =\frac{x^{2}+sen(x)}{e^{x}}\text{dx   } \rightarrow    _{:(} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\frac{dy}{dx} = \frac{x^{2}+sen(x)}{xy} =\frac{x^{2}}{xy}  +\frac{sen(x)}{xy}  \rightarrow  ok
+\end{gather*}
+
+
+\textbf{E.D. Homogenea }$\rightarrow$  se basa en un intercambio de variable para convertir la E.D. a una de variable separable, para ello se debe cumplir lo siguiente:
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y)\text{ si incluyes el operador '𝜆'} \\
+\frac{dy}{dx} = f(𝜆x,𝜆y)  \rightarrow \text{ por operaciones algebraicas,} \\
+\text{ deberias poder volver a la e.d. original} \\
+\frac{dy}{dx} = f(x,y) 
+\end{gather*}
+
+
+ejemplo:
+
+
+\begin{gather*}
+\frac{dy}{dx} = \frac{x^{2}+y^{2}}{xy} = \frac{(𝜆x)^{2}+(𝜆y)^{2}}{𝜆x𝜆y} =\frac{𝜆^{2}x^{2}+𝜆^{2}y^{2}}{𝜆^{2}xy} = \frac{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}(x^{2}+y^{2})}{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}xy}
+\end{gather*}
+
+
+Cambio de Variable
+
+
+\begin{gather*}
+\frac{dy}{dx} = \frac{x^{2}+y^{2}}{xy} =\frac{x^{2}}{xy} +\frac{y^{2}}{xy} = \frac{x}{y}+\frac{y}{x} \\
+\vspace{0.5em} \\
+\text{por criterio asumo que }\frac{x}{y} =v \\
+\frac{dy}{dx} = v +v^{-1} \\
+x = vy    \rightarrow    (uv)' = u'v+uv' \\
+\frac{dx}{dy} = \frac{dv}{dy}y+v \\
+\vspace{0.5em} \\
+----------------------- \\
+y = xv \\
+  \frac{dy}{dx} = v+x\frac{dv}{dx}   \rightarrow A \\
+\vspace{0.5em} \\
+x = yu \\
+\frac{dx}{dy} = u+y\frac{du}{dy}    \rightarrow B
+\end{gather*}
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = \frac{x^{2}+y^{2}}{xy}\text{  aplicamos A} \\
+\frac{dy}{dx} = \frac{x^{2}+(xv)^{2}}{xxv} = \frac{\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}+\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}v^{2}}{\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}v} \\
+v+x\frac{dv}{dx}=\frac{1+v^{2}}{v} \\
+x\frac{dv}{dx}=\frac{1+v^{2}}{v}-v = \frac{1+v^{2}-v^{2}}{v} =\frac{1}{v} \\
+x\frac{dv}{dx}=\frac{1}{v} \\
+\int vdv=\int \frac{1}{x}dx+C \\
+ln(a)+ln(b) = ln(ab) \\
+\frac{v^{2}}{2} = ln(x)+C  =   ln(x)+ln(C) = ln(Cx) \\
+v = \sqrt{2ln(Cx)} \\
+\vspace{0.5em} \\
+ \rightarrow  K=2C \\
+v^{2} = 2ln(x)+K \\
+\frac{y^{2}}{x^{2}}= 2ln(x)+K \\
+y^{2} =x^{2}2ln(x)+x^{2}K
+\end{gather*}
+
+
+
+
+ED Primer Orden Lineal
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dx}$}}\text{\colorbox[RGB]{248,231,28}{$ + P$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$y = Q$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}    \rightarrow  (A) \\
+a_{1}(x)\frac{dy}{dx} + a_{0}(x)y = b(x) \\
+\frac{a_{1}(x)}{a_{1}(x)}\frac{dy}{dx} + \frac{a_{0}(x)}{a_{1}(x)}y = \frac{b(x)}{a_{1}(x)} \\
+P(x) =\frac{a_{0}(x)}{a_{1}(x)}     ; Q(x) = \frac{b(x)}{a_{1}(x)} \\
+\text{Metodo de resolucion} \\
+\frac{dy}{dx}u(x) + P(x)u(x)y = Q(x)u(x) = (yu)' \\
+(vz)' = v'z+vz' \\
+(yu)'=y'u+u'y \\
+u'=Pu \\
+\int \frac{u'}{u}=\int P \\
+ln(u) = \int P(x) \\
+u = e^{\int P(x)} \\
+a)\text{ Calculamos un factor de integracion u}(x) \\
+u(x) = e^{\int P(x)dx} \\
+b)\text{ y calcular la solucion con:} \\
+y = u(x) ^{-1}(\int Q(x)u(x) +c)
+\end{gather*}
+
+
+Ejercicio
+
+
+\begin{gather*}
+x\frac{dy}{dx}+3y= 4x^{2}-3x \\
+\text{para llevar a }(A)\text{ , debemos dividir entre 'x'} \\
+\frac{dy}{dx}+\frac{3}{x}y= 4x-3 \\
+P(x) = \frac{3}{x};  Q(x)=4x-3 \\
+\text{Calculamos el factor de integracion} \\
+u(x) = e^{\int P(x)dx} \\
+u(x) = e^{\int \frac{3}{x}dx}=e^{3\int \frac{1}{x}dx}= e^{3ln(x)} \\
+a*ln(b)  = ln(b^{a}) \\
+=e^{ln(x^{3})}=x^{3} \\
+\text{determinamos la solucion y}(x) \\
+y = u(x) ^{-1}(\int Q(x)u(x) +c) \\
+y = x ^{-3}(\int (4x-3)x^{3} +c) \\
+y = x ^{-3}(\int (4x^{4}-3x^{3} +c) \\
+y = x ^{-3}( \frac{4}{5}x^{5}-\frac{3}{4}x^{4}+c) \\
+y = \frac{4}{5}x^{2}-\frac{3}{4}x+x ^{-3}c
+\end{gather*}
+
+
+E.D. de Bernoulli
+
+
+\begin{gather*}
+\frac{dy}{dx} + P(x)y = Q(x)\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{n}$}} \\
+donde n = es real diferente 1, 0 \\
+\text{el objetivo es tratar de convertir la E.D. en una lineal} \\
+\vspace{0.5em} \\
+\text{lo primero es hacer desaparecer y}^{n}\text{ del miembro de la derecha} \\
+y^{-n}\frac{dy}{dx} + P(x)y^{-n}y = Q(x) \\
+y^{-n}\frac{dy}{dx} + P(x)y^{1-n} = Q(x) \\
+aplicamos cambio de variable z = y^{1-n} \\
+y^{-n}\frac{dy}{dx} + P(x)z = Q(x) \\
+derivamos z = y^{1-n} \\
+\frac{dz}{dy} =(1-n)y^{-n}  \\
+\frac{dz}{dy} =(1-n)y^{-n} \frac{dx}{dx} \\
+\frac{dz}{dx} =(1-n)y^{-n} \frac{dy}{dx} \\
+\text{Multplicar por}(1-n) \\
+(1-n)y^{-n}\frac{dy}{dx} + (1-n)P(x)z = (1-n)Q(x) \\
+\text{reemplazamos} \\
+\frac{dz}{dx} + (1-n)P(x)z = (1-n)Q(x)
+\end{gather*}
+
+
+Ejercicio
+
+
+\begin{gather*}
+y'+\frac{4}{x}y = x^{3}y^{2} ;   y(2) = -1 \\
+n = 2 \\
+\text{Dividimos entre y}^{2} \\
+y^{-2}y'+\frac{4}{x}y^{-1} = x^{3} \\
+z =y^{-1} \\
+\frac{dz}{dx} = -1y^{-2}\frac{dy}{dx} \\
+\text{Multiplicamos la E.D. por }(-1) \\
+- y^{-2}y'-\frac{4}{x}y^{-1} = -x^{3} \\
+\text{hacemos los cambios respectivos} \\
+\frac{dz}{dx}-\frac{4}{x}z =-x^{3} \\
+\text{calculamos el factor de integracion u}(x) \\
+u(x) = e^{\int p(x)dx} = e^{-4\int \frac{1}{x}dx}=x^{-4} \\
+z(x) = u(x)^{-1}(\int Q(x)u(x)+C) \\
+z(x) = x^{4}(\int -x^{3}x^{-4}+C)  \\
+z(x) =x^{4}ln(x^{-1})+x^{4}C \\
+y^{-1} = x^{4}ln(x^{-1})+x^{4}C \\
+y = \frac{1}{x^{4}ln(x^{-1})+x^{4}C}
+\end{gather*}
+
+
+\textbf{E.D. Homogeneas}
+
+
+\begin{gather*}
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x} \\
+\text{Prueba de Homogeneidad} \\
+\text{En caso de que se cumpla} \rightarrow \text{ podemos aplicar:} \\
+\frac{\partial g(x,y)}{\partial x} = M(x,y)   \rightarrow  (A) \\
+\frac{\partial g(x,y)}{\partial y} = N(x,y) \rightarrow  (B) \\
+\text{donde g}(x,y)\text{ es la solucion de la E.D. } \rightarrow  g(x,y) = c \\
+\text{Si despejamos }(A) \\
+g(x,y) =\int  M(x,y)dx + h(y) \\
+\text{Si despejamos }(B) \\
+g(x,y) =\int  N(x,y)dy + v(x) \\
+\text{Posteriormente se vuelve nuevamente a derivar } \\
+\text{con respecto a la otra variable y se iguala a la funcion respectiva cruzada}
+\end{gather*}
+
+
+Ejercicios
+
+
+\begin{gather*}
+(2x+y)+(x+2y)y'=0; y(3)=1 \\
+(2x+y)+(x+2y)\frac{dy}{dx}=0; \\
+(2x+y)dx+(x+2y)dy=0 \\
+\frac{\partial (2x+y)}{\partial y} = \frac{\partial (x+2y)}{\partial x} \\
+1 =1  \\
+\frac{\partial g(x,y)}{\partial x} =2x+y \\
+g(x,y)= \int (2x+y)dx + h(y) \\
+g(x,y)= x^{2}+xy+h(y) \\
+\frac{\partial g(x,y)}{\partial y} = x+h'(y) = x+2y \\
+h'(y) = 2y \\
+h(y) = \int 2ydy = y^{2}+k \\
+g(x,y)= x^{2}+xy+y^{2}+k = c \\
+g(x,y)= x^{2}+xy+y^{2}+A ; donde A = c-k \\
+\vspace{0.5em} \\
+\text{utilizando las formulas al reves} \\
+\frac{\partial g(x,y)}{\partial y} = x+2y \\
+g(x,y) = \int (x+2y)dy + v(x) \\
+g(x,y) = xy+y^{2}+ v(x) \\
+\frac{\partial g(x,y)}{\partial x} =y+ v'(x) = M(x,y)=2x+y \\
+v(x) = x^{2}+c \\
+g(x,y) = xy+y^{2}+ x^{2} =A; donde A = c-k \\
+\text{calculamos la solucion particular con } \\
+y(x=3)=1   (x,y)  \rightarrow  (3,1) \\
+(3)(1)+(1)^{2}+ (3)^{2} =A \\
+A = 13 \\
+g(x,y) = xy+y^{2}+ x^{2} =13
+\end{gather*}
+
+
+
+
+
+
+
+\begin{gather*}
+ycosx+ye^{xy}+(senx+xe^{xy})y' = 0
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y^{2}+x^{3}+xyy'=0
+\end{gather*}
+
+
+
+
+
+\end{document}

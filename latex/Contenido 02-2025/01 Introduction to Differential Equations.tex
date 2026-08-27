@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{INTR. A LAS ECUACIONES DIFERENCIALES}
+
+Concepto. Una ecuacion diferencial es una expresion matematica 
+
+que contempla dentro de si la presencia de derivadas y funciones.
+
+Comunmente las funciones representan cantidades fisicas en general,
+
+las derivadas representan la variacion o cambio de la variable 
+
+independiente a lo largo del tiempo, y la E.D. como tal  define la relacion entre ambas.
+
+
+
+
+\begin{gather*}
+\text{Ecuacion } \rightarrow   x^{2}+5x-3 = 0   \rightarrow \text{ determinar el valor de x}_{1,2} = ?? \\
+Por decir, si asumimos al azar que el valor de 'x'  fuese x = 2 \\
+\vspace{0.5em} \\
+(2)^{2}+5(2)-3 = 0 \\
+\vspace{0.5em} \\
+x+y=2 \\
+3y-x = 5    \rightarrow  Determinar el valor x,y = ?? \\
+\vspace{0.5em} \\
+\frac{d^{2}y}{dx^{2}}+ 5y =e^{5x}   \rightarrow \text{ variable dependiente 'y' depende de 'x'} \\
+y'' + 5y = e^{5x}   \rightarrow \text{ El objetivo es determinar el valor la } \\
+\text{funcion dependiente que satisfaga la E.D. } \rightarrow  y(x) = ? \\
+\vspace{0.5em} \\
+\text{supongamos y}(x) = 3e^{5x}   \\
+\vspace{0.5em} \\
+( 3e^{5x} )''+5( 3e^{5x} ) = e^{5x} 
+\end{gather*}
+
+
+\textbf{Clasificacion de las E.D. de acuerdo a la derivada presente}
+
+\colorbox[RGB]{248,231,28}{\textbf{E.D. Ordinarias}} $\rightarrow$  son aquellas que no tienen presente dentro si, derivadas parciales
+
+\textbf{E.D. No ordinarias} $\rightarrow$  son aquellas que tienen presente derivadas paraciales
+
+
+
+\textbf{Orden, Grado y Linealidad de una E.D. Ordinaria}
+
+\textbf{Orden} $\rightarrow$  se representa por la derivada mayor presente en la E.D.
+
+
+\begin{gather*}
+\frac{d^{2}y}{dx^{2}} +\frac{dy}{dx}+y=0
+\end{gather*}
+             
+\begin{gather*}
+\frac{d^{3}y}{dx^{3}} +\frac{d^{4}y}{dx^{4}}-5y=e^{5x}
+\end{gather*}
+        
+\begin{gather*}
+y'+5xy=3x
+\end{gather*}
+
+
+Es. E.D 2do Orden			Es. E.D. de 4to Orden	 Es. de Primer Orden
+
+
+
+\textbf{Grado} $\rightarrow$  el exponente mayor presente en las diferenciales, considerando 
+
+el orden como factor de arranque.
+
+
+\begin{gather*}
+(\frac{d^{3}y}{dx^{3}})^{4} +(\frac{d^{4}y}{dx^{4}})^{2}+\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$\frac{d^{4}y}{dx^{4}}$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$^{3}$}}-5y=e^{5x}
+\end{gather*}
+  $\rightarrow$  el grado es 3
+
+
+
+
+
+\textbf{Linealidad} $\rightarrow$  Asociado al formato o regla que deben cumplir los 
+
+elementos presentes en una E.D.
+
+	Ed de 2do Orden $\rightarrow$    
+\begin{gather*}
+Ax^{2}+Bx+C = 0
+\end{gather*}
+  $\rightarrow$     
+\begin{gather*}
+Ax^{3}+Bx^{2}+Cx+D = 0^{}
+\end{gather*}
+
+
+	
+\begin{gather*}
+5x^{2}+10 = 0
+\end{gather*}
+       
+\begin{gather*}
+5x^{2}=0
+\end{gather*}
+     
+\begin{gather*}
+5x^{2}-1x+1=0
+\end{gather*}
+   
+\begin{gather*}
+5\sqrt{x^{2}}-1x+1=0
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+a_{n}(x)\frac{d^{n}y}{dx^{n}}+a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}}+......a_{0}(x)y = g(x)
+\end{gather*}
+
+
+
+\begin{gather*}
+5x\frac{d^{2}y}{dx^{2}}+10sen(x)\frac{dy}{dx} -1 y = \sqrt{y}
+\end{gather*}
+
+
+
+
+
+
+
+
+
+\end{document}

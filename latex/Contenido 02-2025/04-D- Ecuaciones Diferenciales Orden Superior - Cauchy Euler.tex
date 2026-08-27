@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{Cauchy Euler}
+
+Supongamos que tenemos la siguiente E.D.
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$a$}}\text{\colorbox[RGB]{248,231,28}{$_{1}$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}y''+\text{\colorbox[RGB]{248,231,28}{$a$}}\text{\colorbox[RGB]{248,231,28}{$_{2}$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}y'+\text{\colorbox[RGB]{248,231,28}{$a$}}\text{\colorbox[RGB]{248,231,28}{$_{3}$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}y = g(x) \\
+\vspace{0.5em} \\
+\text{Donde a}_{1}(x), a_{2}(x) y a_{3}(x)\text{ son polinomios que coinciden } \\
+\text{con la enesima derivada a la que multiplican, es decir} \\
+\text{para una E.D. de 2do orden, se pudiese tener la sig.representacion} \\
+x^{2}y''-xy'-3y = 2x^{3}^{}^{}
+\end{gather*}
+
+
+
+
+Para resolver este tipo de ejercicios, se asume una representacion 
+
+generica en forma de polinomio
+
+
+
+
+\begin{gather*}
+y = e^{rx}   \rightarrow  y = e^{2x}  \\
+\text{de forma similar, se asume una representacion polinomial} \\
+y = x^{r} \\
+y' = rx^{r-1}    \\
+y'' = (r-1)rx^{r-2}  
+\end{gather*}
+
+
+Ejemplo
+
+
+\begin{gather*}
+x^{2}y''-xy'-3y = 2x^{3} \\
+x^{2} (r-1)rx^{r-2}  -xrx^{r-1}-3x^{r} = 2x^{3} \\
+x^{2+r-2}(r^{2}-r)-x^{1+r-1}r-3x^{r} = 2x^{3} \\
+x^{r}(r^{2}-r)-x^{r}r-3x^{r} =  2x^{3} \\
+x^{r} (r^{2}-r-r-3) =2x^{3} \\
+\text{Determinamos inicialmente la solucion y}_{h} \\
+x^{r} (r^{2}-2r-3) =0   \rightarrow   \frac{-b±\sqrt{\text{\colorbox[RGB]{248,231,28}{$b$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$-4ac$}}}}{2a} \\
+(r+1)(r-3) = 0 \\
+y_{1} = x^{r_{1}}   ; y_{2} = x^{r_{2}} \\
+y_{1} = x^{3}; y_{2} = x^{-1} \\
+\vspace{0.5em} \\
+\text{Probemos que una de las soluciones encontradas es como tal} \\
+\text{una solucion a la E.D.} \\
+y_{1} = x^{3} \\
+y_{1}' = 3x^{2} \\
+y_{1}'' = 6x \\
+x^{2}6x-x3x^{2}-3x^{3} = 0 \\
+\vspace{0.5em} \\
+y_{h} = c_{1}x^{3}+c_{2} x^{-1} \\
+\vspace{0.5em} \\
+\text{Ahora se debe determinar la solucion particular} \\
+x^{2}y''-xy'-3y = 2x^{3} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\text{Vamos aplicar Variacion de Parametros} \\
+\text{Reajustamos la E.D. de tal manera que y'' este suelta} \\
+\frac{x^{2}y''-xy'-3y}{x^{2}} = \frac{2x^{3}}{x^{2}} \\
+y_{p} = v_{1}x^{3} +v_{2}x^{-1} \\
+v_{1}'x^{3} + v_{2}'x^{-1}  = 0 \\
+v_{1}3x^{2} -v_{2}x^{-2}  = 2x \\
+\text{Se aplicara el wronskiano} \\
+w=\matrix{x^{3}}{x^{-1}}{3x^{2}}{-x^{-2}}=(-x-3x)= -4x \\
+\text{Para determinar v'}_{1} y v'_{2} \\
+ v'_{1}  = \frac{w_{1}}{w}     ;     v'_{2}  = \frac{w_{2}}{w}   \\
+\vspace{0.5em} \\
+\matrix{x^{3}}{x^{-1}}{3x^{2}}{-x^{-2}}\matrix{v1'}{v2'} = \matrix{\text{\colorbox[RGB]{248,231,28}{$0$}}}{\text{\colorbox[RGB]{248,231,28}{$2x$}}} \\
+\vspace{0.5em} \\
+ v'_{1}  = \frac{\matrix{\text{\colorbox[RGB]{248,231,28}{$0$}}}{x^{-1}}{\text{\colorbox[RGB]{248,231,28}{$2x$}}}{-x^{-2}}}{w} =\frac{-2}{-4x} =\frac{1}{2}x^{-1} \\
+\vspace{0.5em} \\
+ v'_{2}  = \frac{\matrix{x^{3}}{\text{\colorbox[RGB]{248,231,28}{$0$}}}{3x^{2}}{\text{\colorbox[RGB]{248,231,28}{$2x$}}}}{w}=\frac{2x^{4}}{-4x} =-\frac{1}{2}x^{3} \\
+v_{1} =\frac{1}{2}\int x^{-1}=\frac{1}{2}ln(x) ;    v_{2}= -\int \frac{1}{2}x^{3}    =-\frac{1}{8}x^{4}  \\
+\vspace{0.5em} \\
+y_{p} = \frac{1}{2}ln(x)x^{3} +-\frac{1}{8}x^{4}x^{-1} \\
+y_{p}=\frac{1}{2}ln(x)x^{3} -\frac{1}{8}x^{3} \\
+\vspace{0.5em} \\
+y = y_{h}+y_{p} \\
+y = \text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{1}$}}x^{3}+c_{2} x^{-1}+\frac{1}{2}ln(x)x^{3} \text{\colorbox[RGB]{248,231,28}{$-$}}\text{\colorbox[RGB]{248,231,28}{$\frac{1}{8}$}}x^{3} \\
+y = (c1-\frac{1}{8})x^{3}+c_{2} x^{-1}+\frac{1}{2}ln(x)x^{3}  \rightarrow \text{donde c}_{3}=c1-\frac{1}{8} \\
+y = c_{3}x^{3}+c_{2} x^{-1}+\frac{1}{2}ln(x)x^{3}
+\end{gather*}
+
+
+2do Ex. Parcial
+
+4 )E.D. de Orden Superio (\colorbox[RGB]{248,231,28}{Homogeneas, coeficientes indeterminados}, variacion de parametros, cauchy euler)
+
+ 5) Aplicaciones de Modelado para E.D. de 2do Orden
+
+Fecha de Parcial : 10 de Noviembre
+
+Ex. Chico   : Defensa del practico 6  $\rightarrow$  5 de Noviembre
+
+\image-container
+
+
+
+
+\end{document}

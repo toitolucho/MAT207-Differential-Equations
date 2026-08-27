@@ -1,0 +1,191 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+ECUACIONES DIFERENCIALES CON COEFICIENTES CONSTANTES NO HOMOGENEA
+
+
+
+
+\begin{gather*}
+a_{n}(x)y^{n}+a_{n-1}(x)y^{n-1}+.....+a_{1}(x)y'+a_{0}(x)y=\text{\colorbox[RGB]{245,166,35}{$g$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}
+\end{gather*}
+
+
+1) Se resuelve como una E.D. homogenea
+
+
+\begin{gather*}
+a_{n}(x)y^{n}+a_{n-1}(x)y^{n-1}+.....+a_{1}(x)y'+a_{0}(x)y=0 \\
+\text{Aca se determina y}_{1}, y_{2}.....y_{n} \\
+\text{de tal manera que encontramos y}_{h}
+\end{gather*}
+
+
+2) Se determina la solucion particular 
+\begin{gather*}
+y_{h}
+\end{gather*}
+ con alguno de los 
+
+dos metodos ( Variacion de Parametros o Coeficientes Indeterminados)
+
+3) La solucion final esta dada por : 
+\begin{gather*}
+y = y_{h}+y_{p}
+\end{gather*}
+
+
+\textbf{METODO DE COEFICIENTES INDETERMINADOS}
+
+En este metodo se asume una \textbf{solucion generica} para ciertos casos especificos,
+
+es decir cuando 
+\begin{gather*}
+g(x)
+\end{gather*}
+ es una funcion exponencial 
+\begin{gather*}
+𝛼e^{\text{\colorbox[RGB]{126,211,33}{$𝛽$}}x}
+\end{gather*}
+, es un juego de 
+\begin{gather*}
+\text{sen y cos}
+\end{gather*}
+ o 
+
+es un polinomio.
+
+La representacion de estas funciones puede estar dada de forma individual o se 
+
+puede tener una combinacion de estas funciones por adiciones o diferencias o factores de multiplicacion
+
+
+
+\table{Funcion g(x)}{Funcion generica}{\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$5$}}e^{\text{\colorbox[RGB]{126,211,33}{$5$}}x}
+\end{gather*}
+  ;   
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$\frac{1}{2}$}}e^{\text{\colorbox[RGB]{126,211,33}{$10$}}x}
+\end{gather*}
+  $\rightarrow$  
+\begin{gather*}
+𝛼e^{\text{\colorbox[RGB]{126,211,33}{$𝛽$}}x}
+\end{gather*}}{\begin{gather*}
+Ae^{𝛽x}
+\end{gather*}}{}{}
+
+
+\begin{gather*}
+y''+16y=e^{5x}  \rightarrow  y_{1} =cos4x  ; y_{2}= sen4x \\
+y_{p} =Ae^{5x}  \\
+y''+16y=0 \\
+-16sen4x + 16sen4x=0 \\
+Ax^{2}+Bx+C \\
+Ax^{4}+Bx^{3}+Cx^{2}+Dx+E
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+
+\begin{gather*}
+y''+16y= x^{3} * e^{5x}     \\
+y_{p} = (Ex^{3}+Bx^{2}+Cx+D)\text{* Ae}^{5x}  \\
+y_{p} = (Ex^{3}Ae^{5x}+Bx^{2}Ae^{5x}+CxAe^{5x}+DAe^{5x})   \\
+y_{p} = (Ex^{3}Ae^{5x}+Bx^{2}Ae^{5x}+CxAe^{5x}+DAe^{5x})  \\
+y_{p} = E*A = F  ; BA=G \\
+y_{p} = (Fx^{3}+Gx^{2}+Hx+I)* e^{5x}  \\
+\vspace{0.5em} \\
+\end{gather*}
+
+
+ Ejercicios
+
+
+
+
+\begin{gather*}
+y″+4y′+3y=3x \\
+\text{determinamos y}_{h} \\
+e^{rx}(r^{2}+4r+3) = 0 \\
+(r+3)(r+1) = 0 \\
+y_{h} = c_{1}e^{-3x}+c_{2}e^{-x} \\
+\text{para determinar y}_{p}\text{, planteamos una solucion generica} \\
+y_{p}= Ax+B \\
+\text{Para deterinar los valores de A y B, el metodo indica que debemos} \\
+\text{reemplazar las derivadas y la funcion solucion y}_{p}\text{en la en E.D.} \\
+y_{p}' = A \\
+y_{p}''=0 \\
+0+4A+3(Ax+B)=3x \\
+3Ax +(4A+3B)x^{0} =3x +0x^{0} 
+\end{gather*}
+
+
+\image-container
+
+
+
+
+\begin{gather*}
+3Ax=3x \\
+4A+3B = 0x^{0} \\
+A = 1 \\
+4A+3B =0 \\
+4+3B=0 \\
+B =-\frac{4}{3} \\
+y_{p} = Ax+B = x-\frac{4}{3} \\
+\text{Se realiza la prueba respectiva para verificar que la solucion} \\
+\text{encontrada es una solucion particular} \\
+y_{p} = x-\frac{4}{3} \\
+y_{p}' = 1 \\
+y_{p}''=0 \\
+\text{reemplazando} \\
+0+4(1)+3(x-\frac{4}{3})=3x \\
+4+3x-4=3x
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y″+4y′+3y=2e^{3x} \\
+y_{p} = Ae^{3x} \\
+y_{p}' = 3Ae^{3x} \\
+y_{p}'' = 9Ae^{3x} \\
+9Ae^{3x}+4(3Ae^{3x})+3Ae^{3x} =2e^{3x} \\
+(9A+12A+3A)\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{3x}$}} = 2\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{3x}$}} \\
+24A=2 \\
+A = \frac{1}{12} \\
+y_{p} =  \frac{1}{12}e^{3x} \\
+y = y_{h}+y_{p} = c_{1}e^{-3x}+c_{2}e^{-x}+ \frac{1}{12}e^{3x}
+\end{gather*}
+
+
+
+
+
+
+
+\begin{gather*}
+y″−4y′+4y=7sent−\cos{}t. \\
+y_{p} = Asent+Bcost \\
+\vspace{0.5em} \\
+y″−4y′+4y=8sen3t \\
+y_{p} = Asen3t+Bcos3t \\
+\vspace{0.5em} \\
+y″−4y′+4y =x^{2}+5x-3   \rightarrow Ax^{2}+Bx+C
+\end{gather*}
+
+
+
+
+
+\end{document}

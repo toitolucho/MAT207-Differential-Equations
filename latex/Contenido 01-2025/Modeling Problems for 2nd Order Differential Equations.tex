@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+Una masa que pesa 2 pounds estira un resorte 6inch(pulgadas). 
+
+Cuando el tiempo t = 0, la masa es soltada desde un punto a 8 inch(pies) 
+
+por debajo de la posicion de equilibrio con una velocidad hacia arriba de 4/3 ft/s. 
+
+Determine la ecuacion que rige el movimiento del sistema masa resorte.
+
+
+
+
+\begin{gather*}
+\text{Primeramente convertimos las unidades en pulgadas a pies} \\
+s  = 6 inch   \rightarrow  1ft=12inch \\
+s = \frac{1}{2}ft \\
+x_{0} = 8inch = \frac{2}{3}ft \\
+\text{Por Condicion de Equilibrio} \\
+\sumF_{x} = 0 \\
+\sumF_{x} = w-F_{k} = 0 \\
+\text{Para calcular k} \\
+w = F_{k}      \rightarrow \text{ donde F}_{k}= ks \\
+w = ks \\
+2 = k(\frac{1}{2})  \rightarrow  k=4 \\
+\text{Para Calcular la masa}(la gravedad en el sistema internacional americano=32) \\
+w = m*g \\
+2 = m*32 \\
+m =\frac{1}{16} \\
+\frac{d^{2}x}{dt^{2}}+\frac{k}{m}x = 0 \\
+\frac{d^{2}x}{dt^{2}}+\frac{4}{\frac{1}{16}}x = 0 \\
+\frac{d^{2}x}{dt^{2}}+64x = 0 \\
+r^{2}+64 = 0 \\
+r_{1,2} = \sqrt{-64}  \rightarrow r_{1}= 8i ; r_{2}=-8i  \\
+x(t) = c_{1}cos8t+c_{2}\text{sen8t} \\
+\text{Considerar los valores frontera o iniciales} \\
+x(t=0) = \frac{2}{3}ft \\
+x'(t=0) = -\frac{4}{3}ft/s \\
+\text{para t}_{0} =0, x =2/3 \\
+\frac{2}{3}= c_{1}cos8(0)+c_{2}sen8(0) \\
+c_{1}= \frac{2}{3} \\
+\text{reemplazando el valor encontrado} \\
+x(t) = \frac{2}{3}cos8t+c_{2}\text{sen8t} \\
+\text{para determinar la otra ctte, se debe derivar} \\
+x'(t) = -\frac{16}{3}sen8t+8c_{2}\text{cos8t} \\
+\text{para t}_{0} =0, v =-\frac{4}{3} \\
+-\frac{4}{3} = \text{\colorbox[RGB]{248,231,28}{$-$}}\text{\colorbox[RGB]{248,231,28}{$\frac{16}{3}$}}\text{\colorbox[RGB]{248,231,28}{$sen8$}}(0)+8c_{2}cos8(0) \\
+-\frac{4}{3} =8c_{2}  \rightarrow  c_{2}=-\frac{1}{6} \\
+\text{la solucion como tal} \\
+x(t) = \frac{2}{3}cos8t-\frac{1}{6}\text{sen8t}
+\end{gather*}
+
+
+
+
+
+
+
+
+
+\end{document}

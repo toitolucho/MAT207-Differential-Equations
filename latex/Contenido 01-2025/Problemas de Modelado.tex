@@ -1,0 +1,295 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+Cap 03 - Aplicaciones de modelado para E.D. de 1er Orden
+
+
+
+Aplicaciones a crecimiento y decrecimiento
+
+
+\begin{gather*}
+\frac{dP}{dt} = kP \\
+\int \frac{dP}{P} = \int kdt \\
+ln(P) = kt +c \\
+P = e^{kt+c} \\
+P=e^{kt}*e^{c} \\
+P = Ae^{kt} \\
+\text{donde }\text{\colorbox[RGB]{248,231,28}{$k$}}\text{ es una ctte de proporcionalidad} \\
+y \text{\colorbox[RGB]{248,231,28}{$P$}}\text{, es la poblacion presente en el punto de estudio}
+\end{gather*}
+
+
+Aplicaciones de Cambio de Temperatura
+
+
+
+
+\begin{gather*}
+\frac{dT}{dt} = k(T-Tm) \\
+\int \frac{dT}{(T-T_{m})} = \int kdt \\
+ln(T-T_{m}) = kt +c \\
+T-T_{m} = e^{kt}e^{c} \\
+T = Ae^{kt}+T_{m} \\
+\vspace{0.5em} \\
+\text{donde }\text{\colorbox[RGB]{248,231,28}{$k$}}\text{ es una ctte de proporcionalidad} \\
+T_{m} = Temperatura del medio \\
+T = Temperatura a estudiar
+\end{gather*}
+
+
+
+
+Un país tiene una población de 1,000,000 de habitantes. La tasa de crecimiento anual de la población es proporcional a su tamaño actual. Escribe la ecuación diferencial que modela este proceso y resuelve para determinar el tamaño de la población después de 5 años, si la tasa de crecimiento anual es del 2%.
+
+
+
+Ecuación diferencial:
+
+
+\begin{gather*}
+\frac{dP}{dt} = kP \\
+P = Ae^{kt} \\
+k = 0.02 \\
+\text{Sabemos que la poblacion inicial P}_{0}=1000000 \\
+t_{0} =0 \\
+\vspace{0.5em} \\
+\text{Considerando el primer punto dado en el estudio  P}(0)=1000000 \\
+1000000 = Ae^{0.02(0)} \\
+A = 1000000 \\
+\text{Entonces la E.D. del modelo quedaria:} \\
+P = 1000000e^{0.02t} \\
+\vspace{0.5em} \\
+\text{Respondiendo a la pregunta P}(5) = ? \\
+P = 1000000e^{0.02(5)} \\
+P = 1105170.9...
+\end{gather*}
+
+
+Una barra de metal que se encuentra a una temperatura de 100° F es expuesta a  un cuarto que se encuentra a una temperatura de 0° F. Si despues de 20 min la temperatura de la barra alcanza 50° F, encuentra
+
+a) El tiempo que le toma a la barra alcanzar la temperatura de 25° F
+
+b) La temperatura de la barra despues de 10 minutos 
+
+
+
+Haciendo un analisis de los puntos datos y solicitados, podemos representar de manera tentativa a lo largo del tiempo las siguientes combinaciones
+
+
+
+\image-container
+
+
+\begin{gather*}
+\frac{dT}{dt} = k(T-Tm) \\
+T = Ae^{kt}+T_{m} \\
+\text{Sabemos que T}_{m} = 0, por ende \\
+T = Ae^{kt} \\
+\text{Asumismo utilizar el punto }D \rightarrow  T(0)=100 \\
+T_{d} = 100 y t_{d}=0 \\
+100 = Ae^{k(0)} \\
+A = 100 \\
+\text{La E.D. queria de momento} \\
+T = 100e^{kt} \\
+\vspace{0.5em} \\
+\text{Asumimos utilizar el punto }C  \rightarrow  T(20) =50 \\
+T_{c} = 50 y t_{c}=20 \\
+50 = 100e^{k20} \\
+ln(\frac{50}{100}) = 20k \\
+k = \frac{ln(\frac{50}{100})}{20} =-0.0346573 \\
+\text{La E.D. quedaria:} \\
+T = 100e^{-0.034t} \\
+\vspace{0.5em} \\
+\text{Para el inciso A  P}(t=?) = 25 \\
+25 = 100e^{-0.034t} \\
+\text{Despejando} \\
+t =-\frac{ln(\frac{25}{100})}{-0.0346573}  = \frac{}{} \\
+t = 40.77 \\
+\text{Representando Graficamente}
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+3) Un determinado estudio de bacterias inicialmente tiene una poblacion 
+\begin{gather*}
+P_{0}
+\end{gather*}
+, tras haber transcurrido 1hora, el numero de bacteria aunmento su valor a 
+\begin{gather*}
+\frac{3}{2}P_{0}
+\end{gather*}
+.
+
+Si  la taza de crecimiento  es proporcional al numero de bacterias presentes en 
+
+un tiempo t, determina el tiempo necesario para el numero de bacterias triplique
+
+su valor.
+
+
+
+
+
+
+
+Un objeto de 50Kg  es arrojado desde una peña hacia arriba con una velocidad inicial de 10m/s sobre una peña que tiene una altura de 100 metros por encima del suelo, si la resitencia del aire esta dada por 5v, determine la velocidad de la masa cuando este golpea el suelo.
+
+
+\begin{gather*}
+\sumF_{y} = m*a
+\end{gather*}
+
+
+\image-container
+
+
+
+\image-container
+
+
+
+
+\begin{gather*}
+ma = mg-5v \\
+m\frac{dv}{dt} = mg-5v \\
+\frac{dv}{dt} = g-\frac{5v}{m} \\
+\text{Cosiderando que la E.D. puede acomodarse a una lineal} \\
+\frac{dv}{dt}  +\frac{5}{m}v =g \\
+v(t) = u(t)^{-1}(\int Q(t)u(t)dt +c) \\
+\text{calculamos el factor de integracion u}(t) \\
+u(t) = e^{\int P(t)dt} \\
+u(t) = e^{\frac{5}{m}\int dt} = e^{\frac{1}{10}t} = e^{0.1t} \\
+v(t) = e^{-0.1t}(9.8\int e^{0.1t}dt +c)   \\
+v(t) = e^{-0.1t}(98e^{0.1t}+c) \\
+v(t) = 98+ce^{-0.1t} \\
+\text{Utilizamos el valor de frontera v}(0) = -10 \\
+-10 = 98+ce^{-0.1(0)} \\
+c =-108 \\
+\vspace{0.5em} \\
+v(t) = 98-108e^{-0.1t} \\
+\text{Sabemos que la velocidad es la variacion del desplazamiento en funcion al tiempo} \\
+\frac{dx}{dt} = 98-108e^{-0.1t} \\
+\int dx = \int (98-108e^{-0.1t})dt \\
+x(t) = 98t+1080e^{-0.1t}+c \\
+\text{Considerando el trayecto de caida libre} \\
+x(0)=0 \\
+0= 98(0)+1080e^{-0.1(0)}+c \\
+0 = 1080+c \\
+c = -1080 \\
+x(t) = 98t+1080e^{-0.1t}-1080 \\
+\vspace{0.5em} \\
+\text{Ahora se puede calcular el tiempo t}_{f}\text{ en que alcanza 100 unidades para llegar al suelo} \\
+x(t) = 100 \\
+100 = 98t+1080e^{-0.1t}-1080 \\
+\text{Para encontrar el t}_{f}\text{, es posible apoyarse en alguna grafica como tal} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\text{Una vez determinado t}_{f}\text{ para llegar al suelo..} \\
+\text{Se puede encontrar la v}(t_{f}) 
+\end{gather*}
+
+
+
+
+Un perdigon que pesa aproximadamente 2 libras es arrojado desde una altura de 3000 pies con una velidad inicial nula, A medida que va cayendo, el perdigon se encuentra con la resistencia del aire que es numericamente igual a v/8, donde v denota la velocidad del perdigon.
+
+Encuentre:
+
+a) el limite de la velocidad
+
+b) El tiempo requerido para que la pelota choque con el suelo
+
+
+
+
+
+\image-container
+
+
+
+
+
+
+\begin{gather*}
+\text{Aplicamos la 2da ley de movimiento de Newton} \\
+\sumFx = m*a \\
+\sumFx = w-f_{v} \\
+m*\frac{dv}{dt} = m*g -kv \\
+m\frac{dv}{dt} +kv= m*g \\
+\frac{dv}{dt} +\frac{k}{m}v= g \\
+de acuerdo al problema w =2lb, x = 3000, k = \frac{1}{8} \\
+\text{Para el calculo de la masa } \rightarrow  w = m*g  \rightarrow  2 = m*32  \rightarrow  m= \frac{1}{16} \\
+\frac{dv}{dt} +\frac{\frac{1}{8}}{\frac{1}{16}}v= g \\
+\frac{dv}{dt} + 2v =32 \\
+v' + p(x)v = q(x) \\
+\text{Calculamos el factor de Integracion} \\
+u(t) = e^{\int p(t)dt} =e^{\int 2dt} = e^{2t} \\
+\vspace{0.5em} \\
+v(t) = u(t)^{-1}(\int q(t)u(t)dt +c) \\
+v(t) =e^{-2t}(\int 32e^{2t}dt +c) \\
+v(t) =e^{-2t}(\frac{32}{2}e^{2t} +c) \\
+v(t) =16+ce^{-2t} \\
+\vspace{0.5em} \\
+\text{Aplicamos los puntos de frontera} \\
+\text{Considerando  v}(0) =0 al inicio del analisis \\
+0 =16+ce^{-2(0)} \\
+c = -16 \\
+v(t) =16-16e^{-2t} \\
+\vspace{0.5em} \\
+\text{Cuanto el tiempo  t} \rightarrow  ∞ \\
+v(t) =16-\frac{16}{e^{2t}} \\
+\vspace{0.5em} \\
+\text{Podemos aplicar una interpretacion grafica para determinar } \\
+\text{el limite de la velocidad}
+\end{gather*}
+
+
+
+
+\image-container
+
+
+\begin{gather*}
+\text{Sabemos que la velocidad puede ser representada en su forma diferencial como:} \\
+\frac{dx}{dt} =16-16e^{-2t} \\
+x(t) = \int (16-16e^{-2t})dt \\
+x(t) = 16t+8e^{-2t}+c \\
+\text{Asumimos del punto }(A)\text{ del analisis que } \rightarrow  x(0) = 0 \\
+0 = 16(0)+8e^{-2(0)}+c \\
+c = -8 \\
+\vspace{0.5em} \\
+x(t) = 16t+8e^{-2t}-8 \\
+\vspace{0.5em} \\
+\text{Asumimos el punto }(C)\text{ del analisis } \rightarrow  x(t) = 3000  \\
+3000 = 16t+8e^{-2t}-8 \\
+3008=16t+8e^{-2t}  /8 \\
+376 = 2t+e^{-2t}  \\
+si t = 5 \\
+376 = 10+e^{-10} = \\
+si t = 50 \\
+376 = 100+e^{-100} =
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,190 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{E.D. de Variable Separable}
+
+
+\begin{gather*}
+\int A(x)dx + \int B(y)dy =c
+\end{gather*}
+
+
+Resuelva la siguiente E.D.
+
+
+\begin{gather*}
+y′=(x^{2}−4)(3y+2) \\
+\frac{dy}{dx} = (x^{2}−4)(3y+2) \rightarrow  y(x)=? \\
+\frac{1}{(3y+2)}dy =(x^{2}−4)dx  \\
+\int (x^{2}−4)dx -\int \frac{1}{(3y+2)}dy =c \\
+\vspace{0.5em} \\
+u=3y+2   du=3dy  \rightarrow \frac{1}{3}\int \frac{du}{u} = \frac{1}{3}ln(u) \\
+\frac{x^{3}}{3}-4x-\frac{1}{3}ln(3y+2) = c \\
+\vspace{0.5em} \\
+A = -c \\
+\frac{1}{3}ln(3y+2)=\frac{x^{3}}{3}-4x+A \\
+ln(3y+2)=3(\frac{x^{3}}{3}-4x+A) \\
+ln(3y+2)=x^{3}-12x+3A \\
+3y+2=e^{x^{3}-12x+3A} = \rightarrow  a^{x+y}=a^{x}a^{y} \\
+3y+2=e^{x^{3}-12x}e^{3A}   \rightarrow  k=e^{3A}  \\
+3y+2=ke^{x^{3}-12x} \\
+y = \frac{ke^{x^{3}-12x}-2}{3} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+y=−2+Cex3−12x3 , where C=±C2 or C=0. \\
+\vspace{0.5em} \\
+y′=2xy+3y−4x−6 \\
+y=2+Ce^{x^{2}+3x}
+\end{gather*}
+
+
+
+
+
+
+Ejercicio 02
+
+
+
+
+\begin{gather*}
+y′=2xy+3y−4x−6 \\
+\frac{dy}{dx} = 2xy+3y−4x−6 \\
+\frac{dy}{dx} = y(2x+3)−4x−6  \\
+\frac{dy}{dx} = y(2x+3)-2(2x+3)  \\
+\frac{dy}{dx} = (2x+3)(y-2) \\
+\int \frac{1}{(y-2)} dy=\int (2x+3)dx \\
+ln(y-2)= x^{2}+3x +c  \rightarrow  donde K = e^{c} \\
+y-2 = Ke^{x^{2}+3x} \\
+y = Ke^{x^{2}+3x}+2
+\end{gather*}
+
+
+\textbf{E.D Homogeneas}
+
+En este tipo de ecuaciones, la idea es convertir la E.D. no separable en una que si lo sea, a traves de un cambio de variable
+
+Para ello primeramente se corrobora que la E.D. tenga el mismo grado a nivel del operador Lambda 
+\begin{gather*}
+𝜆
+\end{gather*}
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y) = \frac{dy}{dx} = f(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x,\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y) =f(x,y)  
+\end{gather*}
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = \frac{x^{2}+y^{2}}{xy} \\
+\frac{dy}{dx} = \frac{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}^{2}x^{2}+\text{\colorbox[RGB]{248,231,28}{$𝜆$}}^{2}y^{2}}{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y} =  \frac{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}^{2}(x^{2}+y^{2})}{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}^{2}xy}=\frac{x^{2}+y^{2}}{xy} \\
+\vspace{0.5em} \\
+0 = (x^{2}+y^{2})dx-xydy \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\text{Demuestre que la E.D. es homogenea} \\
+xy′=y(\text{lnx−lny})   \\
+\frac{dy}{dx} = \frac{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y(ln\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x−ln\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)}{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x} = \frac{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y(ln\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$\frac{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x}{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y}$}}))}{\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x} = \frac{y(\text{lnx−lny})}{x}
+\end{gather*}
+
+
+
+
+
+
+Ejercicio:
+
+
+\begin{gather*}
+xy\frac{dy}{dx}+4x^{2}+y^{2}=0           y(2)=-7 \\
+\text{Verificacion de homogeneidad en la ED.:} \\
+  \frac{dy}{dx}=\frac{-4x^{2}-y^{2}}{xy} \\
+\vspace{0.5em} \\
+\frac{dy}{dx}=\frac{-4\text{\colorbox[RGB]{250,230,4}{$𝜆$}}^{2}x^{2}-\text{\colorbox[RGB]{250,230,4}{$𝜆$}}^{2}y^{2}}{\text{\colorbox[RGB]{250,230,4}{$𝜆$}}x\text{\colorbox[RGB]{250,230,4}{$𝜆$}}y} \\
+\frac{dy}{dx}=\frac{\text{\colorbox[RGB]{250,230,4}{$𝜆$}}^{2}(-4x^{2}-y^{2})}{\text{\colorbox[RGB]{250,230,4}{$𝜆$}}^{2}xy} \\
+\text{simplificamos:} \\
+\frac{dy}{dx}=\frac{-4x^{2}-y^{2}}{xy}       \rightarrow \text{ si es homogenea} \\
+\text{se hace un cambio de variable} \\
+\text{\colorbox[RGB]{255,255,255}{$y=x 𝜇$}}       𝜇=\frac{y}{x}        \text{\colorbox[RGB]{255,255,255}{$ $}}\text{\colorbox[RGB]{255,255,255}{$\frac{dy}{dx}$}}\text{\colorbox[RGB]{255,255,255}{$=𝜇+x$}}\text{\colorbox[RGB]{255,255,255}{$\frac{d𝜇}{dx}$}} \\
+\vspace{0.5em} \\
+\text{Partimos de la forma B en su forma diferencial para hacer el cambio respectivo} \\
+𝜇+x\frac{d𝜇}{dx}=\frac{-4x^{2}-x^{2}𝜇^{2}}{xx𝜇}  \\
+\vspace{0.5em} \\
+𝜇+x\frac{d𝜇}{dx}=\frac{\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}(-4-𝜇^{2})}{\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}𝜇} \\
+\vspace{0.5em} \\
+𝜇+x\frac{d𝜇}{dx}=\frac{-4-𝜇^{2}}{𝜇} \\
+\vspace{0.5em} \\
+x\frac{d𝜇}{dx}=\frac{-4-𝜇^{2}}{𝜇}-𝜇 \\
+\vspace{0.5em} \\
+x\frac{d𝜇}{dx}=\frac{-4-𝜇^{2}-𝜇^{2}}{𝜇} \\
+\vspace{0.5em} \\
+x\frac{d𝜇}{dx}=\frac{-4-2𝜇^{2}}{𝜇} \\
+\vspace{0.5em} \\
+x\frac{d𝜇}{dx}=-\frac{4+2𝜇^{2}}{𝜇}  \\
+\vspace{0.5em} \\
+\text{reacomodamos algebraicamente para separar las variables} \\
+\vspace{0.5em} \\
+\int \frac{𝜇d𝜇}{4+2𝜇^{2}}=-\int  \frac{dx}{x} \\
+\vspace{0.5em} \\
+El termino 4+2𝜇^{2}\text{ es integral directo, por ende} \\
+\vspace{0.5em} \\
+\frac{1}{4}Ln(4+2𝜇^{2})=-Ln(x)+lnC \\
+\vspace{0.5em} \\
+Ln((4+2𝜇^{2})^{\frac{1}{4}})=Ln(x^{-1})+lnC \\
+\vspace{0.5em} \\
+e^{Ln((4+2𝜇^{2})^{\frac{1}{4}})}= e^{Ln(cx^{-1})} \\
+\vspace{0.5em} \\
+(4+2𝜇^{2})^{\frac{1}{4}}= x^{-1}C \\
+\vspace{0.5em} \\
+4+2𝜇^{2}= x^{-4}C^{4} \\
+\vspace{0.5em} \\
+C^{4}=A \\
+4+2𝜇^{2}= Ax^{-4} \\
+\text{Determinamos una expresion parcial para la variable incluida} \\
+2𝜇^{2}=Ax^{-4}-4 \\
+\vspace{0.5em} \\
+\text{Determinamos la expresion volviendo a la variable anterior} \\
+\frac{y^{2}}{x^{2}}=\frac{Ax^{-4}-4}{2} \\
+\vspace{0.5em} \\
+y^{2}=\frac{Ax^{-2}-4x^{2}}{2} \\
+\vspace{0.5em} \\
+y^{2}=\frac{Ax^{-2}}{2}-2x^{2} \\
+\vspace{0.5em} \\
+\text{Reacomodamos algebraicamente para ver si es posible tener despejada } \\
+\text{la variable 'y' dependiente} \\
+y^{2}=\frac{A}{2x^{2}}-2x^{2} \\
+\vspace{0.5em} \\
+\text{aplicamos el valor de frontera y}(2)=-7 \\
+(-7)^{2}=\frac{A}{2(2)^{2}}-2(2)^{2} \\
+\text{Tras el reemplazo de la variable} \\
+49=\frac{A}{8}-8 \\
+57=\frac{A}{8} \\
+\text{Se determina la constante} \\
+\text{\colorbox[RGB]{74,144,226}{$456=A$}} \\
+\vspace{0.5em} \\
+\text{remplazamos:} \\
+\vspace{0.5em} \\
+y^{2}=\frac{456}{2x^{2}}-2x^{2} \\
+\vspace{0.5em} \\
+y=\sqrt{\frac{228}{x^{2}}-2x^{2}}   
+\end{gather*}
+
+
+
+
+
+\end{document}

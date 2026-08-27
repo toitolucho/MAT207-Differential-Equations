@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{Cap 01 - Introduccion a las Ecuaciones Diferenciales}
+
+\textbf{Definicion}.-
+
+Una Expresion que contiene dentro de si diferenciales(Derivadas de una mas variables dependientes) como tal, cuyo objetivo es determinar una funcion solucion que satisfaga dicha expresion. 
+
+
+
+
+\begin{gather*}
+x+y+3z = 55 \\
+\text{tratar de adivinar los posibles valores para} \\
+x = ?   \rightarrow   2 \\
+y = ?   \rightarrow  10 \\
+z = ?   \rightarrow  5 \\
+2+10+3(5) = 55 \\
+x^{2}+3x-5=0   \rightarrow  x=? \\
+\vspace{0.5em} \\
+\text{Una E.D. es algo similar, donde en vez de tener variables reales} \\
+\text{tenemos como incognita, }\text{\colorbox[RGB]{248,231,28}{$\text{derivadas}$}} \\
+\frac{dy}{dx} + 5x + y = 0 \\
+\text{que funcion de x, satisface la diferencial? de tal manera que se cumpla la expresion dada} \\
+\vspace{0.5em} \\
+y = x^{2}+3   \rightarrow  f(x) \implies  y(x)=? \\
+y' = 2x \\
+\vspace{0.5em} \\
+ 2x + 5x + y = 0  \rightarrow \text{ no satisface}
+\end{gather*}
+
+
+\textbf{Clasificacion es de las Ecuaciones Diferenciales}
+
+Clasificacion por Tipo
+
+a) Ecuaciones Diferenciales Ordinarias $\rightarrow$  \colorbox[RGB]{248,231,28}{no hay fraciones parciales}
+
+
+\begin{gather*}
+\frac{dy}{dx} + 5x + y = 0         \frac{d^{2}y}{dx^{2}} + \frac{dy}{dx}  - 5y = 0       \frac{d^{2}y}{dx^{2}} + \frac{dz}{dx}  - 5e^{x} = 3x+y 
+\end{gather*}
+
+
+
+
+b) Ecuaciones Diferenciales No Ordinarias$\rightarrow$  Estan presentes las derivadas Parciales
+
+
+\begin{gather*}
+\frac{\partial ^{2}u}{\partial x^{2}}+\frac{\partial ^{2}u}{\partial y^{2}} = 0       \frac{\partial ^{2}u}{\partial x^{2}}= \frac{\partial ^{2}u}{\partial t^{2}} -2
+\end{gather*}
+
+
+\textbf{Grado de Una Ecuacion Diferencial} $\rightarrow$  Asociado al \colorbox[RGB]{248,231,28}{Exponente Mayor} presente dentro de la E.D. que representa el orden de la E.D.
+
+
+\begin{gather*}
+(\frac{d^{2}y}{dx^{2}})^{3} + (\frac{dy}{dx})^{2}  - 5y = 0           \frac{d^{3}y}{dx^{3}} + (\frac{dy}{dx})^{3} +3x\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$\frac{d^{3}y}{dx^{3}}$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}- 5y = 0  \\
+\text{E.D. de Grado 3                           E.D. de Grado 2                       }
+\end{gather*}
+
+
+\textbf{Orden de una E.D.} $\rightarrow$  Representa la mayor derivada presente dentro de la E.D.
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$\frac{d^{4}y}{dx^{4}}$}}+5y=x                     \frac{dy}{dx}+ \text{\colorbox[RGB]{248,231,28}{$\frac{d^{3}y}{dx^{3}}$}} - 5y = 0  \\
+\text{E.D. de Orden 4                        E.D. de Orden 3}
+\end{gather*}
+
+
+
+
+\textbf{E.D. Lineales}
+
+Apliquemos la analogia de un polinomio de grado n para entender el concepto
+
+
+\begin{gather*}
+x^{2}+3x+5 = 0 \\
+Ax^{2}+Bx+C = 0  \rightarrow \text{ 2do Grado} \\
+Ax^{4}+Bx^{3}+Cx^{2}+Dx+E = 0  \rightarrow \text{ 4to Grado} \\
+x^{4}-12x^{3}+\frac{1}{2}x^{2}+\sqrt{168}x+8 = 0 \\
+\vspace{0.5em} \\
+\text{Todas estas expresiones pueden ser resolubles por Ruffini}(\text{ Se puede programar} \\
+\text{un algoritmo que haga dicha tarea})
+\end{gather*}
+
+
+En ecuaciones diferenciales, existe un formato similar, su forma generica esta dada por:
+
+
+\begin{gather*}
+a_{n}(x)\frac{d^{n}y}{dx^{n}}+a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}}+......a_{1}(x)\frac{dy}{dx}+ a_{0}(x)y = g(x) \\
+\text{Ejemplo} \\
+5x\frac{d^{4}y}{dx^{4}}+senx\frac{d^{3}y}{dx^{3}}+e^{3x}\frac{d^{2}y}{dx^{2}}+\frac{dy}{dx^{}} +\sqrt{5}y=x
+\end{gather*}
+
+
+
+
+
+\end{document}

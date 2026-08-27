@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+
+\begin{gather*}
+Ay^{(n)}+By^{(n-1)}+C++..........Dy`+Ey = g(x) \\
+\vspace{0.5em} \\
+a_{n}x^{n}\frac{d^{n}y}{dx^{n}}+a_{n-1}x^{n-1}\frac{d^{n-1}y}{dx^{n}} +a_{n-2}x^{n-2}\frac{d^{n-2}y}{dx^{n-2}}....+a_{1}x\frac{dy}{dx} + a_{0}y = 0 \\
+\vspace{0.5em} \\
+\text{Primera Ruta:} \\
+\text{Hacer cambio de Variable para la variable independiente} \\
+\text{con el fin de convertir la E.D. en una E.D. con C.C.} \\
+\text{se utiliza un funcion comodin} \\
+(ax+b)  =x \\
+\vspace{0.5em} \\
+x = e^{t} \\
+ln(x) =t \\
+\vspace{0.5em} \\
+\frac{dx}{dt} =e^{t} \implies  \frac{dt}{dx} =e^{-t} \\
+\text{Aplicar la regla de la cadena} \\
+\frac{dx}{dt} =e^{t}\frac{dy}{dy} \implies \frac{dy}{dt} =e^{t}\frac{dy}{dx} \\
+\frac{dy}{e^{t}dt} =\frac{dy}{dx} \\
+\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dx}$}}\text{\colorbox[RGB]{248,231,28}{$ = e$}}\text{\colorbox[RGB]{248,231,28}{$^{-t}$}}\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dt}$}} \\
+\vspace{0.5em} \\
+\frac{d^{2}y}{dx^{2}} = \frac{d}{dx}(\frac{dy}{dx}) =\frac{d}{dx}(\frac{dy}{dt}e^{-t})\frac{dt}{dt} = \frac{d}{dt}(\frac{dy}{dt}e^{-t})\frac{dt}{dx} = \frac{d}{dt}(\frac{dy}{dt}e^{-t})e^{-t}  \\
+(uv)' = u'v+uv' \\
+(\frac{dy}{dt}e^{-t})^{'} = \frac{d^{2}y}{dt^{2}}e^{-t} -\frac{dy}{dt}e^{-t} \\
+\frac{d^{2}y}{dx^{2}} =(\frac{d^{2}y}{dt^{2}}-\frac{dy}{dt})e^{-t} e^{-t} =\text{\colorbox[RGB]{248,231,28}{$ $}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$\frac{d^{2}y}{dt^{2}}$}}\text{\colorbox[RGB]{248,231,28}{$-$}}\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dt}$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{-2t}$}}\text{\colorbox[RGB]{248,231,28}{$ $}}
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y = x^{r} \\
+y' = rx^{r-1} \\
+y'' = (r-1)rx^{r-2} = (r^{2}-r)x^{r-2} 
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+x^{2}y''-xy'-3y = 2x^{2} \\
+e^{2t}((\frac{d^{2}y}{dt^{2}}-\frac{dy}{dt})e^{-2t}\text{\colorbox[RGB]{248,231,28}{$ $}})-e^{t}(e^{-t}\frac{dy}{dt})-3y = 2x^{2} \\
+\frac{d^{2}y}{dt^{2}}-\frac{dy}{dt}-\frac{dy}{dt}-3y = 2e^{2t} \\
+\frac{d^{2}y}{dt^{2}}-2\frac{dy}{dt}-3y =2e^{2t} \\
+(r -3)(r +1) = \\
+y_{h}(t) = c_{1}e^{3t}+c_{2}e^{-t} \\
+y_{p} = Ae^{2t} \\
+y_{p}' = 2Ae^{2t} \\
+y_{p} = 4Ae^{2t} \\
+ 4Ae^{2t}-4Ae^{2t}-3Ae^{2t} = 2e^{2t} \\
+A =-\frac{2}{3}  \\
+y = y_{h}+y_{p} \\
+y=c_{1}e^{3t}+c_{2}e^{-t}-\frac{2}{3} e^{2t} \\
+y=c_{1}e^{3lnx}+c_{2}e^{-lnx}-\frac{2}{3} e^{2lnx} \\
+y=c_{1}e^{lnx^{3}}+c_{2}e^{lnx^{-1}}-\frac{2}{3} e^{lnx^{2}} \\
+y=c_{1}x^{3}+c_{2}\frac{1}{x}-\frac{2}{3} x^{2} \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+x^{2}y''-xy'-3y = 2x^{3}
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+y = x^{r} \\
+y'= rx^{r-1} \\
+y'' = (r-1)rx^{r-2} = (r^{2}-r)x^{r-2}  \\
+x^{2}y''-xy'-3y = 2x^{3} \\
+x^{2}(r^{2}-r)x^{r-2}-xrx^{r-1}-3x^{r}= 2x^{3} \\
+\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}(r^{2}-r)x^{r}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{-2}$}}-\text{\colorbox[RGB]{248,231,28}{$x$}}rx^{r}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{-1}$}}-3x^{r} = 2x^{3} \\
+x^{r}(r^{2}-r-r-3) = 0 \\
+(r^{2}-2r-3) \\
+(r+1)(r-3)  \\
+y=  c1x^{-1}+c2x^{3}
+\end{gather*}
+
+
+
+\begin{gather*}
+(5x-1)^{2}y''-(5x-1)y'-3y = 2x^{3}
+\end{gather*}
+
+
+
+\end{document}

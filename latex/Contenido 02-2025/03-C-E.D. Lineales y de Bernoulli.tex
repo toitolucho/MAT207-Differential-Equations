@@ -1,0 +1,259 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{E.D. Primer Orden Lineales}
+
+
+
+
+\begin{gather*}
+a_{1}(x)\frac{dy}{dx}+a_{0}(x)y = g(x) \\
+\text{llevar al a la forma:} \\
+\text{\colorbox[RGB]{248,231,28}{$y'+P$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$y = Q$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}} \\
+\text{para ello dividimos toda la E.D. entre a}_{1}(x) \\
+P(x) = \frac{a_{0}(x)}{a_{1}(x)}  ;  Q(x) =  \frac{g(x)}{a_{1}(x)}  \\
+\vspace{0.5em} \\
+\text{La idea es representar una miltiplicaciones de funciones en su forma diferencial} \\
+(uv)' = u'v+uv' \\
+(yu)' = y'u+u'y   (A) \\
+\vspace{0.5em} \\
+\text{Incorporamos la funcion u}(x)\text{ para asemejar a  }(A) \\
+\text{\colorbox[RGB]{248,231,28}{$y'u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$+u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$P$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$y = u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$Q$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}} \\
+\text{Bajo este contexto, se asume que} \\
+u'(x) = \text{\colorbox[RGB]{248,231,28}{$u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$P$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}    \rightarrow   (B) \\
+y'u(x)+u'(x)y = u(x)Q(x) =(yu)'   \\
+\text{Si integramos} \\
+\int u(x)Q(x) =\int (yu)'   \\
+\int u(x)Q(x)=y*u(x) \\
+\text{\colorbox[RGB]{248,231,28}{$y = u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$^{-1}$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$\int $}}\text{\colorbox[RGB]{248,231,28}{$u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$Q$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$+c$}}\text{\colorbox[RGB]{248,231,28}{$)$}} \\
+\text{Sabemos que de }(B) \\
+u'(x) = \text{\colorbox[RGB]{248,231,28}{$u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$P$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}   \rightarrow   u'=uP(x) \\
+\text{Por la diferencial de la funcion u se sabe que:} \\
+\frac{du}{dx}=uP(x) \\
+\int \frac{1}{u}du=\int P(x)dx \\
+ln(u) = \int P(x)dx \\
+\text{\colorbox[RGB]{248,231,28}{$u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$ = e$}}\text{\colorbox[RGB]{248,231,28}{$^{\int P(x)dx}$}}
+\end{gather*}
+
+
+
+
+
+
+1) Llevar a la forma estandar de una E.D. lineal: 
+\begin{gather*}
+y'+P(x)y=Q(x)
+\end{gather*}
+
+
+2) Identificar las funciones P(x) y Q(x)
+
+3) Identificar el factor de Integracion: 
+\begin{gather*}
+u(x) = e^{\int P(x)dx}
+\end{gather*}
+
+
+4) Simplificar el factor de integracion en caso de ser posible
+
+5) Multiplicar el factor de integracion por la E.D. 
+
+6) Igualar la E.D. a 
+\begin{gather*}
+u(x)*Q(x)
+\end{gather*}
+ y despejar 
+\begin{gather*}
+y(x)
+\end{gather*}
+
+
+7) Simplificar algebraicamente 
+\begin{gather*}
+y(x)
+\end{gather*}
+ en caso de ser posible
+
+8) Evaluar el valor de frontera para determinar la constate en caso de ser necesario 
+\begin{gather*}
+y(x_{0}) = y_{0}
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+a) y′=3x−4y \\
+b) \frac{3xy′}{4y−3}=2 \\
+c) (x−2)y′+y=3x2+2x
+\end{gather*}
+
+
+Resolucion del inciso b)
+
+
+
+
+\begin{gather*}
+\frac{3xy′}{4y−3}=2 \\
+3xy' = 8y-6 \\
+\text{Dividimos con 3x} \\
+y'= \frac{8}{3x}y-\frac{2}{x} \\
+y'\text{\colorbox[RGB]{248,231,28}{$-$}}\text{\colorbox[RGB]{248,231,28}{$\frac{8}{3x}$}}y =\text{\colorbox[RGB]{248,231,28}{$-$}}\text{\colorbox[RGB]{248,231,28}{$\frac{2}{x}$}} \\
+P(x) = -\frac{8}{3x}  ; Q(x) = -\frac{2}{x} \\
+u(x) = e^{\int P(x)dx} =e^{\int -\frac{8}{3x}dx}=e^{-\frac{8}{3}ln(x)}=e^{ln(x^{-\frac{8}{3}})}=x^{-\frac{8}{3}} \\
+y = u(x)^{-1}(\int u(x)Q(x)+c) =u(x)^{-1}(\int u(x)(-\frac{2}{x})+c) \\
+\vspace{0.5em} \\
+y = \frac{1}{e^{\int P(x)dx}}(\int e^{\int P(x)dx}Q(x)+c) 
+\end{gather*}
+
+
+
+
+
+
+\textbf{E.D. Bernoulli$\rightarrow$  }Es una variacion al metodo anterior, con una pequeña diferencia, el miembro de la derecha  g(x)  esta multiplicada por 
+\begin{gather*}
+y^{n}
+\end{gather*}
+, donde \textbf{n} es un numero real (n=3,2, 
+\begin{gather*}
+\frac{1}{2}
+\end{gather*}
+, 
+\begin{gather*}
+\frac{3}{2}
+\end{gather*}
+) y es diferente de 0 y 1
+
+
+\begin{gather*}
+y'+P(x)y=Q(x)y^{n} \\
+si n = 1  \rightarrow  \\
+y'+P(x)y=Q(x)y^{} =y' +P(x)y-Q(x)y=0^{} \\
+y' +(P(x)-Q(x))y=0^{}  \rightarrow \text{ Variable Separable} \\
+\vspace{0.5em} \\
+\text{la idea es convertir esta e.d. a un lineal por un cambio de variable} \\
+\vspace{0.5em} \\
+y'+P(x)y=Q(x)y^{n}\text{ Dividir la E.D entre y}^{n}  \\
+y^{-n}y'+P(x)yy^{-n}=Q(x) \\
+\vspace{0.5em} \\
+\text{\colorbox[RGB]{248,231,28}{$y'+P$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$y=Q$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}} \\
+y^{-n}y'+P(x)\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{1-n}$}}=Q(x) \\
+\text{Par asemejar la expresion acutual a la lineal estandar, } \\
+\text{aplicaremos un cambio de variable} \\
+z=y^{1-n} \\
+\text{Se aplica derivada a la nueva variable} \\
+\frac{dz}{dy} = (1-n)y^{-n} \\
+\text{Se aplica la regla de la cadena para incluir la variable 'x'} \\
+\frac{dz}{dy} = (1-n)y^{-n}\text{\colorbox[RGB]{248,231,28}{$\frac{dx}{dx}$}}           \\
+(\frac{dx}{dx} \rightarrow \text{este termino es un comodin para intercambiar diferenciales}) \\
+\frac{dz}{dx} = (1-n)y^{-n}\frac{dy}{dx} =  (1-n)y^{-n}y' \\
+\vspace{0.5em} \\
+\text{Para completar la expresion, multiplicamos la E.D. por }(1-n) \\
+\text{\colorbox[RGB]{126,211,33}{$ $}}\text{\colorbox[RGB]{126,211,33}{$($}}\text{\colorbox[RGB]{126,211,33}{$1-n$}}\text{\colorbox[RGB]{126,211,33}{$)$}}\text{\colorbox[RGB]{126,211,33}{$y$}}\text{\colorbox[RGB]{126,211,33}{$^{-n}$}}\text{\colorbox[RGB]{126,211,33}{$y'$}}+ (1-n)P(x)z= (1-n)Q(x)   \rightarrow z' = \frac{dz}{dx} \\
+z'+(1-n)P(x)z= (1-n)Q(x) \rightarrow \text{ E.D. Lineal}
+\end{gather*}
+
+
+
+
+
+
+
+
+1) Llevar a la forma estandar de una E.D. de Bernoulli: 
+\begin{gather*}
+y'+P(x)y=Q(x)y^{n}
+\end{gather*}
+
+
+2) Identificar el valor de la potencia 
+\begin{gather*}
+n
+\end{gather*}
+
+
+3) Determinar el valor de la variable que se utilizar para hacer el reemplazo, 
+\begin{gather*}
+z=y^{1-n} 
+\end{gather*}
+
+
+4) Determinar la derivada con el cambio respectivo de la variable 
+\begin{gather*}
+z'
+\end{gather*}
+
+
+5) Hacer los cambios respectivos para quitar la variable \textbf{y} en la E.D. 
+
+6) Identificar las funciones P(x) y Q(x) 
+
+7) Identificar el factor de Integracion: 
+\begin{gather*}
+u(x) = e^{\int P(x)dx}
+\end{gather*}
+
+
+8) Simplificar en la forma el factor de integracion en caso de ser posible
+
+9) Multiplicar el factor de integracion por la E.D. 
+
+10) Igualar la E.D. a 
+\begin{gather*}
+u(x)*Q(x)
+\end{gather*}
+ y despejar 
+\begin{gather*}
+y(x)
+\end{gather*}
+
+
+11) Reemplazar el valor de 
+\begin{gather*}
+z
+\end{gather*}
+ por 
+\begin{gather*}
+y
+\end{gather*}
+
+
+12) Simplificar algebraicamente 
+\begin{gather*}
+y(x)
+\end{gather*}
+ en caso de ser posible
+
+13) Evaluar el valor de frontera para determinar la constate en caso de ser necesario 
+\begin{gather*}
+y(x_{0}) = y_{0}
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+d) \frac{dy}{dx}  + x^{5}y = x^{5}y^{7} \\
+n = 7 \\
+y^{-7}\frac{dy}{dx}  + x^{5}y^{-7}y = x^{5} \\
+y^{-7}\frac{dy}{dx}  + x^{5}y^{-6} = x^{5} \\
+z =y^{-6}  \\
+\frac{dz}{dx} = -6y^{-7}\frac{dy}{dx} \\
+\text{multiplicamos la E.D. por }(1-n) \\
+-6y^{-7}\frac{dy}{dx}  -6x^{5}y^{-6} = -6x^{5} \\
+\frac{dz}{dx} -6x^{5}z=-6x^{5}
+\end{gather*}
+
+
+
+
+
+
+
+\end{document}

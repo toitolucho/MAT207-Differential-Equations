@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+VARIACION DE PARAMETROS
+
+- Este metodo es generico para cualquier tipo de E.D. con CC. no Homogenea
+
+Permite determinar la mayor parte de soluciones de un E.D. 
+
+Depende de la solucion homogenea
+
+Requiere el Wronskiano como metodo de sistema de ecuaciones
+
+Se apoya en el uso de Derivadas e Integrales.
+
+Dada una E.D. de la forma:
+
+
+
+
+\begin{gather*}
+a_{1}(x)y''+a_{2}(x)y'+a_{3}(x)y = g(x) \\
+\vspace{0.5em} \\
+1)\text{ Determinar la solucion Homogenea } \rightarrow  y_{h} \\
+2)\text{ Poner la ecuacion Diferencial en su forma estandar} \\
+y''+\frac{a_{2}}{a_{1}(x)}(x)y'+\frac{a_{3}}{a_{1}(x)}(x)y =\frac{g(x)}{a_{1}(x)} \\
+\vspace{0.5em} \\
+3)\text{ Se plantea una solucion generica, en base a las solucion y}_{h} \\
+\text{por decir:} \\
+y_{h} = c_{1}y_{1}+c_{2}y_{2} \\
+\vspace{0.5em} \\
+\text{se asume una solucion generica en base a y}_{h} \\
+y1 = x^{2}  y2 = x^{3}   \rightarrow  v1=1, v2 =\frac{1}{x} \\
+y_{p} = v_{1}y_{1}+v_{2}y_{2} =   \rightarrow \text{ donde v}_{1}, y v_{2}  \rightarrow \text{funciones de x desconocidas} \\
+\text{el objetivo es determinar v1, y v2} \\
+\vspace{0.5em} \\
+4)\text{ Para determinar v1 y v2, se arma un sistema de ecuaciones,} \\
+\text{similar al Wronskiano} \\
+v_{1}'y_{1}+v_{2}'y_{2} = 0 \\
+v_{1}'y_{1}'+v_{2}'y_{2}' =\frac{g(x)}{a_{1}(x)} \\
+\vspace{0.5em} \\
+\text{si el sistema fuese de 4to orden} \\
+v_{1}'y_{1}+v_{2}'y_{2}+v_{3}'y_{3}+v_{4}'y_{4} = 0 \\
+v_{1}'y_{1}'+v_{2}'y_{2}'+v_{3}'y_{3}'+v_{4}'y_{4}' = 0 \\
+v_{1}'y_{1}''+v_{2}'y_{2}''+v_{3}'y_{3}''+v_{4}'y_{4}'' = 0 \\
+v_{1}'y_{1}'''+v_{2}'y_{2}'''+v_{3}'y_{3}'''+v_{4}'y_{4}''' = \frac{g(x)}{a_{1}(x)} \\
+\vspace{0.5em} \\
+\matrix{y_{1}}{y_{1}'}{y_{1}''}{y_{1}'''}{y_{2}}{y_{3}}{y_{4}}{y_{2}'}{y_{3}'}{y_{4}'}{y_{2}''}{y_{3}''}{y_{4}''}{y_{2}'''}{y_{3}'''}{y_{4}'''}\matrix{v_{1}'}{v_{2}'}{v_{3}'}{v_{4}'}=\matrix{0}{0}{0}{\frac{g(x)}{a_{1}(x)}} \\
+6)\text{ Determinar el valor v}_{1}',v_{2}'....v_{n}' \\
+7)\text{ Determinamos las integrales respectiva} \\
+v_{1}' = f(x)   \rightarrow  v_{1} = \int f(x)dx \\
+8)\text{ Reemplzar en la funcion supuesta} \\
+9)\text{ Reducir algebraicamente en caso de ser posible} \\
+10)\text{ Absorver los terminos similares en caso de ser posible} \\
+11)\text{ Determinar la solucion general como tal} \\
+y = y_{h}+y_{p}
+\end{gather*}
+
+
+Ejemplos
+
+
+
+
+\begin{gather*}
+y′′′−2y′′−y′+2y=e^{3x} \\
+e^{rx}(r^{3}-2r^{2}-r+2) = 0 \\
+\matrix{1}{-2}{}{1}{1}{-1}{-1}{2}{}{-1}{-2}{1}{-2}{0}{} \\
+(r^{2}-r-2)(r-1)=0 \\
+(r-2)(r+1)(r-1)=0 \\
+yh= c_{1}e^{2x}+c_{2}e^{x}+c_{3}e^{-x} \\
+y_{p} = Ae^{3x} \\
+y_{p} = \frac{1}{8}e^{3x} \\
+\vspace{0.5em} \\
+y_{h}= v_{1}e^{2x}+v_{2}e^{x}+v_{3}e^{-x} \\
+\text{Armamos el sistema de Ecuaciones} \\
+ v_{1}'\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{2x}$}}+v_{2}'\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{x}$}}+v_{3}'\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{-x}$}}=0    \rightarrow (A) \\
+ 2v_{1}'e^{2x}+v_{2}'e^{x}-v_{3}'e^{-x}=0  \rightarrow (B) \\
+4v_{1}'e^{2x}+v_{2}'e^{x}+v_{3}'e^{-x}=e^{3x} \rightarrow (C)
+\end{gather*}
+
+
+
+\begin{gather*}
+ \matrix{e^{2x}}{2e^{2x}}{4e^{2x}}{y_{1}'''}{e^{x}}{e^{-x}}{y_{4}}{e^{x}}{-e^{-x}}{y_{4}'}{e^{x}}{e^{-x}}{y_{4}''}{y_{2}'''}{y_{3}'''}{y_{4}'''}\matrix{v_{1}'}{v_{2}'}{v_{3}'}{v_{4}'}=\matrix{0}{0}{e^{3x}}{\frac{g(x)}{a_{1}(x)}}
+\end{gather*}
+
+
+
+\begin{gather*}
+\text{Sumamos }(A)\text{ con }(B) \\
+v_{1}'\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{2x}$}}+v_{2}'\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{x}$}}+v_{3}'\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{-x}$}}=0    \rightarrow (A) \\
+ 2v_{1}'e^{2x}+v_{2}'e^{x}-v_{3}'e^{-x}=0  \rightarrow (B) \\
+3v_{1}'e^{2x}+2v_{2}'e^{x} = 0  \rightarrow (D) \\
+\text{Sumamos }(B)\text{ con }(C) \\
+ 2v_{1}'e^{2x}+v_{2}'e^{x}-v_{3}'e^{-x}=0  \rightarrow (B) \\
+4v_{1}'e^{2x}+v_{2}'e^{x}+v_{3}'e^{-x}=e^{3x} \rightarrow (C) \\
+6v_{1}'e^{2x}+2v_{2}'e^{x} = e^{3x}   \rightarrow (E) \\
+\vspace{0.5em} \\
+(E) -(D) \\
+6v_{1}'e^{2x}+2v_{2}'e^{x} = e^{3x} \\
+-3v_{1}'e^{2x}-2v_{2}'e^{x} = 0  \\
+3v_{1}'e^{2x} = e^{3x} \\
+v_{1}' = \frac{e^{3x}}{3e^{2x}} = \frac{1}{3}e^{x} \\
+v_{1}= \int \frac{1}{3}e^{x}dx \\
+v_{1}=\frac{1}{3}e^{x} \\
+\text{Reemplazando en 3v}_{1}'e^{2x}+2v_{2}'e^{x} = 0  \rightarrow (D) \\
+\vspace{0.5em} \\
+3\frac{1}{3}e^{x}e^{2x}+2v_{2}'e^{x} = 0  \\
+e^{3x}+2v_{2}'e^{x} = 0  \\
+2v_{2}'e^{x}=-e^{3x} \\
+v_{2}'=-\frac{1}{2}e^{2x} \\
+v_{2} = -\frac{1}{2}\int e^{2x}dx \implies -\frac{1}{2}\frac{1}{2}e^{2x}=-\frac{1}{4}e^{2x} \\
+\vspace{0.5em} \\
+\text{Reemplazando en }(A) \\
+ \frac{1}{3}e^{x}e^{2x}-\frac{1}{2}e^{2x}e^{x}+v_{3}'e^{-x}=0    \rightarrow (A) \\
+\frac{1}{3}e^{3x}-\frac{1}{2}e^{3x}+v_{3}'e^{-x}=0 \\
+-\frac{1}{6}e^{3x}=-v_{3}'e^{-x} \\
+v_{3}'=\frac{1}{6}e^{4x} \rightarrow v_{3} =\frac{1}{24}e^{4x} \\
+\vspace{0.5em} \\
+y_{h}= \frac{1}{3}e^{x}e^{2x}-\frac{1}{4}e^{2x}e^{x}+\frac{1}{24}e^{4x}e^{-x} \\
+y_{h}=e^{3x}(\frac{1}{3}-\frac{1}{4}+\frac{1}{24})=e^{3x}(\frac{8-6+1}{24})=\frac{3}{24}e^{3x} = \frac{1}{8}e^{3x}  \\
+\vspace{0.5em} \\
+\end{gather*}
+
+
+
+
+
+\end{document}

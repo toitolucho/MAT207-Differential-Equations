@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+E.D. Exactas
+
+Comunmente vienen representadas en su forma (B)
+
+
+\begin{gather*}
+M(x,y)dx+N(x,y)dy = 0
+\end{gather*}
+
+
+Primeramente se debe comprobar si estas son exactas
+
+
+\begin{gather*}
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x}  \\
+\text{Prueba de exactitud}
+\end{gather*}
+
+
+Si es exacta, se desea determinar una funcion desconocida g(x) de la siguiente manera:
+
+
+\begin{gather*}
+\frac{\partial g(x)}{\partial x} =M(x,y)  o   \frac{\partial g(x)}{\partial y} =N(x,y) 
+\end{gather*}
+
+
+Bajo es criterio, es posible despejar g(x) respetando los conceptos de derivadas parciales
+
+
+\begin{gather*}
+g(x) =\int M(x,y)dx +h(y)  (A) \\
+o \\
+g(x) =\int N(x,y)dy +u(x)
+\end{gather*}
+
+
+Para determinar la funcion h(y) o u(x) que aparece, se puede nuevamente derivar parcialmente g(x)
+
+
+\begin{gather*}
+\text{si tomamos }(A) \\
+\frac{\partial g(x)}{\partial y} =(\int M(x,y)dx)' +h'(y)  =N(x,y) \\
+o \\
+\frac{\partial g(x)}{\partial x} =(\int N(x,y)dy)' +u'(x)  =M(x,y)
+\end{gather*}
+
+
+Algoritmo
+
+1) Llevar al E.D.  la forma diferencial M(x,y) N(x,y)
+
+2) Determinar M y N
+
+3) Realizar la prueba de exactitud
+
+4) Determinar parcialmente g(x,y) en terminos de M(x,y) y la funcion desconocida h(y). o alternativamente Determinar parcialmente g(x,y) en terminos de N(x,y) y la funcion desconocida f(x).
+
+5) Derivar la funcion  parcial g(x) en terminos de la otra variable
+
+6) Igualar la expresion encontrada al termino respectivo, ya sea M o N y corroborar que se pueden simplificar los terminos de la variable que no corresponde al funcio h(y) o f(x).
+
+7) Integrar la funcion que resulta de la simplificacion.
+
+8) Reemplazar y determinar g(x,y)
+
+9) Encontrar los valores de frontera.
+
+Ejercicios
+
+Determine si las siguientes e.d. SON EXACTAS.
+
+
+\begin{gather*}
+a) (\text{ 2xy – 3x}^{2} ) dx + ( x^{2} – 2y ) dy = 0
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+M(x,y) = 2xy – 3x^{2} \\
+N(x,y)=x^{2} – 2y \\
+\vspace{0.5em} \\
+\text{Realizamos la prueba de exactitud} \\
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x}  \\
+\frac{\partial (\text{2xy – 3x}^{2})}{\partial y} = \frac{\partial (x^{2} – 2y)}{\partial x} \\
+2x = 2x
+\end{gather*}
+
+
+
+\begin{gather*}
+b) e^{y} dx + ( 2y + xe^{y} ) dy = 0
+\end{gather*}
+
+
+
+\begin{gather*}
+\text{Realizamos la prueba de exactitud} \\
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x}  \\
+\frac{\partial (e^{y})}{\partial y} = \frac{\partial ( 2y + xe^{y} )}{\partial x} \\
+e^{y}=e^{y}
+\end{gather*}
+
+
+Determina si el resto de E.D. es exacta o no
+
+
+\begin{gather*}
+( xy^{2} + x ) dx + yx^{2}dy = 0 \\
+Cos y dx + ( y^{2}\text{ – x sin y }) dy = 0 \\
+( 6x^{2} – y +3 ) dx + (3y^{2} -x – 2) dy =0
+\end{gather*}
+
+
+Resuelva la sig. E.D:
+
+
+\begin{gather*}
+(\text{ 2xy – sin x }) dx + ( x^{2}\text{ – cos y}) dy = 0 \\
+\text{Realizamos la prueba de exactitud} \\
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x}  \\
+\frac{\partial (\text{ 2xy – sin x })}{\partial y} = \frac{\partial N( x^{2}\text{ – cos y})}{\partial x}  \\
+2x=2x \\
+\text{Procedemos a resolver por el metodo, utilizando las igualdades como tal del metodo} \\
+\frac{\partial g(x)}{\partial x} =M(x,y) =2xy – sin x \\
+\text{integrando} \\
+g(x) = \int (2x\text{\colorbox[RGB]{248,231,28}{$y$}}\text{ – sin x})dx  \\
+\text{por la derivada parcial que paso al otro miembro, se asume que la } \\
+\text{variable complementario se considera como ctte para la integral, sin embargo,} \\
+\text{se debe contemplar que dicha variable estara presente con una funcion adicional} \\
+\vspace{0.5em} \\
+g(x) = \int (2x\text{\colorbox[RGB]{248,231,28}{$y$}}\text{ – sin x})dx = 2y\frac{x^{2}}{2} - (-cosx)+h(y) \\
+g(x) = yx^{2}+cosx+\text{\colorbox[RGB]{248,231,28}{$h$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$)$}} \\
+\text{en este punto, al incorporarse h}(y)\text{, es una funcion que debe ser descubierta} \\
+\text{por ende asumimos la otra expresion del metodo:} \\
+\frac{\partial g(x)}{\partial y} =N(x,y) =x^{2}\text{ – cos y} \\
+\frac{\partial ( \text{\colorbox[RGB]{126,211,33}{$yx$}}\text{\colorbox[RGB]{126,211,33}{$^{2}$}}\text{\colorbox[RGB]{126,211,33}{$+cosx+h$}}\text{\colorbox[RGB]{126,211,33}{$($}}\text{\colorbox[RGB]{126,211,33}{$y$}}\text{\colorbox[RGB]{126,211,33}{$)$}})}{\partial y} =x^{2}+h'(y) =x^{2}\text{ – cos y} \\
+\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}+h'(y) =\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$ $}}\text{– cos y} \\
+h'(y) = -cosy \\
+h(y) =-\int \text{cosydy} \\
+h(y) = -seny+A \\
+\text{la posible solucion determinada anteriormente era:} \\
+g(x) = yx^{2}+cosx+\text{\colorbox[RGB]{248,231,28}{$h$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$)$}} \\
+g(x) = yx^{2}+cosx-seny+A \\
+\text{En teoria esta funcion g}(x) = c \\
+g(x) = yx^{2}+cosx-seny+A=c \\
+donde B = c-A \\
+yx^{2}+cosx-seny=B
+\end{gather*}
+
+
+Se puede partir por cualquier combinacion de las formulas del metod
+
+
+\begin{gather*}
+\frac{\partial g(x)}{\partial y} =N(x,y) \\
+g(x) = \int N(x,y)dy = \int (x^{2}\text{ – cos y})dy \\
+g(x) =x^{2}y-seny+h(x) \\
+\vspace{0.5em} \\
+\frac{\partial g(x)}{\partial x} =M(x,y) \\
+\frac{\partial (x^{2}y-seny+h(x))}{\partial x} =2xy – sin x  \\
+\text{\colorbox[RGB]{248,231,28}{$2yx$}}+h'(x) =\text{\colorbox[RGB]{248,231,28}{$2xy $}}\text{– sin x} \\
+h'(x) = -sinx \\
+h(x)=cosx \\
+g(x) =x^{2}y-seny+cosx
+\end{gather*}
+
+
+
+\begin{gather*}
+
+\end{gather*}
+
+
+Tarea : Revisar Factores de integracion para convertir una ED. no exacta a una exacta.
+
+
+
+
+\end{document}

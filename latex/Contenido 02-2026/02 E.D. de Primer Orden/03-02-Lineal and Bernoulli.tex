@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+Ecuaciones Diferenciales Primer Orden Lineales
+
+
+\begin{gather*}
+\frac{dy}{dx} + P(x)y = Q(x) \\
+\text{La idea general es lograr obtener una funcion que haga la ecuacion diferenciales en la forma:} \\
+(yu)' = \text{\colorbox[RGB]{248,231,28}{$uy'$}} + u'\text{\colorbox[RGB]{126,211,33}{$y$}} \\
+\text{si multiplicamos por "u"} \\
+\text{\colorbox[RGB]{248,231,28}{$u$}}\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dx}$}} + uP(x)\text{\colorbox[RGB]{126,211,33}{$y$}}=uQ(x) \\
+u' = uP(x) \\
+\int \frac{u'}{u} =\int  P(x) \\
+ln(u) = \int  P(x) \\
+\text{\colorbox[RGB]{245,166,35}{$u$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}\text{\colorbox[RGB]{245,166,35}{$ = e$}}\text{\colorbox[RGB]{245,166,35}{$^{\int P(x)dx}$}} \\
+\text{Si multiplico u}(x) \\
+u(x)\frac{dy}{dx} + u(x)P(x)y = u(x)Q(x) \\
+(u(x)y)' = u(x)Q(x) \\
+u(x)y = \int u(x)Q(x) \\
+\text{\colorbox[RGB]{245,166,35}{$y =u$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}\text{\colorbox[RGB]{245,166,35}{$^{-1}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$\int $}}\text{\colorbox[RGB]{248,231,28}{$u$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$Q$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{245,166,35}{$ +C$}}\text{\colorbox[RGB]{245,166,35}{$)$}}\text{\colorbox[RGB]{245,166,35}{$ $}}
+\end{gather*}
+
+
+Ejercicios
+
+
+\begin{gather*}
+\frac{dy}{dx}-\frac{y}{x} = 1 \\
+\frac{dy}{dx}+P(x)y = Q(x) \\
+P(x) = -\frac{1}{x} ;   Q(x)=1 \\
+\text{Calculamos el factor de Integracion} \\
+u(x) = e^{\int P(x)dx} =e^{-\int \frac{1}{x}dx}= e^{-ln(x)}=e^{ln(x^{-1})}=x^{-1} \\
+\frac{1}{x}\frac{dy}{dx}-\frac{1}{x}\frac{y}{x} = \frac{1}{x}1 \\
+(\frac{1}{x}y)^{'} = \frac{1}{x} \\
+\frac{1}{x}y = \int \frac{1}{x}dx \\
+\frac{1}{x}y = ln(x)+ln(c) \\
+y = xln(xc)
+\end{gather*}
+
+
+Ejercicio 2
+
+
+\begin{gather*}
+\frac{dy}{dx}-\frac{3y}{x} = x   \rightarrow  y=cx^{3}-x^{2} \\
+u(x) = e^{\int p(x)dx} = e^{-3\int \frac{1}{x}dx}= x^{-3} \\
+y(x) = u(x)^{-1}(\int Q(x)u(x)+C) \\
+y(x) = x^{3}(\int xx^{-3}+C) \\
+y(x) = x^{3}(\int x^{-2}+C) = x^{3}(-\frac{1}{x}+C) \\
+y(x) = cx^{3}-x^{2}
+\end{gather*}
+
+
+
+
+E.D Primer Orden Bernoulli
+
+
+\begin{gather*}
+\frac{dy}{dx} +P(x)y = Q(x)\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{n}$}} \\
+\text{Donde }\text{\colorbox[RGB]{248,231,28}{$n$}} es un numero real, n <> 0,1 \\
+\text{\colorbox[RGB]{126,211,33}{$\text{La Idea principal, es convertir la E.D. en una lineal}$}}, \\
+\text{para ello debemos hacer desaparecer y}^{n} \\
+1)\text{ Dividimos la E.D. por y}^{n} \\
+y^{-n}\frac{dy}{dx} +y^{-n}P(x)y = Q(x)y^{n}y^{-n} \\
+2)\text{ Operamos donde se pueda con la variable y} \\
+\frac{d\text{\colorbox[RGB]{248,231,28}{$y$}}}{dx} +P(x)\text{\colorbox[RGB]{248,231,28}{$y$}} = Q(x)   \rightarrow  y(x) \\
+y^{-n}\frac{dy}{dx} +P(x)y^{1-n} = Q(x) \\
+3)\text{ Aplicamos cambio de variable por z} \\
+z = y^{1-n} \\
+\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{-n}$}}\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dx}$}} +P(x)z = Q(x) \\
+4)\text{ Incorporar la nueva variable en diferencial} \\
+\frac{dz}{dy} =(1-n)y^{-n}  \\
+5)\text{ Aplicar la regla de la cadena} \\
+\frac{dz}{dy} =(1-n)y^{-n}*\frac{dx}{dx} \\
+\frac{dz}{dx} =(1-n)y^{-n}*\frac{dy}{dx} \\
+6)\text{ Multiplicamos la E.D. por }(1-n) \\
+\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$1-n$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{-n}$}}\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dx}$}} +(1-n)P(x)z =(1-n)Q(x) \\
+7)\text{ Hacemos el cambio respectivo de la diferencial} \\
+\frac{dz}{dx}+(1-n)P(x)z =(1-n)Q(x)
+\end{gather*}
+
+
+
+
+
+
+Ejercicios
+
+
+\begin{gather*}
+\frac{dy}{dx}+x^{5}y = x^{5}y^{7} \\
+1)\text{ Dividimos la E.D. por y}^{n}   \rightarrow  n =7 \\
+y^{-7}\frac{dy}{dx} +y^{-7}P(x)y = Q(x)y^{n}y^{-7} \\
+y^{-7}\frac{dy}{dx}+x^{5}yy^{-7} = x^{5}y^{7}y^{-7} \\
+2)\text{ Operamos donde se pueda con la variable y} \\
+y^{-7}\frac{dy}{dx}+x^{5}y^{-6} = x^{5} \\
+3)\text{ Aplicamos cambio de variable por z} \\
+z = y^{-6} \\
+4)\text{ Incorporar la nueva variable en diferencial} \\
+\frac{dz}{dy} =-6y^{-7}  \\
+5)\text{ Aplicar la regla de la cadena} \\
+\frac{dz}{dy} =(1-n)y^{-n}*\frac{dx}{dx} \\
+\frac{dz}{dx} =(1-n)y^{-n}*\frac{dy}{dx} \\
+\frac{dz}{dx} =-6y^{-7}\frac{dy}{dx} \\
+6)\text{ Multiplicamos la E.D. por }(1-n) \\
+-6y^{-7}\frac{dy}{dx}-6x^{5}y^{-6} = -6x^{5} \\
+7)\text{ Hacemos el cambio respectivo de la diferencial} \\
+\frac{dz}{dx}-6x^{5}z=-6x^{5} \\
+\frac{dz}{dx}=6x^{5}z-6x^{5} \\
+\frac{dz}{dx}=6x^{5}(z-1) \\
+\int \frac{dz}{(z-1)}=\int 6x^{5}dx \\
+ln(z-1)=x^{6}+C \\
+z=e^{x^{6}+C}+1 \\
+y^{-6} = e^{x^{6}+C}+1 \\
+(y^{-6})^{-\frac{1}{6}} = (e^{x^{6}+C}+1)^{-\frac{1}{6}} = y
+\end{gather*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

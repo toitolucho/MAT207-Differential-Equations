@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+INTRODUCCION A LAS ECUACIONES DIFERENCIALES
+
+
+
+Que es una Ecuacion Diferencial?
+
+Una E.D. es un expresion matematica que tiene presente dentro de si derivadas.
+
+El objetivo, es identificar una función solución que satisfaga dicha expresion
+
+
+\begin{gather*}
+x^{2}+5x+6=0 \\
+(-3)^{2}+5(-3)+6=0 \\
+x_{1,2} = ??   \rightarrow  x=-3 \\
+\text{inicialmente en esta expresion, la idea era} \\
+\text{determinar el valor de "}x\text{" como valor real}
+\end{gather*}
+
+
+En una E.D. se va tener presente, derivadas que pueden depender de una o mas variables
+
+
+\begin{gather*}
+\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6y=0 \\
+donde y = variable dependiente \\
+x = variable independiente \\
+donde el objetivo es encontrar una funcion y=(x) \\
+Asumamos que   y = e^{-3x} ,  x^{2}+3  , sen(4x) \\
+                                 y =  e^{-3x}  \rightarrow \text{solucion a la E.D.} \\
+y' = -3e^{-3x} \\
+y'' = 9e^{-3x} \\
+9e^{-3x}-15e^{-3x}+6e^{-3x}=0
+\end{gather*}
+
+
+Clasificacion de las E.D.
+
+E.D. Ordinarias $\rightarrow$  tienen presente derivadas simples
+
+
+\begin{gather*}
+\frac{dx}{dt} +5x =0 
+\end{gather*}
+
+
+E.D No Ordinarias $\rightarrow$  tienen presente derivadas parciales
+
+
+\begin{gather*}
+\frac{\partial x}{\partial y} + \frac{\partial x}{\partial z}=3x
+\end{gather*}
+
+
+Segun el orden, grado, linealidad
+
+\textbf{Orden}$\rightarrow$  Se puede identificar por la \colorbox[RGB]{248,231,28}{derivada mayor} presente en la E.D.
+
+
+\begin{gather*}
+\frac{dx}{dt} +5x =0 \rightarrow \text{ Primer Orden} \\
+\frac{d^{3}x}{dt^{3}} +\frac{d^{2}x}{dt^{2}}+5x =0  \rightarrow \text{Tercer Orden} \\
+\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6y=0  \rightarrow \text{ Segundo Orden}
+\end{gather*}
+
+
+
+
+\textbf{Grado} $\rightarrow$  El exponente mayor presente en la E.D del termino que tiene el orden de la E.D.
+
+
+\begin{gather*}
+(\frac{d^{2}y}{dx^{2}})^{3}+5(\frac{dy}{dx})^{5}+6y=0  \rightarrow \text{Grado 3} \\
+       A                  B                      
+\end{gather*}
+
+
+
+
+\textbf{Linealidad} $\rightarrow$  Basado en el formato plantilla en forma de escalera *
+
+
+\begin{gather*}
+a_{n}(x)\frac{d^{n}y}{dx^{n}} + a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}} + .....a_{1}(x)\frac{dy}{dx}+a_{0}(x)y = g(x) \\
+\frac{d^{3}y}{dx^{3}} +e^{3x}\frac{d^{2}y}{dx^{2}}+5x\frac{dy}{dx}-3y =sen(x)  \rightarrow \text{lineal} \\
+\vspace{0.5em} \\
+\frac{d^{3}y}{dx^{3}} +e^{3x}\frac{d^{2}y}{dx^{2}}+5x\frac{dy}{dx}-3y =\text{\colorbox[RGB]{248,231,28}{$sen$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$)$}}  \rightarrow \text{no lineal} \\
+\frac{d^{3}y}{dx^{3}} +e^{3x}\frac{d^{2}y}{dx^{2}}+5x\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$\frac{dy}{dx}$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}-3\text{\colorbox[RGB]{248,231,28}{$\sqrt{y}$}} =sen(x)  \rightarrow \text{ no es lineal} \\
+\text{\colorbox[RGB]{248,231,28}{$y$}}\frac{d^{3}y}{dx^{3}} +e^{3x}\frac{d^{2}y}{dx^{2}}+5x\frac{dy}{dx}-3y =sen(x) \rightarrow \text{ no es lineal} \\
+\text{Por ejemplo para simplificar el concepto, podemos arrancar} \\
+\text{de una ecuacion de 2do grado de colegio} \\
+Ax^{2}+Bx+C=0 \\
+5x^{2}-3x+8=0 \\
+Ax^{4}+Bx^{3}+Cx^{2}+Dx+E=0
+\end{gather*}
+
+
+E.D. de Variable Separable
+
+E.D. Homogeneas
+
+E.D. Lineales
+
+
+\end{document}

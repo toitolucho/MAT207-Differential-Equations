@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{Cap 02 - E.D. Primer Orden}
+
+Representacion de una E.D.
+
+
+\begin{gather*}
+f(x,y) = \frac{dy}{dx}   \rightarrow \text{ Forma General }(a) \\
+sen(x)e^{x}+y = \frac{dy}{dx} \\
+M(x,y)dx +N(x,y)dy = 0  \rightarrow \text{ Forma Diferencial }(b) \\
+(e^{2x}y)dx+(x+y)dy = 0  \\
+\vspace{0.5em} \\
+\text{es posible llevar de una forma }(a)\text{  la forma }(b)\text{ y viceversa} \\
+(e^{2x}y)dx+(x+y)dy = 0  \\
+(e^{2x}y)+(x+y)\frac{dy}{dx} = 0  \\
+(x+y)\frac{dy}{dx} = -e^{2x}y \\
+\frac{dy}{dx} = \frac{-e^{2x}y}{(x+y)}
+\end{gather*}
+
+
+Tipos or Rutas de Solucion de acuerdo a su presentacion
+
+\textbf{E.D. de Variables Separable}
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$M$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x,y$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$dx +N$}}\text{\colorbox[RGB]{248,231,28}{$($}}\text{\colorbox[RGB]{248,231,28}{$x,y$}}\text{\colorbox[RGB]{248,231,28}{$)$}}\text{\colorbox[RGB]{248,231,28}{$dy = 0 $}} \\
+\text{Si se puede garantizar que:} \\
+M(x,y)  \rightarrow \text{ solo depende de x } \rightarrow  A(x) \\
+y \\
+N(x,y) \rightarrow \text{ solo depende de y } \rightarrow  B(y): \\
+A(x)dx +B(y)dy = 0  \\
+\text{la E.D es de variable separable, por ende se puede resolver integrando} \\
+\int A(x)dx +\int B(y)dy = c  \rightarrow \text{ donde c  es una ctte } \\
+\frac{dy}{dx} = \frac{x^{2}+2}{e^{y}}  \rightarrow   \\
+e^{-y}dy = (x^{2}+2)dx \\
+(x^{2}+2)dx-e^{-y}dy =0 \\
+\text{Multiplica, division de factores uniamente de una variable individual}
+\end{gather*}
+
+
+\textbf{E.D Homogeneas $\rightarrow$  }Comunmente representadas en su forma (b)
+
+
+\begin{gather*}
+M(x,y)dx +N(x,y)dy = 0  \\
+\text{Una forma es utiliza el operando }\text{\colorbox[RGB]{248,231,28}{$𝜆$}} \\
+M(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x,\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)dx +N(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x,\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)dy = 0  \\
+\text{Si es posible factorizar y lograr que }\text{\colorbox[RGB]{248,231,28}{$\text{𝜆 sea igual en ambos terminos}$}} \\
+\text{la E.D. es homogenea}
+\end{gather*}
+
+
+
+
+
+\begin{gather*}
+f(x,y) = \frac{dy}{dx}   \rightarrow \text{ Forma General }(a) \\
+\frac{dy}{dx} = f(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x,\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)  \rightarrow f(x,y)  \rightarrow \text{ es Homogenea}
+\end{gather*}
+
+
+Ejemplo
+
+
+\begin{gather*}
+(x^{2}y+y^{3})dx+(x+y)dy = 0 \\
+((x\text{\colorbox[RGB]{248,231,28}{$𝜆$}})^{2}y\text{\colorbox[RGB]{248,231,28}{$𝜆$}}+(y\text{\colorbox[RGB]{248,231,28}{$𝜆$}})^{3})dx+(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x+\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)dy = 0 \\
+(x^{2}\text{\colorbox[RGB]{248,231,28}{$𝜆$}}\text{\colorbox[RGB]{248,231,28}{$^{3}$}}y+y^{3}\text{\colorbox[RGB]{248,231,28}{$𝜆$}}\text{\colorbox[RGB]{248,231,28}{$^{3}$}})dx+(𝜆x+𝜆y)dy = 0 \\
+𝜆^{3}(x^{2}y+y^{3})dx+𝜆(x+y)dy = 0  \\
+ \rightarrow \text{ no es Homogenea} \\
+\vspace{0.5em} \\
+(x^{2}y+y^{3})dx+(x^{3}+y^{2}x)dy = 0 \\
+(x^{2}𝜆^{2}y𝜆+y^{3}𝜆^{3})dx+(x^{3}𝜆^{3}+y^{2}𝜆^{2}x𝜆)dy = 0 \\
+𝜆^{3}(x^{2}y+y^{3})dx+𝜆^{3}(x^{3}+y^{2}x)dy = 0 \\
+𝜆^{3}((x^{2}y+y^{3})dx+(x^{3}+y^{2}x)dy )=0 \\
+ \rightarrow \text{ E.D. homogenea}
+\end{gather*}
+
+
+E.D. Lineales 
+
+
+\begin{gather*}
+a_{n}(x)\frac{d^{n}y}{dx^{n}}+a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}}+......a_{1}(x)\frac{dy}{dx}+ a_{0}(x)y = g(x)
+\end{gather*}
+
+
+
+\begin{gather*}
+n=1 \\
+a_{1}(x)\frac{dy}{dx}+a_{0}(x)y=g(x) \\
+\text{El objetivo, va  ser dejar suelta el termino de la diferencial} \\
+\text{Se puede dividir entre a}_{1}(x) \\
+\text{\colorbox[RGB]{248,231,28}{$\frac{a_{1}(x)}{a_{1}(x)}$}}\frac{dy}{dx}+\frac{a_{0}(x)}{a_{1}(x)}y=\frac{g(x)}{a_{1}(x)} \\
+\vspace{0.5em} \\
+P(x) =\frac{a_{0}(x)}{a_{1}(x)}  ;    Q(x) = \frac{g(x)}{a_{1}(x)} \\
+\frac{dy}{dx}+P(x)y=Q(x)
+\end{gather*}
+
+
+E.D. Bernoulli $\rightarrow$  es una variacion a la forma Lineal
+
+
+\begin{gather*}
+\frac{dy}{dx}+P(x)y=Q(x)y^{n} \\
+n<> 0,1
+\end{gather*}
+
+
+E.D. Exactas
+
+
+\begin{gather*}
+M(x,y)dx +N(x,y)dy = 0 \\
+\text{es Exacta cuando se cumple:} \\
+\frac{\partial M(x,y)}{\partial y} =\frac{\partial N(x,y)}{\partial x} 
+\end{gather*}
+
+
+
+
+
+\end{document}

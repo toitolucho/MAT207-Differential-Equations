@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+Determine el equivalente de la sumatorio, considerando el cambio de variable por k
+
+
+\begin{gather*}
+23)   \sum{∞}{n=1}nc_{n}x^{n-2} =\sum{∞}{k=3}(k-2)c_{k}-2x^{k}
+\end{gather*}
+
+
+
+
+Encuentre el equivalente de las siguientes combinaciones de sumatorias de series
+
+
+\begin{gather*}
+25) \sum{∞}{k=0}[(k+1)c_{k+1}-c_{k}]x^{k}
+\end{gather*}
+
+
+27) 
+\begin{gather*}
+2c_{1}+\sum{∞}{k=1}[2(k+1)c_{k+1}+6c_{k-1}]x^{k}
+\end{gather*}
+
+
+
+
+
+
+
+\begin{gather*}
+y''-xy=x \\
+\text{Partimos  de la siguiente hipotesis, la solucion a la E.D. es:} \\
+y = c_{0}+\text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{1}$}}\text{\colorbox[RGB]{248,231,28}{$x+c$}}\text{\colorbox[RGB]{248,231,28}{$_{2}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$+c$}}\text{\colorbox[RGB]{248,231,28}{$_{3}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{3}$}}\text{\colorbox[RGB]{248,231,28}{$+c$}}\text{\colorbox[RGB]{248,231,28}{$_{4}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{4}$}}\text{\colorbox[RGB]{248,231,28}{$+c$}}\text{\colorbox[RGB]{248,231,28}{$_{5}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{5}$}}\text{\colorbox[RGB]{248,231,28}{$+c$}}\text{\colorbox[RGB]{248,231,28}{$_{6}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{6}$}}+... = \sum{∞}{n=0}c_{n}x^{n} \\
+y = c_{0} + c_{1}x+ \sum{∞}{n=2}c_{n}x^{n} \\
+\vspace{0.5em} \\
+y = \sum{∞}{n=0}c_{n}x^{n} \\
+y' =\sum{∞}{n=1}c_{n}nx^{n-1}  \\
+y'' = \sum{∞}{n=2}c_{n}n(n-1)x^{n-2}  \\
+y''-xy=x \\
+\vspace{0.5em} \\
+y'''+3y''-xy'+5y=0 \\
+\vspace{0.5em} \\
+\sum{∞}{n=2}c_{n}n(n-1)x^{n-2}-x \sum{∞}{n=0}c_{n}x^{n} = x \\
+\text{Una vez representa la E.D. en terminos de las sumatarios,} \\
+\text{la idea es unificar en un solo simbolo todos los terminos.} \\
+\text{Primeramente debemos distribuir las funciones o constates que afentan a las sumatarios} \\
+\sum{∞}{n=2}c_{n}n(n-1)x^{n-2}-\sum{∞}{n=0}c_{n}x^{n}x^{1} = x \\
+\sum{∞}{n=2}c_{n}n(n-1)x^{n-2}-\sum{∞}{n=0}c_{n}x^{n+1} = x \\
+si n=2   \rightarrow  x^{2-2}=x^{0}       si n=0 \rightarrow  x^{0+1}=x^{1}    \\
+la idea es desfasar la primera serie con un termino para que la serie arrance un valor +1 en n \\
+2(1)c_{2}x^{2-2}+   \sum{∞}{n=3}c_{n}n(n-1)x^{n-2}-\sum{∞}{n=0}c_{n}x^{n+1} = x
+\end{gather*}
+
+
+
+\begin{gather*}
+2c_{2}+   \sum{∞}{n=3}c_{n}n(n-1)x^{n-2}-\sum{∞}{n=0}c_{n}x^{n+1} = x \\
+\vspace{0.5em} \\
+\text{Una vez nivelada las potencias, se puede aplicar un artificio} \\
+\text{de cambio de potencia por otra variable} \\
+2c_{2}+   \sum{∞}{n=3}c_{n}n(n-1)x^{n-2}-\sum{∞}{n=0}c_{n}x^{n+1} = x \\
+k=n-2                       k =n+1 \\
+                   n = k+2                     n=k-1         \\
+\vspace{0.5em} \\
+          2c_{2}+   \sum{∞}{k+2 =3}c_{k+2}(k+2 )(k+2 -1)x^{k}-\sum{∞}{k-1=0}c_{k-1}x^{k} = x  \\
+2c_{2}+   \sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k =1$}}}c_{k+2}(k+2 )(k+1)\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{k}$}}-\sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k=1$}}}c_{k-1}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{k}$}} = x \\
+\vspace{0.5em} \\
+\text{*suponiendo que g}(x)\text{ es 0 similar al ejercicio anterior} \\
+2c_{2}+\sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k =1$}}}[c_{k+2}(k+2 )(k+1) - c_{k-1}]x^{k} =0 \\
+2c_{2}= 0  \rightarrow c_{2}= 0  \\
+\sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k =1$}}}[c_{k+2}(k+2 )(k+1) - c_{k-1}]x^{k} =0 \\
+c_{k+2}(k+2 )(k+1) - c_{k-1} = 0 \\
+para k=1,2,3,4...∞ \\
+c_{k+2}(k+2 )(k+1) = c_{k-1}  \\
+c_{k+2}=\frac{c_{k-1}}{(k+2 )(k+1)} \\
+\vspace{0.5em} \\
+si k=1 \\
+c_{3} = \frac{c_{0}}{(1+2 )(1+1)} =\frac{1}{6}c_{0}  \\
+\vspace{0.5em} \\
+si k=2 \\
+c_{4}= \frac{c_{1}}{(2+2 )(2+1)} =\frac{1}{12}c_{1}  \\
+\vspace{0.5em} \\
+si k=3 \\
+c_{5}= \frac{c_{2}}{(3+2 )(3+1)} =\frac{1}{20}c_{2} = 0 \\
+\vspace{0.5em} \\
+si k = 4 \\
+c_{6}= \frac{c_{3}}{(4+2 )(4+1)} =\frac{1}{30}c_{3} = \frac{1}{30}\frac{1}{6}c_{0} \\
+\vspace{0.5em} \\
+si k=5 \\
+c_{7}= \frac{c_{4}}{(5+2 )(5+1)} =\frac{1}{42}c_{4} = \frac{1}{42}\frac{1}{12}c_{1} \\
+\vspace{0.5em} \\
+y = c_{0}+c_{1}x+c_{2}x^{2}+c_{3}x^{3}+c_{4}x^{4}+c_{5}x^{5}+c_{6}x^{6} \\
+\vspace{0.5em} \\
+y = c_{0}+c_{1}x+0+\frac{1}{6}c_{0} x^{3}+\frac{1}{12}c_{1}x^{4}+0+\frac{1}{30}\frac{1}{6}c_{0}x^{6}+\frac{1}{42}\frac{1}{12}c_{1}x^{7}+... \\
+\vspace{0.5em} \\
+y =c_{0}(1+\frac{1}{6}x^{3}+\frac{1}{30}\frac{1}{6}x^{6}) +c_{1}(x+\frac{1}{12}x^{4}+\frac{1}{42}\frac{1}{12}x^{7}) \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\text{Retomando el planteamiento anterior} \\
+2c_{2}+   \sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k =1$}}}c_{k+2}(k+2 )(k+1)\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{k}$}}-\sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k=1$}}}c_{k-1}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{k}$}} = x \\
+c_{2}=0 \\
+\text{Se debe tener mucho cuidado cuando g}(x)\text{ no es cero, para ver } \\
+\text{en que momento igualar al valor de g}(x) \\
+\sum{∞}{\text{\colorbox[RGB]{248,231,28}{$k =1$}}}[c_{k+2}(k+2 )(k+1) - c_{k-1}]x^{k} =x \\
+si k=1 \\
+c_{3}(3 )(2) - c_{0}=1  \rightarrow 6c_{3}- c_{0}=1 \\
+c_{3}=\frac{1+c_{0}}{6} =\frac{1}{6}+\frac{1}{6}c_{0} \\
+\vspace{0.5em} \\
+c_{k+2}=\frac{c_{k-1}}{(k+2 )(k+1)}   \rightarrow para k=2,3....∞ \\
+\vspace{0.5em} \\
+si k=2 \\
+c_{4}= \frac{c_{1}}{(2+2 )(2+1)} =\frac{1}{12}c_{1}  \\
+\vspace{0.5em} \\
+si k=3 \\
+c_{5}=0 \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+si k=4 \\
+c_{6}= \frac{c_{3}}{(4+2 )(4+1)} =\frac{1}{30}c_{3}= \frac{1}{30}(\frac{1}{6}+\frac{1}{6}c_{0}) \\
+\vspace{0.5em} \\
+si k=5 \\
+c_{7}= \frac{c_{4}}{(5+2 )(5+1)} =\frac{1}{42}\frac{1}{12}c_{1}  \\
+\vspace{0.5em} \\
+y = y_{h}+y_{p}  \\
+\vspace{0.5em} \\
+y = c_{0}+c_{1}x+c_{2}x^{2}+c_{3}x^{3}+c_{4}x^{4}+c_{5}x^{5}+c_{6}x^{6} \\
+y = c_{0}+c_{1}x+0+(\frac{1}{6}+\frac{1}{6}c_{0})x^{3}+(\frac{1}{12}c_{1})x^{4}+0+(\frac{1}{30}(\frac{1}{6}+\frac{1}{6}c_{0}))x^{6}+\frac{1}{42}\frac{1}{12}c_{1} x^{7} \\
+y = \text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{0}$}}\text{\colorbox[RGB]{248,231,28}{$+c$}}\text{\colorbox[RGB]{248,231,28}{$_{1}$}}\text{\colorbox[RGB]{248,231,28}{$x+$}}\text{\colorbox[RGB]{248,231,28}{$\frac{1}{6}$}}\text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{0}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{3}$}}\text{\colorbox[RGB]{248,231,28}{$+$}}\text{\colorbox[RGB]{248,231,28}{$\frac{1}{12}$}}\text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{1}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{4}$}}\text{\colorbox[RGB]{248,231,28}{$+$}}\text{\colorbox[RGB]{248,231,28}{$\frac{1}{180}$}}\text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{0}$}}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{6}$}}\text{\colorbox[RGB]{248,231,28}{$+$}}\text{\colorbox[RGB]{248,231,28}{$\frac{1}{42}$}}\text{\colorbox[RGB]{248,231,28}{$\frac{1}{12}$}}\text{\colorbox[RGB]{248,231,28}{$c$}}\text{\colorbox[RGB]{248,231,28}{$_{1}$}}\text{\colorbox[RGB]{248,231,28}{$ x$}}\text{\colorbox[RGB]{248,231,28}{$^{7}$}}\text{\colorbox[RGB]{248,231,28}{$.$}}..+\frac{1}{6}x^{3}+\frac{1}{180}x^{6}+.. \\
+\vspace{0.5em} \\
+\vspace{0.5em} \\
+\text{por ende la solucion particular yp} \\
+y_{p}=+\frac{1}{6}x^{3}+\frac{1}{180}x^{6} \\
+y'_{p}=+\frac{1}{2}x^{2}+\frac{1}{30}x^{5} \\
+y''_{p}=x+\frac{1}{6}x^{4} \\
+\vspace{0.5em} \\
+y''-xy=x \\
+x+\frac{1}{6}x^{4}-x(\frac{1}{6}x^{3}+\text{\colorbox[RGB]{248,231,28}{$\frac{1}{180}$}}x^{6}) =x \\
+\vspace{0.5em} \\
+\text{el coeficiente marcado en pocas palabras es 0} \\
+x+\frac{1}{6}x^{4}-x(\frac{1}{6}x^{3}+(0)x^{6}) =x
+\end{gather*}
+
+
+
+\end{document}

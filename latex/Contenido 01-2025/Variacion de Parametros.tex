@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+\textbf{Ejercicio 01 - }Resuelva la sig. E.D
+
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = \frac{xy^{2}-cos(x)sen(x)}{y(1-x^{2})}    y(0)=2 \\
+(xy^{2}-cos(x)sen(x))dx -(y(1-x^{2}))dy = 0  \\
+(xy^{2}-cos(x)sen(x))dx +(y(x^{2}-1))dy = 0  \\
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x} \\
+\frac{\partial (xy^{2}-cos(x)sen(x))}{\partial y} = \frac{\partial (y(x^{2}-1))}{\partial x} \\
+2xy = 2xy \\
+\frac{\partial g(x,y)}{\partial y} = N(x,y) \\
+\frac{\partial g(x,y)}{\partial y} = y(x^{2}-1) \\
+g(x,y) = \int y(x^{2}-1)dy \\
+g(x,y)  =(x^{2}-1)\frac{y^{2}}{2} + h(x) \\
+\frac{\partial g(x,y)}{\partial x} = M(x,y) \\
+\frac{\partial ((x^{2}-1)\frac{y^{2}}{2} + h(x))}{\partial x} = xy^{2}-cos(x)sen(x) \\
+\text{\colorbox[RGB]{248,231,28}{$y$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$x$}} +h'(x) = \text{\colorbox[RGB]{248,231,28}{$xy$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}-cos(x)sen(x) \\
+h'(x) = -cos(x)sen(x) \\
+h(x) = \int -cos(x)sen(x)dx \\
+u = cos(x) \\
+du = -sen(x)dx \\
+h(x) = \int udu = \frac{u^{2}}{2} \\
+h(x) =\frac{cos^{2}(x)}{2} \\
+g(x,y)  =(x^{2}-1)\frac{y^{2}}{2} + \frac{cos^{2}(x)}{2} = C \\
+(x^{2}-1)y^{2}+cos^{2}(x) = K  \rightarrow  donde K = 2C \\
+\text{para y}(0)=2 \\
+(0-1)4+1=K \\
+K = -3 \\
+(x^{2}-1)y^{2}+cos^{2}(x) = -3
+\end{gather*}
+
+
+\textbf{Ejercicio 02} 
+
+
+\begin{gather*}
+2xy-9x^{2}+(2y+x^{2}+1)\frac{dy}{dx} = 0
+\end{gather*}
+
+
+Inicialmente la idea reacomodar la E.D. a su forma b
+
+
+\begin{gather*}
+(2xy-9x^{2})dx +(2y+x^{2}+1)dy =0 
+\end{gather*}
+
+
+Procedemos a determinar si la E.D. es Exacta
+
+
+\begin{gather*}
+\frac{\partial M(x,y)}{\partial y} = \frac{\partial N(x,y)}{\partial x} \\
+\frac{\partial (2xy-9x^{2})}{\partial y} = \frac{\partial N(2y+x^{2}+1)}{\partial x} \\
+2x = 2x
+\end{gather*}
+
+
+Por ende se puede aplicar el metodo que indica lo siguiente
+
+
+\begin{gather*}
+g(x,y) =c \\
+\frac{\partial g(x,y)}{\partial x} = M(x,y)   o   \frac{\partial g(x,y)}{\partial y} = N(x,y)
+\end{gather*}
+
+
+Se puede optar por tomar una de las expresiones para iniciar el proceso
+
+
+\begin{gather*}
+\frac{\partial g(x,y)}{\partial x} = 2xy-9x^{2} \\
+g(x,y) =\int (2xy-9x^{2}) dx  \\
+g(x,y) = yx^{2}-3x^{3} + h(y)
+\end{gather*}
+
+
+Como tenemos una nueva funcion 
+\begin{gather*}
+h(y)
+\end{gather*}
+ como incognita, se puede utilizar la otra expresion complementario
+
+
+\begin{gather*}
+\frac{\partial g(x,y)}{\partial y} = N(x,y) \\
+\frac{\partial g( yx^{2}-3x^{3} + h(y))}{\partial y} = 2y+x^{2}+1 \\
+\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}+h'(y) = 2y+\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}+1 \\
+h'(y) = 2y+1 \\
+h(y) = \int (2y+1)dy \\
+h(y) =y^{2}+y + k
+\end{gather*}
+
+
+Reemplazamos la funcion encontrada en la primera expresion asociada a g(x,y)
+
+
+\begin{gather*}
+g(x,y) = yx^{2}-3x^{3} + y^{2}+y + k = c \\
+g(x,y) = yx^{2}-3x^{3} + y^{2}+y +A \\
+donde A = k-c
+\end{gather*}
+
+
+
+
+\textbf{Ejercicio 03} - No Exacta
+
+Resuelva la sig. E.D.
+
+
+\begin{gather*}
+(2y^{2}+3x)dx + 2xydy = 0 \\
+\frac{\partial (2y^{2}+3x)}{\partial y} = 4y \implies  M_{y} \\
+\frac{\partial (2xy)}{\partial x} = 2y \implies  N_{x} \\
+\text{La E.D. no es exacta} \\
+\frac{M_{y}-N_{x}}{N} = f(x)  \rightarrow  FI(x) = e^{\int f(x)dx} = \frac{4y-2y}{2xy} =\frac{2y}{2xy}=\frac{1}{x} \\
+FI(x) = e^{\int \frac{1}{x}dx} = e^{ln(x)} = x \\
+\frac{N_{x}-M_{y}}{M} = g(y)  \rightarrow  FI(y) = e^{\int g(y)dy} \\
+\text{Multiplicamos por el FI encontrado} \\
+(2xy^{2}+3x^{2})dx + 2x^{2}ydy = 0 \\
+4xy = 4xy  \rightarrow \text{por las derivadas parciales} \\
+\frac{\partial g(x,y)}{\partial x} =2xy^{2}+3x^{2} \\
+g(x,y) = \int  (2xy^{2}+3x^{2})dx \\
+g(x,y) = x^{2}y^{2}+x^{3} + h(y) \\
+\frac{\partial g(x,y)}{\partial y} = \text{\colorbox[RGB]{248,231,28}{$2x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$y$}}+ h'(y) =\text{\colorbox[RGB]{248,231,28}{$2x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$y$}} \\
+h'(y)=0  \rightarrow h(y) = a  \rightarrow \text{ donde 'a' es un ctte de la integral} \\
+K= c-a \\
+resp = x^{2}y^{2}+x^{3} = K
+\end{gather*}
+
+
+
+
+
+
+
+
+
+\end{document}

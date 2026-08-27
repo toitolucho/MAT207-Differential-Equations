@@ -1,0 +1,406 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+CAP 04- ECUACIONES DIFERENCIALES DE ORDEN SUPERIOR
+
+
+
+E.D. Lineales
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{245,166,35}{$a$}}\text{\colorbox[RGB]{245,166,35}{$_{n}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}y^{n}+\text{\colorbox[RGB]{245,166,35}{$a$}}\text{\colorbox[RGB]{245,166,35}{$_{n-1}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}y^{n-1}+.....+a_{1}(x)y'+\text{\colorbox[RGB]{245,166,35}{$a$}}\text{\colorbox[RGB]{245,166,35}{$_{0}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}y=g(x)
+\end{gather*}
+
+
+La linealidad esta asociada al formato anterior, donde la idea es tener sueltas 
+
+las diferenciales como la variable dependiente, estas pueden estar acompañadas de
+
+funciones de 'x' $\rightarrow$   (las marcadas con naranja) 
+
+\textbf{Clasificacion} :
+
+De acuerdo al miembro de la izq: Concieficientes Constantes, o Sin Coeficientes Ctte
+
+De acuerdo al miembro de la der: Homogeneas o No Homogeneas
+
+Ejemplos:
+
+E.D con coeficientes cttes 
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$5$}}\frac{d^{2}y}{dx^{2}}+\text{\colorbox[RGB]{248,231,28}{$10$}}\frac{dy}{dx}-y = .....
+\end{gather*}
+
+
+E.D sin coeficientes cttes 
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{248,231,28}{$5x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\frac{d^{2}y}{dx^{2}}+\text{\colorbox[RGB]{248,231,28}{$10e$}}\text{\colorbox[RGB]{248,231,28}{$^{2x}$}}\frac{dy}{dx}-y = .....
+\end{gather*}
+
+
+E.D. Homogeneas:
+
+
+\begin{gather*}
+5\frac{d^{2}y}{dx^{2}}+10\frac{dy}{dx}-y =\text{\colorbox[RGB]{248,231,28}{$ 0$}}
+\end{gather*}
+
+
+E.D. NO Homogeneas:
+
+
+\begin{gather*}
+5\frac{d^{2}y}{dx^{2}}+10\frac{dy}{dx}-y = \text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$+5x-10$}}
+\end{gather*}
+
+
+
+
+\textbf{SOLUCION A UNA E.D. de Orden Superior:}
+
+Toda E.D. de orde n $\rightarrow$  se asume que tendra \colorbox[RGB]{248,231,28}{n soluciones linealmente independientes}
+
+Por decir de forma generica, si se toma la E.D. general
+
+
+\begin{gather*}
+\text{\colorbox[RGB]{245,166,35}{$a$}}\text{\colorbox[RGB]{245,166,35}{$_{n}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}y^{n}+\text{\colorbox[RGB]{245,166,35}{$a$}}\text{\colorbox[RGB]{245,166,35}{$_{n-1}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}y^{n-1}+.....+a_{1}(x)y'+\text{\colorbox[RGB]{245,166,35}{$a$}}\text{\colorbox[RGB]{245,166,35}{$_{0}$}}\text{\colorbox[RGB]{245,166,35}{$($}}\text{\colorbox[RGB]{245,166,35}{$x$}}\text{\colorbox[RGB]{245,166,35}{$)$}}y=0 \\
+y_{1} = ..... (x^{2}) \\
+y_{2}=..... \\
+. \\
+. \\
+y_{n}= .... \\
+\text{Por ende cada solucion, al reemplar en la E.D. debe satisfacer} \\
+\text{la misma, y generar un valor de 0 al hacer el reeemplazo respectivo} \\
+\text{Se dice que la suma de las soluciones, tambien es una solucion} \\
+\text{Cuando la E.D. es Homogenea} \\
+y_{h}=y_{1}+y_{2}+y_{3}.....y_{n} \\
+\text{si la E.D. fuese no Homogenea, se asume} \\
+\text{que existe una solucion particular para E.D.} \\
+y_{p} = ... \\
+\vspace{0.5em} \\
+\text{De forma general la solucion como tal seria:} \\
+y = y_{h}+y_{p}
+\end{gather*}
+
+
+INDEPENCIA LINEAL
+
+Se dice que un conjunto de funciones y1,y2, y3, son linealmente independientes, \colorbox[RGB]{248,231,28}{cuando no son posibles absoverse entre si operando algebraicamente}.
+
+Por ejemplo, si 
+\begin{gather*}
+y_{1}= x  ; y_{2} = 5x ;  y_{3}= -3x
+\end{gather*}
+ determine si son linealmente independiente
+
+
+
+
+\begin{gather*}
+y1+y2+y3 = y1+y2+y3 \\
+x +5x-3x = 3x  \rightarrow \text{ estas funciones son linealmente dependientes}
+\end{gather*}
+
+
+
+
+Por ejemplo, si 
+\begin{gather*}
+y_{1}= x  ; y_{2} = x^{2} 
+\end{gather*}
+
+
+
+\begin{gather*}
+y1+y2 = y1+y2 \\
+x+x^{2} = x+x^{2}  \rightarrow \text{ son funciones linealmente independientes}
+\end{gather*}
+
+
+WRONSKIANO
+
+Es una matriz que se forma a traves del set de funciones dadas, cada fila posterior  a la primera, 
+
+se la calcula con la derivada respectiva
+
+Por decir, si se nos facilita el siguiente set de funciones  {y1,y2 }
+
+
+
+
+\begin{gather*}
+W =\matrix{y_{1}}{y_{2}}{y_{1}'}{y_{2}'}=y_{1}*y_{2}'-y_{2}*y_{1}' = ...... \\
+W = \matrix{y_{1}}{y_{2}}{y_{1}'}{y_{2}'}{y_{1}''}{y_{2}''}{y_{3}}{y_{3}'}{y_{3}''} \\
+Si el valor encontrada, W <> 0  \rightarrow \text{ se tiene la certeza} \\
+\text{que el set de funciones son LINEALMENTE INDEPENDIENTE}
+\end{gather*}
+
+
+Dado el siguiente set de funciones 
+\begin{gather*}
+y_{1}= x  ; y_{2} = x^{2} 
+\end{gather*}
+, determine el Wronskiano
+
+
+\begin{gather*}
+W =\matrix{x}{x^{2}}{1}{2x}=x*2x'-x^{2}(1) =x^{2} \\
+\text{por ende y}_{1} y y_{2}\text{ son }\text{\colorbox[RGB]{248,231,28}{$\text{LINEALMENTE INDEPENDIENTES}$}}
+\end{gather*}
+
+
+Dado el siguiente set de funciones 
+\begin{gather*}
+y_{1}= 10x^{2}  ; y_{2} = 5x^{2} 
+\end{gather*}
+, determine el Wronskiano
+
+
+\begin{gather*}
+W =\matrix{10x^{2}}{5x^{2}}{20x}{10x}=100x^{3}-100x^{3}=0 \\
+\text{por ende y}_{1} y y_{2}\text{ son LINEALMENTE DEPENDIENTES}
+\end{gather*}
+
+
+E.D. DE 2DO ORDEN
+
+
+\begin{gather*}
+a_{2}(x)y''+a_{1}(x)y'+a_{0}(x)y=0 \\
+\text{Por ende se tiene como solucion} \\
+y_{1} = ... \\
+y_{2} = ... \\
+yh = y1+y2 \\
+\vspace{0.5em} \\
+\text{Asumamos que una solucion generica para este tipo de E.D. considerando que la E.D} \\
+\text{ES con Coeficientes CTTE.} \\
+Ay''+By'+Cy=0 \\
+\text{Se puede considerar que la solucion generica a esta E.D. es} \\
+y = e^{rx}   \rightarrow \text{donde r, es un valor real}(raiz) \\
+\text{por ende se deberia cumplir el reemplazo con las derivadas, } \\
+\text{de tal manera que obtengamos cero } \\
+y = e^{rx} \\
+y' = re^{rx} \\
+y'' = r^{2}e^{rx} \\
+\text{Si reemplazamos en la E.D.} \\
+Ar^{2}e^{rx}+Bre^{rx}+Ce^{rx}=0 \\
+e^{rx}(Ar^{2}+Br+C) =0 \\
+Ar^{2}+Br+C =0 \\
+\text{ solucion para r} \rightarrow \text{ se puede determinar de varias formas} \\
+r1,r2 = \frac{-b±\sqrt{b^{2}-4ac}}{2a} \\
+\text{por ende tenemos dos raices, que nos permiten obtener} \\
+y1 = e^{r_{1}x} ; y2= e^{r_{2}x}
+\end{gather*}
+
+
+EJERCICIOS
+
+
+\begin{gather*}
+a) \frac{d^{2}y}{dx^{2}}-3\frac{dy}{dx}+2y = 0 \\
+y = e^{rx} \\
+e^{rx}(r^{2}-3r+2) =0 \\
+(r-2)(r-1) =0 \\
+r_{1}=2; r_{2}=1 \\
+y1 = e^{2x}; y2 =e^{x} \\
+y_{h} = e^{2x}+ e^{x} \\
+\text{Corroborando, primeramente con y}_{1} \\
+y_{1} = e^{2x} \\
+y_{1}' = 2e^{2x} \\
+y_{2}' = 4e^{2x} \\
+(4e^{2x})-3(2e^{2x})+2(e^{2x}) = 0 \\
+\vspace{0.5em} \\
+y_{3} = 3.14e^{2x} \\
+y_{3}' = 6.28e^{2x} \\
+y_{3}'' = 12.56e^{2x} \\
+( 12.56e^{2x})-3(6.28e^{2x})+2(3.14e^{2x}) = 0 \\
+\vspace{0.5em} \\
+y = e^{2x}+e^{x}-e^{x}+ 3.14e^{2x} \\
+y = c_{1}y_{1}+c_{2}y_{2} \\
+y = c_{1}e^{2x}+c_{2}e^{x}
+\end{gather*}
+ 
+
+
+
+
+\begin{gather*}
+b) \frac{d^{2}y}{dx^{2}}-4\frac{dy}{dx}+4y = 0 \\
+y = e^{rx} \\
+e^{rx}(r^{2}-4r+4) =0 \\
+(r-2)(r-2) \\
+r_{1} =2; r_{2}=2 \\
+y_{1}=e^{2x}; y_{2}=e^{2x} \\
+y_{h} = c_{1}e^{2x}+c_{2}e^{2x} \\
+yh = e^{2x}(c1+c2)   \rightarrow A = c1+c2 \\
+yh = Ae^{2x} \\
+\text{bajo este planteamiento, la solcuiones se absorven, porque no son LI} \\
+y_{h} = c_{1}e^{2x}+c_{2}e^{2x}\text{\colorbox[RGB]{248,231,28}{$x$}}  \\
+\text{Se multiplica por x, para garantizar la Independicia lineal}
+\end{gather*}
+
+
+a) 
+\begin{gather*}
+ y'''+3y''+3y'+y=0
+\end{gather*}
+
+
+
+\begin{gather*}
+y'''+3y''+3y'+y=0 \\
+e^{rx}(r^{3}+3r^{2}+3r+1) = 0 \\
+\matrix{1}{3}{}{-1}{1}{2}{3}{1}{}{-2}{-1}{-1}{1}{0}{} \\
+(r^{2}+2r+1)(r+1)=0 \\
+(r+1)(r+1)(r+1) \\
+y_{1} = c_{1}e^{-x} \\
+y_{2} = c_{2}xe^{-x} \\
+y_{3} = c_{3}x^{2}e^{-x} \\
+y_{h} = c_{1}e^{-x}+c_{2}\text{\colorbox[RGB]{248,231,28}{$x$}}e^{-x}+c_{3}\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}e^{-x}
+\end{gather*}
+
+
+b) 
+\begin{gather*}
+ y'''-y''+y'-y=0.
+\end{gather*}
+
+
+
+\begin{gather*}
+y'''-y''+y'-y=0   \rightarrow    \\
+y(0)=1; y'(0)=2; y''(0)=-1 \\
+\vspace{0.5em} \\
+e^{rx}(r^{3}-r^{2}+r-1) = 0 \\
+\matrix{1}{-1}{}{1}{1}{0}{1}{-1}{}{0}{1}{1}{1}{0}{} \\
+(r^{2}+1)(r-1)=0 \\
+r^{2}+1=0 \\
+r^{2}=-1 = r=\sqrt{-1}  \rightarrow i,-i \\
+\text{En el caso de determinar raices imaginarias:} \\
+r_{1} = a+bi    \rightarrow  r_{2} =a-bi  \\
+y = e^{ax}c_{1}cosbx+e^{ax}c_{2}senbx =e^{ax}(c_{1}cosbx+c_{2}\text{senbx})  \\
+y_{1} = c_{1}e^{x} \\
+y_{2} =c_{2}e^{ix} = c_{2}cosx \\
+y_{3} =c_{3}e^{-ix}= c_{3}senx \\
+y_{h} = c_{1}e^{x}+c_{2}cosx+c_{3}senx
+\end{gather*}
+
+
+c) 
+\begin{gather*}
+ y^{(4)}-16y=0
+\end{gather*}
+
+
+
+\begin{gather*}
+ y^{(4)}-16y=0 \\
+e^{rx}(r^{4}-16)=0 \\
+(r^{2}^{2}-4^{2})=0   \rightarrow  a =r^{2} \\
+(a^{2}-4^{2}) = (a-4)(a+4) \\
+\text{reemplando el valor de a} \\
+(r^{2}-4)(r^{2}+4)=0 \\
+(r^{2}-2^{2})(r^{2}+4)=0 \\
+(r-2)(r+2)(r^{2}+4)=0   \rightarrow r^{2}=-4 \\
+r_{1}=2; r_{2}=-2 ; r_{3}=2i; r_{4}=-2i \\
+y_{h} =c_{1}e^{2x}+c_{2}e^{-2x}+ c_{3}cos2x+c_{4}\text{sen2x}
+\end{gather*}
+
+
+
+
+e)
+\begin{gather*}
+ (D^{2}+4D+13)^{3}y=0.
+\end{gather*}
+  $\rightarrow$  Operador Diferencial: 
+\begin{gather*}
+\frac{dy}{dx}
+\end{gather*}
+ = Dy  $\rightarrow$  
+\begin{gather*}
+D = \frac{d}{dx}
+\end{gather*}
+
+
+por ejemplo:
+
+
+\begin{gather*}
+y''+16y = 0 \rightarrow  \frac{d^{2}y}{dx^{2}} = \frac{d}{dx}\frac{d}{dx}y = D^{2}y \\
+D^{2}y+16y=0 \\
+y(D^{2}+16)
+\end{gather*}
+
+
+Resolviendo el ejercicio
+
+
+\begin{gather*}
+(D^{2}+4D+13)^{3}y=0   \rightarrow  -2±3i \\
+\text{es una E.D. de 6 orden } \rightarrow \text{ se deben determinar 6 raices} \\
+(D^{2}+4D+13)(D^{2}+4D+13)(D^{2}+4D+13)=0 \\
+D^{2}+4D+13 =0 \\
+\text{completando cudrados} \\
+(D^{2}+4D+4)-4 +13 \\
+(D^{2}+4D+4)+9 =0 \\
+(D+ 2)(D+2) +9 =0 \\
+(D+ 2)^{2}+9 =0 \\
+(D+ 2)^{2} = -9 \\
+\text{aplicando raices a ambos elementos} \\
+\sqrt{(D+ 2)^{2}}= \sqrt{-9} \\
+D+ 2 =±3i \\
+D_{1,2} = -2±3i \\
+y_{1,2}=e^{-2x}(c_{1}cos3x+c_{2}\text{sen3x}) \\
+y_{3,4}=e^{-2x}(c_{3}cos3x+c_{4}\text{sen3x})\text{\colorbox[RGB]{248,231,28}{$x$}} \\
+y_{5,6}=e^{-2x}(c_{5}cos3x+c_{6}\text{sen3x})\text{\colorbox[RGB]{248,231,28}{$x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}} \\
+y_{h} =y_{1,2}+ y_{3,4}+y_{5,6}
+\end{gather*}
+
+
+f) Considerando que una de las soluciones a un E.D. de 6 orden 
+
+esta dada por: 
+\begin{gather*}
+e^{3x}x^{2}\text{sen2x}
+\end{gather*}
+
+
+1) Determine el resto de las soluciones
+
+2) Determine la E.D. como tal
+
+
+
+g) Considerando que una de las soluciones a una ED. de 5to orden esta 
+
+dada por 
+\begin{gather*}
+x^{2}\text{cos3x}
+\end{gather*}
+. Es posible determinar la e.d? JUSTIFIQUE su respuesta
+
+
+
+h) Considerando que una de las soluciones a una ED. de 5to orden esta 
+
+dada por 
+\begin{gather*}
+x\text{cos3x}
+\end{gather*}
+ y adiconalmente se sabe una de las soluciones es
+
+simplemente una contante. Es posible determinar la e.d? JUSTIFIQUE su respuesta
+
+en caso de ser posible, determine el resto de soluciones y la E.D. como tal
+
+
+\end{document}

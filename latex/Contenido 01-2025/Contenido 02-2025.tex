@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+
+
+
+
+
+\begin{gather*}
+y'' − 4y' + 4y = (x + 1)e^{2x} \\
+\vspace{0.5em} \\
+(r^{2}-4r+4) = 0 \\
+(r-2)(r-2) = 0 \\
+y = c_{1}e^{2x}+c_{2}xe^{2x} \\
+\vspace{0.5em} \\
+yp = v_{1}y_{1}+v_{2}y_{2} \\
+y_{p}= v_{1}e^{2x}+v_{2}xe^{2x} \\
+\vspace{0.5em} \\
+0= v_{1}'e^{2x}+v_{2}'xe^{2x} \\
+(x + 1)e^{2x}=2v_{1}'e^{2x}+v_{2}'(2xe^{2x}+e^{2x}) \\
+\vspace{0.5em} \\
+\text{Armamos el wronskiano} \\
+\matrix{e^{2x}}{xe^{2x}}{2e^{2x}}{2xe^{2x}+e^{2x}} = e^{2x}(2xe^{2x}+e^{2x})-xe^{2x}2e^{2x}= 2xe^{4x}+e^{4x}-2xe^{2x}e^{2x}=e^{4x} \\
+\text{Calculamos individualmente cada w}_{i} \\
+\vspace{0.5em} \\
+w1 = \matrix{0}{xe^{2x}}{(x + 1)e^{2x}}{2xe^{2x}+e^{2x}} =-( xe^{2x}((x + 1)e^{2x})) = x^{2}e^{4x}+xe^{4x} \\
+\vspace{0.5em} \\
+w2 = \matrix{e^{2x}}{0}{2e^{2x}}{(x + 1)e^{2x}} = (x + 1)e^{4x} \\
+\vspace{0.5em} \\
+\text{Calculamos individualmente cada v}_{i} \\
+\vspace{0.5em} \\
+v_{1}' = \frac{w_{1}}{w} = 
+\end{gather*}
+
+
+
+
+\image-container
+
+
+
+
+\end{document}

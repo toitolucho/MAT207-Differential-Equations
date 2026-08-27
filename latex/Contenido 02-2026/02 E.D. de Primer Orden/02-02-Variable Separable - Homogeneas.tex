@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+Variable Separable
+
+
+\begin{gather*}
+\frac{dy}{dx} = e^{-y}(2x-4)    y(5) =0  \rightarrow  a \\
+\frac{dy}{dx}  = f(x,y)  \rightarrow  A(x)B(y) o \frac{A(x)}{B(y)} o \frac{B(x)}{A(y)} \\
+\text{Se puede separar las variables} \\
+e^{y}dy = (2x-4)dx \\
+\int e^{y}dy = \int (2x-4)dx \\
+e^{y}+c_{1}= 2\frac{x^{2}}{2} - 4x +c_{2} \\
+C = c_{2}-c_{1} \\
+\text{\colorbox[RGB]{248,231,28}{$e$}}\text{\colorbox[RGB]{248,231,28}{$^{y}$}}\text{\colorbox[RGB]{248,231,28}{$ = x$}}\text{\colorbox[RGB]{248,231,28}{$^{2}$}}\text{\colorbox[RGB]{248,231,28}{$-4x+C$}}    \rightarrow  y(x=5) =0 \\
+y(x) = ln(x^{2}-4x+C)  \rightarrow \text{familia de curvas} \\
+\text{utilizamos los valores de frontera} \\
+e^{(0)} = (5)^{2}-4(5)+C \\
+1 = 25 - 20 + C \\
+C = 4 \\
+y(x) = ln(x^{2}-4x+4)  \rightarrow \text{solucion particular}
+\end{gather*}
+
+
+Ejercicio 2
+
+
+\begin{gather*}
+y' = \frac{3x^{2}+4x-4}{2y-4}  y(1) = 3 \\
+\frac{dy}{dx} = \frac{3x^{2}+4x-4}{2y-4}  = \frac{A(x)}{B(y)} \\
+(2y-4)dy =(3x^{2}+4x-4)dx  \\
+\int (2y-4)dy =\int (3x^{2}+4x-4)dx \\
+y^{2}-4y +c_{1} =x^{3}+2x^{2}-4x + c_{2}  \\
+C=c_{2} -c_{1} \\
+y^{2}-4y =x^{3}+2x^{2}-4x +C  \rightarrow  y(1) = 3 \\
+(3)^{2}-4(3) =(1)^{3}+2(1)^{2}-4(1) +C \\
+-3=-1+C \\
+C=-2 \\
+\text{Reemplazando} \\
+y^{2}-4y =x^{3}+2x^{2}-4x -2 \\
+y^{2}-4y -(x^{3}+2x^{2}-4x -2)=0    g=x^{3}+2x^{2}-4x -2 \\
+y(x) =..... \\
+y^{2}-4y-g =0 \\
+y1,y2 = \frac{-b±\sqrt{b^{2}-4ac}}{2a}  ;   a=1; b =-4, c =-g=-(x^{3}+2x^{2}-4x -2) \\
+y1,y2 = \frac{4±\sqrt{16+4(x^{3}+2x^{2}-4x -2)}}{2} \\
+y1,y2 = \frac{4±\sqrt{4(4+(x^{3}+2x^{2}-4x -2))}}{2} \\
+y1,y2 = \frac{4±2\sqrt{(4+(x^{3}+2x^{2}-4x -2))}}{2} \\
+y1,y2 =2±\sqrt{4+(x^{3}+2x^{2}-4x -2)} \\
+\text{Se debe cumplir la igualdad de y}(1) = 3, dicho criterio \\
+\text{sera tomado para asumir la solucion correcta} \\
+y1,y2 =2±1  \rightarrow  2+1=3; 2-1=1 \\
+y1 = 2+\sqrt{4+(x^{3}+2x^{2}-4x -2)} \\
+y(1) = 3
+\end{gather*}
+
+
+E.D. Homogeneas
+
+
+\begin{gather*}
+\frac{dy}{dx} = \frac{x^{2}+y^{2}}{xy}
+\end{gather*}
+
+
+
+
+
+\end{document}

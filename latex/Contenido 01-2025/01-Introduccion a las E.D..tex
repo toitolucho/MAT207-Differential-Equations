@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+
+E.D.  de Primer Orden
+
+E.D.  de Variable Separable
+
+La E.D. puede estar representada en su forma A o B
+
+considerando la forma A (General)
+
+
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y)  \rightarrow  A(x)*B(y)  \rightarrow  A(x)/B(y)... \\
+\text{Se puede separarar} \\
+\text{por ejemplo} \\
+A(x)dx =\frac{1}{B(y)}dy
+\end{gather*}
+
+
+Considerando la forma B(Forma diferencial)
+
+
+
+
+\begin{gather*}
+M(x,y)dx + N(x,y)dy = 0 \\
+\text{Si es posible garantizar que} \\
+M(x,y) = A(x) \\
+N(x,y) = B(y) \\
+A(x)dx+B(y)dy = 0 \\
+\int A(x)dx+\int B(y)dy = c
+\end{gather*}
+
+
+Ejercicios
+
+
+\begin{gather*}
+\frac{dy}{dx}=\frac{3x^{2}}{y} \\
+\int ydy = \int 3x^{2}dx \\
+\frac{y^{2}}{2} = \frac{3x^{3}}{3} + C \\
+y = \sqrt{2x^{3}+2C}
+\end{gather*}
+
+
+Ejercicio 2
+
+
+
+
+\begin{gather*}
+\frac{dy}{dx}=\frac{y}{x+3}     y(0)=1 \\
+\vspace{0.5em} \\
+\frac{1}{y}dy = \frac{1}{x+3}dx \\
+\int \frac{1}{y}dy = \int \frac{1}{x+3}\text{dx      } \rightarrow  u=x+3   \rightarrow  du =dx \\
+ln(y) = ln(x+3)+ln(c) \\
+ln(a*b)  \rightarrow ln(a)+ln(b) \\
+ln(y) = ln(c[x+3]) \\
+\text{aplicando la funcion exponencial} \\
+e^{ln(y)} = e^{ln(c[x+3])} \\
+y = c(x+3)  \rightarrow \text{solucion general} \\
+\text{aplicando el valor de frontera  y}(0)=1 \\
+1 = c(0 +3) \\
+c = \frac{1}{3} \\
+y = \frac{1}{3}(x+3)  \rightarrow \text{solucion particular.}
+\end{gather*}
+
+
+E.D. Homogeneas.
+
+Partimos de la forma A para convertir la E.D. en una de Variable Separable.
+
+
+\begin{gather*}
+\frac{dy}{dx} = f(x,y)  \rightarrow \text{ incorporamos el operador 𝜆} \\
+\frac{dy}{dx} = f(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x,\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y) = f(x,y) 
+\end{gather*}
+
+
+Determine si la E.D. dada, es una E.D. Homogenea
+
+
+
+
+\begin{gather*}
+(x^{2}+y^{2})dx + (x^{2}-xy)dy = 0 \\
+(x^{2}-xy)dy =- (x^{2}+y^{2})dx \\
+\frac{dy}{dx} =-\frac{((\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x)^{2}+(\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)^{2})}{((\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x)^{2}-\text{\colorbox[RGB]{248,231,28}{$𝜆$}}x\text{\colorbox[RGB]{248,231,28}{$𝜆$}}y)} =-\frac{𝜆^{2}x^{2}+𝜆^{2}y^{2}}{𝜆^{2}x^{2}-𝜆^{2}xy} \implies -\frac{𝜆^{2}(x^{2}+y^{2})}{𝜆^{2}(x^{2}-xy)}
+\end{gather*}
+
+
+Si la E.D. es Homogenea, entonces se puede aplicar un cambio de variable
+
+
+\begin{gather*}
+y = ux  \\
+\frac{dy}{dx} = u + \frac{du}{dx}x \\
+\vspace{0.5em} \\
+x = vy \\
+\frac{dx}{dy} = v+ \frac{dv}{dy}y
+\end{gather*}
+
+
+
+
+Ejercicio 
+
+
+\begin{gather*}
+x y y'+4x^{2}+y^{2}=0   \rightarrow  y(2) = -7 \\
+xy\frac{dy}{dx} = -4x^{2}-y^{2} \\
+\frac{dy}{dx} = -\frac{4x^{2}+y^{2}}{xy} \\
+\vspace{0.5em} \\
+u + \frac{du}{dx}x= -\frac{4x^{2}+u^{2}x^{2}}{x^{2}u} \implies \frac{x^{2}(4+u^{2})}{x^{2}u} \\
+\frac{du}{dx}x = -\frac{4+u^{2}}{u}-u \\
+\frac{du}{dx}x = \frac{-4-u^{2}-u^{2}}{u} = -\frac{4+2u^{2}}{u} \\
+\frac{du}{dx}x =-\frac{4+2u^{2}}{u} \\
+\frac{1}{4}\int \frac{4u}{4+2u^{2}}du = -\int \frac{1}{x}dx \\
+\frac{1}{4}ln(4+2u^{2}) = -ln(x) +ln(c) \\
+ln(4+2u^{2}) = 4ln(\frac{c}{x}) \\
+aln(b) = ln(b^{a}) \\
+ln(4+2u^{2}) = ln(\frac{D}{x^{4}})  \rightarrow   c^{4} =D \\
+4+2u^{2} = \frac{D}{x^{4}} \\
+y = ux  \rightarrow u = \frac{y}{x} \\
+4+2\frac{y^{2}}{x^{2}} = \frac{D}{x^{4}} \\
+y^{2} =\frac{(\frac{D}{x^{4}}-4)x^{2}}{2}
+\end{gather*}
+
+
+
+
+
+\end{document}
