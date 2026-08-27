@@ -1,0 +1,453 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\title{\textbf{Chapter 2 (Continued): First-Order Differential Equations}\\
+\large Exact Differential Equations and Integrating Factors\\
+\normalsize Ecuaciones Diferenciales Exactas y Factores Integrantes}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Theoretical Foundations / Conceptos Teóricos Claves}
+
+In this section, we study first-order differential equations written in differential form:
+\begin{equation}
+    M(x,y)dx + N(x,y)dy = 0
+\end{equation}
+
+\subsection{Exact Differential Equations / Ecuaciones Exactas}
+A differential form $M(x,y)dx + N(x,y)dy$ is an \textbf{exact differential} in a region $R$ of the $xy$-plane if it corresponds to the total differential of some function $f(x,y)$:
+\begin{equation}
+    df = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy
+    \label{eq:total_diff}
+\end{equation}
+A first-order differential equation written in differential form is \textbf{exact} if the expression on the left-hand side is an exact differential.
+
+\textbf{Theorem (Criterion for an Exact Differential):}
+Let $M(x,y)$ and $N(x,y)$ be continuous and have continuous first partial derivatives in an open region $R$. The differential equation $M(x,y)dx + N(x,y)dy = 0$ is exact if and only if:
+\begin{equation}
+    \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \quad (\text{or } M_y = N_x)
+\end{equation}
+
+\textbf{Method of Solution:}
+If the equation is exact, there exists a function $f(x,y)$ such that $\frac{\partial f}{\partial x} = M(x,y)$ and $\frac{\partial f}{\partial y} = N(x,y)$. The implicit general solution is $f(x,y) = C$.
+\begin{enumerate}
+    \item Integrate $\frac{\partial f}{\partial x} = M(x,y)$ with respect to $x$, treating $y$ as a constant:
+    \begin{equation}
+        f(x,y) = \int M(x,y) dx + g(y)
+    \end{equation}
+    where $g(y)$ is an arbitrary function of $y$ playing the role of the constant of integration.
+    \item Differentiate $f(x,y)$ with respect to $y$ and set it equal to $N(x,y)$:
+    \begin{equation}
+        \frac{\partial f}{\partial y} = \frac{\partial}{\partial y} \left[ \int M(x,y) dx \right] + g'(y) = N(x,y)
+    \end{equation}
+    \item Solve for $g'(y)$, which will depend solely on $y$:
+    \begin{equation}
+        g'(y) = N(x,y) - \frac{\partial}{\partial y} \left[ \int M(x,y) dx \right]
+    \end{equation}
+    \item Integrate $g'(y)$ to find $g(y)$ (omitting the constant of integration), substitute it back into $f(x,y)$, and write the general solution as $f(x,y) = C$.
+\end{enumerate}
+
+\subsection{Integrating Factors / Factores Integrantes}
+Sometimes an equation $M(x,y)dx + N(x,y)dy = 0$ is \textbf{not exact} ($M_y \neq N_x$), but can be made exact by multiplying it by an integrating factor $\mu(x,y)$ such that:
+\begin{equation}
+    \mu(M\,dx + N\,dy) = 0 \quad \text{is exact.}
+\end{equation}
+To find $\mu$, we look for factors that depend on only one variable:
+
+\begin{enumerate}
+    \item \textbf{Integrating Factor depending only on $x$, $\mu(x)$:}
+    If the expression
+    \begin{equation}
+        \frac{M_y - N_x}{N} = g(x)
+    \end{equation}
+    is a function of $x$ alone, then the integrating factor is:
+    \begin{equation}
+        \mu(x) = e^{\int g(x) \, dx}
+    \end{equation}
+
+    \item \textbf{Integrating Factor depending only on $y$, $\mu(y)$:}
+    If the expression
+    \begin{equation}
+        \frac{N_x - M_y}{M} = h(y)
+    \end{equation}
+    is a function of $y$ alone, then the integrating factor is:
+    \begin{equation}
+        \mu(y) = e^{\int h(y) \, dy}
+    \end{equation}
+\end{enumerate}
+
+Multiply the original differential equation by the found integrating factor to obtain a new, exact differential equation, and solve it using the standard exact method.
+
+\newpage
+\section{Problem Set / Banco de Ejercicios}
+
+\subsection*{Part A: 10 Classification Exercises / Clasificación}
+For each of the following first-order differential equations, classify the equation as \textbf{Separable (S)}, \textbf{Homogeneous (H)}, \textbf{Linear (L)}, \textbf{Bernoulli (B)}, \textbf{Exact (E)}, or \textbf{requires an Integrating Factor to become exact (IF)}. Note all categories that apply and provide a brief mathematical justification.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item $(2xy^2 + y)dx + (2x^2y + x)dy = 0$
+    \item $y' = \frac{x-y}{x+y}$
+    \item $(y^2 + 1)dx + 2xy\,dy = 0$
+    \item $(x^2 + y)dx - x\,dy = 0$
+    \item $\frac{dy}{dx} = e^{3x} y^2$
+    \item $(x + y^2)dx - 2xy\,dy = 0$
+    \item $x \frac{dy}{dx} + 2y = 4x^2$
+    \item $(\cos(x)\sin(x) - xy^2)dx + y(1-x^2)dy = 0$
+    \item $\frac{dy}{dx} + \frac{y}{x} = x y^3$
+    \item $(x^2 + y^2 + x)dx + xy\,dy = 0$
+\end{enumerate}
+
+\subsection*{Part B: 8 Exact Differential Equations / Ecuaciones Exactas}
+Verify that each equation is exact, then find its general or particular solution.
+
+\begin{align}
+    & (2x + 3y)dx + (3x + 2y)dy = 0 \label{eq:ext1} \\
+    & (2xy^2 - 3)dx + (2x^2y + 4)dy = 0 \label{eq:ext2} \\
+    & (y^3 - y^2\sin(x) - x)dx + (3xy^2 + 2y\cos(x))dy = 0 \label{eq:ext3} \\
+    & \left(1 + \ln(x) + \frac{y}{x}\right)dx + \left(1 + \ln(x)\right)dy = 0, \quad y(1) = 5 \label{eq:ext4} \\
+    & \left(y e^{xy} + 4y^3\right)dx + \left(x e^{xy} + 12xy^2 - 2y\right)dy = 0 \label{eq:ext5} \\
+    & \left(\frac{1}{x} + 2y^2 x\right)dx + \left(2y x^2 - \cos(y)\right)dy = 0 \label{eq:ext6} \\
+    & \left(\tan(x) - \sin(x)\sin(y)\right)dx + \cos(x)\cos(y)dy = 0 \label{eq:ext7} \\
+    & (2x + y)dx + (x + 3y^2)dy = 0, \quad y(0) = 1 \label{eq:ext8}
+\end{align}
+
+\subsection*{Part C: 8 Integrating Factor Exercises / Factores Integrantes}
+Verify that the following equations are not exact. Find an appropriate integrating factor ($\mu(x)$ or $\mu(y)$) to make them exact, and find their general solutions.
+
+\begin{align}
+    & (2y^2 + 3x)dx + 2xy\,dy = 0 \label{eq:inf1} \\
+    & y(x + y + 1)dx + (x + 2y)dy = 0 \label{eq:inf2} \\
+    & (x^2 + y^2 + 1)dx + x(x - 2y)dy = 0 \label{eq:inf3} \\
+    & dx + \left(\frac{x}{y} - \sin(y)\right)dy = 0 \label{eq:inf4} \\
+    & y\,dx + (2x - y e^y)dy = 0 \label{eq:inf5} \\
+    & (x^4 + y^4)dx - x y^3 dy = 0 \label{eq:inf6} \\
+    & \left(3x^2y + 2xy + y^3\right)dx + \left(x^2 + y^2\right)dy = 0 \label{eq:inf7} \\
+    & y(2x-y+1)dx + x(3x-4y+3)dy = 0 \label{eq:inf8}
+\end{align}
+
+\newpage
+\section{Solutions and Explanations / Solucionario Detallado}
+
+\subsection*{Part A: Classification Solutions}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Equation:} $(2xy^2 + y)dx + (2x^2y + x)dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Exact (E)}.
+        \item \textbf{Justification:} $M_y = \frac{\partial}{\partial y}(2xy^2 + y) = 4xy + 1$. $N_x = \frac{\partial}{\partial x}(2x^2y + x) = 4xy + 1$. Since $M_y = N_x$, the equation is exact.
+    \end{itemize}
+
+    \item \textbf{Equation:} $y' = \frac{x-y}{x+y}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Homogeneous (H)} and \textbf{Exact (E)}.
+        \item \textbf{Justification:} Re-writing as $(y-x)dx + (x+y)dy = 0$. Both coefficients are homogeneous of degree 1, so it is homogeneous. Additionally, $M_y = \frac{\partial}{\partial y}(y-x) = 1$, and $N_x = \frac{\partial}{\partial x}(x+y) = 1$. Since $M_y = N_x$, the equation is exact.
+    \end{itemize}
+
+    \item \textbf{Equation:} $(y^2 + 1)dx + 2xy\,dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable (S)}, \textbf{Linear (L)} in $x(y)$, and \textbf{Exact (E)}.
+        \item \textbf{Justification:} Separable as $\frac{dx}{x} + \frac{2y}{y^2+1}dy = 0$. Exact because $M_y = 2y$ and $N_x = 2y$. It is linear if we view $x$ as the dependent variable: $\frac{dx}{dy} + \frac{2y}{y^2+1}x = 0$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $(x^2 + y)dx - x\,dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear (L)} in $y(x)$ and \textbf{requires an Integrating Factor (IF)}.
+        \item \textbf{Justification:} Dividing by $dx$ yields $x y' - y = x^2 \implies y' - \frac{1}{x}y = x$, which is linear in $y$. In differential form, $M_y = \frac{\partial}{\partial y}(x^2+y) = 1$ and $N_x = \frac{\partial}{\partial x}(-x) = -1$. Since $M_y \neq N_x$, it is not exact but can be made exact with $\mu(x) = e^{\int \frac{1 - (-1)}{-x} dx} = x^{-2}$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = e^{3x} y^2$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable (S)} and \textbf{Bernoulli (B)} with $n = 2$.
+        \item \textbf{Justification:} Separable as $y^{-2}dy = e^{3x}dx$. Bernoulli since $y' - 0\cdot y = e^{3x}y^2$. It is nonlinear, and not exact in differential form ($y^2 dx - e^{-3x}dy = 0$ has $M_y = 2y \neq N_x = 3e^{-3x}$).
+    \end{itemize}
+
+    \item \textbf{Equation:} $(x + y^2)dx - 2xy\,dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Bernoulli (B)} in $y(x)$, \textbf{Homogeneous (H)} if written for variables of degree 1/2, and \textbf{requires an Integrating Factor (IF)}.
+        \item \textbf{Justification:} Re-writing as $x y' - 2y = -y^2 \implies y' - \frac{2}{x}y = -\frac{1}{x}y^2$, which is Bernoulli with $n=2$. Non-exact because $M_y = 2y \neq N_x = -2y$. An integrating factor of $\mu(x) = x^{-3}$ makes it exact.
+    \end{itemize}
+
+    \item \textbf{Equation:} $x \frac{dy}{dx} + 2y = 4x^2$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear (L)} in $y(x)$ and \textbf{requires an Integrating Factor (IF)}.
+        \item \textbf{Justification:} Fits the linear form $y' + \frac{2}{x}y = 4x$. In differential form, $(2y - 4x^2)dx + x dy = 0$ has $M_y = 2 \neq N_x = 1$. It can be made exact by multiplying by $\mu(x) = x$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $(\cos(x)\sin(x) - xy^2)dx + y(1-x^2)dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Exact (E)} and \textbf{Separable (S)}.
+        \item \textbf{Justification:} Exact because $M_y = -2xy$ and $N_x = -2xy$. Also separable because we can factor it: $\cos(x)\sin(x)dx + y(1-x^2)dy - xy^2 dx = 0 \implies \cos(x)\sin(x)dx - x y^2 dx + y(1-x^2)dy = 0 \implies x(\frac{\cos(x)\sin(x)}{x} - y^2)dx + y(1-x^2)dy = 0$, which separates as $\frac{x}{1-x^2}dx + \frac{y}{\cos(x)\sin(x)/x - y^2}dy = 0$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} + \frac{y}{x} = x y^3$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Bernoulli (B)} with $n = 3$ and \textbf{requires an Integrating Factor (IF)}.
+        \item \textbf{Justification:} Fits Bernoulli form with $P(x)=1/x$, $Q(x)=x$, and $n=3$. Non-exact in differential form $(y - x^2 y^3)dx + x dy = 0$ because $M_y = 1 - 3x^2y^2 \neq N_x = 1$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $(x^2 + y^2 + x)dx + xy\,dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{requires an Integrating Factor (IF)}.
+        \item \textbf{Justification:} $M_y = 2y \neq N_x = y$, so it is not exact. We have $\frac{M_y - N_x}{N} = \frac{2y - y}{xy} = \frac{y}{xy} = \frac{1}{x}$, which depends only on $x$. Thus, it can be made exact using an integrating factor $\mu(x) = e^{\int 1/x \, dx} = x$.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Part B: Exact Differential Equations}
+
+\subsubsection*{Solution 1: $(2x + 3y)dx + (3x + 2y)dy = 0$}
+\begin{enumerate}
+    \item $M_y = 3$, $N_x = 3$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int (2x + 3y)dx = x^2 + 3xy + g(y) \]
+    \item Differentiate with respect to $y$ and set equal to $N$:
+    \[ \frac{\partial f}{\partial y} = 3x + g'(y) = 3x + 2y \implies g'(y) = 2y \]
+    \item Integrate: $g(y) = y^2$.
+\end{enumerate}
+General solution:
+\[ x^2 + 3xy + y^2 = C \]
+
+\subsubsection*{Solution 2: $(2xy^2 - 3)dx + (2x^2y + 4)dy = 0$}
+\begin{enumerate}
+    \item $M_y = 4xy$, $N_x = 4xy$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int (2xy^2 - 3)dx = x^2 y^2 - 3x + g(y) \]
+    \item Differentiate with respect to $y$:
+    \[ \frac{\partial f}{\partial y} = 2x^2 y + g'(y) = 2x^2 y + 4 \implies g'(y) = 4 \]
+    \item Integrate: $g(y) = 4y$.
+\end{enumerate}
+General solution:
+\[ x^2 y^2 - 3x + 4y = C \]
+
+\subsubsection*{Solution 3: $(y^3 - y^2\sin(x) - x)dx + (3xy^2 + 2y\cos(x))dy = 0$}
+\begin{enumerate}
+    \item $M_y = 3y^2 - 2y\sin(x)$, $N_x = 3y^2 - 2y\sin(x)$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int (y^3 - y^2\sin(x) - x)dx = xy^3 + y^2\cos(x) - \frac{1}{2}x^2 + g(y) \]
+    \item Differentiate with respect to $y$:
+    \[ \frac{\partial f}{\partial y} = 3xy^2 + 2y\cos(x) + g'(y) = 3xy^2 + 2y\cos(x) \implies g'(y) = 0 \]
+    \item Integrate: $g(y) = 0$.
+\end{enumerate}
+General solution:
+\[ xy^3 + y^2\cos(x) - \frac{1}{2}x^2 = C \]
+
+\subsubsection*{Solution 4: $\left(1 + \ln(x) + \frac{y}{x}\right)dx + \left(1 + \ln(x)\right)dy = 0, \quad y(1) = 5$}
+\begin{enumerate}
+    \item $M_y = 1/x$, $N_x = 1/x$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int (1 + \ln(x)) dy = y + y\ln(x) + g(x) \]
+    \item Differentiate with respect to $x$:
+    \[ \frac{\partial f}{\partial x} = \frac{y}{x} + g'(x) = 1 + \ln(x) + \frac{y}{x} \implies g'(x) = 1 + \ln(x) \]
+    \item Integrate $g'(x) = 1 + \ln(x)$ by parts: $g(x) = x + (x\ln(x) - x) = x\ln(x)$.
+    \[ f(x,y) = y + y\ln(x) + x\ln(x) = (x+y)\ln(x) + y \]
+    \item Apply general solution $f(x,y) = C$:
+    \[ (x+y)\ln(x) + y = C \]
+    \item Apply initial condition $y(1) = 5$:
+    \[ (1+5)\ln(1) + 5 = C \implies C = 5 \]
+\end{enumerate}
+Particular solution:
+\[ (x+y)\ln(x) + y = 5 \]
+
+\subsubsection*{Solution 5: $\left(y e^{xy} + 4y^3\right)dx + \left(x e^{xy} + 12xy^2 - 2y\right)dy = 0$}
+\begin{enumerate}
+    \item $M_y = e^{xy} + xy e^{xy} + 12y^2$, $N_x = e^{xy} + xy e^{xy} + 12y^2$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int \left(y e^{xy} + 4y^3\right) dx = e^{xy} + 4xy^3 + g(y) \]
+    \item Differentiate with respect to $y$:
+    \[ \frac{\partial f}{\partial y} = x e^{xy} + 12xy^2 + g'(y) = x e^{xy} + 12xy^2 - 2y \implies g'(y) = -2y \]
+    \item Integrate: $g(y) = -y^2$.
+\end{enumerate}
+General solution:
+\[ e^{xy} + 4xy^3 - y^2 = C \]
+
+\subsubsection*{Solution 6: $\left(\frac{1}{x} + 2y^2 x\right)dx + \left(2y x^2 - \cos(y)\right)dy = 0$}
+\begin{enumerate}
+    \item $M_y = 4yx$, $N_x = 4yx$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int \left(\frac{1}{x} + 2y^2 x\right)dx = \ln|x| + y^2 x^2 + g(y) \]
+    \item Differentiate with respect to $y$:
+    \[ \frac{\partial f}{\partial y} = 2y x^2 + g'(y) = 2y x^2 - \cos(y) \implies g'(y) = -\cos(y) \]
+    \item Integrate: $g(y) = -\sin(y)$.
+\end{enumerate}
+General solution:
+\[ \ln|x| + x^2 y^2 - \sin(y) = C \]
+
+\subsubsection*{Solution 7: $\left(\tan(x) - \sin(x)\sin(y)\right)dx + \cos(x)\cos(y)dy = 0$}
+\begin{enumerate}
+    \item $M_y = -\sin(x)\cos(y)$, $N_x = -\sin(x)\cos(y)$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int \cos(x)\cos(y) dy = \cos(x)\sin(y) + g(x) \]
+    \item Differentiate with respect to $x$:
+    \[ \frac{\partial f}{\partial x} = -\sin(x)\sin(y) + g'(x) = \tan(x) - \sin(x)\sin(y) \implies g'(x) = \tan(x) \]
+    \item Integrate: $g(x) = \ln|\sec(x)|$.
+\end{enumerate}
+General solution:
+\[ \cos(x)\sin(y) + \ln|\sec(x)| = C \]
+
+\subsubsection*{Solution 8: $(2x + y)dx + (x + 3y^2)dy = 0, \quad y(0) = 1$}
+\begin{enumerate}
+    \item $M_y = 1$, $N_x = 1$. Exact!
+    \item Find $f(x,y)$:
+    \[ f(x,y) = \int (2x+y)dx = x^2 + xy + g(y) \]
+    \item Differentiate with respect to $y$:
+    \[ \frac{\partial f}{\partial y} = x + g'(y) = x + 3y^2 \implies g'(y) = 3y^2 \]
+    \item Integrate: $g(y) = y^3$.
+    \[ f(x,y) = x^2 + xy + y^3 = C \]
+    \item Apply initial condition $y(0) = 1$:
+    \[ 0^2 + 0(1) + 1^3 = C \implies C = 1 \]
+\end{enumerate}
+Particular solution:
+\[ x^2 + xy + y^3 = 1 \]
+
+\subsection*{Part C: Integrating Factor Solutions}
+
+\subsubsection*{Solution 9: $(2y^2 + 3x)dx + 2xy\,dy = 0$}
+\begin{enumerate}
+    \item $M_y = 4y$, $N_x = 2y$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{M_y - N_x}{N} = \frac{4y - 2y}{2xy} = \frac{2y}{2xy} = \frac{1}{x} \]
+    This depends only on $x$, so $\mu(x) = e^{\int 1/x \, dx} = x$.
+    \item Multiply by $x$:
+    \[ (2xy^2 + 3x^2)dx + 2x^2y\,dy = 0 \]
+    \item Check exactness: $M_y' = 4xy$, $N_x' = 4xy$. Exact!
+    \item Solve:
+    \[ f(x,y) = \int (2x^2y) dy = x^2 y^2 + g(x) \]
+    \[ \frac{\partial f}{\partial x} = 2xy^2 + g'(x) = 2xy^2 + 3x^2 \implies g'(x) = 3x^2 \implies g(x) = x^3 \]
+\end{enumerate}
+General solution:
+\[ x^2 y^2 + x^3 = C \]
+
+\subsubsection*{Solution 10: $y(x + y + 1)dx + (x + 2y)dy = 0$}
+\begin{enumerate}
+    \item $M = xy + y^2 + y \implies M_y = x + 2y + 1$.
+    \item $N = x + 2y \implies N_x = 1$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{M_y - N_x}{N} = \frac{x + 2y + 1 - 1}{x + 2y} = \frac{x+2y}{x+2y} = 1 \]
+    This depends only on $x$, so $\mu(x) = e^{\int 1 \, dx} = e^x$.
+    \item Multiply by $e^x$:
+    \[ (x e^x y + y^2 e^x + y e^x)dx + (x e^x + 2y e^x)dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int (x e^x + 2y e^x) dy = x e^x y + y^2 e^x + g(x) \]
+    \[ \frac{\partial f}{\partial x} = e^x y + x e^x y + y^2 e^x + g'(x) = x e^x y + y^2 e^x + y e^x \implies g'(x) = 0 \]
+\end{enumerate}
+General solution:
+\[ (xy + y^2)e^x = C \]
+
+\subsubsection*{Solution 11: $(x^2 + y^2 + 1)dx + x(x - 2y)dy = 0$}
+\begin{enumerate}
+    \item $M_y = 2y$, $N = x^2 - 2xy \implies N_x = 2x - 2y$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{N_x - M_y}{M} = \frac{2x - 2y - 2y}{x^2+y^2+1} \quad \text{(not simple)} \]
+    Try:
+    \[ \frac{M_y - N_x}{N} = \frac{2y - (2x - 2y)}{x(x-2y)} = \frac{4y - 2x}{x(x-2y)} = \frac{-2(x-2y)}{x(x-2y)} = -\frac{2}{x} \]
+    This depends only on $x$, so $\mu(x) = e^{\int -2/x \, dx} = x^{-2}$.
+    \item Multiply by $x^{-2}$:
+    \[ \left(1 + y^2 x^{-2} + x^{-2}\right)dx + \left(1 - 2y x^{-1}\right)dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int (1 - 2y x^{-1}) dy = y - y^2 x^{-1} + g(x) \]
+    \[ \frac{\partial f}{\partial x} = y^2 x^{-2} + g'(x) = 1 + y^2 x^{-2} + x^{-2} \implies g'(x) = 1 + x^{-2} \implies g(x) = x - x^{-1} \]
+\end{enumerate}
+General solution:
+\[ y - \frac{y^2}{x} + x - \frac{1}{x} = C \implies x^2 + xy - y^2 - 1 = Cx \]
+
+\subsubsection*{Solution 12: $dx + \left(\frac{x}{y} - \sin(y)\right)dy = 0$}
+\begin{enumerate}
+    \item $M = 1 \implies M_y = 0$, $N = \frac{x}{y} - \sin(y) \implies N_x = \frac{1}{y}$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{M_y - N_x}{N} \quad \text{(not simple)} \]
+    Try:
+    \[ \frac{N_x - M_y}{M} = \frac{1/y - 0}{1} = \frac{1}{y} \]
+    Depends only on $y$, so $\mu(y) = e^{\int 1/y \, dy} = y$.
+    \item Multiply by $y$:
+    \[ y\,dx + (x - y\sin(y))dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int y \, dx = xy + g(y) \]
+    \[ \frac{\partial f}{\partial y} = x + g'(y) = x - y\sin(y) \implies g'(y) = -y\sin(y) \]
+    \item Integrate by parts: $g(y) = y\cos(y) - \sin(y)$.
+\end{enumerate}
+General solution:
+\[ xy + y\cos(y) - \sin(y) = C \]
+
+\subsubsection*{Solution 13: $y\,dx + (2x - y e^y)dy = 0$}
+\begin{enumerate}
+    \item $M_y = 1$, $N_x = 2$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{N_x - M_y}{M} = \frac{2 - 1}{y} = \frac{1}{y} \]
+    Depends only on $y$, so $\mu(y) = y$.
+    \item Multiply by $y$:
+    \[ y^2 dx + (2xy - y^2 e^y)dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int y^2 dx = xy^2 + g(y) \]
+    \[ \frac{\partial f}{\partial y} = 2xy + g'(y) = 2xy - y^2 e^y \implies g'(y) = -y^2 e^y \]
+    \item Integrate by parts twice: $g(y) = -e^y(y^2 - 2y + 2)$.
+\end{enumerate}
+General solution:
+\[ xy^2 - e^y(y^2 - 2y + 2) = C \]
+
+\subsubsection*{Solution 14: $(x^4 + y^4)dx - x y^3 dy = 0$}
+\begin{enumerate}
+    \item $M_y = 4y^3$, $N_x = -y^3$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{M_y - N_x}{N} = \frac{4y^3 - (-y^3)}{-xy^3} = \frac{5y^3}{-xy^3} = -\frac{5}{x} \]
+    Depends only on $x$, so $\mu(x) = e^{\int -5/x \, dx} = x^{-5}$.
+    \item Multiply by $x^{-5}$:
+    \[ \left(\frac{1}{x} + y^4 x^{-5}\right)dx - y^3 x^{-4} dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int -y^3 x^{-4} dy = -\frac{1}{4}y^4 x^{-4} + g(x) \]
+    \[ \frac{\partial f}{\partial x} = y^4 x^{-5} + g'(x) = x^{-1} + y^4 x^{-5} \implies g'(x) = x^{-1} \implies g(x) = \ln|x| \]
+\end{enumerate}
+General solution:
+\[ \ln|x| - \frac{y^4}{4x^4} = C \]
+
+\subsubsection*{Solution 15: $\left(3x^2y + 2xy + y^3\right)dx + \left(x^2 + y^2\right)dy = 0$}
+\begin{enumerate}
+    \item $M_y = 3x^2 + 2x + 3y^2$, $N_x = 2x$. Non-exact!
+    \item Find integrating factor:
+    \[ \frac{M_y - N_x}{N} = \frac{3x^2 + 2x + 3y^2 - 2x}{x^2 + y^2} = \frac{3(x^2+y^2)}{x^2+y^2} = 3 \]
+    Depends only on $x$, so $\mu(x) = e^{\int 3 \, dx} = e^{3x}$.
+    \item Multiply by $e^{3x}$:
+    \[ e^{3x}\left(3x^2y + 2xy + y^3\right)dx + e^{3x}\left(x^2 + y^2\right)dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int e^{3x}(x^2+y^2) dy = e^{3x}x^2y + \frac{1}{3}e^{3x}y^3 + g(x) \]
+    \[ \frac{\partial f}{\partial x} = 3e^{3x}x^2y + 2xe^{3x}y + e^{3x}y^3 + g'(x) = e^{3x}\left(3x^2y + 2xy + y^3\right) \implies g'(x) = 0 \]
+\end{enumerate}
+General solution:
+\[ e^{3x}\left(x^2y + \frac{1}{3}y^3\right) = C \]
+
+\subsubsection*{Solution 16: $y(2x-y+1)dx + x(3x-4y+3)dy = 0$}
+\begin{enumerate}
+    \item $M = 2xy - y^2 + y \implies M_y = 2x - 2y + 1$.
+    \item $N = 3x^2 - 4xy + 3x \implies N_x = 6x - 4y + 3$. Non-exact!
+    \item This is a classic non-linear case where we look for an integrating factor of the form $\mu(x,y) = x^a y^b$.
+    \item Multiplying: $x^a y^{b+1}(2x-y+1)dx + x^{a+1} y^b(3x-4y+3)dy = 0$.
+    \item Set $M'_y = N'_x$ to solve for $a, b$:
+    \[ M' = 2x^{a+1}y^{b+1} - x^a y^{b+2} + x^a y^{b+1} \implies M'_y = 2(b+1)x^{a+1}y^b - (b+2)x^a y^{b+1} + (b+1)x^a y^b \]
+    \[ N' = 3x^{a+2}y^b - 4x^{a+1}y^{b+1} + 3x^{a+1}y^b \implies N'_x = 3(a+2)x^{a+1}y^b - 4(a+1)x^a y^{b+1} + 3(a+1)x^{a+1}y^b \]
+    \item Comparing powers:
+    For $x^{a+1}y^b$: $2(b+1) = 3(a+2) \implies 2b - 3a = 4$.
+    For $x^a y^{b+1}$: $b+2 = 4(a+1) \implies b - 4a = 2$.
+    \item Solving the linear system:
+    From second: $b = 4a+2$.
+    Substitute into first: $2(4a+2) - 3a = 4 \implies 8a + 4 - 3a = 4 \implies 5a = 0 \implies a = 0$.
+    Thus, $b = 2$.
+    \item Integrating factor is $\mu(x,y) = y^2$.
+    \item Multiply original by $y^2$:
+    \[ (2xy^3 - y^4 + y^3)dx + (3x^2y^2 - 4xy^3 + 3xy^2)dy = 0 \]
+    \item Solve:
+    \[ f(x,y) = \int (2xy^3 - y^4 + y^3) dx = x^2 y^3 - x y^4 + x y^3 + g(y) \]
+    \[ \frac{\partial f}{\partial y} = 3x^2 y^2 - 4x y^3 + 3x y^2 + g'(y) = N \implies g'(y) = 0 \]
+\end{enumerate}
+General solution:
+\[ x^2 y^3 - x y^4 + x y^3 = C \]
+
+\end{document}

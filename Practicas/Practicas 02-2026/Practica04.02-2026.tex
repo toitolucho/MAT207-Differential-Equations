@@ -1,0 +1,86 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 04 - Ecuaciones Diferenciales Exactas y Factores Integrantes}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se resolverán ecuaciones diferenciales de primer orden utilizando el método de ecuaciones exactas y factores integrantes, además de continuar con la clasificación estructural.
+
+% Ejercicios
+\section*{Ejercicios}
+
+\subsection*{A) Clasificación}
+Para cada una de las siguientes ecuaciones diferenciales de primer orden, clasifica la ecuación como \textbf{Separable (S)}, \textbf{Homogénea (H)}, \textbf{Lineal (L)}, \textbf{Bernoulli (B)}, \textbf{Exacta (E)}, o que \textbf{requiere un Factor Integrante para volverse exacta (FI)}. Anota todas las categorías que apliquen y proporciona una breve justificación matemática.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $(2xy^2 + y)dx + (2x^2y + x)dy = 0$
+    \item $y' = \dfrac{x-y}{x+y}$
+    \item $(y^2 + 1)dx + 2xy\,dy = 0$
+    \item $(x^2 + y)dx - x\,dy = 0$
+    \item $\dfrac{dy}{dx} = e^{3x} y^2$
+    \item $(x + y^2)dx - 2xy\,dy = 0$
+    \item $x \dfrac{dy}{dx} + 2y = 4x^2$
+    \item $(\cos(x)\sin(x) - xy^2)dx + y(1-x^2)dy = 0$
+    \item $\dfrac{dy}{dx} + \dfrac{y}{x} = x y^3$
+    \item $(x^2 + y^2 + x)dx + xy\,dy = 0$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Ecuaciones Exactas}
+Verifica que cada ecuación sea exacta, luego encuentra su solución general o particular.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $(2x + 3y)dx + (3x + 2y)dy = 0$
+    \item $(2xy^2 - 3)dx + (2x^2y + 4)dy = 0$
+    \item $(y^3 - y^2\sin(x) - x)dx + (3xy^2 + 2y\cos(x))dy = 0$
+    \item $\left(1 + \ln(x) + \dfrac{y}{x}\right)dx + \left(1 + \ln(x)\right)dy = 0, \quad y(1) = 5$
+    \item $\left(y e^{xy} + 4y^3\right)dx + \left(x e^{xy} + 12xy^2 - 2y\right)dy = 0$
+    \item $\left(\dfrac{1}{x} + 2y^2 x\right)dx + \left(2y x^2 - \cos(y)\right)dy = 0$
+    \item $\left(\tan(x) - \sin(x)\sin(y)\right)dx + \cos(x)\cos(y)dy = 0$
+    \item $(2x + y)dx + (x + 3y^2)dy = 0, \quad y(0) = 1$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{C) Factores Integrantes}
+Verifica que las siguientes ecuaciones no son exactas. Encuentra un factor integrante adecuado ($\mu(x)$ o $\mu(y)$) para hacerlas exactas, y encuentra sus soluciones generales.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $(2y^2 + 3x)dx + 2xy\,dy = 0$
+    \item $y(x + y + 1)dx + (x + 2y)dy = 0$
+    \item $(x^2 + y^2 + 1)dx + x(x - 2y)dy = 0$
+    \item $dx + \left(\dfrac{x}{y} - \sin(y)\right)dy = 0$
+    \item $y\,dx + (2x - y e^y)dy = 0$
+    \item $(x^4 + y^4)dx - x y^3 dy = 0$
+    \item $\left(3x^2y + 2xy + y^3\right)dx + \left(x^2 + y^2\right)dy = 0$
+    \item $y(2x-y+1)dx + x(3x-4y+3)dy = 0$
+\end{enumerate}
+\end{multicols}
+
+\end{document}

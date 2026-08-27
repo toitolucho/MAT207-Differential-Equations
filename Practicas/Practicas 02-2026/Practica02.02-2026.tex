@@ -1,0 +1,86 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 02 - Ecuaciones Diferenciales de Primer Orden}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se resolverán ecuaciones diferenciales de primer orden mediante métodos de variables separables y ecuaciones homogéneas, y se clasificarán según su estructura.
+
+% Ejercicios
+\section*{Ejercicios}
+
+\subsection*{A) Ecuaciones de Variables Separables}
+Resuelve las siguientes ecuaciones diferenciales de variables separables. Encuentra soluciones explícitas cuando sea conveniente, o déjalas en forma implícita.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $\dfrac{dy}{dx} = \dfrac{x^2}{y(1+x^3)}$
+    \item $\dfrac{dy}{dt} = e^{3t+2y}$
+    \item $x \dfrac{dy}{dx} = 4y, \quad y(1) = 3$
+    \item $\dfrac{dy}{dx} = \dfrac{y\ln(y)}{x}$
+    \item $y \ln(x) \dfrac{dx}{dy} = \left(\dfrac{y+1}{x}\right)^2$
+    \item $\dfrac{dP}{dt} = k P(M - P)$
+    \item $x \sqrt{1-y^2} dx + y \sqrt{1-x^2} dy = 0$
+    \item $\dfrac{dy}{dx} = (y-1)^2, \quad y(0) = 1.01$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Ecuaciones Homogéneas}
+Verifica que las siguientes ecuaciones son homogéneas y encuentra sus soluciones generales o particulares.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $(x+y)dx - (x-y)dy = 0$
+    \item $\dfrac{dy}{dx} = \dfrac{x^2 + y^2}{xy}$
+    \item $(x^2+y^2)dx + (x^2-xy)dy = 0$
+    \item $\dfrac{dy}{dx} = \dfrac{y-4x}{x-y}$
+    \item $x^2 \dfrac{dy}{dx} = y^2 + xy$
+    \item $(y + \sqrt{x^2+y^2})dx - x dy = 0, \quad y(1) = 0$
+    \item $\dfrac{dy}{dx} = \dfrac{y}{x} - e^{y/x}$
+    \item $\dfrac{dy}{dx} = \dfrac{2xy}{x^2 - y^2}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{C) Clasificación}
+Para cada una de las siguientes ecuaciones diferenciales de primer orden, determina si la ecuación es \textbf{Separable}, \textbf{Homogénea}, \textbf{Lineal}, cualquier combinación de estas, o ninguna. Proporciona una breve justificación matemática.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $\dfrac{dy}{dx} = 2xy$
+    \item $\dfrac{dy}{dx} = x + y$
+    \item $\dfrac{dy}{dx} = \dfrac{x^2 + 3y^2}{2xy}$
+    \item $x \dfrac{dy}{dx} + 2y = x^{-3}$
+    \item $y' = y^2 - 1$
+    \item $\dfrac{dy}{dx} = \dfrac{1}{y-x}$
+    \item $(t+y+1)dt - dy = 0$
+    \item $\dfrac{dy}{dx} = \dfrac{y}{x} + \tan\left(\dfrac{y}{x}\right)$
+    \item $x dy - y dx = 0$
+    \item $\dfrac{dy}{dx} = e^{x-y}$
+\end{enumerate}
+\end{multicols}
+
+\end{document}

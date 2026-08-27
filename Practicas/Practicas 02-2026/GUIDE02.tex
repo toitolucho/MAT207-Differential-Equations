@@ -1,0 +1,415 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\title{\textbf{Chapter 2: First-Order Differential Equations}\\
+\large Separable, Homogeneous, and Linear Classification \& Exercises\\
+\normalsity Ecuaciones Diferenciales de Primer Orden}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction and Theoretical Foundations / Conceptos Teóricos Clave}
+
+In first-order differential equations, the main objective is to identify the underlying structural pattern of the equation. This allows us to apply a specific, mathematically guaranteed integration strategy. The three most common forms are described below:
+
+\begin{enumerate}
+    \item \textbf{Separable Variables / Variables Separables:}
+    A first-order differential equation is \textit{separable} if it can be written in the form:
+    \begin{equation}
+        \frac{dy}{dx} = g(x)h(y) \quad \text{or} \quad p(y)dy = g(x)dx
+    \end{equation}
+    where $p(y) = \frac{1}{h(y)}$. The general solution is found by integrating both sides directly:
+    \begin{equation}
+        \int p(y) dy = \int g(x) dx + C
+    \end{equation}
+    \textbf{Caution / Advertencia:} If $y = r$ is a constant such that $h(r) = 0$, then $y(x) = r$ is a constant solution (often a \textit{singular solution}) that might be lost during the division by $h(y)$ when separating variables.
+
+    \item \textbf{Homogeneous Equations / Ecuaciones Homogéneas:}
+    An equation $M(x,y)dx + N(x,y)dy = 0$ is \textit{homogeneous} (of degree $k$) if both coefficient functions $M$ and $N$ are homogeneous functions of the same degree $k$. That is, for any $t > 0$:
+    \begin{equation}
+        M(tx, ty) = t^k M(x,y) \quad \text{and} \quad N(tx, ty) = t^k N(x,y)
+    \end{equation}
+    Alternatively, the equation can be written as $\frac{dy}{dx} = F\left(\frac{y}{x}\right)$. 
+    To solve it, we make the substitution:
+    \begin{equation}
+        y = ux \implies dy = u dx + x du \quad \left(\text{or } x = vy \implies dx = v dy + y dv\right)
+    \end{equation}
+    This substitution transforms any homogeneous first-order equation into a separable equation in terms of the variables $u$ and $x$:
+    \begin{equation}
+        u + x\frac{du}{dx} = F(u) \implies \frac{du}{F(u) - u} = \frac{dx}{x}
+    \end{equation}
+
+    \item \textbf{Linear Equations / Ecuaciones Lineales:}
+    A first-order differential equation is \textit{linear} in the dependent variable $y$ if it can be written in the standard form:
+    \begin{equation}
+        \frac{dy}{dx} + P(x)y = Q(x)
+    \end{equation}
+    where $P(x)$ and $Q(x)$ are continuous functions of the independent variable $x$ alone. 
+    The general solution is found by multiplying by the integrating factor (factor integrante) $\mu(x) = e^{\int P(x)dx}$, which yields:
+    \begin{equation}
+        \frac{d}{dx}\left[ e^{\int P(x)dx} y \right] = e^{\int P(x)dx} Q(x) \implies y(x) = e^{-\int P(x)dx} \left[ \int e^{\int P(x)dx} Q(x) dx + C \right]
+    \end{equation}
+\end{enumerate}
+
+\newpage
+\section{Problem Set / Banco de Ejercicios}
+
+\subsection*{Part A: 8 Separable Variable Exercises / Variables Separables}
+Solve the following differential equations. Find explicit solutions when convenient, or leave them in implicit form.
+
+\begin{align}
+    & \frac{dy}{dx} = \frac{x^2}{y(1+x^3)} \label{eq:sep1} \\
+    & \frac{dy}{dt} = e^{3t+2y} \label{eq:sep2} \\
+    & x \frac{dy}{dx} = 4y, \quad y(1) = 3 \label{eq:sep3} \\
+    & \frac{dy}{dx} = \frac{y\ln(y)}{x} \label{eq:sep4} \\
+    & y \ln(x) \frac{dx}{dy} = \left(\frac{y+1}{x}\right)^2 \label{eq:sep5} \\
+    & \frac{dP}{dt} = k P(M - P) \quad \text{(The Logistic Equation, with constant $k, M > 0$)} \label{eq:sep6} \\
+    & x \sqrt{1-y^2} dx + y \sqrt{1-x^2} dy = 0 \label{eq:sep7} \\
+    & \frac{dy}{dx} = (y-1)^2, \quad y(0) = 1.01 \label{eq:sep8}
+\end{align}
+
+\subsection*{Part B: 8 Homogeneous Equation Exercises / Ecuaciones Homogéneas}
+Verify that the following equations are homogeneous, and find their general or particular solutions.
+
+\begin{align}
+    & (x+y)dx - (x-y)dy = 0 \label{eq:hom1} \\
+    & \frac{dy}{dx} = \frac{x^2 + y^2}{xy} \label{eq:hom2} \\
+    & (x^2+y^2)dx + (x^2-xy)dy = 0 \label{eq:hom3} \\
+    & \frac{dy}{dx} = \frac{y-4x}{x-y} \label{eq:hom4} \\
+    & x^2 \frac{dy}{dx} = y^2 + xy \label{eq:hom5} \\
+    & (y + \sqrt{x^2+y^2})dx - x dy = 0, \quad y(1) = 0 \label{eq:hom6} \\
+    & \frac{dy}{dx} = \frac{y}{x} - e^{y/x} \label{eq:hom7} \\
+    & \frac{dy}{dx} = \frac{2xy}{x^2 - y^2} \label{eq:hom8}
+\end{align}
+
+\subsection*{Part C: 10 Classification Exercises / Clasificación}
+For each of the following first-order differential equations, determine if the equation is \textbf{Separable}, \textbf{Homogeneous}, \textbf{Linear}, any combination of these, or none. Provide a brief mathematical justification.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item $\frac{dy}{dx} = 2xy$
+    \item $\frac{dy}{dx} = x + y$
+    \item $\frac{dy}{dx} = \frac{x^2 + 3y^2}{2xy}$
+    \item $x \frac{dy}{dx} + 2y = x^{-3}$
+    \item $y' = y^2 - 1$
+    \item $\frac{dy}{dx} = \frac{1}{y-x}$
+    \item $(t+y+1)dt - dy = 0$ (where $t$ is the independent variable, and $y$ is the dependent variable)
+    \item $\frac{dy}{dx} = \frac{y}{x} + \tan\left(\frac{y}{x}\right)$
+    \item $x dy - y dx = 0$
+    \item $\frac{dy}{dx} = e^{x-y}$
+\end{enumerate}
+
+\newpage
+\section{Solutions and Explanations / Solucionario Detallado}
+
+\subsection*{Part A: Separable Variable Solutions}
+
+\subsubsection*{Solution 1: $\frac{dy}{dx} = \frac{x^2}{y(1+x^3)}$}
+Separating variables, we get:
+\[ y \, dy = \frac{x^2}{1+x^3} \, dx \]
+Integrating both sides:
+\[ \int y \, dy = \int \frac{x^2}{1+x^3} \, dx \]
+Let $u = 1+x^3$ on the right side, so $du = 3x^2 dx$, meaning $x^2 dx = \frac{1}{3}du$.
+\[ \frac{1}{2}y^2 = \frac{1}{3}\ln|1+x^3| + C_1 \]
+Multiplying by 2:
+\[ y^2 = \frac{2}{3}\ln|1+x^3| + C \quad \implies \quad y(x) = \pm \sqrt{\frac{2}{3}\ln|1+x^3| + C} \]
+
+\subsubsection*{Solution 2: $\frac{dy}{dt} = e^{3t+2y}$}
+Using the properties of exponents, we can write $e^{3t+2y} = e^{3t} e^{2y}$. Separating variables yields:
+\[ e^{-2y} \, dy = e^{3t} \, dt \]
+Integrating both sides:
+\[ \int e^{-2y} \, dy = \int e^{3t} \, dt \quad \implies \quad -\frac{1}{2} e^{-2y} = \frac{1}{3} e^{3t} + C_1 \]
+Multiply by $-2$:
+\[ e^{-2y} = -\frac{2}{3} e^{3t} + C \]
+Taking the natural logarithm of both sides:
+\[ -2y = \ln\left( C - \frac{2}{3} e^{3t} \right) \quad \implies \quad y(t) = -\frac{1}{2} \ln\left( C - \frac{2}{3} e^{3t} \right) \]
+
+\subsubsection*{Solution 3: $x \frac{dy}{dx} = 4y, \quad y(1) = 3$}
+Separating variables by dividing by $xy$ (assuming $x \neq 0, y \neq 0$):
+\[ \frac{1}{y} \, dy = \frac{4}{x} \, dx \]
+Integrating both sides:
+\[ \int \frac{1}{y} \, dy = \int \frac{4}{x} \, dx \quad \implies \quad \ln|y| = 4\ln|x| + C_1 = \ln(x^4) + C_1 \]
+Exponentiating both sides:
+\[ |y| = e^{C_1} x^4 \quad \implies \quad y(x) = C x^4 \]
+Applying the initial condition $y(1) = 3$:
+\[ 3 = C(1)^4 \implies C = 3 \]
+Thus, the unique particular solution is:
+\[ y(x) = 3x^4 \]
+Note that $y \equiv 0$ is a singular solution lost when dividing by $y$, corresponding to $C = 0$.
+
+\subsubsection*{Solution 4: $\frac{dy}{dx} = \frac{y\ln(y)}{x}$}
+Separating variables:
+\[ \frac{1}{y\ln(y)} \, dy = \frac{1}{x} \, dx \]
+Integrating both sides:
+\[ \int \frac{1}{y\ln(y)} \, dy = \int \frac{1}{x} \, dx \]
+For the left integral, let $u = \ln(y)$, so $du = \frac{1}{y} dy$:
+\[ \int \frac{1}{u} \, du = \int \frac{1}{x} \, dx \quad \implies \quad \ln|\ln(y)| = \ln|x| + C_1 \]
+Exponentiating both sides:
+\[ |\ln(y)| = e^{C_1} |x| \quad \implies \quad \ln(y) = C x \]
+Solving explicitly for $y(x)$:
+\[ y(x) = e^{C x} \]
+
+\subsubsection*{Solution 5: $y \ln(x) \frac{dx}{dy} = \left(\frac{y+1}{x}\right)^2$}
+Expanding the right-hand side:
+\[ y \ln(x) \frac{dx}{dy} = \frac{(y+1)^2}{x^2} \]
+Separating variables (terms with $x$ on the left, terms with $y$ on the right):
+\[ x^2 \ln(x) \, dx = \frac{(y+1)^2}{y} \, dy \]
+Expanding the right-hand side term: $\frac{(y+1)^2}{y} = \frac{y^2 + 2y + 1}{y} = y + 2 + \frac{1}{y}$.
+Now, integrate both sides:
+\[ \int x^2 \ln(x) \, dx = \int \left( y + 2 + \frac{1}{y} \right) dy \]
+The left integral is solved using Integration by Parts ($\int u \, dv = uv - \int v \, du$):
+Let $u = \ln(x)$ and $dv = x^2 \, dx$. Then $du = \frac{1}{x} \, dx$ and $v = \frac{x^3}{3}$.
+\[ \int x^2 \ln(x) \, dx = \frac{x^3}{3}\ln(x) - \int \frac{x^3}{3}\left(\frac{1}{x}\right) dx = \frac{x^3}{3}\ln(x) - \frac{x^3}{9} \]
+The right integral is straightforward:
+\[ \int \left( y + 2 + \frac{1}{y} \right) dy = \frac{1}{2}y^2 + 2y + \ln|y| \]
+Thus, the implicit solution is:
+\[ \frac{x^3}{3}\ln(x) - \frac{x^3}{9} = \frac{1}{2}y^2 + 2y + \ln|y| + C \]
+
+\subsubsection*{Solution 6: $\frac{dP}{dt} = k P(M - P)$}
+This is the classic logistic equation. Separating variables:
+\[ \frac{1}{P(M-P)} \, dP = k \, dt \]
+Using partial fraction decomposition on the left side:
+\[ \frac{1}{P(M-P)} = \frac{1}{M}\left( \frac{1}{P} + \frac{1}{M-P} \right) \]
+The equation becomes:
+\[ \frac{1}{M} \left( \frac{1}{P} + \frac{1}{M-P} \right) dP = k \, dt \]
+Integrating both sides:
+\[ \frac{1}{M} \left( \ln|P| - \ln|M-P| \right) = kt + C_1 \]
+Multiplying by $M$:
+\[ \ln\left| \frac{P}{M-P} \right| = Mkt + C_2 \quad \implies \quad \left| \frac{P}{M-P} \right| = e^{C_2} e^{Mkt} \]
+Solving for $P(t)$:
+\[ \frac{P}{M-P} = B e^{Mkt} \quad (\text{where } B = \pm e^{C_2}) \]
+\[ P = B M e^{Mkt} - B P e^{Mkt} \implies P(1 + B e^{Mkt}) = B M e^{Mkt} \]
+Dividing numerator and denominator by $B e^{Mkt}$ and setting $C = 1/B$:
+\[ P(t) = \frac{M}{1 + C e^{-Mkt}} \]
+
+\subsubsection*{Solution 7: $x \sqrt{1-y^2} dx + y \sqrt{1-x^2} dy = 0$}
+Dividing through by $\sqrt{1-x^2}\sqrt{1-y^2}$ (assuming $1-x^2 > 0$ and $1-y^2 > 0$):
+\[ \frac{x}{\sqrt{1-x^2}} \, dx + \frac{y}{\sqrt{1-y^2}} \, dy = 0 \]
+Integrating both sides:
+\[ \int \frac{x}{\sqrt{1-x^2}} \, dx + \int \frac{y}{\sqrt{1-y^2}} \, dy = C_1 \]
+Both integrals can be solved using $u$-substitution ($u = 1-x^2 \implies du = -2xdx$):
+\[ -\sqrt{1-x^2} - \sqrt{1-y^2} = C_1 \]
+Multiplying by $-1$ and letting $C = -C_1$, we get the implicit solution:
+\[ \sqrt{1-x^2} + \sqrt{1-y^2} = C \]
+
+\subsubsection*{Solution 8: $\frac{dy}{dx} = (y-1)^2, \quad y(0) = 1.01$}
+Separating variables:
+\[ \frac{1}{(y-1)^2} \, dy = dx \quad \implies \quad (y-1)^{-2} \, dy = dx \]
+Integrating both sides:
+\[ \int (y-1)^{-2} \, dy = \int dx \quad \implies \quad -\frac{1}{y-1} = x + C \]
+Solving for $y$:
+\[ y-1 = -\frac{1}{x+C} \quad \implies \quad y(x) = 1 - \frac{1}{x+C} \]
+Applying the initial condition $y(0) = 1.01$:
+\[ 1.01 = 1 - \frac{1}{C} \implies 0.01 = -\frac{1}{C} \implies C = -100 \]
+Thus, the particular solution is:
+\[ y(x) = 1 - \frac{1}{x-100} = 1 + \frac{1}{100-x} \]
+\textbf{Note:} The domain of definition for this solution is $x \in (-\infty, 100)$ due to the vertical asymptote at $x = 100$. The constant solution $y \equiv 1$ is a singular solution lost during division.
+
+\subsection*{Part B: Homogeneous Equation Solutions}
+
+\subsubsection*{Solution 9: $(x+y)dx - (x-y)dy = 0$}
+Let $M(x,y) = x+y$ and $N(x,y) = y-x$. Both are homogeneous of degree 1. Writing in derivative form:
+\[ \frac{dy}{dx} = \frac{x+y}{x-y} = \frac{1+y/x}{1-y/x} \]
+Let $y = ux \implies \frac{dy}{dx} = u + x\frac{du}{dx}$. Substituting:
+\[ u + x\frac{du}{dx} = \frac{1+u}{1-u} \implies x\frac{du}{dx} = \frac{1+u}{1-u} - u = \frac{1+u - u + u^2}{1-u} = \frac{1+u^2}{1-u} \]
+Separating variables in $u$ and $x$:
+\[ \frac{1-u}{1+u^2} \, du = \frac{1}{x} \, dx \quad \implies \quad \left( \frac{1}{1+u^2} - \frac{u}{1+u^2} \right) du = \frac{dx}{x} \]
+Integrating:
+\[ \arctan(u) - \frac{1}{2}\ln(1+u^2) = \ln|x| + C \]
+Using $u = y/x$:
+\[ \arctan\left(\frac{y}{x}\right) - \frac{1}{2}\ln\left(1 + \frac{y^2}{x^2}\right) = \ln|x| + C \]
+Since $\frac{1}{2}\ln\left(\frac{x^2+y^2}{x^2}\right) = \frac{1}{2}\ln(x^2+y^2) - \ln|x|$, the terms cancel nicely:
+\[ \arctan\left(\frac{y}{x}\right) - \frac{1}{2}\ln(x^2+y^2) = C \]
+
+\subsubsection*{Solution 10: $\frac{dy}{dx} = \frac{x^2 + y^2}{xy}$}
+Dividing numerator and denominator on the right by $x^2$:
+\[ \frac{dy}{dx} = \frac{1 + (y/x)^2}{y/x} \]
+Let $y = ux \implies y' = u + x u'$. Substituting:
+\[ u + x\frac{du}{dx} = \frac{1+u^2}{u} \implies x\frac{du}{dx} = \frac{1+u^2}{u} - u = \frac{1+u^2-u^2}{u} = \frac{1}{u} \]
+Separating variables:
+\[ u \, du = \frac{dx}{x} \quad \implies \quad \int u \, du = \int \frac{dx}{x} \]
+\[ \frac{1}{2}u^2 = \ln|x| + C_1 \implies u^2 = 2\ln|x| + C \]
+Substituting back $u = y/x$:
+\[ \frac{y^2}{x^2} = 2\ln|x| + C \implies y^2 = x^2(2\ln|x| + C) \]
+
+\subsubsection*{Solution 11: $(x^2+y^2)dx + (x^2-xy)dy = 0$}
+Both functions are homogeneous of degree 2. Substitute $y = ux \implies dy = u dx + x du$:
+\[ (x^2 + u^2 x^2)dx + (x^2 - u x^2)(u dx + x du) = 0 \]
+Factoring out $x^2$ and dividing (assuming $x \neq 0$):
+\[ (1+u^2)dx + (1-u)(u dx + x du) = 0 \]
+\[ (1+u^2 + u - u^2)dx + x(1-u)du = 0 \implies (1+u)dx + x(1-u)du = 0 \]
+Separating variables:
+\[ \frac{1-u}{1+u} \, du + \frac{dx}{x} = 0 \]
+Rewriting $\frac{1-u}{1+u} = \frac{-(u+1)+2}{1+u} = -1 + \frac{2}{1+u}$. Integrating:
+\[ \int \left( -1 + \frac{2}{1+u} \right) du + \int \frac{dx}{x} = C \]
+\[ -u + 2\ln|1+u| + \ln|x| = C \]
+Using $u = y/x$:
+\[ -\frac{y}{x} + 2\ln\left| 1 + \frac{y}{x} \right| + \ln|x| = C \implies 2\ln|x+y| - \ln|x| - \frac{y}{x} = C \]
+Which can also be written in exponential form: $(x+y)^2 = C' x e^{y/x}$.
+
+\subsubsection*{Solution 12: $\frac{dy}{dx} = \frac{y-4x}{x-y}$}
+Dividing the right side by $x$:
+\[ \frac{dy}{dx} = \frac{y/x - 4}{1 - y/x} \]
+Let $y = ux \implies y' = u + x u'$:
+\[ u + x\frac{du}{dx} = \frac{u-4}{1-u} \implies x\frac{du}{dx} = \frac{u-4}{1-u} - u = \frac{u-4-u+u^2}{1-u} = \frac{u^2-4}{1-u} \]
+Separating variables:
+\[ \frac{1-u}{u^2-4} \, du = \frac{dx}{x} \]
+Using partial fraction decomposition on the left side:
+\[ \frac{1-u}{(u-2)(u+2)} = \frac{A}{u-2} + \frac{B}{u+2} \implies 1-u = A(u+2) + B(u-2) \]
+Setting $u = 2 \implies -1 = 4A \implies A = -1/4$.
+Setting $u = -2 \implies 3 = -4B \implies B = -3/4$.
+Integrating:
+\[ \int \left( -\frac{1}{4(u-2)} - \frac{3}{4(u+2)} \right) du = \int \frac{dx}{x} \]
+\[ -\frac{1}{4}\ln|u-2| - \frac{3}{4}\ln|u+2| = \ln|x| + C_1 \]
+Multiplying by $-4$:
+\[ \ln|u-2| + 3\ln|u+2| = -4\ln|x| + C \implies \ln| (u-2)(u+2)^3 | = \ln(x^{-4}) + C \]
+Taking the exponential:
+\[ (u-2)(u+2)^3 = \frac{K}{x^4} \]
+Substituting back $u = y/x$:
+\[ \left( \frac{y}{x} - 2 \right) \left( \frac{y}{x} + 2 \right)^3 = \frac{K}{x^4} \implies \frac{(y-2x)(y+2x)^3}{x^4} = \frac{K}{x^4} \]
+This yields the elegant implicit general solution:
+\[ (y-2x)(y+2x)^3 = K \]
+
+\subsubsection*{Solution 13: $x^2 \frac{dy}{dx} = y^2 + xy$}
+Dividing by $x^2$:
+\[ \frac{dy}{dx} = \left(\frac{y}{x}\right)^2 + \frac{y}{x} \]
+Let $y = ux \implies y' = u + x u'$:
+\[ u + x\frac{du}{dx} = u^2 + u \implies x\frac{du}{dx} = u^2 \]
+Separating variables:
+\[ \frac{1}{u^2} \, du = \frac{dx}{x} \implies u^{-2} \, du = \frac{dx}{x} \]
+Integrating:
+\[ \int u^{-2} \, du = \int \frac{dx}{x} \implies -\frac{1}{u} = \ln|x| + C \]
+Substituting back $u = y/x$:
+\[ -\frac{x}{y} = \ln|x| + C \implies y(x) = -\frac{x}{\ln|x|+C} \]
+
+\subsubsection*{Solution 14: $(y + \sqrt{x^2+y^2})dx - x dy = 0, \quad y(1) = 0$}
+Rewriting the equation:
+\[ \frac{dy}{dx} = \frac{y + \sqrt{x^2+y^2}}{x} = \frac{y}{x} + \sqrt{1 + \frac{y^2}{x^2}} \quad (\text{assuming } x > 0) \]
+Let $y = ux \implies y' = u + x u'$:
+\[ u + x\frac{du}{dx} = u + \sqrt{1+u^2} \implies x\frac{du}{dx} = \sqrt{1+u^2} \]
+Separating variables:
+\[ \frac{1}{\sqrt{1+u^2}} \, du = \frac{dx}{x} \]
+Integrating both sides:
+\[ \ln| u + \sqrt{1+u^2} | = \ln|x| + C_1 \implies u + \sqrt{1+u^2} = C x \]
+Substituting back $u = y/x$:
+\[ \frac{y}{x} + \sqrt{1 + \frac{y^2}{x^2}} = C x \implies y + \sqrt{x^2+y^2} = C x^2 \]
+Applying the initial condition $y(1) = 0$:
+\[ 0 + \sqrt{1 + 0} = C(1)^2 \implies C = 1 \]
+Thus, the implicit particular solution is $y + \sqrt{x^2+y^2} = x^2$. We can solve for $y$ explicitly:
+\[ \sqrt{x^2+y^2} = x^2 - y \implies x^2 + y^2 = x^4 - 2x^2 y + y^2 \implies 2x^2 y = x^4 - x^2 \]
+Dividing by $2x^2$ (since $x > 0$):
+\[ y(x) = \frac{1}{2}(x^2 - 1) \]
+
+\subsubsection*{Solution 15: $\frac{dy}{dx} = \frac{y}{x} - e^{y/x}$}
+Let $y = ux \implies y' = u + x u'$:
+\[ u + x\frac{du}{dx} = u - e^u \implies x\frac{du}{dx} = -e^u \]
+Separating variables:
+\[ e^{-u} \, du = -\frac{dx}{x} \]
+Integrating both sides:
+\[ \int e^{-u} \, du = -\int \frac{dx}{x} \implies -e^{-u} = -\ln|x| + C_1 \]
+Multiplying by $-1$ and letting $C = -C_1$:
+\[ e^{-u} = \ln|x| + C \]
+Substituting back $u = y/x$:
+\[ e^{-y/x} = \ln|x| + C \implies -\frac{y}{x} = \ln(\ln|x| + C) \implies y(x) = -x\ln(\ln|x| + C) \]
+
+\subsubsection*{Solution 16: $\frac{dy}{dx} = \frac{2xy}{x^2 - y^2}$}
+Let $y = ux \implies y' = u + x u'$. Substituting:
+\[ u + x\frac{du}{dx} = \frac{2u}{1-u^2} \implies x\frac{du}{dx} = \frac{2u}{1-u^2} - u = \frac{2u - u + u^3}{1-u^2} = \frac{u(1+u^2)}{1-u^2} \]
+Separating variables:
+\[ \frac{1-u^2}{u(1+u^2)} \, du = \frac{dx}{x} \]
+Using partial fractions:
+\[ \frac{1-u^2}{u(1+u^2)} = \frac{A}{u} + \frac{Bu+C}{1+u^2} \implies 1-u^2 = A(1+u^2) + (Bu+C)u \]
+Setting $u = 0 \implies A = 1$.
+Comparing coefficients of $u^2$: $-1 = A+B \implies B = -2$.
+Comparing coefficients of $u$: $C = 0$.
+So:
+\[ \int \left( \frac{1}{u} - \frac{2u}{1+u^2} \right) du = \int \frac{dx}{x} \]
+\[ \ln|u| - \ln(1+u^2) = \ln|x| + C_1 \implies \ln\left| \frac{u}{1+u^2} \right| = \ln|x| + C_1 \]
+Taking the exponential on both sides:
+\[ \frac{u}{1+u^2} = C x \]
+Substituting back $u = y/x$:
+\[ \frac{y/x}{1 + y^2/x^2} = C x \implies \frac{xy}{x^2+y^2} = C x \implies \frac{y}{x^2+y^2} = C \]
+Letting $K = 1/C$, we obtain the implicit equation of a family of circles tangent to the $x$-axis:
+\[ x^2 + y^2 = K y \]
+
+\subsection*{Part C: Classification Solutions and Justifications}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Equation:} $\frac{dy}{dx} = 2xy$
+    \begin{itemize}
+        \item \textbf{Classification:} Both \textbf{Separable} and \textbf{Linear}.
+        \item \textbf{Justification:} It is separable because it is written as the product of $g(x) = 2x$ and $h(y) = y$. It is linear because it can be written as $y' - 2xy = 0$, which matches $y' + P(x)y = Q(x)$ with $P(x) = -2x$ and $Q(x) = 0$. (It is NOT homogeneous of degree zero because $2(tx)(ty) = t^2(2xy) \neq 2xy$).
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = x + y$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear} only.
+        \item \textbf{Justification:} It is linear because it can be rewritten as $y' - y = x$ (where $P(x) = -1$ and $Q(x) = x$). It is not separable because $x+y$ cannot be factored into a product $g(x)h(y)$. It is not homogeneous because $tx + ty = t(x+y) \neq t^0(x+y)$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \frac{x^2 + 3y^2}{2xy}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Homogeneous} only.
+        \item \textbf{Justification:} It is homogeneous of degree zero because $f(tx, ty) = \frac{t^2x^2 + 3t^2y^2}{2(tx)(ty)} = \frac{t^2(x^2 + 3y^2)}{t^2(2xy)} = f(x,y)$. It is nonlinear because of the $y^2$ term in the numerator. It is not separable.
+    \end{itemize}
+
+    \item \textbf{Equation:} $x \frac{dy}{dx} + 2y = x^{-3}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear} only.
+        \item \textbf{Justification:} In standard form, $y' + \frac{2}{x} y = x^{-4}$, which is linear in $y$. It is not separable due to the forcing term $x^{-4}$ coupled with addition, and it is not homogeneous.
+    \end{itemize}
+
+    \item \textbf{Equation:} $y' = y^2 - 1$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable} only.
+        \item \textbf{Justification:} It is separable since $y' = g(x)h(y)$ with $g(x) = 1$ and $h(y) = y^2-1$. It is nonlinear due to the $y^2$ term. It is not homogeneous because $f(tx, ty) = t^2y^2 - 1 \neq t^0(y^2-1)$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \frac{1}{y-x}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{None} of the three (in terms of $y$).
+        \item \textbf{Justification:} It is not separable, not homogeneous, and nonlinear in $y$ because $y$ is in the denominator. 
+        \item \textbf{Pedagogical Note:} If we reverse the role of the variables (viewing $x$ as the dependent variable and $y$ as independent), the equation becomes $\frac{dx}{dy} = y - x \implies \frac{dx}{dy} + x = y$, which is a **linear** first-order equation in $x(y)$! This is a classic trick.
+    \end{itemize}
+
+    \item \textbf{Equation:} $(t+y+1)dt - dy = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear} only.
+        \item \textbf{Justification:} Dividing by $dt$ gives the standard form $\frac{dy}{dt} - y = t+1$, which is linear in $y$ (with independent variable $t$). It is not separable and not homogeneous.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \frac{y}{x} + \tan\left(\frac{y}{x}\right)$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Homogeneous} only.
+        \item \textbf{Justification:} The right-hand side is explicitly a function of the ratio $y/x$, making it homogeneous of degree zero. It is nonlinear because of the transcendental function $\tan(y/x)$ of the dependent variable. It is not separable.
+    \end{itemize}
+
+    \item \textbf{Equation:} $x dy - y dx = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable}, \textbf{Homogeneous}, and \textbf{Linear}.
+        \item \textbf{Justification:} 
+        Re-writing as $\frac{dy}{dx} = \frac{y}{x}$:
+        \begin{itemize}
+            \item It is separable: $\frac{1}{y} dy = \frac{1}{x} dx$.
+            \item It is homogeneous of degree zero: $f(tx, ty) = \frac{ty}{tx} = \frac{y}{x}$.
+            \item It is linear: $y' - \frac{1}{x}y = 0$, which is linear in $y$.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = e^{x-y}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable} only.
+        \item \textbf{Justification:} It can be written as $y' = e^x e^{-y}$, which is a product of functions of $x$ and $y$. It is nonlinear because of the term $e^{-y}$. It is not homogeneous because $e^{tx-ty} \neq t^0 e^{x-y}$.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}

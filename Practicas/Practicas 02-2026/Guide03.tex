@@ -1,0 +1,425 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\title{\textbf{Chapter 2 (Continued): First-Order Differential Equations}\\
+\large Linear and Bernoulli Equations with Classification Exercises\\
+\normalsize Ecuaciones Diferenciales de Primer Orden: Lineales, Bernoulli y Clasificación}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introductory Theory / Introducción Teórica}
+
+In this section, we expand our study of first-order ordinary differential equations (ODEs) to two powerful, highly structured families: \textbf{Linear Equations} and \textbf{Bernoulli Equations}.
+
+\subsection{First-Order Linear Differential Equations / Ecuaciones Lineales}
+A first-order differential equation is \textbf{linear} in the dependent variable $y$ if it can be written in the standard form:
+\begin{equation}
+    \frac{dy}{dx} + P(x)y = Q(x)
+\end{equation}
+where $P(x)$ and $Q(x)$ are continuous functions on a common interval $I$. 
+\textbf{Solution Method (Integrating Factor / Factor Integrante):}
+\begin{enumerate}
+    \item Ensure the equation is in the standard form (the coefficient of $y'$ must be 1).
+    \item Find the integrating factor:
+    \begin{equation}
+        \mu(x) = e^{\int P(x) \, dx}
+    \end{equation}
+    (We omit the constant of integration here).
+    \item Multiply the entire standard-form equation by $\mu(x)$. The left side automatically compresses into the derivative of a product:
+    \begin{equation}
+        \frac{d}{dx} \left[ \mu(x) y \right] = \mu(x) Q(x)
+    \end{equation}
+    \item Integrate both sides with respect to $x$ and solve for $y(x)$:
+    \begin{equation}
+        \mu(x) y = \int \mu(x) Q(x) \, dx + C \implies y(x) = \frac{1}{\mu(x)} \left[ \int \mu(x) Q(x) \, dx + C \right]
+    \end{equation}
+\end{enumerate}
+
+\subsection{Bernoulli Differential Equations / Ecuaciones de Bernoulli}
+A first-order differential equation of the form:
+\begin{equation}
+    \frac{dy}{dx} + P(x)y = Q(x)y^n
+\end{equation}
+where $n \in \mathbb{R}$ is called a \textbf{Bernoulli equation}. 
+\begin{itemize}
+    \item If $n = 0$, the equation is linear.
+    \item If $n = 1$, the equation is linear (and separable: $y' + (P(x) - Q(x))y = 0$).
+    \item For $n \neq 0$ and $n \neq 1$, the equation is nonlinear, but can be linearized using a clever substitution.
+\end{itemize}
+
+\textbf{Solution Method (Linearization / Linealización):}
+\begin{enumerate}
+    \item Divide the entire equation by $y^n$ to get:
+    \begin{equation}
+        y^{-n} \frac{dy}{dx} + P(x)y^{1-n} = Q(x)
+    \end{equation}
+    \item Let $u = y^{1-n}$. Differentiating with respect to $x$ using the chain rule gives:
+    \begin{equation}
+        \frac{du}{dx} = (1-n)y^{-n} \frac{dy}{dx} \implies y^{-n} \frac{dy}{dx} = \frac{1}{1-n} \frac{du}{dx}
+    \end{equation}
+    \item Substitute these expressions into the equation:
+    \begin{equation}
+        \frac{1}{1-n} \frac{du}{dx} + P(x)u = Q(x)
+    \end{equation}
+    \item Multiply by $(1-n)$ to obtain the standard \textbf{linear equation} in terms of $u(x)$:
+    \begin{equation}
+        \frac{du}{dx} + (1-n)P(x)u = (1-n)Q(x)
+    \end{equation}
+    \item Solve this linear equation for $u(x)$ using the integrating factor method, and then substitute back $y = u^{1/(1-n)}$ to find the general solution.
+\end{enumerate}
+
+\newpage
+\section{Problem Set / Banco de Ejercicios}
+
+\subsection*{Part A: 10 Classification Exercises / Clasificación}
+Identify whether each of the following first-order differential equations is \textbf{Separable (S)}, \textbf{Homogeneous (H)}, \textbf{Linear (L)}, \textbf{Bernoulli (B)}, or \textbf{None (N)}. Some equations may belong to multiple categories; list all that apply and write a brief justification.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item $\frac{dy}{dx} + 2xy = y^2$
+    \item $\frac{dy}{dx} = \frac{y^2-x^2}{2xy}$
+    \item $\frac{dy}{dx} - 3y = e^{2x}$
+    \item $\frac{dy}{dx} = x^2 y^3$
+    \item $\frac{dy}{dx} = \frac{x+y}{x}$
+    \item $\frac{dy}{dx} = y^3 - y$
+    \item $\frac{dy}{dx} = \frac{x^3 + y^3}{xy^2}$
+    \item $\frac{dy}{dx} + \frac{y}{x} = x^2 y^3 \ln(x)$
+    \item $\frac{dy}{dx} = \cos(x+y)$
+    \item $dy + \left(2xy - x e^{-x^2}\right)dx = 0$
+\end{enumerate}
+
+\subsection*{Part B: 8 Linear Equation Exercises / Ecuaciones Lineales}
+Solve the following linear differential equations. Find explicit solutions when possible, and apply initial conditions where specified.
+
+\begin{align}
+    & \frac{dy}{dx} + 2y = e^{-x} \label{eq:lin1} \\
+    & x\frac{dy}{dx} + y = e^x, \quad y(1) = 2 \label{eq:lin2} \\
+    & \frac{dy}{dx} + y \tan(x) = \cos^2(x), \quad -\frac{\pi}{2} < x < \frac{\pi}{2} \label{eq:lin3} \\
+    & x\frac{dy}{dx} + 2y = 3x \label{eq:lin4} \\
+    & (1+x^2)dy + 2xy\,dx = 0 \label{eq:lin5} \\
+    & x^2 \frac{dy}{dx} + xy = 1, \quad x > 0 \label{eq:lin6} \\
+    & \frac{dy}{dx} - y = e^{2x} \label{eq:lin7} \\
+    & t \frac{dy}{dt} + 2y = t^2 - t + 1, \quad y(1) = \frac{1}{2}, \quad t > 0 \label{eq:lin8}
+\end{align}
+
+\subsection*{Part C: 8 Bernoulli Equation Exercises / Ecuaciones de Bernoulli}
+Solve the following Bernoulli differential equations. Show the linearization substitution step clearly.
+
+\begin{align}
+    & \frac{dy}{dx} + y = xy^3 \label{eq:ber1} \\
+    & \frac{dy}{dx} - y = e^x y^2 \label{eq:ber2} \\
+    & x\frac{dy}{dx} + y = y^2 \ln(x), \quad x > 0 \label{eq:ber3} \\
+    & \frac{dy}{dx} + \frac{y}{x} = y^2, \quad x > 0 \label{eq:ber4} \\
+    & t^2 \frac{dy}{dt} + 2ty = y^3, \quad t > 0 \label{eq:ber5} \\
+    & \frac{dy}{dx} - \frac{y}{x} = -\frac{1}{2y}, \quad x > 0 \label{eq:ber6} \\
+    & \frac{dy}{dx} + \frac{2}{x}y = x^3 y^2, \quad y(1) = -1, \quad x > 0 \label{eq:ber7} \\
+    & 3(1+t^2)\frac{dy}{dt} = 2ty(y^3 - 1) \label{eq:ber8}
+\end{align}
+
+\newpage
+\section{Solutions and Explanations / Solucionario Detallado}
+
+\subsection*{Part A: Classification Solutions}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Equation:} $\frac{dy}{dx} + 2xy = y^2$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Bernoulli (B)} with $n = 2$.
+        \item \textbf{Justification:} It is of the form $y' + P(x)y = Q(x)y^n$ where $P(x) = 2x$, $Q(x) = 1$, and $n = 2$. It is nonlinear due to $y^2$, not separable, and not homogeneous.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \frac{y^2-x^2}{2xy}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Homogeneous (H)}.
+        \item \textbf{Justification:} Let $f(x,y) = \frac{y^2-x^2}{2xy}$. Then $f(tx,ty) = \frac{t^2 y^2 - t^2 x^2}{2(tx)(ty)} = \frac{t^2(y^2-x^2)}{t^2(2xy)} = f(x,y)$. The terms $M(x,y)=y^2-x^2$ and $N(x,y)=-2xy$ are both homogeneous of degree 2. It is nonlinear, not separable, and not linear.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} - 3y = e^{2x}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear (L)}.
+        \item \textbf{Justification:} Fits the standard linear form $y' + P(x)y = Q(x)$ with $P(x) = -3$ and $Q(x) = e^{2x}$. It is not separable, not homogeneous of degree 0, and not Bernoulli (or rather, trivial Bernoulli with $n=0$).
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = x^2 y^3$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable (S)} and \textbf{Bernoulli (B)} with $n=3$.
+        \item \textbf{Justification:} It is separable since $y' = g(x)h(y)$ with $g(x)=x^2$ and $h(y)=y^3$. It is also Bernoulli because it can be written as $y' + 0 \cdot y = x^2 y^3$ where $P(x)=0, Q(x)=x^2, n=3$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \frac{x+y}{x}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Homogeneous (H)} and \textbf{Linear (L)}.
+        \item \textbf{Justification:} It is homogeneous of degree 0 since $\frac{tx+ty}{tx} = \frac{x+y}{x}$. It is also linear because it can be rewritten as $y' - \frac{1}{x}y = 1$, where $P(x) = -1/x$ and $Q(x) = 1$. It is not separable.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = y^3 - y$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Separable (S)} and \textbf{Bernoulli (B)} with $n=3$.
+        \item \textbf{Justification:} It is separable because $g(x)=1$ and $h(y)=y^3-y$. It is also Bernoulli because it can be rewritten as $y' + y = y^3$, where $P(x)=1$, $Q(x)=1$, and $n=3$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \frac{x^3 + y^3}{xy^2}$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Homogeneous (H)} and \textbf{Bernoulli (B)} with $n=-2$.
+        \item \textbf{Justification:} It is homogeneous of degree 0 because $f(tx,ty) = \frac{t^3 x^3 + t^3 y^3}{tx \cdot t^2 y^2} = f(x,y)$. It is also a Bernoulli equation because we can rewrite it as $\frac{dy}{dx} = \frac{x^2}{y^2} + \frac{y}{x} \implies \frac{dy}{dx} - \frac{1}{x}y = x^2 y^{-2}$, which has $P(x) = -1/x, Q(x) = x^2$, and $n = -2$. This is a beautiful dual-classification.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} + \frac{y}{x} = x^2 y^3 \ln(x)$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Bernoulli (B)} with $n=3$.
+        \item \textbf{Justification:} Fits the standard form $y' + P(x)y = Q(x)y^n$ with $P(x) = 1/x$, $Q(x) = x^2 \ln(x)$, and $n=3$. It is nonlinear, not separable, and not homogeneous.
+    \end{itemize}
+
+    \item \textbf{Equation:} $\frac{dy}{dx} = \cos(x+y)$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{None (N)} of these categories.
+        \item \textbf{Justification:} The dependent variable $y$ is trapped inside the nonlinear cosine function and cannot be algebraically separated, linearized, or written in terms of $y/x$. It is solved using the substitution $u = x+y$, which transforms it into a separable equation in terms of $u$ and $x$.
+    \end{itemize}
+
+    \item \textbf{Equation:} $dy + \left(2xy - x e^{-x^2}\right)dx = 0$
+    \begin{itemize}
+        \item \textbf{Classification:} \textbf{Linear (L)} only.
+        \item \textbf{Justification:} Dividing by $dx$ yields $\frac{dy}{dx} + 2xy = x e^{-x^2}$, which fits the standard linear form with $P(x) = 2x$ and $Q(x) = x e^{-x^2}$. It is not separable due to the subtraction inside the $Q(x)$ term and not homogeneous.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Part B: Linear Equation Solutions}
+
+\subsubsection*{Solution 1: $\frac{dy}{dx} + 2y = e^{-x}$}
+This is already in standard form with $P(x) = 2$ and $Q(x) = e^{-x}$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int 2 \, dx} = e^{2x}$.
+    \item Multiply the equation by $\mu(x)$:
+    \[ e^{2x} y' + 2e^{2x}y = e^{2x}e^{-x} \implies \frac{d}{dx}\left[ e^{2x}y \right] = e^x \]
+    \item Integrating both sides with respect to $x$:
+    \[ e^{2x}y = \int e^x \, dx = e^x + C \]
+    \item Solving for $y(x)$:
+    \[ y(x) = e^{-2x}(e^x + C) = e^{-x} + C e^{-2x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 2: $x\frac{dy}{dx} + y = e^x, \quad y(1) = 2$}
+Dividing by $x$ (for $x \neq 0$) to put the equation in standard form:
+\[ \frac{dy}{dx} + \frac{1}{x}y = \frac{e^x}{x} \]
+Here $P(x) = 1/x$ and $Q(x) = e^x/x$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int \frac{1}{x} \, dx} = e^{\ln|x|} = x$ (since the initial condition is at $x=1 > 0$, we drop the absolute values).
+    \item Multiply standard form by $x$:
+    \[ x y' + y = e^x \implies \frac{d}{dx}[xy] = e^x \]
+    \item Integrating both sides:
+    \[ xy = \int e^x \, dx = e^x + C \implies y(x) = \frac{e^x + C}{x} \]
+    \item Apply the initial condition $y(1) = 2$:
+    \[ 2 = \frac{e^1 + C}{1} \implies C = 2 - e \]
+\end{enumerate}
+The particular solution is:
+\[ y(x) = \frac{e^x + 2 - e}{x} \]
+
+\subsubsection*{Solution 3: $\frac{dy}{dx} + y \tan(x) = \cos^2(x), \quad -\frac{\pi}{2} < x < \frac{\pi}{2}$}
+In standard form with $P(x) = \tan(x)$ and $Q(x) = \cos^2(x)$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int \tan(x) \, dx} = e^{\ln|\sec(x)|} = \sec(x)$ (since $\sec(x) > 0$ for $x \in (-\pi/2, \pi/2)$).
+    \item Multiply the equation by $\sec(x)$:
+    \[ \sec(x) y' + y \sec(x)\tan(x) = \sec(x)\cos^2(x) \implies \frac{d}{dx}\left[ y \sec(x) \right] = \cos(x) \]
+    \item Integrating both sides:
+    \[ y \sec(x) = \int \cos(x) \, dx = \sin(x) + C \]
+    \item Solving for $y(x)$:
+    \[ y(x) = \cos(x)(\sin(x) + C) = \sin(x)\cos(x) + C \cos(x) \]
+\end{enumerate}
+
+\subsubsection*{Solution 4: $x\frac{dy}{dx} + 2y = 3x$}
+Putting in standard form by dividing by $x$ (assuming $x > 0$ or $x < 0$):
+\[ \frac{dy}{dx} + \frac{2}{x}y = 3 \]
+Here $P(x) = 2/x$ and $Q(x) = 3$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int \frac{2}{x} \, dx} = e^{2\ln|x|} = e^{\ln(x^2)} = x^2$.
+    \item Multiply standard form by $x^2$:
+    \[ x^2 y' + 2xy = 3x^2 \implies \frac{d}{dx}[x^2 y] = 3x^2 \]
+    \item Integrating both sides:
+    \[ x^2 y = \int 3x^2 \, dx = x^3 + C \]
+    \item Solving for $y(x)$:
+    \[ y(x) = x + \frac{C}{x^2} \]
+\end{enumerate}
+
+\subsubsection*{Solution 5: $(1+x^2)dy + 2xy\,dx = 0$}
+Dividing by $(1+x^2)dx$:
+\[ \frac{dy}{dx} + \frac{2x}{1+x^2}y = 0 \]
+This is a homogeneous linear first-order equation (with $Q(x) = 0$). It is also separable!
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int \frac{2x}{1+x^2} \, dx} = e^{\ln(1+x^2)} = 1+x^2$.
+    \item Multiply standard form by $(1+x^2)$:
+    \[ (1+x^2)y' + 2xy = 0 \implies \frac{d}{dx}[(1+x^2)y] = 0 \]
+    \item Integrating both sides:
+    \[ (1+x^2)y = C \implies y(x) = \frac{C}{1+x^2} \]
+\end{enumerate}
+
+\subsubsection*{Solution 6: $x^2 \frac{dy}{dx} + xy = 1, \quad x > 0$}
+Putting in standard form by dividing by $x^2$:
+\[ \frac{dy}{dx} + \frac{1}{x}y = \frac{1}{x^2} \]
+Here $P(x) = 1/x$ and $Q(x) = 1/x^2$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int \frac{1}{x} \, dx} = x$ (since $x > 0$).
+    \item Multiply by $x$:
+    \[ x y' + y = \frac{1}{x} \implies \frac{d}{dx}[xy] = \frac{1}{x'] = \frac{1}{x} \]
+    \item Integrating both sides:
+    \[ xy = \int \frac{1}{x} \, dx = \ln(x) + C \]
+    \item Solving for $y(x)$:
+    \[ y(x) = \frac{\ln(x) + C}{x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 7: $\frac{dy}{dx} - y = e^{2x}$}
+In standard form with $P(x) = -1$ and $Q(x) = e^{2x}$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(x) = e^{\int -1 \, dx} = e^{-x}$.
+    \item Multiply standard form by $e^{-x}$:
+    \[ e^{-x} y' - e^{-x} y = e^{-x} e^{2x} \implies \frac{d}{dx}[e^{-x}y] = e^x \]
+    \item Integrating both sides:
+    \[ e^{-x}y = \int e^x \, dx = e^x + C \]
+    \item Solving for $y(x)$:
+    \[ y(x) = e^x(e^x + C) = e^{2x} + C e^x \]
+\end{enumerate}
+
+\subsubsection*{Solution 8: $t \frac{dy}{dt} + 2y = t^2 - t + 1, \quad y(1) = \frac{1}{2}, \quad t > 0$}
+Dividing by $t$:
+\[ \frac{dy}{dt} + \frac{2}{t}y = t - 1 + \frac{1}{t} \]
+Here $P(t) = 2/t$ and $Q(t) = t - 1 + 1/t$.
+\begin{enumerate}
+    \item Integrating factor: $\mu(t) = e^{\int \frac{2}{t} \, dt} = t^2$.
+    \item Multiply standard form by $t^2$:
+    \[ t^2 y' + 2ty = t^3 - t^2 + t \implies \frac{d}{dt}[t^2 y] = t^3 - t^2 + t \]
+    \item Integrating both sides:
+    \[ t^2 y = \int (t^3 - t^2 + t) \, dt = \frac{1}{4}t^4 - \frac{1}{3}t^3 + \frac{1}{2}t^2 + C \]
+    \item Solving for $y(t)$:
+    \[ y(t) = \frac{1}{4}t^2 - \frac{1}{3}t + \frac{1}{2} + \frac{C}{t^2} \]
+    \item Apply $y(1) = 1/2$:
+    \[ \frac{1}{2} = \frac{1}{4} - \frac{1}{3} + \frac{1}{2} + C \implies C = \frac{1}{3} - \frac{1}{4} = \frac{1}{12} \]
+\end{enumerate}
+The particular solution is:
+\[ y(t) = \frac{1}{4}t^2 - \frac{1}{3}t + \frac{1}{2} + \frac{1}{12t^2} \]
+
+\subsection*{Part C: Bernoulli Equation Solutions}
+
+\subsubsection*{Solution 9: $\frac{dy}{dx} + y = xy^3$}
+Here $n = 3$. Dividing by $y^3$:
+\[ y^{-3} y' + y^{-2} = x \]
+Let $u = y^{1-3} = y^{-2} \implies u' = -2 y^{-3} y'$. So $y^{-3} y' = -\frac{1}{2}u'$.
+Substituting:
+\[ -\frac{1}{2}u' + u = x \implies u' - 2u = -2x \]
+This is linear in $u$ with integrating factor $\mu(x) = e^{-2x}$.
+\[ \frac{d}{dx}[e^{-2x}u] = -2xe^{-2x} \]
+Integrating the right side by parts ($\int w \, dz = wz - \int z \, dw$ with $w = -2x \implies dw = -2dx$; $dz = e^{-2x}dx \implies z = -\frac{1}{2}e^{-2x}$):
+\[ e^{-2x}u = x e^{-2x} - \int e^{-2x} \, dx = x e^{-2x} + \frac{1}{2}e^{-2x} + C \]
+Multiply by $e^{2x}$:
+\[ u(x) = x + \frac{1}{2} + C e^{2x} \]
+Since $u = y^{-2} = 1/y^2$, we have:
+\[ y(x) = \pm \frac{1}{\sqrt{x + \frac{1}{2} + C e^{2x}}} \]
+
+\subsubsection*{Solution 10: $\frac{dy}{dx} - y = e^x y^2$}
+Here $n = 2$. Dividing by $y^2$:
+\[ y^{-2}y' - y^{-1} = e^x \]
+Let $u = y^{-1} \implies u' = -y^{-2}y'$. So $y^{-2}y' = -u'$.
+Substituting:
+\[ -u' - u = e^x \implies u' + u = -e^x \]
+Linear in $u$ with integrating factor $\mu(x) = e^x$:
+\[ \frac{d}{dx}[e^x u] = -e^{2x} \implies e^x u = -\frac{1}{2}e^{2x} + C \]
+Dividing by $e^x$:
+\[ u(x) = -\frac{1}{2}e^x + C e^{-x} \]
+Substituting back $y = 1/u$:
+\[ y(x) = \frac{1}{Ce^{-x} - \frac{1}{2}e^x} = \frac{2}{2Ce^{-x} - e^x} \]
+
+\subsubsection*{Solution 11: $x\frac{dy}{dx} + y = y^2 \ln(x), \quad x > 0$}
+Standard form: $y' + \frac{1}{x}y = \frac{\ln(x)}{x}y^2$. Here $n=2$. Dividing by $y^2$:
+\[ y^{-2}y' + \frac{1}{x}y^{-1} = \frac{\ln(x)}{x} \]
+Let $u = y^{-1} \implies u' = -y^{-2}y'$. Substituting:
+\[ -u' + \frac{1}{x}u = \frac{\ln(x)}{x} \implies u' - \frac{1}{x}u = -\frac{\ln(x)}{x} \]
+Linear in $u$ with integrating factor $\mu(x) = e^{\int -1/x \, dx} = 1/x$ (for $x > 0$):
+\[ \frac{d}{dx}\left[ \frac{u}{x} \right] = -\frac{\ln(x)}{x^2} \]
+Integrating by parts on the right side: let $w = \ln(x) \implies dw = \frac{1}{x}dx$; $dz = -x^{-2}dx \implies z = x^{-1}$.
+\[ \int -\frac{\ln(x)}{x^2} \, dx = \frac{\ln(x)}{x} - \int \frac{1}{x^2} \, dx = \frac{\ln(x)}{x} + \frac{1}{x} + C \]
+So:
+\[ \frac{u}{x} = \frac{\ln(x) + 1}{x} + C \implies u = \ln(x) + 1 + Cx \]
+Substituting back $y = 1/u$:
+\[ y(x) = \frac{1}{\ln(x) + 1 + Cx} \]
+
+\subsubsection*{Solution 12: $\frac{dy}{dx} + \frac{y}{x} = y^2$}
+Here $n = 2$. Dividing by $y^2$:
+\[ y^{-2}y' + \frac{1}{x}y^{-1} = 1 \]
+Let $u = y^{-1} \implies u' = -y^{-2}y'$. Substituting:
+\[ -u' + \frac{1}{x}u = 1 \implies u' - \frac{1}{x}u = -1 \]
+Linear in $u$ with integrating factor $\mu(x) = e^{\int -1/x \, dx} = 1/x$:
+\[ \frac{d}{dx}\left[ \frac{u}{x} \right] = -\frac{1}{x} \implies \frac{u}{x} = -\ln(x) + C \implies u = x(C - \ln(x)) \]
+Substituting back $y = 1/u$:
+\[ y(x) = \frac{1}{x(C - \ln(x))} \]
+
+\subsubsection*{Solution 13: $t^2 \frac{dy}{dt} + 2ty = y^3, \quad t > 0$}
+Standard form: $y' + \frac{2}{t}y = \frac{1}{t^2}y^3$. Here $n = 3$. Dividing by $y^3$:
+\[ y^{-3}y' + \frac{2}{t}y^{-2} = \frac{1}{t^2} \]
+Let $u = y^{-2} \implies u' = -2y^{-3}y'$. Substituting:
+\[ -\frac{1}{2}u' + \frac{2}{t}u = \frac{1}{t^2} \implies u' - \frac{4}{t}u = -\frac{2}{t^2} \]
+Linear in $u$ with integrating factor $\mu(t) = e^{\int -4/t \, dt} = t^{-4}$.
+\[ \frac{d}{dt}\left[ t^{-4} u \right] = -2 t^{-6} \]
+Integrating both sides:
+\[ t^{-4}u = \int -2 t^{-6} \, dt = \frac{2}{5}t^{-5} + C \]
+Multiplying by $t^4$:
+\[ u = \frac{2}{5t} + C t^4 \]
+Since $u = y^{-2}$:
+\[ y(t) = \pm \frac{1}{\sqrt{\frac{2}{5t} + C t^4}} = \pm \sqrt{\frac{5t}{2 + K t^5}} \quad (\text{where } K = 5C) \]
+
+\subsubsection*{Solution 14: $\frac{dy}{dx} - \frac{y}{x} = -\frac{1}{2y}$}
+This can be written as $y' - \frac{1}{x}y = -\frac{1}{2}y^{-1}$. Here $n = -1$. Dividing by $y^{-1}$ (which is multiplying by $y$):
+\[ y y' - \frac{1}{x}y^2 = -\frac{1}{2} \]
+Let $u = y^{1-(-1)} = y^2 \implies u' = 2yy'$. So $yy' = \frac{1}{2}u'$.
+Substituting:
+\[ \frac{1}{2}u' - \frac{1}{x}u = -\frac{1}{2} \implies u' - \frac{2}{x}u = -1 \]
+Linear in $u$ with integrating factor $\mu(x) = e^{\int -2/x \, dx} = x^{-2}$.
+\[ \frac{d}{dx}\left[ x^{-2} u \right] = -x^{-2} \]
+Integrating:
+\[ x^{-2} u = \int -x^{-2} \, dx = x^{-1} + C \]
+Multiplying by $x^2$:
+\[ u = x + C x^2 \]
+Since $u = y^2$:
+\[ y(x) = \pm \sqrt{x + C x^2} \]
+
+\subsubsection*{Solution 15: $\frac{dy}{dx} + \frac{2}{x}y = x^3 y^2, \quad y(1) = -1$}
+Here $n = 2$. Dividing by $y^2$:
+\[ y^{-2}y' + \frac{2}{x}y^{-1} = x^3 \]
+Let $u = y^{-1} \implies u' = -y^{-2}y'$. Substituting:
+\[ -u' + \frac{2}{x}u = x^3 \implies u' - \frac{2}{x}u = -x^3 \]
+Linear in $u$ with integrating factor $\mu(x) = e^{\int -2/x \, dx} = x^{-2}$.
+\[ \frac{d}{dx}\left[ x^{-2}u \right] = -x^{-2}x^3 = -x \]
+Integrating:
+\[ x^{-2}u = -\frac{1}{2}x^2 + C \implies u = -\frac{1}{2}x^4 + C x^2 \]
+Since $u = 1/y$:
+\[ y(x) = \frac{1}{Cx^2 - \frac{1}{2}x^4} = \frac{2}{2Cx^2 - x^4} \]
+Apply the initial condition $y(1) = -1$:
+\[ -1 = \frac{2}{2C(1)^2 - 1^4} = \frac{2}{2C - 1} \implies 1 - 2C = 2 \implies 2C = -1 \implies C = -1/2 \]
+Thus, the particular solution is:
+\[ y(x) = \frac{2}{-x^2 - x^4} = -\frac{2}{x^2 + x^4} = -\frac{2}{x^2(1+x^2)} \]
+
+\subsubsection*{Solution 16: $3(1+t^2)\frac{dy}{dt} = 2ty(y^3 - 1)$}
+Expanding the right side:
+\[ 3(1+t^2) \frac{dy}{dt} = 2ty^4 - 2ty \implies 3(1+t^2)\frac{dy}{dt} + 2ty = 2ty^4 \]
+Dividing by $3(1+t^2)$ to get the standard Bernoulli form:
+\[ \frac{dy}{dt} + \frac{2t}{3(1+t^2)}y = \frac{2t}{3(1+t^2)}y^4 \]
+Here $n = 4$. Dividing by $y^4$:
+\[ y^{-4}y' + \frac{2t}{3(1+t^2)}y^{-3} = \frac{2t}{3(1+t^2)} \]
+Let $u = y^{-3} \implies u' = -3y^{-4}y'$. Substituting:
+\[ -\frac{1}{3}u' + \frac{2t}{3(1+t^2)}u = \frac{2t}{3(1+t^2)} \implies u' - \frac{2t}{1+t^2}u = -\frac{2t}{1+t^2} \]
+Linear in $u$ with integrating factor $\mu(t) = e^{\int -\frac{2t}{1+t^2} \, dt} = e^{-\ln(1+t^2)} = \frac{1}{1+t^2}$.
+\[ \frac{d}{dt}\left[ \frac{u}{1+t^2} \right] = -\frac{2t}{(1+t^2)^2} \]
+Integrating both sides:
+\[ \frac{u}{1+t^2} = \int -2t(1+t^2)^{-2} \, dt = \frac{1}{1+t^2} + C \]
+Multiplying by $(1+t^2)$:
+\[ u = 1 + C(1+t^2) \]
+Since $u = y^{-3}$:
+\[ y(t) = \frac{1}{\sqrt[3]{1 + C(1+t^2)}} \]
+
+\end{document}

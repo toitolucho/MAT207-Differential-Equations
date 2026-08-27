@@ -1,0 +1,67 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 01 - Introducción a las Ecuaciones Diferenciales}\\[1cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se clasificarán diversas ecuaciones diferenciales identificando sus variables, tipo, orden, grado y linealidad.
+
+% Ejercicios
+\section*{Ejercicios}
+
+Para cada una de las siguientes ecuaciones diferenciales, identifica:
+\begin{enumerate}[label=(\alph*)]
+    \item Las variables independiente y dependiente.
+    \item El tipo (EDO vs. EDP).
+    \item El orden.
+    \item El grado.
+    \item La linealidad (Lineal/No lineal) con una breve justificación.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.4cm]
+    \item $y'' + 5y' + 6y = \cos(x)$
+    \item $x \dfrac{d^3 y}{dx^3} - \left(\dfrac{dy}{dx}\right)^4 + y = 0$
+    \item $\dfrac{d^2 y}{dx^2} = \sqrt{1 + \left(\dfrac{dy}{dx}\right)^2}$
+    \item $t^5 y^{(4)} - t^3 y'' + 6y = 0$
+    \item $\dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2} = 0$
+    \item $y^{(4)} + y'' \sin(y) = e^x$
+    \item $(x^2 + y^2)dx + 2xydy = 0$
+    \item $\left(\dfrac{d^2 y}{dx^2}\right)^3 + e^y = \ln(x)$
+    \item $\dfrac{\partial u}{\partial t} = k \dfrac{\partial^2 u}{\partial x^2}$
+    \item $y' = \sqrt[3]{1 + (y'')^2}$
+    \item $\left(\dfrac{d^3 y}{dx^3}\right)^{2/3} = y' + 2$
+    \item $\ln(y') + y = x$
+    \item $x^3 y''' - 3x^2 y'' + 6xy' - 6y = 0$
+    \item $\dfrac{d^2 y}{dx^2} + \tan(x) \dfrac{dy}{dx} + y = \sec(x)$
+    \item $\ddot{\theta} + \dfrac{g}{L} \sin(\theta) = 0$
+\end{enumerate}
+\end{multicols}
+
+\end{document}

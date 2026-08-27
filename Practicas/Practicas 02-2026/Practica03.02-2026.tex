@@ -1,0 +1,86 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 03 - Ecuaciones Diferenciales Lineales y de Bernoulli}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se resolverán ecuaciones diferenciales de primer orden lineales y de Bernoulli, y se clasificarán según su estructura (Separables, Homogéneas, Lineales, Bernoulli).
+
+% Ejercicios
+\section*{Ejercicios}
+
+\subsection*{A) Clasificación}
+Identifica si cada una de las siguientes ecuaciones diferenciales de primer orden es \textbf{Separable (S)}, \textbf{Homogénea (H)}, \textbf{Lineal (L)}, \textbf{Bernoulli (B)}, o \textbf{Ninguna (N)}. Algunas pueden pertenecer a múltiples categorías. Proporciona una breve justificación.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $\dfrac{dy}{dx} + 2xy = y^2$
+    \item $\dfrac{dy}{dx} = \dfrac{y^2-x^2}{2xy}$
+    \item $\dfrac{dy}{dx} - 3y = e^{2x}$
+    \item $\dfrac{dy}{dx} = x^2 y^3$
+    \item $\dfrac{dy}{dx} = \dfrac{x+y}{x}$
+    \item $\dfrac{dy}{dx} = y^3 - y$
+    \item $\dfrac{dy}{dx} = \dfrac{x^3 + y^3}{xy^2}$
+    \item $\dfrac{dy}{dx} + \dfrac{y}{x} = x^2 y^3 \ln(x)$
+    \item $\dfrac{dy}{dx} = \cos(x+y)$
+    \item $dy + \left(2xy - x e^{-x^2}\right)dx = 0$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Ecuaciones Lineales}
+Resuelve las siguientes ecuaciones diferenciales lineales. Encuentra soluciones explícitas cuando sea posible y aplica las condiciones iniciales donde se especifiquen.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $\dfrac{dy}{dx} + 2y = e^{-x}$
+    \item $x\dfrac{dy}{dx} + y = e^x, \quad y(1) = 2$
+    \item $\dfrac{dy}{dx} + y \tan(x) = \cos^2(x), \quad -\dfrac{\pi}{2} < x < \dfrac{\pi}{2}$
+    \item $x\dfrac{dy}{dx} + 2y = 3x$
+    \item $(1+x^2)dy + 2xy\,dx = 0$
+    \item $x^2 \dfrac{dy}{dx} + xy = 1, \quad x > 0$
+    \item $\dfrac{dy}{dx} - y = e^{2x}$
+    \item $t \dfrac{dy}{dt} + 2y = t^2 - t + 1, \quad y(1) = \dfrac{1}{2}, \quad t > 0$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{C) Ecuaciones de Bernoulli}
+Resuelve las siguientes ecuaciones diferenciales de Bernoulli. Muestra claramente la sustitución utilizada para la linealización.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $\dfrac{dy}{dx} + y = xy^3$
+    \item $\dfrac{dy}{dx} - y = e^x y^2$
+    \item $x\dfrac{dy}{dx} + y = y^2 \ln(x), \quad x > 0$
+    \item $\dfrac{dy}{dx} + \dfrac{y}{x} = y^2, \quad x > 0$
+    \item $t^2 \dfrac{dy}{dt} + 2ty = y^3, \quad t > 0$
+    \item $\dfrac{dy}{dx} - \dfrac{y}{x} = -\dfrac{1}{2y}, \quad x > 0$
+    \item $\dfrac{dy}{dx} + \dfrac{2}{x}y = x^3 y^2, \quad y(1) = -1, \quad x > 0$
+    \item $3(1+t^2)\dfrac{dy}{dt} = 2ty(y^3 - 1)$
+\end{enumerate}
+\end{multicols}
+
+\end{document}

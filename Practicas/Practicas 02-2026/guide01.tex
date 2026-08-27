@@ -1,0 +1,213 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\title{Introduction to Differential Equations: Classification and Exercises\\
+\large Type, Order, Degree, and Linearity / Clasificación de Ecuaciones Diferenciales}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Key Introductory Concepts / Conceptos Claves}
+
+A \textbf{Differential Equation (DE) / Ecuación Diferencial (ED)} is an equation containing the derivatives of one or more unknown functions (or dependent variables) with respect to one or more independent variables.
+
+\begin{enumerate}
+    \item \textbf{Classification by Type / Clasificación por Tipo:}
+    \begin{itemize}
+        \item \textbf{Ordinary Differential Equation (ODE) / Ecuación Diferencial Ordinaria (EDO):} Contains only ordinary derivatives with respect to a single independent variable.
+        \item \textbf{Partial Differential Equation (PDE) / Ecuación Diferencial Parcial (EDP):} Involves partial derivatives with respect to two or more independent variables.
+    \end{itemize}
+    
+    \item \textbf{Order / Orden:} The order of a differential equation is the order of the highest derivative present in the equation.
+    
+    \item \textbf{Degree / Grado:} The degree of a differential equation is the power/exponent of the highest-order derivative term when the equation is written in a rationalized, polynomial form with respect to its derivatives. If the highest-order derivative is inside a radical, fractional power, or transcendental function from which it cannot be algebraically cleared, the degree is either non-integer or undefined.
+    
+    \item \textbf{Linearity / Linealidad:} An $n$-th order ordinary differential equation is \textbf{linear} if it can be written in the form:
+    \[
+    a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \dots + a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)
+    \]
+    This implies:
+    \begin{itemize}
+        \item The dependent variable $y$ and all its derivatives $y', y'', \dots, y^{(n)}$ are of first degree (i.e., power of 1).
+        \item The coefficients $a_i(x)$ depend at most on the independent variable $x$.
+        \item There are no nonlinear functions of the dependent variable (e.g., $\sin y$, $e^y$, $y^2$) or its derivatives.
+    \end{itemize}
+\end{enumerate}
+
+\section{Problem Set: 15 Practice Exercises / 15 Ejercicios de Práctica}
+
+For each of the following differential equations, identify:
+\begin{enumerate}[label=(\alph*)]
+    \item The independent and dependent variables.
+    \item The type (ODE vs. PDE).
+    \item The Order (Orden).
+    \item The Degree (Grado).
+    \item The Linearity (Linear/Nonlinear) with a brief justification.
+\end{enumerate}
+
+\begin{align}
+    & y'' + 5y' + 6y = \cos(x) \label{eq:ex1} \\
+    & x \frac{d^3 y}{dx^3} - \left(\frac{dy}{dx}\right)^4 + y = 0 \label{eq:ex2} \\
+    & \frac{d^2 y}{dx^2} = \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \label{eq:ex3} \\
+    & t^5 y^{(4)} - t^3 y'' + 6y = 0 \label{eq:ex4} \\
+    & \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0 \label{eq:ex5} \\
+    & y^{(4)} + y'' \sin(y) = e^x \label{eq:ex6} \\
+    & (x^2 + y^2)dx + 2xydy = 0 \label{eq:ex7} \\
+    & \left(\frac{d^2 y}{dx^2}\right)^3 + e^y = \ln(x) \label{eq:ex8} \\
+    & \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} \label{eq:ex9} \\
+    & y' = \sqrt[3]{1 + (y'')^2} \label{eq:ex10} \\
+    & \left(\frac{d^3 y}{dx^3}\right)^{2/3} = y' + 2 \label{eq:ex11} \\
+    & \ln(y') + y = x \label{eq:ex12} \\
+    & x^3 y''' - 3x^2 y'' + 6xy' - 6y = 0 \label{eq:ex13} \\
+    & \frac{d^2 y}{dx^2} + \tan(x) \frac{dy}{dx} + y = \sec(x) \label{eq:ex14} \\
+    & \ddot{\theta} + \frac{g}{L} \sin(\theta) = 0 \label{eq:ex15}
+\end{align}
+
+\newpage
+\section{Detailed Solutions and Justifications / Solucionario Detallado}
+
+\subsection*{Exercise 1: $y'' + 5y' + 6y = \cos(x)$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 2 (highest derivative is $y''$).
+    \item \textbf{Degree:} 1 (the power of $y''$ is 1).
+    \item \textbf{Linearity:} Linear. It matches the standard form with coefficients $a_2=1$, $a_1=5$, $a_0=6$, and forcing term $g(x)=\cos(x)$.
+\end{itemize}
+
+\subsection*{Exercise 2: $x \frac{d^3 y}{dx^3} - \left(\frac{dy}{dx}\right)^4 + y = 0$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 3 (highest derivative is $d^3y/dx^3$).
+    \item \textbf{Degree:} 1 (the power of $d^3y/dx^3$ is 1; the fourth power is on the first derivative).
+    \item \textbf{Linearity:} Nonlinear. The term $\left(\frac{dy}{dx}\right)^4$ has power greater than 1.
+\end{itemize}
+
+\subsection*{Exercise 3: $\frac{d^2 y}{dx^2} = \sqrt{1 + \left(\frac{dy}{dx}\right)^2}$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 2 (highest derivative is $d^2y/dx^2$).
+    \item \textbf{Degree:} 2. We must rationalize the equation by squaring both sides: $\left(\frac{d^2 y}{dx^2}\right)^2 = 1 + \left(\frac{dy}{dx}\right)^2$. The exponent of the highest derivative is now 2.
+    \item \textbf{Linearity:} Nonlinear. Squaring both sides shows the highest derivative has power 2, and the first derivative also has power 2.
+\end{itemize}
+
+\subsection*{Exercise 4: $t^5 y^{(4)} - t^3 y'' + 6y = 0$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $t$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 4 (highest derivative is $y^{(4)}$).
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Linear. The dependent variable $y$ and its derivatives are all of first power, and the coefficients depend only on $t$.
+\end{itemize}
+
+\subsection*{Exercise 5: $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x, y$, Dependent: $u$.
+    \item \textbf{Type:} PDE (contains partial derivatives).
+    \item \textbf{Order:} 2.
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Linear. Both partial derivatives appear in additive linear combinations with constant coefficients.
+\end{itemize}
+
+\subsection*{Exercise 6: $y^{(4)} + y'' \sin(y) = e^x$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 4.
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Nonlinear. The term $\sin(y) y''$ involves a transcendental function of $y$ and a product of the dependent variable's function with a derivative.
+\end{itemize}
+
+\subsection*{Exercise 7: $(x^2 + y^2)dx + 2xydy = 0$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$ (or vice versa).
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 1 (dividing by $dx$ gives $(x^2+y^2) + 2xy y' = 0$).
+    \item \textbf{Degree:} 1 (the power of $y'$ is 1).
+    \item \textbf{Linearity:} Nonlinear. When written as $y' = -\frac{x^2+y^2}{2xy}$, the term $y^2$ and the product $y y'$ make it nonlinear in terms of $y$.
+\end{itemize}
+
+\subsection*{Exercise 8: $\left(\frac{d^2 y}{dx^2}\right)^3 + e^y = \ln(x)$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 2.
+    \item \textbf{Degree:} 3 (the exponent of $d^2y/dx^2$ is 3).
+    \item \textbf{Linearity:} Nonlinear. The derivative has a power of 3, and the term $e^y$ is nonlinear in $y$.
+\end{itemize}
+
+\subsection*{Exercise 9: $\frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $t, x$, Dependent: $u$.
+    \item \textbf{Type:} PDE.
+    \item \textbf{Order:} 2 (highest partial derivative is $\partial^2 u/\partial x^2$).
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Linear. The partial derivatives appear linearly.
+\end{itemize}
+
+\subsection*{Exercise 10: $y' = \sqrt[3]{1 + (y'')^2}$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 2 (highest derivative is $y''$).
+    \item \textbf{Degree:} 2. Cubing both sides yields $(y')^3 = 1 + (y'')^2$. The highest derivative $y''$ has power 2.
+    \item \textbf{Linearity:} Nonlinear. The highest derivative has power 2 (and the first derivative is cubed).
+\end{itemize}
+
+\subsection*{Exercise 11: $\left(\frac{d^3 y}{dx^3}\right)^{2/3} = y' + 2$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 3.
+    \item \textbf{Degree:} 2. To rationalize the fractional exponent, cube both sides: $\left(\frac{d^3 y}{dx^3}\right)^2 = (y' + 2)^3$. The power of the highest derivative $d^3y/dx^3$ is 2.
+    \item \textbf{Linearity:} Nonlinear. The highest derivative has power 2 when rationalized.
+\end{itemize}
+
+\subsection*{Exercise 12: $\ln(y') + y = x$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 1.
+    \item \textbf{Degree:} Undefined. This equation cannot be expressed as a polynomial in its derivatives (the derivative is inside a logarithmic function, and clearing it by exponentiation yields $y' = e^{x-y}$, which is still non-polynomial).
+    \item \textbf{Linearity:} Nonlinear due to the $\ln(y')$ term.
+\end{itemize}
+
+\subsection*{Exercise 13: $x^3 y''' - 3x^2 y'' + 6xy' - 6y = 0$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 3.
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Linear. This is a Cauchy-Euler linear equation; all powers of $y$ and its derivatives are 1, and the coefficients depend only on $x$.
+\end{itemize}
+
+\subsection*{Exercise 14: $\frac{d^2 y}{dx^2} + \tan(x) \frac{dy}{dx} + y = \sec(x)$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $x$, Dependent: $y$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 2.
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Linear. Although $\tan(x)$ and $\sec(x)$ are nonlinear functions, they depend solely on the independent variable $x$. The dependent variable $y$ and its derivatives are strictly linear.
+\end{itemize}
+
+\subsection*{Exercise 15: $\ddot{\theta} + \frac{g}{L} \sin(\theta) = 0$}
+\begin{itemize}
+    \item \textbf{Variables:} Independent: $t$, Dependent: $\theta$.
+    \item \textbf{Type:} ODE.
+    \item \textbf{Order:} 2 (highest derivative is $\ddot{\theta} = d^2\theta/dt^2$).
+    \item \textbf{Degree:} 1.
+    \item \textbf{Linearity:} Nonlinear due to the transcendental term $\sin(\theta)$ of the dependent variable.
+\end{itemize}
+
+\end{document}
