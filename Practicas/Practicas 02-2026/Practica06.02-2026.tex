@@ -1,0 +1,118 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\setlength{\headheight}{14pt}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 06 - Ecuaciones Diferenciales Lineales de Segundo Orden}\\[0.5cm]  
+
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se estudiarán las ecuaciones diferenciales lineales de segundo orden: su clasificación según linealidad, tipo de coeficientes y homogeneidad; la determinación de la independencia lineal mediante la definición y el cálculo del Wronskiano; y la resolución de ecuaciones lineales homogéneas con coeficientes constantes en sus tres casos fundamentales.
+
+% Ejercicios
+\section*{Ejercicios}
+
+\subsection*{A) Clasificación de Ecuaciones de Segundo Orden}
+Para cada una de las siguientes ecuaciones diferenciales de segundo orden, determina si es:
+\begin{enumerate}[label=(\alph*), itemsep=0.05cm]
+    \item \textbf{Lineal (L)} o \textbf{No Lineal (NL)}.
+    \item \textbf{Coeficientes Constantes (CC)} o \textbf{Coeficientes Variables (CV)}.
+    \item \textbf{Homogénea (H)} o \textbf{No Homogénea (NH)}.
+\end{enumerate}
+Proporciona una breve justificación matemática para cada respuesta.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $y'' + 4y' + 4y = 0$
+    \item $x^2 y'' + 3x y' - 4y = e^x$
+    \item $y'' + y y' = \sin(x)$
+    \item $3 y'' - 5 y' + 2y = 0$
+    \item $y'' + \cos(x) y' + \sin(x) y = 0$
+    \item $(y'')^2 + 2 y' + y = 0$
+    \item $2 y'' + 8 y = \tan(x)$
+    \item $y'' + e^y = 0$
+    \item $x y'' - 2 y' + 5y = 0$
+    \item $y'' + 9y = 0$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Independencia Lineal y el Wronskiano}
+Determina si los siguientes pares de funciones son \textbf{Linealmente Independientes (LI)} o \textbf{Linealmente Dependientes (LD)} en el intervalo dado.
+\begin{itemize}[itemsep=0.05cm]
+    \item Para los ejercicios \textbf{1 al 5}, demuestra utilizando la definición fundamental de dependencia lineal ($c_1 f_1(x) + c_2 f_2(x) \equiv 0$).
+    \item Para los ejercicios \textbf{6 al 10}, calcula el Wronskiano $W(f_1, f_2)(x)$ y justifica tu conclusión.
+\end{itemize}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.1cm]
+    \item $f_1(x) = 3x, \quad f_2(x) = -5x \quad \text{en } \mathbb{R}$
+    \item $f_1(x) = e^{2x}, \quad f_2(x) = e^{-2x} \quad \text{en } \mathbb{R}$
+    \item $f_1(x) = x^2, \quad f_2(x) = 4x^2 - 1 \quad \text{en } \mathbb{R}$
+    \item $f_1(x) = \sin^2(x), \quad f_2(x) = 1 - \cos^2(x) \quad \text{en } \mathbb{R}$
+    \item $f_1(x) = x, \quad f_2(x) = x \ln(x) \quad \text{en } (0, \infty)$
+    \item $f_1(x) = e^{3x}, \quad f_2(x) = e^{-3x}$
+    \item $f_1(x) = \cos(2x), \quad f_2(x) = \sin(2x)$
+    \item $f_1(x) = x, \quad f_2(x) = x e^x$
+    \item $f_1(x) = e^x \cos(x), \quad f_2(x) = e^x \sin(x)$
+    \item $f_1(x) = x^2, \quad f_2(x) = x^3 \quad \text{en } (0, \infty)$
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+\subsection*{C) Ecuaciones Homogéneas con Coeficientes Constantes}
+Resuelve las siguientes ecuaciones diferenciales lineales homogéneas de segundo orden con coeficientes constantes. Plantea la ecuación auxiliar o característica $a r^2 + b r + c = 0$, halla sus raíces y encuentra la solución general o resuelve el problema de valor inicial (PVI) según corresponda.
+
+\subsubsection*{Caso 1: Raíces Reales y Distintas ($\Delta > 0$)}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.15cm]
+    \item $y'' - 5y' + 6y = 0$
+    \item $y'' - 4y = 0$
+    \item $2y'' + 5y' - 3y = 0$
+    \item $y'' - 3y' = 0, \quad y(0) = 2, \quad y'(0) = 3$
+\end{enumerate}
+\end{multicols}
+
+\subsubsection*{Caso 2: Raíces Reales Repetidas ($\Delta = 0$)}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.15cm, start=5]
+    \item $y'' - 6y' + 9y = 0$
+    \item $4y'' + 4y' + y = 0$
+    \item $y'' + 2y' + y = 0, \quad y(0) = 1, \quad y'(0) = -2$
+    \item $9y'' - 12y' + 4y = 0$
+\end{enumerate}
+\end{multicols}
+
+\subsubsection*{Caso 3: Raíces Complejas Conjugadas ($\Delta < 0$)}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.15cm, start=9]
+    \item $y'' + 4y = 0$
+    \item $y'' - 2y' + 5y = 0$
+    \item $y'' + 2y' + 2y = 0, \quad y(0) = 2, \quad y'(0) = 0$
+    \item $y'' + 4y' + 13y = 0$
+\end{enumerate}
+\end{multicols}
+
+\end{document}
