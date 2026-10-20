@@ -1,0 +1,359 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\title{\textbf{Chapter 5: Nonhomogeneous Linear Differential Equations}\\
+\large Method of Undetermined Coefficients (Coeficientes Indeterminados)\\
+\normalsize Ecuaciones Diferenciales Lineales No Homogéneas de Orden $n$}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Theoretical Foundations / Fundamentos Teóricos}
+
+The general solution of an $n$-th order nonhomogeneous linear differential equation with constant coefficients:
+\begin{equation}
+    a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = g(x)
+\end{equation}
+is expressed as the sum of two components:
+\begin{equation}
+    y(x) = y_h(x) + y_p(x)
+\end{equation}
+where $y_h(x) = c_1 y_1(x) + c_2 y_2(x) + \dots + c_n y_n(x)$ is the general solution of the associated homogeneous equation ($g(x) = 0$), and $y_p(x)$ is any particular solution of the nonhomogeneous equation.
+
+\subsection{The Method of Undetermined Coefficients / Método de Coeficientes Indeterminados}
+
+The Method of Undetermined Coefficients is an algebraic technique applicable when $g(x)$ consists of finite sums and products of:
+\begin{enumerate}
+    \item Polynomials: $P_m(x) = a_m x^m + \dots + a_1 x + a_0$
+    \item Exponentials: $e^{\alpha x}$
+    \item Sines and Cosines: $\sin(\beta x)$ or $\cos(\beta x)$
+\end{enumerate}
+
+\subsubsection{Rule I: Form of Trial $y_p(x)$ without Duplication}
+If no term in the initial trial choice for $y_p(x)$ duplicates a term in the homogeneous solution $y_h(x)$, select $y_p(x)$ according to the standard forms:
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Forcing Term $g(x)$} & \textbf{Assumed Form for $y_p(x)$} \\ \midrule
+$P_m(x) = a_m x^m + \dots + a_0$ & $A_m x^m + A_{m-1} x^{m-1} + \dots + A_1 x + A_0$ \\
+$e^{\alpha x}$ & $A e^{\alpha x}$ \\
+$\sin(\beta x)$ or $\cos(\beta x)$ & $A \cos(\beta x) + B \sin(\beta x)$ \\
+$P_m(x) e^{\alpha x}$ & $(A_m x^m + \dots + A_0) e^{\alpha x}$ \\
+$P_m(x) e^{\alpha x} \cos(\beta x)$ & $(A_m x^m + \dots + A_0) e^{\alpha x} \cos(\beta x) + (B_m x^m + \dots + B_0) e^{\alpha x} \sin(\beta x)$ \\ \bottomrule
+\end{tabular}
+\caption{Standard trial forms for $y_p(x)$.}
+\end{table}
+
+\subsubsection{Rule II: Modification Rule for Duplication (Overlapping with $y_h$)}
+If any term in the assumed $y_p(x)$ duplicates a term in $y_h(x)$ (i.e., corresponds to a root of the auxiliary equation of multiplicity $s \ge 1$), multiply the trial function $y_p(x)$ by $x^s$, where $s$ is the smallest positive integer that eliminates all duplications with $y_h(x)$:
+\begin{equation}
+    y_p(x) = x^s \cdot \left[ \text{Standard Trial Form} \right]
+\end{equation}
+
+\subsubsection{Superposition Principle for Linear Nonhomogeneous Equations}
+If $g(x) = g_1(x) + g_2(x) + \dots + g_k(x)$, then the particular solution is $y_p(x) = y_{p1}(x) + y_{p2}(x) + \dots + y_{pk}(x)$, where each $y_{pi}(x)$ corresponds to the forcing term $g_i(x)$.
+
+\newpage
+\section{Problem Set / Banco de Ejercicios}
+
+\subsection*{Section 1: 6 Exercises — Identifying the General Form of $y_p(x)$ without Solving}
+For each of the following nonhomogeneous differential equations, find $y_h(x)$ and determine the correct trial form for $y_p(x)$ (including $x^s$ modification factors if overlap exists). \textbf{Do NOT evaluate the undetermined coefficients.}
+
+\begin{enumerate}[label=\textbf{1.\arabic*}]
+    \item $y'' + 4y = x^2 + e^{3x}$
+    \item $y'' - 2y' + y = x e^x$
+    \item $y''' - 3y'' + 3y' - y = x^2 + 5$
+    \item $y'' + 9y = \sin(3x) + x \cos(3x)$
+    \item $y^{(4)} - 4y'' = x^3 + e^{2x}$
+    \item $y'' - 4y' + 13y = e^{2x} \cos(3x) + x^2 e^{2x} \sin(3x)$
+\end{enumerate}
+
+\subsection*{Section 2: 10 Exercises — Complete Solutions covering the 3 Main Cases}
+Find the general solution $y(x) = y_h(x) + y_p(x)$ for each of the following differential equations by determining all undetermined coefficients.
+
+\begin{enumerate}[label=\textbf{2.\arabic*}]
+    \item $y'' - y' - 2y = 4x^2$ \quad (Polynomial Case)
+    \item $y'' + 3y' = 6x + 5$ \quad (Polynomial with $y_h$ Overlap)
+    \item $y'' - 4y' + 3y = 2e^{5x}$ \quad (Exponential Case)
+    \item $y'' - 3y' + 2y = 3e^{2x}$ \quad (Exponential with $y_h$ Overlap)
+    \item $y'' + 4y = 10\cos(3x)$ \quad (Trigonometric Case)
+    \item $y'' + y = 4\sin(x)$ \quad (Trigonometric Resonance / Overlap)
+    \item $y''' - y' = 4e^{-x}$ \quad (Third-Order Exponential Overlap)
+    \item $y'' - 2y' + 2y = 5x$ \quad (Complex Roots $y_h$ + Polynomial $g(x)$)
+    \item $y'' + 2y' + 5y = 10 e^{-x}$ \quad (Complex Roots $y_h$ + Exponential $g(x)$)
+    \item $y^{(4)} - y = 8 e^x$ \quad (Fourth-Order Equation with Overlap)
+\end{enumerate}
+
+\subsection*{Section 3: 5 Exercises — Combinations of Cases (Last 3 with $y_h$ Overlap)}
+Use the superposition principle to find the general solution for each combined forcing function.
+
+\begin{enumerate}[label=\textbf{3.\arabic*}]
+    \item $y'' - 3y' + 2y = 2x^2 + 10\sin(x)$ \quad (Polynomial + Trigonometric, No Overlap)
+    \item $y'' + 4y' + 5y = 5x + 13e^{2x}$ \quad (Polynomial + Exponential, No Overlap)
+    \item $y'' - 4y' + 4y = 6e^{2x} + x^2$ \quad (\textbf{Overlap:} Exponential duplicates repeated root $r=2$)
+    \item $y'' + y = 2\cos(x) + e^x$ \quad (\textbf{Overlap:} Trigonometric duplicates imaginary root $r=\pm i$)
+    \item $y''' - y'' = 2x + 4e^x$ \quad (\textbf{Overlap:} Polynomial duplicates $r=0$ of mult. 2; Exponential duplicates $r=1$)
+\end{enumerate}
+
+\newpage
+\section{Solutions and Step-by-Step Manual / Solucionario}
+
+\subsection*{Section 1 Solutions: Identifying $y_p(x)$}
+
+\subsubsection*{Solution 1.1: $y'' + 4y = x^2 + e^{3x}$}
+\begin{itemize}
+    \item \textbf{Auxiliary Equation:} $r^2 + 4 = 0 \implies r = \pm 2i$.
+    \item \textbf{Homogeneous Solution:} $y_h(x) = c_1 \cos(2x) + c_2 \sin(2x)$.
+    \item \textbf{Forcing Term Analysis:} $g_1(x) = x^2 \implies y_{p1} = A x^2 + B x + C$. No overlap with $y_h$.
+    \item $g_2(x) = e^{3x} \implies y_{p2} = D e^{3x}$. No overlap with $y_h$.
+    \item \textbf{Assumed Form:}
+    \[ y_p(x) = A x^2 + B x + C + D e^{3x} \]
+\end{itemize}
+
+\subsubsection*{Solution 1.2: $y'' - 2y' + y = x e^x$}
+\begin{itemize}
+    \item \textbf{Auxiliary Equation:} $r^2 - 2r + 1 = (r-1)^2 = 0 \implies r = 1$ (multiplicity $2$).
+    \item \textbf{Homogeneous Solution:} $y_h(x) = c_1 e^x + c_2 x e^x = (c_1 + c_2 x) e^x$.
+    \item \textbf{Forcing Term Analysis:} $g(x) = x e^x$. Initial trial form: $(A x + B) e^x$.
+    \item \textbf{Overlap Adjustment:} Both $e^x$ and $x e^x$ appear in $y_h(x)$ ($s=2$). Multiply by $x^2$.
+    \item \textbf{Assumed Form:}
+    \[ y_p(x) = x^2 (A x + B) e^x = (A x^3 + B x^2) e^x \]
+\end{itemize}
+
+\subsubsection*{Solution 1.3: $y''' - 3y'' + 3y' - y = x^2 + 5$}
+\begin{itemize}
+    \item \textbf{Auxiliary Equation:} $r^3 - 3r^2 + 3r - 1 = (r-1)^3 = 0 \implies r = 1$ (multiplicity $3$).
+    \item \textbf{Homogeneous Solution:} $y_h(x) = (c_1 + c_2 x + c_3 x^2) e^x$.
+    \item \textbf{Forcing Term Analysis:} $g(x) = x^2 + 5$ (a degree-2 polynomial).
+    \item \textbf{Overlap Adjustment:} Polynomial terms $1, x, x^2$ do not overlap with $e^x, x e^x, x^2 e^x$.
+    \item \textbf{Assumed Form:}
+    \[ y_p(x) = A x^2 + B x + C \]
+\end{itemize}
+
+\subsubsection*{Solution 1.4: $y'' + 9y = \sin(3x) + x \cos(3x)$}
+\begin{itemize}
+    \item \textbf{Auxiliary Equation:} $r^2 + 9 = 0 \implies r = \pm 3i$.
+    \item \textbf{Homogeneous Solution:} $y_h(x) = c_1 \cos(3x) + c_2 \sin(3x)$.
+    \item \textbf{Forcing Term Analysis:} $g(x) = \sin(3x) + x \cos(3x)$. Initial trial form: $(A x + B) \cos(3x) + (C x + D) \sin(3x)$.
+    \item \textbf{Overlap Adjustment:} Terms $\cos(3x)$ and $\sin(3x)$ duplicate $y_h(x)$ ($s=1$). Multiply by $x^1$.
+    \item \textbf{Assumed Form:}
+    \[ y_p(x) = x \left[ (A x + B) \cos(3x) + (C x + D) \sin(3x) \right] = (A x^2 + B x) \cos(3x) + (C x^2 + D x) \sin(3x) \]
+\end{itemize}
+
+\subsubsection*{Solution 1.5: $y^{(4)} - 4y'' = x^3 + e^{2x}$}
+\begin{itemize}
+    \item \textbf{Auxiliary Equation:} $r^4 - 4r^2 = r^2 (r-2)(r+2) = 0 \implies r = 0, 0, 2, -2$.
+    \item \textbf{Homogeneous Solution:} $y_h(x) = c_1 + c_2 x + c_3 e^{2x} + c_4 e^{-2x}$.
+    \item \textbf{Forcing Term Analysis:}
+    \begin{itemize}
+        \item $g_1(x) = x^3 \implies \text{Initial: } A x^3 + B x^2 + C x + D$. Terms $1, x$ duplicate $c_1 + c_2 x$ (root $r=0$, multiplicity $2$). Multiply by $x^2 \implies x^2(A x^3 + B x^2 + C x + D) = A x^5 + B x^4 + C x^3 + D x^2$.
+        \item $g_2(x) = e^{2x} \implies \text{Initial: } E e^{2x}$. Duplicates $c_3 e^{2x}$ (root $r=2$, multiplicity $1$). Multiply by $x^1 \implies E x e^{2x}$.
+    \end{itemize}
+    \item \textbf{Assumed Form:}
+    \[ y_p(x) = A x^5 + B x^4 + C x^3 + D x^2 + E x e^{2x} \]
+\end{itemize}
+
+\subsubsection*{Solution 1.6: $y'' - 4y' + 13y = e^{2x} \cos(3x) + x^2 e^{2x} \sin(3x)$}
+\begin{itemize}
+    \item \textbf{Auxiliary Equation:} $r^2 - 4r + 13 = 0 \implies r = 2 \pm 3i$.
+    \item \textbf{Homogeneous Solution:} $y_h(x) = e^{2x} (c_1 \cos(3x) + c_2 \sin(3x))$.
+    \item \textbf{Forcing Term Analysis:} Degree-2 polynomial times $e^{2x} \cos(3x) / e^{2x} \sin(3x)$. Initial trial form: $(A x^2 + B x + C) e^{2x} \cos(3x) + (D x^2 + E x + F) e^{2x} \sin(3x)$.
+    \item \textbf{Overlap Adjustment:} Terms $e^{2x} \cos(3x)$ and $e^{2x} \sin(3x)$ duplicate $y_h(x)$ ($s=1$). Multiply by $x^1$.
+    \item \textbf{Assumed Form:}
+    \[ y_p(x) = x \left[ (A x^2 + B x + C) e^{2x} \cos(3x) + (D x^2 + E x + F) e^{2x} \sin(3x) \right] \]
+\end{itemize}
+
+\newpage
+\subsection*{Section 2 Solutions: Complete Exercises}
+
+\subsubsection*{Solution 2.1: $y'' - y' - 2y = 4x^2$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 - r - 2 = (r-2)(r+1) = 0 \implies y_h(x) = c_1 e^{2x} + c_2 e^{-x}$.
+    \item \textbf{$y_p(x)$:} Assume $y_p = A x^2 + B x + C$. Derivatives: $y_p' = 2Ax + B$, $y_p'' = 2A$.
+    \item \textbf{Substitution:}
+    \[ 2A - (2Ax + B) - 2(Ax^2 + Bx + C) = -2A x^2 + (-2A - 2B)x + (2A - B - 2C) = 4x^2 \]
+    \item \textbf{Equating coefficients:}
+    \[ -2A = 4 \implies A = -2 \]
+    \[ -2(-2) - 2B = 0 \implies 4 - 2B = 0 \implies B = 2 \]
+    \[ 2(-2) - 2 - 2C = 0 \implies -6 - 2C = 0 \implies C = -3 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 e^{2x} + c_2 e^{-x} - 2x^2 + 2x - 3 \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.2: $y'' + 3y' = 6x + 5$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 + 3r = r(r+3) = 0 \implies y_h(x) = c_1 + c_2 e^{-3x}$.
+    \item \textbf{$y_p(x)$:} Initial $A x + B$ overlaps with constant $c_1$. Multiply by $x \implies y_p = A x^2 + B x$.
+    \item \textbf{Derivatives:} $y_p' = 2Ax + B$, $y_p'' = 2A$.
+    \item \textbf{Substitution:}
+    \[ 2A + 3(2Ax + B) = 6Ax + (2A + 3B) = 6x + 5 \]
+    \[ 6A = 6 \implies A = 1; \quad 2(1) + 3B = 5 \implies 3B = 3 \implies B = 1 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 + c_2 e^{-3x} + x^2 + x \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.3: $y'' - 4y' + 3y = 2e^{5x}$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 - 4r + 3 = (r-1)(r-3) = 0 \implies y_h(x) = c_1 e^x + c_2 e^{3x}$.
+    \item \textbf{$y_p(x)$:} Assume $y_p = A e^{5x}$. $y_p' = 5Ae^{5x}$, $y_p'' = 25Ae^{5x}$.
+    \item \textbf{Substitution:}
+    \[ (25 - 20 + 3) A e^{5x} = 8 A e^{5x} = 2 e^{5x} \implies 8A = 2 \implies A = \frac{1}{4} \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 e^x + c_2 e^{3x} + \frac{1}{4} e^{5x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.4: $y'' - 3y' + 2y = 3e^{2x}$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 - 3r + 2 = (r-1)(r-2) = 0 \implies y_h(x) = c_1 e^x + c_2 e^{2x}$.
+    \item \textbf{$y_p(x)$:} Initial $A e^{2x}$ duplicates $c_2 e^{2x}$. Multiply by $x \implies y_p = A x e^{2x}$.
+    \item \textbf{Derivatives:} $y_p' = A(1 + 2x)e^{2x}$, $y_p'' = A(4 + 4x)e^{2x}$.
+    \item \textbf{Substitution:}
+    \[ A e^{2x} \left[ (4 + 4x) - 3(1 + 2x) + 2x \right] = A e^{2x} (1) = 3 e^{2x} \implies A = 3 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 e^x + c_2 e^{2x} + 3x e^{2x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.5: $y'' + 4y = 10\cos(3x)$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 + 4 = 0 \implies y_h(x) = c_1 \cos(2x) + c_2 \sin(2x)$.
+    \item \textbf{$y_p(x)$:} Assume $y_p = A \cos(3x) + B \sin(3x)$.
+    \item \textbf{Derivatives:} $y_p'' = -9A \cos(3x) - 9B \sin(3x)$.
+    \item \textbf{Substitution:}
+    \[ -9A \cos(3x) - 9B \sin(3x) + 4(A \cos(3x) + B \sin(3x)) = -5A \cos(3x) - 5B \sin(3x) = 10\cos(3x) \]
+    \[ -5A = 10 \implies A = -2; \quad -5B = 0 \implies B = 0 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 \cos(2x) + c_2 \sin(2x) - 2\cos(3x) \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.6: $y'' + y = 4\sin(x)$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 + 1 = 0 \implies y_h(x) = c_1 \cos(x) + c_2 \sin(x)$.
+    \item \textbf{$y_p(x)$:} Initial $A \cos x + B \sin x$ overlaps. Multiply by $x \implies y_p = x(A \cos x + B \sin x)$.
+    \item \textbf{Derivatives:} $y_p'' = -2A \sin x + 2B \cos x + x(-A \cos x - B \sin x)$.
+    \item \textbf{Substitution:}
+    \[ y_p'' + y_p = -2A \sin x + 2B \cos x = 4\sin x \implies -2A = 4 \implies A = -2; \quad 2B = 0 \implies B = 0 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 \cos(x) + c_2 \sin(x) - 2x \cos(x) \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.7: $y''' - y' = 4e^{-x}$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^3 - r = r(r-1)(r+1) = 0 \implies y_h(x) = c_1 + c_2 e^x + c_3 e^{-x}$.
+    \item \textbf{$y_p(x)$:} Initial $A e^{-x}$ duplicates $c_3 e^{-x}$. Multiply by $x \implies y_p = A x e^{-x}$.
+    \item \textbf{Derivatives:} $y_p' = A e^{-x}(1 - x)$, $y_p''' = A e^{-x}(3 - x)$.
+    \item \textbf{Substitution:}
+    \[ A e^{-x}(3 - x) - A e^{-x}(1 - x) = 2A e^{-x} = 4 e^{-x} \implies 2A = 4 \implies A = 2 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 + c_2 e^x + c_3 e^{-x} + 2x e^{-x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.8: $y'' - 2y' + 2y = 5x$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 - 2r + 2 = 0 \implies r = 1 \pm i \implies y_h(x) = e^x(c_1 \cos x + c_2 \sin x)$.
+    \item \textbf{$y_p(x)$:} Assume $y_p = A x + B$. $y_p' = A$, $y_p'' = 0$.
+    \item \textbf{Substitution:}
+    \[ 0 - 2A + 2(Ax + B) = 2Ax + (2B - 2A) = 5x \]
+    \[ 2A = 5 \implies A = \frac{5}{2}; \quad 2B - 2\left(\frac{5}{2}\right) = 0 \implies 2B = 5 \implies B = \frac{5}{2} \]
+    \item \textbf{General Solution:}
+    \[ y(x) = e^x(c_1 \cos x + c_2 \sin x) + \frac{5}{2}x + \frac{5}{2} \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.9: $y'' + 2y' + 5y = 10 e^{-x}$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 + 2r + 5 = 0 \implies r = -1 \pm 2i \implies y_h(x) = e^{-x}(c_1 \cos(2x) + c_2 \sin(2x))$.
+    \item \textbf{$y_p(x)$:} Assume $y_p = A e^{-x}$ (no overlap, since $y_h$ has $\cos(2x)/\sin(2x)$ factors).
+    \item \textbf{Derivatives:} $y_p' = -A e^{-x}$, $y_p'' = A e^{-x}$.
+    \item \textbf{Substitution:}
+    \[ (1 - 2 + 5) A e^{-x} = 4 A e^{-x} = 10 e^{-x} \implies 4A = 10 \implies A = \frac{5}{2} \]
+    \item \textbf{General Solution:}
+    \[ y(x) = e^{-x}(c_1 \cos(2x) + c_2 \sin(2x)) + \frac{5}{2}e^{-x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 2.10: $y^{(4)} - y = 8 e^x$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^4 - 1 = (r-1)(r+1)(r^2+1) = 0 \implies y_h(x) = c_1 e^x + c_2 e^{-x} + c_3 \cos x + c_4 \sin x$.
+    \item \textbf{$y_p(x)$:} Initial $A e^x$ duplicates $c_1 e^x$. Multiply by $x \implies y_p = A x e^x$.
+    \item \textbf{Derivatives:} $y_p^{(4)} = A(x + 4)e^x$.
+    \item \textbf{Substitution:}
+    \[ A(x + 4)e^x - A x e^x = 4 A e^x = 8 e^x \implies 4A = 8 \implies A = 2 \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 e^x + c_2 e^{-x} + c_3 \cos x + c_4 \sin x + 2x e^x \]
+\end{enumerate}
+
+\newpage
+\subsection*{Section 3 Solutions: Combined Cases and Overlap}
+
+\subsubsection*{Solution 3.1: $y'' - 3y' + 2y = 2x^2 + 10\sin(x)$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 - 3r + 2 = (r-1)(r-2) = 0 \implies y_h(x) = c_1 e^x + c_2 e^{2x}$.
+    \item \textbf{Part 1 ($g_1 = 2x^2$):} $y_{p1} = A x^2 + B x + C$.
+    \[ -3(2Ax+B) + 2(Ax^2+Bx+C) = 2A x^2 + (2B - 6A)x + (2C - 3B) = 2x^2 \]
+    \[ 2A = 2 \implies A = 1; \quad 2B - 6 = 0 \implies B = 3; \quad 2C - 9 = 0 \implies C = \frac{7}{2} \]
+    \[ y_{p1} = x^2 + 3x + \frac{7}{2} \]
+    \item \textbf{Part 2 ($g_2 = 10\sin(x)$):} $y_{p2} = D \cos x + E \sin x$.
+    \[ y_{p2}'' - 3y_{p2}' + 2y_{p2} = (D - 3E)\cos x + (3D + E)\sin x = 10\sin x \]
+    \[ D - 3E = 0 \implies D = 3E; \quad 3(3E) + E = 10E = 10 \implies E = 1, \, D = 3 \]
+    \[ y_{p2} = 3\cos x + \sin x \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 e^x + c_2 e^{2x} + x^2 + 3x + \frac{7}{2} + 3\cos(x) + \sin(x) \]
+\end{enumerate}
+
+\subsubsection*{Solution 3.2: $y'' + 4y' + 5y = 5x + 13e^{2x}$}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r = -2 \pm i \implies y_h(x) = e^{-2x}(c_1 \cos x + c_2 \sin x)$.
+    \item \textbf{Part 1 ($g_1 = 5x$):} $y_{p1} = Ax + B$.
+    \[ 4A + 5(Ax+B) = 5Ax + (5B + 4A) = 5x \implies A = 1, \, B = -\frac{4}{5} \implies y_{p1} = x - \frac{4}{5} \]
+    \item \textbf{Part 2 ($g_2 = 13e^{2x}$):} $y_{p2} = C e^{2x}$.
+    \[ (4 + 8 + 5) C e^{2x} = 17 C e^{2x} = 13 e^{2x} \implies C = \frac{13}{17} \implies y_{p2} = \frac{13}{17} e^{2x} \]
+    \item \textbf{General Solution:}
+    \[ y(x) = e^{-2x}(c_1 \cos x + c_2 \sin x) + x - \frac{4}{5} + \frac{13}{17} e^{2x} \]
+\end{enumerate}
+
+\subsubsection*{Solution 3.3: $y'' - 4y' + 4y = 6e^{2x} + x^2$ \quad (\textbf{Overlap})}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 - 4r + 4 = (r-2)^2 = 0 \implies y_h(x) = (c_1 + c_2 x) e^{2x}$.
+    \item \textbf{Part 1 ($g_1 = 6e^{2x}$):} $e^{2x}$ duplicates root $r=2$ of multiplicity $2$. Multiply by $x^2 \implies y_{p1} = A x^2 e^{2x}$.
+    \[ y_{p1}'' - 4y_{p1}' + 4y_{p1} = 2A e^{2x} = 6e^{2x} \implies 2A = 6 \implies A = 3 \implies y_{p1} = 3x^2 e^{2x} \]
+    \item \textbf{Part 2 ($g_2 = x^2$):} $y_{p2} = B x^2 + C x + D$.
+    \[ 2B - 4(2Bx + C) + 4(Bx^2 + Cx + D) = 4B x^2 + (4C - 8B)x + (2B - 4C + 4D) = x^2 \]
+    \[ 4B = 1 \implies B = \frac{1}{4}; \quad 4C - 2 = 0 \implies C = \frac{1}{2}; \quad \frac{1}{2} - 2 + 4D = 0 \implies D = \frac{3}{8} \]
+    \[ y_{p2} = \frac{1}{4}x^2 + \frac{1}{2}x + \frac{3}{8} \]
+    \item \textbf{General Solution:}
+    \[ y(x) = (c_1 + c_2 x) e^{2x} + 3x^2 e^{2x} + \frac{1}{4}x^2 + \frac{1}{2}x + \frac{3}{8} \]
+\end{enumerate}
+
+\subsubsection*{Solution 3.4: $y'' + y = 2\cos(x) + e^x$ \quad (\textbf{Overlap})}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^2 + 1 = 0 \implies y_h(x) = c_1 \cos(x) + c_2 \sin(x)$.
+    \item \textbf{Part 1 ($g_1 = 2\cos(x)$):} Duplicates $c_1 \cos(x)$. Multiply by $x \implies y_{p1} = x(A \cos x + B \sin x)$.
+    \[ y_{p1}'' + y_{p1} = -2A \sin x + 2B \cos x = 2\cos x \implies B = 1, \, A = 0 \implies y_{p1} = x \sin(x) \]
+    \item \textbf{Part 2 ($g_2 = e^x$):} $y_{p2} = C e^x$.
+    \[ (1 + 1)C e^x = 2C e^x = e^x \implies C = \frac{1}{2} \implies y_{p2} = \frac{1}{2}e^x \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 \cos(x) + c_2 \sin(x) + x \sin(x) + \frac{1}{2}e^x \]
+\end{enumerate}
+
+\subsubsection*{Solution 3.5: $y''' - y'' = 2x + 4e^x$ \quad (\textbf{Overlap})}
+\begin{enumerate}
+    \item \textbf{$y_h(x)$:} $r^3 - r^2 = r^2(r-1) = 0 \implies y_h(x) = c_1 + c_2 x + c_3 e^x$.
+    \item \textbf{Part 1 ($g_1 = 2x$):} Initial $A x + B$ duplicates $c_1 + c_2 x$ ($r=0$, mult. $2$). Multiply by $x^2 \implies y_{p1} = A x^3 + B x^2$.
+    \[ y_{p1}''' - y_{p1}'' = 6A - (6Ax + 2B) = -6Ax + (6A - 2B) = 2x \]
+    \[ -6A = 2 \implies A = -\frac{1}{3}; \quad 6\left(-\frac{1}{3}\right) - 2B = 0 \implies B = -1 \implies y_{p1} = -\frac{1}{3}x^3 - x^2 \]
+    \item \textbf{Part 2 ($g_2 = 4e^x$):} Initial $C e^x$ duplicates $c_3 e^x$ ($r=1$, mult. $1$). Multiply by $x \implies y_{p2} = C x e^x$.
+    \[ y_{p2}''' - y_{p2}'' = C e^x (x + 3 - x - 2) = C e^x = 4e^x \implies C = 4 \implies y_{p2} = 4x e^x \]
+    \item \textbf{General Solution:}
+    \[ y(x) = c_1 + c_2 x + c_3 e^x - \frac{1}{3}x^3 - x^2 + 4x e^x \]
+\end{enumerate}
+
+\end{document}

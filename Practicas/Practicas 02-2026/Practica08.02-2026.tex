@@ -1,0 +1,79 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\setlength{\headheight}{14pt}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 08 - Ecuaciones Diferenciales No Homogéneas: Coeficientes Indeterminados}\\[0.5cm]  
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se aplicará el método de coeficientes indeterminados para resolver ecuaciones diferenciales lineales no homogéneas con coeficientes constantes: determinación de la forma de ensayo de la solución particular $y_p(x)$ considerando la duplicidad con la solución homogénea $y_h(x)$, resolución de los casos fundamentales (polinomial, exponencial y trigonométrico), y aplicación del principio de superposición para funciones forzantes combinadas.
+
+% Ejercicios
+\section*{Ejercicios}
+
+\subsection*{A) Forma de la Solución Particular $y_p(x)$}
+Para cada una de las siguientes ecuaciones diferenciales no homogéneas, determina la solución homogénea $y_h(x)$ y establece la forma de ensayo adecuada para la solución particular $y_p(x)$ (incluyendo la regla de modificación por multiplicación por $x^s$ cuando exista duplicidad con $y_h$). \textbf{No calcules el valor numérico de los coeficientes.}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.18cm]
+    \item $y'' + 4y = x^2 + e^{3x}$
+    \item $y'' - 2y' + y = x e^x$
+    \item $y''' - 3y'' + 3y' - y = x^2 + 5$
+    \item $y'' + 9y = \sin(3x) + x \cos(3x)$
+    \item $y^{(4)} - 4y'' = x^3 + e^{2x}$
+    \item $y'' - 4y' + 13y = e^{2x} \cos(3x) + x^2 e^{2x} \sin(3x)$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Solución Completa: Casos Polinomial, Exponencial y Trigonométrico}
+Encuentra la solución general $y(x) = y_h(x) + y_p(x)$ para cada una de las siguientes ecuaciones diferenciales determinando todos los coeficientes indeterminados correspondientes.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.15cm]
+    \item $y'' - y' - 2y = 4x^2$
+    \item $y'' + 3y' = 6x + 5$
+    \item $y'' - 4y' + 3y = 2e^{5x}$
+    \item $y'' - 3y' + 2y = 3e^{2x}$
+    \item $y'' + 4y = 10\cos(3x)$
+    \item $y'' + y = 4\sin(x)$
+    \item $y''' - y' = 4e^{-x}$
+    \item $y'' - 2y' + 2y = 5x$
+    \item $y'' + 2y' + 5y = 10 e^{-x}$
+    \item $y^{(4)} - y = 8 e^x$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{C) Principio de Superposición y Casos Combinados}
+Aplica el principio de superposición para encontrar la solución general $y(x) = y_h(x) + y_p(x)$ para cada una de las siguientes ecuaciones con funciones forzantes combinadas.
+
+\begin{enumerate}[itemsep=0.2cm]
+    \item $y'' - 3y' + 2y = 2x^2 + 10\sin(x)$
+    \item $y'' + 4y' + 5y = 5x + 13e^{2x}$
+    \item $y'' - 4y' + 4y = 6e^{2x} + x^2$
+    \item $y'' + y = 2\cos(x) + e^x$
+    \item $y''' - y'' = 2x + 4e^x$
+\end{enumerate}
+
+\end{document}

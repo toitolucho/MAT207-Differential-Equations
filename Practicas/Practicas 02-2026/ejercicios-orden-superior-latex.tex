@@ -1,0 +1,338 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\title{\textbf{Chapter 4 (Continued): Higher-Order Linear Differential Equations}\\
+\large $n$-th Order Homogeneous ODEs, IVPs, Equation Reconstruction, and Complex Root Logic\\
+\normalsize Ecuaciones Diferenciales Lineales de Orden $n$}
+\author{Gemini Notebook}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Theoretical Overview / Resumen Teórico}
+
+Higher-order homogeneous linear differential equations with constant real coefficients take the general form:
+\begin{equation}
+    a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = 0, \quad a_n \neq 0, \quad a_i \in \mathbb{R}
+\end{equation}
+
+\subsection{Characteristic Polynomial and Fundamental Set of Solutions}
+Assuming a solution of the form $y = e^{rx}$, we obtain the $n$-th degree auxiliary / characteristic polynomial:
+\begin{equation}
+    P(r) = a_n r^n + a_{n-1} r^{n-1} + \dots + a_1 r + a_0 = 0
+\end{equation}
+By the Fundamental Theorem of Algebra, $P(r)$ has exactly $n$ complex roots (counting multiplicity). The structure of the homogeneous general solution $y_h(x) = c_1 y_1(x) + c_2 y_2(x) + \dots + c_n y_n(x)$ is determined as follows:
+
+\begin{enumerate}
+    \item \textbf{Real Distinct Roots:} Each simple real root $r_k$ contributes $e^{r_k x}$.
+    \item \textbf{Real Repeated Roots:} A real root $r_k$ of multiplicity $m$ contributes $m$ linearly independent solutions:
+    \[ e^{r_k x}, \, x e^{r_k x}, \, x^2 e^{r_k x}, \, \dots, \, x^{m-1} e^{r_k x} \]
+    \item \textbf{Complex Conjugate Roots:} Since coefficients $a_i$ are real, non-real roots occur in conjugate pairs $\alpha \pm i \beta$. A simple pair contributes:
+    \[ e^{\alpha x} \cos(\beta x) \quad \text{and} \quad e^{\alpha x} \sin(\beta x) \]
+    \item \textbf{Repeated Complex Conjugate Roots:} A pair $\alpha \pm i \beta$ of multiplicity $m$ contributes $2m$ solutions:
+    \[ e^{\alpha x} \cos(\beta x), \, x e^{\alpha x} \cos(\beta x), \, \dots, \, x^{m-1} e^{\alpha x} \cos(\beta x) \]
+    \[ e^{\alpha x} \sin(\beta x), \, x e^{\alpha x} \sin(\beta x), \, \dots, \, x^{m-1} e^{\alpha x} \sin(\beta x) \]
+\end{enumerate}
+
+\subsection{Reconstructing the Differential Equation from Solutions}
+If a fundamental set of solutions $\{y_1, y_2, \dots, y_n\}$ is known, we can identify the corresponding characteristic roots $r_1, r_2, \dots, r_n$ and build the characteristic polynomial:
+\begin{equation}
+    P(r) = (r - r_1)(r - r_2) \cdots (r - r_n) = 0
+\end{equation}
+Expanding $P(r)$ into $a_n r^n + a_{n-1} r^{n-1} + \dots + a_0 = 0$ yields the differential equation operator $P(D)y = 0$, where $D^k y = y^{(k)}$.
+
+\newpage
+\section{Problem Set / Banco de Ejercicios}
+
+\subsection*{Part A: 10 Exercises - Finding the Homogeneous Solution $y_h$}
+Find the general solution $y_h(x)$ for each of the following $n$-th order homogeneous linear differential equations.
+
+\begin{align}
+    & y''' - 6y'' + 11y' - 6y = 0 \label{eq:nth_1} \\
+    & y''' - 3y'' + 3y' - y = 0 \label{eq:nth_2} \\
+    & y''' + y' = 0 \label{eq:nth_3} \\
+    & y^{(4)} - 16y = 0 \label{eq:nth_4} \\
+    & y^{(4)} + 8y'' + 16y = 0 \label{eq:nth_5} \\
+    & y''' - y'' - y' + y = 0 \label{eq:nth_6} \\
+    & y^{(4)} - 5y'' + 4y = 0 \label{eq:nth_7} \\
+    & y''' + 2y'' + 4y' + 8y = 0 \label{eq:nth_8} \\
+    & y^{(5)} - 2y^{(4)} + y''' = 0 \label{eq:nth_9} \\
+    & y^{(4)} + 2y'' + y = 0 \label{eq:nth_10}
+\end{align}
+
+\subsection*{Part B: 5 Exercises - Initial Value Problems (IVPs)}
+Solve the following higher-order initial value problems.
+
+\begin{align}
+    & y''' - 2y'' - y' + 2y = 0, \quad y(0) = 1, \, y'(0) = 2, \, y''(0) = 0 \label{eq:ivp_1} \\
+    & y''' + 4y' = 0, \quad y(0) = 0, \, y'(0) = 4, \, y''(0) = 8 \label{eq:ivp_2} \\
+    & y''' - 3y'' + 3y' - y = 0, \quad y(0) = 1, \, y'(0) = 2, \, y''(0) = 3 \label{eq:ivp_3} \\
+    & y^{(4)} - y = 0, \quad y(0) = 1, \, y'(0) = 0, \, y''(0) = 1, \, y'''(0) = 0 \label{eq:ivp_4} \\
+    & y''' + y'' + y' + y = 0, \quad y(0) = 2, \, y'(0) = -1, \, y''(0) = 0 \label{eq:ivp_5}
+\end{align}
+
+\subsection*{Part C: 5 Exercises - Reconstructing the Differential Equation}
+For each given fundamental set of solutions, reconstruct the minimal-order homogeneous linear differential equation with constant real coefficients $P(D)y = 0$.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item $S = \{1, \, e^{2x}, \, e^{-2x}\}$
+    \item $S = \{e^x, \, x e^x, \, x^2 e^x\}$
+    \item $S = \{\cos(3x), \, \sin(3x), \, e^x\}$
+    \item $S = \{1, \, x, \, e^{4x}\}$
+    \item $S = \{e^{-x}, \, e^x \cos(2x), \, e^x \sin(2x)\}$
+\end{enumerate}
+
+\subsection*{Part D: 3 Logic / Clue Problems - Complex Roots and Minimal Order}
+Apply the theory of real-coefficient differential equations (Dennis Zill style) to solve these conceptual puzzles.
+
+\begin{enumerate}[label=\textbf{Problem \arabic*:}, leftmargin=*]
+    \item \textbf{Complex Solution Clue:} A homogeneous linear differential equation with \textit{constant real coefficients} has $y_1(x) = e^{3x} \sin(2x)$ as one of its solutions.
+    \begin{enumerate}[label=(\alph*)]
+        \item What is the minimal order that this differential equation can have?
+        \item State all roots of the minimal characteristic polynomial and write the differential equation.
+        \item If it is additionally known that $y_2(x) = 5$ is also a solution, what is the new minimal order and the corresponding differential equation?
+    \end{enumerate}
+
+    \item \textbf{Repeated Complex Root Clue:} A homogeneous linear ODE with real constant coefficients has $y_1(x) = x e^{-x} \cos(x)$ as a solution.
+    \begin{enumerate}[label=(\alph*)]
+        \item Identify all roots of the characteristic equation implied by this solution, including their multiplicities.
+        \item Determine the minimal order $n$ of the differential equation.
+        \item Find the explicit differential equation in operator notation $P(D)y = 0$.
+    \end{enumerate}
+
+    \item \textbf{Reconstruction from Partial Solutions and IVP:} 
+    A 3rd-order homogeneous linear differential equation with constant real coefficients has solutions $y_1(x) = \sin(x)$ and $y_2(x) = e^{2x}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Deduce the full set of 3 characteristic roots and write the differential equation.
+        \item Solve the initial value problem with conditions $y(0) = 0$, $y'(0) = 3$, and $y''(0) = 5$.
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+\section{Solutions and Step-by-Step Manual / Solucionario}
+
+\subsection*{Part A: Homogeneous Solutions $y_h$}
+
+\subsubsection*{Solution 1: $y''' - 6y'' + 11y' - 6y = 0$}
+Characteristic equation: $r^3 - 6r^2 + 11r - 6 = 0$.
+Testing $r = 1$: $1 - 6 + 11 - 6 = 0$. So $(r-1)$ is a factor.
+Factoring: $(r-1)(r^2 - 5r + 6) = (r-1)(r-2)(r-3) = 0$.
+Roots: $r_1 = 1, r_2 = 2, r_3 = 3$.
+\[ y_h(x) = c_1 e^x + c_2 e^{2x} + c_3 e^{3x} \]
+
+\subsubsection*{Solution 2: $y''' - 3y'' + 3y' - y = 0$}
+Characteristic equation: $r^3 - 3r^2 + 3r - 1 = (r-1)^3 = 0$.
+Root: $r = 1$ with multiplicity 3.
+\[ y_h(x) = c_1 e^x + c_2 x e^x + c_3 x^2 e^x = (c_1 + c_2 x + c_3 x^2) e^x \]
+
+\subsubsection*{Solution 3: $y''' + y' = 0$}
+Characteristic equation: $r^3 + r = r(r^2 + 1) = 0$.
+Roots: $r_1 = 0, r_{2,3} = \pm i$ ($\alpha = 0, \beta = 1$).
+\[ y_h(x) = c_1 e^{0x} + c_2 \cos(x) + c_3 \sin(x) = c_1 + c_2 \cos(x) + c_3 \sin(x) \]
+
+\subsubsection*{Solution 4: $y^{(4)} - 16y = 0$}
+Characteristic equation: $r^4 - 16 = (r^2 - 4)(r^2 + 4) = (r-2)(r+2)(r^2 + 4) = 0$.
+Roots: $r_{1,2} = \pm 2$, $r_{3,4} = \pm 2i$.
+\[ y_h(x) = c_1 e^{2x} + c_2 e^{-2x} + c_3 \cos(2x) + c_4 \sin(2x) \]
+
+\subsubsection*{Solution 5: $y^{(4)} + 8y'' + 16y = 0$}
+Characteristic equation: $r^4 + 8r^2 + 16 = (r^2 + 4)^2 = 0$.
+Roots: $r = \pm 2i$ with multiplicity 2 each.
+\[ y_h(x) = (c_1 + c_2 x) \cos(2x) + (c_3 + c_4 x) \sin(2x) \]
+
+\subsubsection*{Solution 6: $y''' - y'' - y' + y = 0$}
+Characteristic equation: $r^3 - r^2 - r + 1 = r^2(r-1) - (r-1) = (r^2 - 1)(r-1) = (r-1)^2(r+1) = 0$.
+Roots: $r_1 = r_2 = 1$ (multiplicity 2), $r_3 = -1$.
+\[ y_h(x) = c_1 e^x + c_2 x e^x + c_3 e^{-x} \]
+
+\subsubsection*{Solution 7: $y^{(4)} - 5y'' + 4y = 0$}
+Characteristic equation: $r^4 - 5r^2 + 4 = (r^2 - 1)(r^2 - 4) = (r-1)(r+1)(r-2)(r+2) = 0$.
+Roots: $r = \pm 1, \pm 2$.
+\[ y_h(x) = c_1 e^x + c_2 e^{-x} + c_3 e^{2x} + c_4 e^{-2x} \]
+
+\subsubsection*{Solution 8: $y''' + 2y'' + 4y' + 8y = 0$}
+Characteristic equation: $r^2(r+2) + 4(r+2) = (r+2)(r^2+4) = 0$.
+Roots: $r_1 = -2, r_{2,3} = \pm 2i$.
+\[ y_h(x) = c_1 e^{-2x} + c_2 \cos(2x) + c_3 \sin(2x) \]
+
+\subsubsection*{Solution 9: $y^{(5)} - 2y^{(4)} + y''' = 0$}
+Characteristic equation: $r^3(r^2 - 2r + 1) = r^3(r-1)^2 = 0$.
+Roots: $r = 0$ (multiplicity 3), $r = 1$ (multiplicity 2).
+\[ y_h(x) = c_1 + c_2 x + c_3 x^2 + c_4 e^x + c_5 x e^x \]
+
+\subsubsection*{Solution 10: $y^{(4)} + 2y'' + y = 0$}
+Characteristic equation: $r^4 + 2r^2 + 1 = (r^2 + 1)^2 = 0$.
+Roots: $r = \pm i$ with multiplicity 2 each.
+\[ y_h(x) = (c_1 + c_2 x) \cos(x) + (c_3 + c_4 x) \sin(x) \]
+
+\subsection*{Part B: Initial Value Problems (IVPs)}
+
+\subsubsection*{Solution 11: $y''' - 2y'' - y' + 2y = 0, \, y(0)=1, \, y'(0)=2, \, y''(0)=0$}
+Characteristic equation: $r^2(r-2) - (r-2) = (r-2)(r^2-1) = (r-2)(r-1)(r+1) = 0$.
+General solution: $y(x) = c_1 e^x + c_2 e^{-x} + c_3 e^{2x}$.
+Derivatives:
+\[ y'(x) = c_1 e^x - c_2 e^{-x} + 2c_3 e^{2x} \]
+\[ y''(x) = c_1 e^x + c_2 e^{-x} + 4c_3 e^{2x} \]
+Applying initial conditions at $x=0$:
+\[ c_1 + c_2 + c_3 = 1 \]
+\[ c_1 - c_2 + 2c_3 = 2 \]
+\[ c_1 + c_2 + 4c_3 = 0 \]
+Subtracting equation 1 from equation 3: $3c_3 = -1 \implies c_3 = -1/3$.
+Then $c_1 + c_2 = 1 - c_3 = 4/3$, and $c_1 - c_2 = 2 - 2c_3 = 8/3$.
+Adding: $2c_1 = 12/3 = 4 \implies c_1 = 2$.
+$c_2 = 4/3 - 2 = -2/3$.
+Particular Solution:
+\[ y(x) = 2e^x - \frac{2}{3}e^{-x} - \frac{1}{3}e^{2x} \]
+
+\subsubsection*{Solution 12: $y''' + 4y' = 0, \, y(0)=0, \, y'(0)=4, \, y''(0)=8$}
+Roots: $r = 0, \pm 2i$.
+General solution: $y(x) = c_1 + c_2 \cos(2x) + c_3 \sin(2x)$.
+Derivatives:
+\[ y'(x) = -2c_2 \sin(2x) + 2c_3 \cos(2x) \]
+\[ y''(x) = -4c_2 \cos(2x) - 4c_3 \sin(2x) \]
+Applying ICs:
+\[ y(0) = c_1 + c_2 = 0 \implies c_1 = -c_2 \]
+\[ y'(0) = 2c_3 = 4 \implies c_3 = 2 \]
+\[ y''(0) = -4c_2 = 8 \implies c_2 = -2 \implies c_1 = 2 \]
+Particular Solution:
+\[ y(x) = 2 - 2\cos(2x) + 2\sin(2x) \]
+
+\subsubsection*{Solution 13: $y''' - 3y'' + 3y' - y = 0, \, y(0)=1, \, y'(0)=2, \, y''(0)=3$}
+Roots: $r = 1$ (multiplicity 3).
+General solution: $y(x) = (c_1 + c_2 x + c_3 x^2) e^x$.
+Derivatives:
+\[ y'(x) = (c_1 + c_2 + (c_2 + 2c_3)x + c_3 x^2) e^x \]
+\[ y''(x) = (c_1 + 2c_2 + 2c_3 + (c_2 + 4c_3)x + c_3 x^2) e^x \]
+Applying ICs at $x=0$:
+\[ y(0) = c_1 = 1 \]
+\[ y'(0) = c_1 + c_2 = 2 \implies 1 + c_2 = 2 \implies c_2 = 1 \]
+\[ y''(0) = c_1 + 2c_2 + 2c_3 = 3 \implies 1 + 2(1) + 2c_3 = 3 \implies 2c_3 = 0 \implies c_3 = 0 \]
+Particular Solution:
+\[ y(x) = (1 + x) e^x \]
+
+\subsubsection*{Solution 14: $y^{(4)} - y = 0, \, y(0)=1, \, y'(0)=0, \, y''(0)=1, \, y'''(0)=0$}
+Roots: $r = \pm 1, \pm i$.
+General solution: $y(x) = c_1 e^x + c_2 e^{-x} + c_3 \cos(x) + c_4 \sin(x)$.
+Derivatives:
+\[ y'(x) = c_1 e^x - c_2 e^{-x} - c_3 \sin(x) + c_4 \cos(x) \]
+\[ y''(x) = c_1 e^x + c_2 e^{-x} - c_3 \cos(x) - c_4 \sin(x) \]
+\[ y'''(x) = c_1 e^x - c_2 e^{-x} + c_3 \sin(x) - c_4 \cos(x) \]
+Applying ICs at $x=0$:
+\[ c_1 + c_2 + c_3 = 1 \]
+\[ c_1 - c_2 + c_4 = 0 \]
+\[ c_1 + c_2 - c_3 = 1 \]
+\[ c_1 - c_2 - c_4 = 0 \]
+From equations 2 and 4: $2c_4 = 0 \implies c_4 = 0$, so $c_1 = c_2$.
+From equations 1 and 3: subtracting gives $2c_3 = 0 \implies c_3 = 0$.
+So $c_1 + c_2 = 1 \implies 2c_1 = 1 \implies c_1 = 1/2, c_2 = 1/2$.
+Particular Solution:
+\[ y(x) = \frac{1}{2} e^x + \frac{1}{2} e^{-x} = \cosh(x) \]
+
+\subsubsection*{Solution 15: $y''' + y'' + y' + y = 0, \, y(0)=2, \, y'(0)=-1, \, y''(0)=0$}
+Roots: $r^2(r+1) + (r+1) = (r+1)(r^2+1) = 0 \implies r = -1, \pm i$.
+General solution: $y(x) = c_1 e^{-x} + c_2 \cos(x) + c_3 \sin(x)$.
+Derivatives:
+\[ y'(x) = -c_1 e^{-x} - c_2 \sin(x) + c_3 \cos(x) \]
+\[ y''(x) = c_1 e^{-x} - c_2 \cos(x) - c_3 \sin(x) \]
+Applying ICs:
+\[ c_1 + c_2 = 2 \]
+\[ -c_1 + c_3 = -1 \]
+\[ c_1 - c_2 = 0 \implies c_1 = c_2 \]
+Since $c_1 = c_2$ and $c_1 + c_2 = 2 \implies c_1 = 1, c_2 = 1$.
+Then $-1 + c_3 = -1 \implies c_3 = 0$.
+Particular Solution:
+\[ y(x) = e^{-x} + \cos(x) \]
+
+\subsection*{Part C: Reconstructing Differential Equations}
+
+\subsubsection*{Solution 16: $S = \{1, e^{2x}, e^{-2x}\}$}
+Roots: $r_1 = 0, r_2 = 2, r_3 = -2$.
+Polynomial: $P(r) = r(r-2)(r+2) = r(r^2 - 4) = r^3 - 4r = 0$.
+Differential Equation:
+\[ y''' - 4y' = 0 \]
+
+\subsubsection*{Solution 17: $S = \{e^x, x e^x, x^2 e^x\}$}
+Roots: $r = 1$ with multiplicity 3.
+Polynomial: $P(r) = (r-1)^3 = r^3 - 3r^2 + 3r - 1 = 0$.
+Differential Equation:
+\[ y''' - 3y'' + 3y' - y = 0 \]
+
+\subsubsection*{Solution 18: $S = \{\cos(3x), \sin(3x), e^x\}$}
+Roots: $r_{1,2} = \pm 3i, r_3 = 1$.
+Polynomial: $P(r) = (r^2 + 9)(r - 1) = r^3 - r^2 + 9r - 9 = 0$.
+Differential Equation:
+\[ y''' - y'' + 9y' - 9y = 0 \]
+
+\subsubsection*{Solution 19: $S = \{1, x, e^{4x}\}$}
+Roots: $r = 0$ (multiplicity 2), $r = 4$.
+Polynomial: $P(r) = r^2(r - 4) = r^3 - 4r^2 = 0$.
+Differential Equation:
+\[ y''' - 4y'' = 0 \]
+
+\subsubsection*{Solution 20: $S = \{e^{-x}, e^x \cos(2x), e^x \sin(2x)\}$}
+Roots: $r_1 = -1$, $r_{2,3} = 1 \pm 2i$.
+Factors: $(r+1)$ and $((r-1)^2 + 4) = (r^2 - 2r + 5)$.
+Polynomial: $P(r) = (r+1)(r^2 - 2r + 5) = r^3 - 2r^2 + 5r + r^2 - 2r + 5 = r^3 - r^2 + 3r + 5 = 0$.
+Differential Equation:
+\[ y''' - y'' + 3y' + 5y = 0 \]
+
+\subsection*{Part D: Logic and Clue Problems}
+
+\subsubsection*{Solution 21: Complex Solution Clue}
+\begin{enumerate}[label=(\alph*)]
+    \item A solution of the form $y_1(x) = e^{3x}\sin(2x)$ implies a complex root $r_1 = 3 + 2i$. Since the differential equation has \textit{real coefficients}, complex roots must occur in conjugate pairs. Thus, $r_2 = 3 - 2i$ must also be a root.
+    Therefore, the \textbf{minimal order is 2}.
+    \item The characteristic factor is $(r - (3+2i))(r - (3-2i)) = (r-3)^2 + 4 = r^2 - 6r + 13 = 0$.
+    The minimal differential equation is:
+    \[ y'' - 6y' + 13y = 0 \]
+    \item If $y_2(x) = 5 = 5e^{0x}$ is also a solution, then $r_3 = 0$ is a third root.
+    The new \textbf{minimal order is 3}.
+    Polynomial: $P(r) = r(r^2 - 6r + 13) = r^3 - 6r^2 + 13r = 0$.
+    Differential Equation:
+    \[ y''' - 6y'' + 13y' = 0 \]
+\end{enumerate}
+
+\subsubsection*{Solution 22: Repeated Complex Root Clue}
+\begin{enumerate}[label=(\alph*)]
+    \item The solution $y_1(x) = x e^{-x} \cos(x)$ has an explicit $x$ factor multiplying the exponential-trigonometric function. This implies that the complex conjugate pair $r = -1 \pm i$ ($\alpha = -1, \beta = 1$) has a \textbf{multiplicity of at least 2}.
+    Roots: $r_1 = r_2 = -1 + i$, $r_3 = r_4 = -1 - i$.
+    \item Since there are 2 pairs of complex roots, the \textbf{minimal order is $n = 4$}.
+    \item The base quadratic factor is $(r - (-1+i))(r - (-1-i)) = (r+1)^2 + 1 = r^2 + 2r + 2$.
+    Since the multiplicity is 2, the characteristic polynomial is:
+    \[ P(r) = (r^2 + 2r + 2)^2 = r^4 + 4r^3 + 8r^2 + 8r + 4 = 0 \]
+    The differential equation in operator notation is:
+    \[ (D^2 + 2D + 2)^2 y = 0 \implies y^{(4)} + 4y''' + 8y'' + 8y' + 4y = 0 \]
+\end{enumerate}
+
+\subsubsection*{Solution 23: Reconstruction from Partial Solutions and IVP}
+\begin{enumerate}[label=(\alph*)]
+    \item The solution $y_1(x) = \sin(x)$ implies roots $r_{1,2} = \pm i$ ($\alpha = 0, \beta = 1$).
+    The solution $y_2(x) = e^{2x}$ implies root $r_3 = 2$.
+    Since the equation is of order 3, these 3 roots complete the characteristic spectrum: $\{i, -i, 2\}$.
+    Polynomial: $P(r) = (r^2 + 1)(r - 2) = r^3 - 2r^2 + r - 2 = 0$.
+    Differential Equation:
+    \[ y''' - 2y'' + y' - 2y = 0 \]
+    \item General solution: $y(x) = c_1 \cos(x) + c_2 \sin(x) + c_3 e^{2x}$.
+    Derivatives:
+    \[ y'(x) = -c_1 \sin(x) + c_2 \cos(x) + 2c_3 e^{2x} \]
+    \[ y''(x) = -c_1 \cos(x) - c_2 \sin(x) + 4c_3 e^{2x} \]
+    Applying ICs at $x=0$:
+    \[ y(0) = c_1 + c_3 = 0 \implies c_1 = -c_3 \]
+    \[ y'(0) = c_2 + 2c_3 = 3 \]
+    \[ y''(0) = -c_1 + 4c_3 = 5 \implies -(-c_3) + 4c_3 = 5 \implies 5c_3 = 5 \implies c_3 = 1 \]
+    Then $c_1 = -1$.
+    From $c_2 + 2(1) = 3 \implies c_2 = 1$.
+    Particular Solution:
+    \[ y(x) = -\cos(x) + \sin(x) + e^{2x} \]
+\end{enumerate}
+
+\end{document}

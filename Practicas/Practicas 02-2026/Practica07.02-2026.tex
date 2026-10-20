@@ -1,0 +1,103 @@
+\documentclass[a4paper,11pt]{article}
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}  % Para caracteres en español
+\usepackage{amsmath, amssymb} % Para símbolos matemáticos
+\usepackage{fancyhdr} % Para encabezado y pie de página
+\usepackage{geometry} % Para márgenes
+\usepackage{enumitem} % Para modificar listas
+\usepackage{multicol} % Para múltiples columnas
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\setlength{\headheight}{14pt}
+
+% Configuración del encabezado y pie de página
+\pagestyle{fancy}
+\lfoot{Ing. Luis A. Molina}  % Pie de página a la izquierda
+\cfoot{MAT207}  % Centro vacío
+\rfoot{\thepage} % Número de página a la derecha
+
+% Inicio del documento
+\begin{document}
+
+% Título de la práctica
+\begin{center}
+    \Large\textbf{Práctica 07 - Ecuaciones Diferenciales Lineales de Orden Superior}\\[0.5cm]  
+\end{center}
+  \textbf{Nombre:} \rule{9cm}{0.4pt}  \textbf{Fecha:} \rule{4.5cm}{0.4pt}
+
+% Introducción
+\section*{Introducción}
+En esta práctica, se resolverán ecuaciones diferenciales lineales homogéneas de orden $n$ con coeficientes constantes reales: el cálculo de la solución general $y_h(x)$ mediante la ecuación característica, la resolución de problemas de valor inicial (PVI), la reconstrucción de operadores diferenciales a partir de conjuntos fundamentales de soluciones, y problemas de deducción conceptual sobre raíces complejas y orden mínimo.
+
+% Ejercicios
+\section*{Ejercicios}
+
+\subsection*{A) Solución General de Ecuaciones Homogéneas de Orden $n$}
+Halla la solución general $y_h(x)$ para cada una de las siguientes ecuaciones diferenciales lineales homogéneas con coeficientes constantes reales.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.15cm]
+    \item $y''' - 6y'' + 11y' - 6y = 0$
+    \item $y''' - 3y'' + 3y' - y = 0$
+    \item $y''' + y' = 0$
+    \item $y^{(4)} - 16y = 0$
+    \item $y^{(4)} + 8y'' + 16y = 0$
+    \item $y''' - y'' - y' + y = 0$
+    \item $y^{(4)} - 5y'' + 4y = 0$
+    \item $y''' + 2y'' + 4y' + 8y = 0$
+    \item $y^{(5)} - 2y^{(4)} + y''' = 0$
+    \item $y^{(4)} + 2y'' + y = 0$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{B) Problemas de Valor Inicial (PVI)}
+Resuelve los siguientes problemas de valor inicial para ecuaciones diferenciales lineales de orden superior.
+
+\begin{enumerate}[itemsep=0.2cm]
+    \item $y''' - 2y'' - y' + 2y = 0, \quad y(0) = 1, \quad y'(0) = 2, \quad y''(0) = 0$
+    \item $y''' + 4y' = 0, \quad y(0) = 0, \quad y'(0) = 4, \quad y''(0) = 8$
+    \item $y''' - 3y'' + 3y' - y = 0, \quad y(0) = 1, \quad y'(0) = 2, \quad y''(0) = 3$
+    \item $y^{(4)} - y = 0, \quad y(0) = 1, \quad y'(0) = 0, \quad y''(0) = 1, \quad y'''(0) = 0$
+    \item $y''' + y'' + y' + y = 0, \quad y(0) = 2, \quad y'(0) = -1, \quad y''(0) = 0$
+\end{enumerate}
+
+\subsection*{C) Reconstrucción de la Ecuación Diferencial}
+Para cada uno de los siguientes conjuntos fundamentales de soluciones, reconstruye la ecuación diferencial lineal homogénea con coeficientes constantes reales de orden mínimo $P(D)y = 0$.
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0.15cm]
+    \item $S = \{1, \, e^{2x}, \, e^{-2x}\}$
+    \item $S = \{e^x, \, x e^x, \, x^2 e^x\}$
+    \item $S = \{\cos(3x), \, \sin(3x), \, e^x\}$
+    \item $S = \{1, \, x, \, e^{4x}\}$
+    \item $S = \{e^{-x}, \, e^x \cos(2x), \, e^x \sin(2x)\}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{D) Problemas Conceptuales de Deducción y Orden Mínimo}
+Resuelve los siguientes problemas de deducción aplicando las propiedades de los polinomios característicos con coeficientes reales:
+
+\begin{enumerate}[itemsep=0.25cm]
+    \item \textbf{Solución compleja:} Una ecuación diferencial lineal homogénea con coeficientes constantes reales admite como solución particular $y_1(x) = e^{3x} \sin(2x)$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.08cm]
+        \item ¿Cuál es el orden mínimo que puede tener dicha ecuación diferencial?
+        \item Determina las raíces del polinomio característico y escribe la correspondiente ecuación diferencial.
+        \item Si además se sabe que $y_2(x) = 5$ también es solución de la misma ecuación, ¿cuál es el nuevo orden mínimo y la ecuación diferencial resultante?
+    \end{enumerate}
+
+    \item \textbf{Raíz compleja repetida:} Una ecuación diferencial lineal homogénea con coeficientes reales constantes admite como solución $y_1(x) = x e^{-x} \cos(x)$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.08cm]
+        \item Identifica todas las raíces características que esta solución implica, indicando sus multiplicidades.
+        \item Determina el orden mínimo $n$ de la ecuación diferencial.
+        \item Escribe la ecuación diferencial en notación de operadores $P(D)y = 0$.
+    \end{enumerate}
+
+    \item \textbf{Reconstrucción con condiciones iniciales:} Una ecuación diferencial lineal homogénea de tercer orden con coeficientes constantes reales tiene como soluciones $y_1(x) = \sin(x)$ y $y_2(x) = e^{2x}$.
+    \begin{enumerate}[label=(\alph*), itemsep=0.08cm]
+        \item Deduce el conjunto completo de las 3 raíces características y escribe la ecuación diferencial.
+        \item Resuelve el problema de valor inicial sujeto a las condiciones $y(0) = 0$, $y'(0) = 3$ y $y''(0) = 5$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
